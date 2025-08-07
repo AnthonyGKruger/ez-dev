@@ -1,0 +1,191 @@
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-blue: oklch(41.92% 0.057 251.06);
+  --color-secondary-blue: oklch(50.5% 0.051 250.85);
+  --color-alternative-blue: oklch(26.77% 0.056 251.48);
+  --color-light-blue: oklch(62.2% 0.037 249.77);
+  --color-primary-gold: oklch(62.28% 0.083 75.89);
+  --color-secondary-gold: oklch(52.56% 0.085 75.06);
+  --color-alternative-gold: oklch(40.39% 0.076 71.84);
+  --color-light-gold: oklch(0.859 0.072 82.67);
+}
+
+* {
+  font-family: Roboto, sans-serif;
+}
+
+::selection {
+  background-color: #a47f4b;
+  color: #d8e0e8;
+}
+
+/* Primary and Surface Palettes */
+:root {
+  --p-primary-50: #ecfdf5;
+  --p-primary-100: #d1fae5;
+  --p-primary-200: #a7f3d0;
+  --p-primary-300: #6ee7b7;
+  --p-primary-400: #34d399;
+  --p-primary-500: #10b981;
+  --p-primary-600: #059669;
+  --p-primary-700: #047857;
+  --p-primary-800: #065f46;
+  --p-primary-900: #064e3b;
+  --p-primary-950: #022c22;
+  --p-surface-0: #ffffff;
+  --p-surface-50: #fafafa;
+  --p-surface-100: #f4f4f5;
+  --p-surface-200: #e4e4e7;
+  --p-surface-300: #d4d4d8;
+  --p-surface-400: #a1a1aa;
+  --p-surface-500: #71717a;
+  --p-surface-600: #52525b;
+  --p-surface-700: #3f3f46;
+  --p-surface-800: #27272a;
+  --p-surface-900: #18181b;
+  --p-surface-950: #09090b;
+  --p-content-border-radius: 6px;
+}
+
+/* Light */
+:root {
+  --p-primary-color: var(--color-primary-blue);
+  --p-primary-contrast-color: var(--p-surface-0);
+  --p-primary-hover-color: var(--color-light-blue);
+  --p-primary-active-color: var(--color-alternative-blue);
+  --p-content-border-color: var(--color-primary-gold);
+  --p-content-hover-background: var(--color-light-blue);
+  --p-content-hover-color: var(--p-surface-800);
+  --p-highlight-background: var(--p-primary-50);
+  --p-highlight-color: var(--p-primary-700);
+  --p-highlight-focus-background: var(--p-primary-100);
+  --p-highlight-focus-color: var(--p-primary-800);
+  --p-text-color: var(--p-surface-700);
+  --p-text-hover-color: var(--p-surface-800);
+  --p-text-muted-color: var(--p-surface-500);
+  --p-text-hover-muted-color: var(--p-surface-600);
+}
+
+/*
+ * Dark Mode
+ * Defaults to system, change the dark variant selector to match the CSS variable configuration.
+ * For example;
+ * @custom-variant dark (&:where(.app-dark, .app-dark *));
+ * should match to;
+ * :root[class="app-dark"]
+*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --p-primary-color: var(--color-neutral-950);
+    --p-primary-contrast-color: var(--color-primary-gold);
+    --p-primary-hover-color: var(--color-light-gold);
+    --p-primary-active-color: var(--color-light-gold);
+    --p-content-border-color: var(--color-alternative-gold);
+    --p-content-hover-background: var(--p-surface-800);
+    --p-content-hover-color: var(--p-surface-0);
+    --p-highlight-background: color-mix(
+      in srgb,
+      var(--color-neutral-950),
+      transparent 84%
+    );
+    --p-highlight-color: rgba(255, 255, 255, 0.87);
+    --p-highlight-focus-background: color-mix(
+      in srgb,
+      var(--color-neutral-950),
+      transparent 76%
+    );
+    --p-highlight-focus-color: rgba(255, 255, 255, 0.87);
+    --p-text-color: var(--p-surface-0);
+    --p-text-hover-color: var(--p-surface-0);
+    --p-text-muted-color: var(--p-surface-400);
+    --p-text-hover-muted-color: var(--p-surface-300);
+  }
+}
+
+#path1 {
+  /* stroke-dasharray:50 ; */
+  stroke-dashoffset: 21554;
+  animation: sign 6s ease;
+  animation-fill-mode: forwards;
+}
+#path2 {
+  stroke-dasharray: 18843;
+  stroke-dashoffset: 18843;
+  animation: sign 4s ease;
+}
+#path3 {
+  stroke-dasharray: 2248;
+  stroke-dashoffset: 2248;
+  animation: sign 4s ease;
+  animation-fill-mode: forwards;
+}
+#path4 {
+  stroke-dasharray: 1535;
+  stroke-dashoffset: 1535;
+  animation: sign 4s ease;
+  animation-fill-mode: forwards;
+}
+#path5 {
+  stroke-dasharray: 1528;
+  stroke-dashoffset: 1528;
+  animation: sign 4s ease;
+  animation-fill-mode: forwards;
+}
+#path6 {
+  stroke-dasharray: 3247;
+  stroke-dashoffset: 3247;
+  animation: sign 4s ease;
+  animation-fill-mode: forwards;
+}
+#path7 {
+  stroke-dasharray: 3237;
+  stroke-dashoffset: 3237;
+  animation: sign 4s ease;
+  animation-fill-mode: forwards;
+}
+#path8 {
+  stroke-dasharray: 3790;
+  stroke-dashoffset: 3790;
+  animation: sign 4s ease;
+  animation-fill-mode: forwards;
+}
+#path9 {
+  stroke-dasharray: 3329;
+  stroke-dashoffset: 3329;
+  animation: sign 4s ease;
+  animation-fill-mode: forwards;
+}
+#path10 {
+  stroke-dasharray: 2680;
+  stroke-dashoffset: 2680;
+  animation: sign 4s ease;
+  animation-fill-mode: forwards;
+}
+#path11 {
+  stroke-dasharray: 756;
+  stroke-dashoffset: 756;
+  animation: sign 4s ease;
+  animation-fill-mode: forwards;
+}
+#path12 {
+  stroke-dasharray: 21554;
+  stroke-dashoffset: 21554;
+  animation: sign 4s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sign {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@utility text-base-priority {
+  color: var(--color-neutral-950);
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-neutral-50);
+  }
+}
