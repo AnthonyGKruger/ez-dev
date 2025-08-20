@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { portfolioItems } from "~/assets/config/data";
+const { t } = useTranslate();
 </script>
 
 <template>
   <UiSectionDivider
     lottie-src="/lotties/Portfolio.json"
-    content="Check Out My Portfolio"
-    subtitle="Dominating The Web One Project At A Time"
+    :content="t('portfolio-heading')"
+    :subtitle="t('portfolio-subtitle')"
   />
   <section class="py-14 bg-alternative-blue dark:bg-black overflow-hidden">
     <div class="container px-6 m-auto">

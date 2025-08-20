@@ -1,11 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-
+  <PagesLanguagesContent />
 </template>
-
-<style scoped>
-
-</style>

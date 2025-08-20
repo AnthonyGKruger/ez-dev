@@ -1,11 +1,8 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-
+  <PagesPortfolioContent />
+  <PagesContactMeForm />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

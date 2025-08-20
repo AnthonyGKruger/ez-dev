@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { skills } from "~/assets/config/data";
+const { t } = useTranslate();
 </script>
 
 <template>
@@ -9,7 +10,7 @@ import { skills } from "~/assets/config/data";
         ? '/lotties/darkSkill.json'
         : '/lotties/Skill.json'
     "
-    content="Some Of The Skills & Awesome Technologies I Use!"
+    :content="t('skills-heading')"
   />
   <section class="flex flex-wrap gap-4 px-4 py-14 items-center justify-center">
     <PagesSkillsMotionCard
@@ -24,7 +25,7 @@ import { skills } from "~/assets/config/data";
         <span class="capitalize">{{ skill.name }}</span>
       </template>
       <template #description>
-        {{ skill.description }}
+        {{ t(skill.description) }}
       </template>
     </PagesSkillsMotionCard>
   </section>

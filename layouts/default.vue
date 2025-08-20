@@ -1,13 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { getLang } = useTranslate();
+onMounted(() => getLang());
+</script>
 
 <template>
   <div>
     <UiMouseHoverOverlay />
     <UiNav />
-    <main class="min-h-screen pt-13 dark:bg-neutral-950"><slot></slot></main>
+    <main class="dark:bg-neutral-950"><slot /></main>
     <UiFooter />
     <UxCookieNotice />
     <UxScrollToTop />
+    <UxLanguageToggle />
     <UxThemeToggle />
   </div>
 </template>

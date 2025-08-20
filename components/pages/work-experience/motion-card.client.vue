@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { motion } from "motion-v";
 import type { IWorkExperience } from "~/types/workExperience";
+const { t } = useTranslate();
 defineProps<{ experience: IWorkExperience }>();
 const variants = {
   hidden: { opacity: 0, scale: 0 },
@@ -34,7 +35,7 @@ const variants = {
     <div class="border-b border-t border-primary-gold">
       <div class="w-full p-1.5 flex justify-start items-center gap-2">
         <Icon name="mdi:account-circle" class="text-light-gold" /><span>{{
-          experience.role
+          t(experience.role)
         }}</span>
       </div>
       <div class="w-full p-1.5 flex justify-start items-center gap-2">
@@ -47,20 +48,20 @@ const variants = {
       </div>
       <div class="w-full p-1.5 flex flex-col justify-start items-center gap-2">
         <p>
-          {{ experience.summary }}
+          {{ t(experience.summary || '') }}
         </p>
         <div class="flex gap-2 flex-nowrap w-full">
           <div
             v-if="!!experience.comments.length"
             v-for="comment in experience.comments"
             class="max-w-[49%] flex gap-2 items-center md:text-md px-3 py-2 rounded-xl border-2 border-primary-gold dark:border-light-gold bg-primary-blue dark:bg-transparent dark:text-white text-light-gold duration-500"
-            :title="comment"
+            :title="t(comment)"
           >
             <Icon
               name="mdi:medal"
               class="stroke-primary-gold text-transparent min-w-6 min-h-6"
             />
-            <span class="ml-3 truncate text-ellipsis">{{ comment }}</span>
+            <span class="ml-3 truncate text-ellipsis">{{ t(comment) }}</span>
           </div>
         </div>
       </div>

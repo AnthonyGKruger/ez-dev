@@ -12,10 +12,12 @@ const route = useRoute();
   <section>
     <div
       class="p-6 m-auto"
-      :class="{
-        'border-t border-b border-primary-gold': route.path === '/',
-        'mt-9': route.path !== '/',
-      }"
+      :class="[
+        'border-t border-b border-primary-gold',
+        {
+          'mt-9': route.path !== '/',
+        },
+      ]"
     >
       <div
         class="flex sm:flex-row mx-auto md:mx-0 justify-center items-center aspect-[6/1] lg:aspect-[8/1]"

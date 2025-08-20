@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { motion } from "motion-v";
 import type { IPortfolioItem } from "~/types/portfolio";
+const { t } = useTranslate();
 defineProps<{ portfolioItem: IPortfolioItem }>();
 const variants = {
   hidden: { opacity: 0, scale: 0 },
@@ -42,7 +43,7 @@ const variants = {
       <dl class="mt-5 text-sm leading-normal">
         <dt class="sr-only">Description</dt>
         <dd class="text-gray 2xl:text-xl text-left">
-          {{ portfolioItem.description }}
+          {{ t(portfolioItem.description) }}
         </dd>
       </dl>
       <div class="pt-9 flex items-center justify-center gap-2">
@@ -58,7 +59,7 @@ const variants = {
               name="mdi:monitor-dashboard"
               class="inline self-center mr-2 w-4"
             />
-            <span class="inline">View</span>
+            <span class="inline">{{ t('portfolio-view') }}</span>
           </NuxtLink>
         </button>
 
@@ -75,7 +76,7 @@ const variants = {
               name="mdi:email-newsletter"
               class="inline self-center mr-2 font-bold w-4"
             />
-            <span class="inline">Referral Letter</span>
+            <span class="inline">{{ t('portfolio-referral-letter') }}</span>
           </NuxtLink>
         </button>
 
@@ -89,7 +90,7 @@ const variants = {
             target="_blank"
           >
             <Icon name="mdi:code-tags" class="inline self-center mr-2 w-4" />
-            <span class="inline">Code</span>
+            <span class="inline">{{ t('portfolio-code') }}</span>
           </NuxtLink>
         </button>
       </div>

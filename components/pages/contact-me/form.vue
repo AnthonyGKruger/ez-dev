@@ -10,6 +10,9 @@ import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 import { addToast } from "~/lib/toast";
 import { zodResolver } from "@primevue/forms/resolvers/zod";
 import type { FormSubmitEvent } from "@primevue/forms/form";
+import { useTranslate } from "#imports";
+
+const { t } = useTranslate();
 
 const config = useRuntimeConfig();
 
@@ -51,33 +54,33 @@ const resolver = zodResolver(
   z.object({
     from_name: z
       .string()
-      .nonempty({ message: "Please enter a valid name." })
-      .min(2, { message: "Your name cant be less than two characters." })
-      .max(20, { message: "Names can't be longer than 20 characters." })
+      .nonempty({ message: "contact-error-name-invalid" })
+      .min(2, { message: "contact-error-name-too-short" })
+      .max(20, { message: "contact-error-name-too-long" })
       .refine((value) => new RegExp("^[a-zA-Z]+$").test(value), {
-        message: "Please enter a valid name.",
+        message: "contact-error-name-invalid",
       }),
     company: z
       .string()
-      .nonempty({ message: "Your company is required." })
+      .nonempty({ message: "contact-error-company-required" })
       .min(2, {
-        message: "Your company name cant be less than two characters.",
+        message: "contact-error-company-too-short",
       })
       .max(30, {
-        message: "Company names can't be longer than 30 characters.",
+        message: "contact-error-company-too-long",
       })
       .refine((value) => new RegExp("^[a-zA-Z0-9]+$").test(value), {
-        message: "Please enter a valid company name.",
+        message: "contact-error-company-invalid",
       }),
     comments: z
       .string()
-      .nonempty({ message: "Your comments are required." })
-      .min(2, { message: "Your comments cant be less than two characters." })
-      .max(200, { message: "Comments can't be longer than 200 characters." })
+      .nonempty({ message: "contact-error-comments-required" })
+      .min(2, { message: "contact-error-comments-too-short" })
+      .max(200, { message: "contact-error-comments-too-long" })
       .refine((value) => new RegExp("^[a-zA-Z0-9]+$").test(value), {
-        message: "Please enter a valid comments.",
+        message: "contact-error-comments-invalid",
       }),
-    reply_to: z.email({ message: "Please enter a valid email." }).nonempty(),
+    reply_to: z.email({ message: "contact-error-email-invalid" }).nonempty(),
   }),
 );
 
@@ -92,24 +95,15 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
         config.public.emailJsSecureToken as string,
       );
       if (data.status === 200) {
-        addToast(
-          "success",
-          "Your email could not be sent. Please try again later.",
-        );
+        addToast("success", t("contact-email-sent-success"));
         navigateTo("/thank-you");
       } else {
-        addToast(
-          "error",
-          "Your email could not be sent. Please try again later.",
-        );
+        addToast("error", t("contact-email-send-failed"));
       }
       console.log(data);
     } catch (e) {
       console.error(e);
-      addToast(
-        "error",
-        "Your email could not be sent. Please try again later.",
-      );
+      addToast("error", t("contact-email-send-failed"));
     }
   }
 };
@@ -118,8 +112,8 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
 <template>
   <UiSectionDivider
     lottie-src="/lotties/contact-me-heading.json"
-    subtitle="Let's Build Something Together!"
-    content="Fill In The Form Below To Contact Me"
+    :subtitle="t('contact-subtitle')"
+    :content="t('contact-content')"
   />
   <section
     class="flex flex-col md:flex-row items-center justify-center min-h-screen"
@@ -141,12 +135,11 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
         class="flex flex-col gap-4 w-full lg:w-3/4 text-base-priority"
       >
         <div class="flex flex-col gap-2">
-          <label for="from_name">First name</label>
-
+          <label for="from_name">{{ t("contact-first-name-label") }}</label>
           <InputText
             name="from_name"
             type="text"
-            placeholder="Your name."
+            :placeholder="t('contact-first-name-placeholder')"
             fluid
           />
           <Message
@@ -154,14 +147,14 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
             severity="error"
             size="small"
             variant="simple"
-            >{{ $form.from_name.error?.message }}</Message
+            >{{ t($form.from_name.error?.message || "") }}</Message
           >
-          <label for="reply_to">Email</label>
+          <label for="reply_to">{{ t("contact-email-label") }}</label>
 
           <InputText
             name="reply_to"
             type="text"
-            placeholder="Your Email."
+            :placeholder="t('contact-email-placeholder')"
             fluid
           />
           <Message
@@ -169,13 +162,13 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
             severity="error"
             size="small"
             variant="simple"
-            >{{ $form.reply_to.error?.message }}</Message
+            >{{ t($form.reply_to.error?.message || "") }}</Message
           >
-          <label for="company">Company</label>
+          <label for="company">{{ t("contact-company-label") }}</label>
           <InputText
             name="company"
             type="text"
-            placeholder="Your Company."
+            :placeholder="t('contact-company-placeholder')"
             fluid
           />
           <Message
@@ -183,14 +176,13 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
             severity="error"
             size="small"
             variant="simple"
-            >{{ $form.company.error?.message }}</Message
+            >{{ t($form.company.error?.message || "") }}</Message
           >
-          <label for="comments">Comments</label>
-
+          <label for="comments">{{ t("contact-comments-label") }}</label>
           <Textarea
             name="comments"
             type="text"
-            placeholder="Your Comments."
+            :placeholder="t('contact-comments-placeholder')"
             fluid
           />
           <Message
@@ -198,12 +190,12 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
             severity="error"
             size="small"
             variant="simple"
-            >{{ $form.comments.error?.message }}</Message
+            >{{ t($form.comments.error?.message || "") }}</Message
           >
         </div>
-        <Button type="submit" label="Submit" class="w-fit" />
+        <Button type="submit" :label="t('contact-submit')" class="w-fit" />
         <p class="text-center text-sm">
-          You can also reach me through these platforms:
+          {{ t("contact-socials-text") }}
         </p>
         <UxSocialLinks :links="socialLinks" />
         <UxDownloadResume />

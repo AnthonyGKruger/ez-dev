@@ -1,15 +1,16 @@
 <script setup lang="ts">
 const route = useRoute();
+const { t } = useTranslate();
 
 const navLinks = [
-  { name: "Home", to: "/" },
-  { name: "About", to: "/about" },
-  { name: "Skills", to: "/skills" },
-  { name: "Qualifications", to: "/qualifications" },
-  { name: "Work Experience", to: "/work-experience" },
-  { name: "Languages", to: "/languages" },
-  { name: "Portfolio", to: "/portfolio" },
-  { name: "Contact", to: "/contact-me" },
+  { name: t("nav-home"), to: "/" },
+  { name: t("nav-about"), to: "/about" },
+  { name: t("nav-skills"), to: "/skills" },
+  { name: t("nav-qualifications"), to: "/qualifications" },
+  { name: t("nav-work-experience"), to: "/work-experience" },
+  { name: t("nav-languages"), to: "/languages" },
+  { name: t("nav-portfolio"), to: "/portfolio" },
+  { name: t("nav-contact"), to: "/contact-me" },
 ];
 </script>
 

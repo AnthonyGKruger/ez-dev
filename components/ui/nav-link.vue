@@ -4,7 +4,7 @@ interface INavLinkProps {
   name: string;
   currentPath: string;
 }
-defineProps<INavLinkProps>();
+const props = defineProps<INavLinkProps>();
 
 const element = ref<HTMLElement>();
 
@@ -19,22 +19,28 @@ onMounted(() => {
     }
   });
 });
+
+const calculateDisplay = computed(() =>
+  ["/skills", "/qualifications", "/languages", "/portfolio"].some(
+    (path: string) => props.to === path,
+  ),
+);
 </script>
 
 <template>
-  <span
-    ref="element"
-    class="w-full cursor-pointer capitalize transition-all duration-300 text-center truncate py-4 px-4 text-sm 2xl:text-xl font-base dark:text-white text-alternative-blue hover:text-light-gold dark:hover:text-black hover:border-light-gold hover:bg-primary-blue dark:hover:bg-light-gold bg-white dark:bg-neutral-950 border-y border-primary-gold"
+  <NuxtLink
+    class="w-full cursor-pointer font-base dark:text-white text-alternative-blue hover:text-light-gold dark:hover:text-black hover:border-light-gold hover:bg-primary-blue dark:hover:bg-light-gold bg-white dark:bg-neutral-950 border-y border-primary-gold"
     :class="{
       'underline decoration-solid underline-offset-8 decoration-light-gold':
         currentPath === to,
-      'hidden lg:block': [
-        'Skills',
-        'Qualifications',
-        'Languages',
-        'Portfolio',
-      ].some((link: string) => name === link),
+      'hidden lg:!block': calculateDisplay,
     }"
-    ><NuxtLink :to="to">{{ name }}</NuxtLink>
-  </span>
+    :to="to"
+  >
+    <span
+      class="text-center truncate py-4 px-4 capitalize text-sm 2xl:text-xl block transition-all duration-300"
+      ref="element"
+      >{{ name }}</span
+    >
+  </NuxtLink>
 </template>

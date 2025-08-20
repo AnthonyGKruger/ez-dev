@@ -1,18 +1,21 @@
 <script setup lang="ts">
 import Typewriter from "typewriter-effect/dist/core";
+import { useTranslate } from "#imports";
 
-const strings = reactive([
-  "Let's collaborate!",
-  "Let's build something together!",
-  "Have a look at my portfolio!",
-  "Contact me!",
+const { t } = useTranslate();
+
+const strings = computed(() => [
+  t("home-typed-collaborate"),
+  t("home-typed-build-together"),
+  t("home-typed-portfolio"),
+  t("home-typed-contact"),
 ]);
 
 onMounted(() =>
   setTimeout(
     () =>
       new Typewriter("#typed", {
-        strings,
+        strings: strings.value,
         autoStart: true,
         cursor: "|",
         loop: true,

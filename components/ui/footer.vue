@@ -1,22 +1,23 @@
 <script setup lang="ts">
 const date = ref<Date>();
+const { t } = useTranslate();
 
 const footerNavs = [
   {
     to: "/",
-    name: "About",
+    name: t("nav-about"),
   },
   {
     to: "/portfolio",
-    name: "Portfolio",
+    name: t("nav-portfolio"),
   },
   {
     to: "/contact-me",
-    name: "Contact",
+    name: t("nav-contact"),
   },
   {
     to: "/privacy-policy",
-    name: "Privacy",
+    name: t("nav-privacy") || "Privacy",
   },
   {
     to: "https://github.com/AnthonyGKruger",
@@ -55,7 +56,7 @@ const dateComputed = computed(() => date.value?.getFullYear() || 2025);
           >
             EZdev Solutions (PTY) LTD.
           </NuxtLink>
-          All rights reserved.
+          {{ t('footer-all-rights-reserved') }}
         </p>
       </div>
     </div>

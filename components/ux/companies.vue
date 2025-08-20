@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { t } = useTranslate();
 const companies = [
   { id: "c1", logo: "/media/logos/ds-logo.png", name: "Digital Stream" },
   { id: "c2", logo: "/media/logos/DPTS.png", name: "DPTS" },
@@ -18,12 +19,12 @@ const companies = [
 
 <template>
   <section
-    class="flex flex-col w-full gap-2 bg-white dark:bg-transparent border border-primary-gold py-9 lg:py-28"
+    class="flex flex-col w-full gap-2 bg-white dark:bg-transparent border-y border-primary-gold py-9 lg:py-28"
   >
     <h2
       class="text-center text-primary-blue dark:text-white font-extrabold text-3xl py-9"
     >
-      Some Of The Awesome Companies That I Have Worked With
+      {{ t('companies-heading') }}
     </h2>
     <div class="flex gap-6 justify-center items-center">
       <NuxtImg
