@@ -2,6 +2,9 @@
 @import "tailwindcss-primeui";
 @custom-variant dark (&:where(.dark, .dark *));
 
+html {
+  overflow-x: hidden;
+}
 @theme {
   --color-primary-blue: oklch(41.92% 0.057 251.06);
   --color-secondary-blue: oklch(50.5% 0.051 250.85);
@@ -188,4 +191,19 @@
   @media (prefers-color-scheme: dark) {
     color: var(--color-neutral-50);
   }
+}
+
+
+::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-alternative-gold);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-light-gold);
+  border: 1px solid var(--color-primary-gold);
+  border-radius: 10px;
 }

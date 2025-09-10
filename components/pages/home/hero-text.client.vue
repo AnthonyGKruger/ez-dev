@@ -11,7 +11,7 @@ const getYearDiffWithMonth = (startDate: Date, endDate: Date) => {
 </script>
 
 <template>
-  <div class="lg:w-2/3">
+  <div class="md:w-3/4 lg:w-2/3">
     <h1 class="text-4xl md:text-5xl text-light-gold md:font-extrabold">
       {{ t("home-hero-title") }}
     </h1>

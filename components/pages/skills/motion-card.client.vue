@@ -34,7 +34,7 @@ watch(state, () => {
     initial="hidden"
     whileInView="visible"
     :variants="variants"
-    class="group aspect-square transform perspective-1000 h-36 w-36 overflow-hidden text-center bg-white dark:bg-neutral-900 rounded-lg hover:rounded-3xl hover:text-secondary-gold shadow-lg dark:shadow hover:shadow-dark dark:hover:shadow-lg shadow-alternative-blue hover:shadow-secondary-gold dark:hover:shadow-secondary-gold border border-primary-gold duration-500"
+    class="group aspect-square transform perspective-1000 h-full w-full overflow-hidden text-center bg-white dark:bg-neutral-900 rounded-lg hover:rounded-3xl hover:text-secondary-gold shadow-lg dark:shadow hover:shadow-dark dark:hover:shadow-lg shadow-alternative-blue hover:shadow-secondary-gold dark:hover:shadow-secondary-gold border border-primary-gold duration-500"
   >
     <div
       ref="motionDiv"

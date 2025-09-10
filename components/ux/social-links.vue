@@ -15,6 +15,7 @@ withDefaults(
     },
   },
 );
+const { t } = useTranslate();
 </script>
 
 <template>
@@ -28,6 +29,7 @@ withDefaults(
             v-if="link.isIcon && link.isExternal"
             :to="link.to"
             target="_blank"
+            rel="noreferrer noopener"
             ><Icon
               :name="link.name"
               class="hover:!text-primary-gold transition duration-500"
@@ -43,7 +45,7 @@ withDefaults(
             v-else
             :to="link.to"
             class="hover:text-light-gold dark:hover:text-primary-gold duration-500"
-            >{{ link.name }}</NuxtLink
+            >{{ t(link.name) }}</NuxtLink
           >
         </li>
       </ul>

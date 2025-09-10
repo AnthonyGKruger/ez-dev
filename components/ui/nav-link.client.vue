@@ -4,26 +4,30 @@ interface INavLinkProps {
   name: string;
   currentPath: string;
 }
-const props = defineProps<INavLinkProps>();
 
+const { scrollY } = useScroll();
+const props = defineProps<INavLinkProps>();
+const { t } = useTranslate();
 const element = ref<HTMLElement>();
 
-onMounted(() => {
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      element.value?.classList.remove("py-4");
-      element.value?.classList.add("py-1.5");
-    } else {
-      element.value?.classList.add("py-4");
-      element.value?.classList.remove("py-1.5");
-    }
-  });
-});
+const updatePadding = () => {
+  if (!element.value) return;
+  if (scrollY.current > 80) {
+    element.value.classList.remove("py-4");
+    element.value.classList.add("py-1.5");
+  } else {
+    element.value.classList.add("py-4");
+    element.value.classList.remove("py-1.5");
+  }
+};
 
 const calculateDisplay = computed(() =>
   ["/skills", "/qualifications", "/languages", "/portfolio"].some(
     (path: string) => props.to === path,
   ),
+);
+onMounted(() =>
+  useEventListener(window, "scroll", () => nextTick(() => updatePadding())),
 );
 </script>
 
@@ -34,13 +38,15 @@ const calculateDisplay = computed(() =>
       'underline decoration-solid underline-offset-8 decoration-light-gold':
         currentPath === to,
       'hidden lg:!block': calculateDisplay,
+      'hidden sm:block': to === '/work-experience',
     }"
     :to="to"
   >
     <span
-      class="text-center truncate py-4 px-4 capitalize text-sm 2xl:text-xl block transition-all duration-300"
+      class="text-center truncate text-ellipsis py-4 px-4 capitalize text-sm 2xl:text-xl block transition-all duration-300 w-full"
       ref="element"
-      >{{ name }}</span
+      @scroll="console.log(scrollY)"
+      >{{ t(name) }}</span
     >
   </NuxtLink>
 </template>

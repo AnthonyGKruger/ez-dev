@@ -10,23 +10,17 @@ const route = useRoute();
 
 <template>
   <section>
-    <div
-      class="p-6 m-auto"
-      :class="[
-        'border-t border-b border-primary-gold',
-        {
-          'mt-9': route.path !== '/',
-        },
-      ]"
-    >
+    <div class="p-7 m-auto border-t border-b border-primary-gold">
       <div
-        class="flex sm:flex-row mx-auto md:mx-0 justify-center items-center aspect-[6/1] lg:aspect-[8/1]"
+        class="flex flex-col sm:flex-row mx-auto md:mx-0 justify-center items-center lg:aspect-[8/1] p-4"
       >
         <div class="md:w-max w-fit mx-auto md:mx-0 aspect-square">
           <LottiePlayer :src="lottieSrc" />
         </div>
 
-        <div class="h-full flex flex-col items-start gap-3 justify-center">
+        <div
+          class="h-full w-full md:w-fit flex flex-col sm:items-start gap-3 justify-center"
+        >
           <p
             v-if="!!subtitle"
             class="lg:text-md md:text-sm xl:text-md text-md font-base md:text-left text-center text-alternative-gold dark:text-light-gold"

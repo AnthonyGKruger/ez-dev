@@ -27,7 +27,7 @@ const cardVariants = {
         <NuxtImg
           src="/media/AnthonyIllustrated.jpeg"
           alt="Anthony Kruger"
-          class="w-96 h-96 rounded-full shadow-lg hover:shadow-xl shadow-primary-gold hover:shadow-light-gold border border-primary-gold hover:border-primary-blue self-center mx-auto transition-all duration-500 hover:relative"
+          class="w-96 rounded-full shadow-lg hover:shadow-xl shadow-primary-gold hover:shadow-light-gold border border-primary-gold hover:border-primary-blue self-center mx-auto transition-all duration-500 hover:relative"
         />
       </div>
     </motion.div>

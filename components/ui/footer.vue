@@ -1,23 +1,22 @@
 <script setup lang="ts">
 const date = ref<Date>();
 const { t } = useTranslate();
-
 const footerNavs = [
   {
     to: "/",
-    name: t("nav-about"),
+    name: "nav-about",
   },
   {
     to: "/portfolio",
-    name: t("nav-portfolio"),
+    name: "nav-portfolio",
   },
   {
     to: "/contact-me",
-    name: t("nav-contact"),
+    name: "nav-contact",
   },
   {
     to: "/privacy-policy",
-    name: t("nav-privacy") || "Privacy",
+    name: "nav-privacy",
   },
   {
     to: "https://github.com/AnthonyGKruger",
@@ -43,6 +42,11 @@ const dateComputed = computed(() => date.value?.getFullYear() || 2025);
     class="mx-auto border-t border-primary-gold bg-white dark:bg-neutral-950 dark:text-white"
   >
     <UxCompanies />
+    <div
+      class="flex dark:bg-neutral-950 items-center justify-center w-full pt-4"
+    >
+      <UiHeaderFooterLogo />
+    </div>
     <div class="mx-auto">
       <UxSocialLinks :links="footerNavs" />
       <div
@@ -56,7 +60,7 @@ const dateComputed = computed(() => date.value?.getFullYear() || 2025);
           >
             EZdev Solutions (PTY) LTD.
           </NuxtLink>
-          {{ t('footer-all-rights-reserved') }}
+          {{ t("footer-all-rights-reserved") }}
         </p>
       </div>
     </div>

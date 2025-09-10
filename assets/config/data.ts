@@ -26,6 +26,15 @@ export const portfolioItems: IPortfolioItem[] = [
 
 export const workExperienceItems: IWorkExperience[] = [
   {
+    id: "w7",
+    company: "Osiris Trading (Pty) Ltd",
+    role: "role-front-end-web-developer",
+    summary: "summary-osiris",
+    dateFrom: "October 2024",
+    dateTo: "Present",
+    comments: [],
+  },
+  {
     id: "w5",
     company: "EZdev Solutions (PTY) Ltd",
     role: "role-full-stack-web-developer",
@@ -74,7 +83,7 @@ export const workExperienceItems: IWorkExperience[] = [
     ],
   },
   {
-    id: "w5",
+    id: "w6",
     company: "Precision Financial Services",
     role: "role-administrator",
     summary: null,

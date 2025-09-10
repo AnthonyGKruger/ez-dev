@@ -13,7 +13,6 @@ import type { FormSubmitEvent } from "@primevue/forms/form";
 import { useTranslate } from "#imports";
 
 const { t } = useTranslate();
-
 const config = useRuntimeConfig();
 
 const socialLinks = [
@@ -128,6 +127,7 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
     <div class="w-full h-full p-2">
       <Toast />
       <Form
+        id="contact-form"
         v-slot="$form"
         :initialValues
         :resolver

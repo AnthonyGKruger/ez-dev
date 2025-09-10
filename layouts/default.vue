@@ -4,7 +4,7 @@ onMounted(() => getLang());
 </script>
 
 <template>
-  <div>
+  <div class="relative">
     <UiMouseHoverOverlay />
     <UiNav />
     <main class="dark:bg-neutral-950"><slot /></main>

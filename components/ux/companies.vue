@@ -22,18 +22,18 @@ const companies = [
     class="flex flex-col w-full gap-2 bg-white dark:bg-transparent border-y border-primary-gold py-9 lg:py-28"
   >
     <h2
-      class="text-center text-primary-blue dark:text-white font-extrabold text-3xl py-9"
+      class="text-center text-primary-blue dark:text-white font-extrabold text-xl md:text-3xl py-9"
     >
-      {{ t('companies-heading') }}
+      {{ t("companies-heading") }}
     </h2>
-    <div class="flex gap-6 justify-center items-center">
+    <div class="flex flex-wrap gap-6 justify-center items-center">
       <NuxtImg
         v-for="company in companies"
         :key="company.id"
         :src="company.logo"
         :class="[
           `grayscale dark:grayscale-0 hover:grayscale-0 opacity-50 hover:opacity-100
-            object-contain hover:scale-125 transition-all duration-300 w-1/5`,
+            object-contain hover:scale-125 transition-all duration-300 w-1/3 md:w-1/5`,
           {
             'dark:invert': company.name === 'Addventures',
           },

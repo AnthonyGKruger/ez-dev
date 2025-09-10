@@ -12,7 +12,9 @@ const { t } = useTranslate();
     "
     :content="t('skills-heading')"
   />
-  <section class="flex flex-wrap gap-4 px-4 py-14 items-center justify-center">
+  <section
+    class="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 px-4 py-14 items-center justify-center"
+  >
     <PagesSkillsMotionCard
       v-for="(skill, idx) in skills"
       :key="skill.name"

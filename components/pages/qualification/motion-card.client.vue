@@ -2,6 +2,7 @@
 import { motion } from "motion-v";
 import type { IQualification } from "~/types/qualification";
 defineProps<{ qualification: IQualification }>();
+const { t } = useTranslate();
 const variants = {
   hidden: { opacity: 0, scale: 0 },
   visible: {
@@ -58,7 +59,7 @@ const variants = {
               name="mdi:file-certificate"
               class="stroke-primary-gold text-transparent w-6 h-6"
             />
-            <span>View Certificate</span>
+            <span>{{ t("view-certificate") }}</span>
           </div>
         </NuxtLink>
         <div
@@ -70,11 +71,9 @@ const variants = {
             name="mdi:medal"
             class="stroke-primary-gold text-transparent w-6 h-6"
           />
-          <span class="ml-3 inline">{{ comment }}</span>
+          <span class="ml-3 inline">{{ t(comment) }}</span>
         </div>
       </div>
     </div>
   </motion.div>
 </template>
-
-<style scoped></style>
