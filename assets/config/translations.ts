@@ -187,6 +187,10 @@ export const translations: Translations = new Map([
         "summary-dpts",
         "Led a web development team building dynamic websites and e-commerce stores for international clients. Migrated code and parameters to QA and production and administered Microsoft Azure cloud environments for web and back-office servers. This provided hands-on experience complementing my Bachelor's degree in Information Technology.",
       ],
+      [
+        "summary-lw-branch-manager",
+        "Directing all operational aspects including distribution, customer service, human resources, administration and sales in accordance with the company's objectives. Providing training, coaching, development and motivation for branch personnel. Developing forecasts and financial objectives.",
+      ],
       ["comment-completed-poe", "Successfully completed Portfolio of Evidence"],
       [
         "comment-integration-corporate",
@@ -500,6 +504,10 @@ export const translations: Translations = new Map([
       [
         "summary-dpts",
         "Het 'n webontwikkelingspan gelei wat dinamiese webwerwe en e-handelswinkels vir internasionale kliënte gebou het. Kode en parameters na QA en produksie gemigreer en Microsoft Azure-wolkomgewings vir web- en rugkantoorbedieners geadministreer. Dit het praktiese ervaring gebied wat my Baccalaureusgraad in Inligtingstegnologie aangevul het.",
+      ],
+      [
+        "summary-lw-branch-manager",
+        "Rig alle operasionele aspekte insluitend distribusie, kliëntediens, menslike hulpbronne, administrasie en verkope in ooreenstemming met die maatskappy se doelwitte. Verskaf opleiding, afrigting, ontwikkeling en motivering vir takpersoneel. Ontwikkel vooruitskattings en finansiële doelwitte.",
       ],
       ["comment-completed-poe", "Portefeulje van Bewyse suksesvol voltooi"],
       [

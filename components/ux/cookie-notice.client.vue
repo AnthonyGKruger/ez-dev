@@ -17,7 +17,7 @@ const acceptCookie = () => {
 <template>
   <article
     v-if="!consent"
-    class="text-neutral-950 dark:text-white w-full md:w-3/4 lg:w-2/3 mx-w-[768px] bg-white dark:bg-black border rounded-xl px-4 p-2 bottom-3 fixed right-0 z-10 border-[#624111] dark:border-light-gold"
+    class="text-neutral-950 dark:text-white w-full md:w-3/4 lg:w-1/3 mx-w-[768px] bg-white dark:bg-black border rounded-xl px-4 p-2 bottom-3 fixed right-0 z-10 border-[#624111] dark:border-light-gold"
   >
     <div class="container pt-0 m-auto">
       <div class="flex justify-start items-center">

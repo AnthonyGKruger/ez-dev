@@ -58,7 +58,7 @@ export const workExperienceItems: IWorkExperience[] = [
     role: "role-branch-manager",
     summary: "summary-lw-branch-manager",
     dateFrom: "June 2018",
-    dateTo: "Present",
+    dateTo: "September 2024",
     comments: ["comment-managing-flagship-branch", "comment-team-of-the-year"],
   },
   {
