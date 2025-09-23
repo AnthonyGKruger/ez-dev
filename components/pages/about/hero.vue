@@ -9,7 +9,7 @@ const { t } = useTranslate();
   >
     <div class="container px-6 m-auto">
       <div class="flex flex-col xl:flex-row gap-6 items-stretch">
-        <div class="w-full xl:w-5/12 self-center">
+        <div class="w-full xl:w-5/12 self-center aspect-square">
           <PagesAboutHeroImage />
         </div>
         <div class="w-full xl:w-7/12">

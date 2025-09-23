@@ -114,13 +114,31 @@ export const translations: Translations = new Map([
       ["home-title", "Home - EZdev Solutions | Anthony Gordon Kruger"],
       ["about-title", "About - EZdev Solutions | Anthony Gordon Kruger"],
       ["skills-title", "Skills - EZdev Solutions | Anthony Gordon Kruger"],
-      ["qualifications-title", "Qualifications - EZdev Solutions | Anthony Gordon Kruger"],
-      ["work-experience-title", "Work Experience - EZdev Solutions | Anthony Gordon Kruger"],
-      ["languages-title", "Languages - EZdev Solutions | Anthony Gordon Kruger"],
-      ["portfolio-title", "Portfolio - EZdev Solutions | Anthony Gordon Kruger"],
+      [
+        "qualifications-title",
+        "Qualifications - EZdev Solutions | Anthony Gordon Kruger",
+      ],
+      [
+        "work-experience-title",
+        "Work Experience - EZdev Solutions | Anthony Gordon Kruger",
+      ],
+      [
+        "languages-title",
+        "Languages - EZdev Solutions | Anthony Gordon Kruger",
+      ],
+      [
+        "portfolio-title",
+        "Portfolio - EZdev Solutions | Anthony Gordon Kruger",
+      ],
       ["contact-title", "Contact - EZdev Solutions | Anthony Gordon Kruger"],
-      ["thank-you-title", "Thank You - EZdev Solutions | Anthony Gordon Kruger"],
-      ["privacy-policy-title", "Privacy Policy - EZdev Solutions | Anthony Gordon Kruger"],
+      [
+        "thank-you-title",
+        "Thank You - EZdev Solutions | Anthony Gordon Kruger",
+      ],
+      [
+        "privacy-policy-title",
+        "Privacy Policy - EZdev Solutions | Anthony Gordon Kruger",
+      ],
 
       // Footer
       ["footer-all-rights-reserved", "All rights reserved."],
@@ -303,7 +321,7 @@ export const translations: Translations = new Map([
       ["view-certificate", "View Certificate"],
       ["qualifications-heading", "Have A Look At My Qualifications"],
       ["qualifications-subtitle", "Always Leveling Up"],
-      ["qual-systems-dev-specialized", "Systems Development Specialized"],
+      ["qual-systems-dev-specialized", "Specialized in Systems Development "],
       ["qual-8-distinctions", "8 Distinctions"],
       ["qual-half-colours-academics", "Half Colours for Academics"],
 
@@ -432,13 +450,25 @@ export const translations: Translations = new Map([
       ["home-title", "Tuis - EZdev Solutions | Anthony Gordon Kruger"],
       ["about-title", "Oor - EZdev Solutions | Anthony Gordon Kruger"],
       ["skills-title", "Vaardighede - EZdev Solutions | Anthony Gordon Kruger"],
-      ["qualifications-title", "Kwalifikasies - EZdev Solutions | Anthony Gordon Kruger"],
-      ["work-experience-title", "Werkservaring - EZdev Solutions | Anthony Gordon Kruger"],
+      [
+        "qualifications-title",
+        "Kwalifikasies - EZdev Solutions | Anthony Gordon Kruger",
+      ],
+      [
+        "work-experience-title",
+        "Werkservaring - EZdev Solutions | Anthony Gordon Kruger",
+      ],
       ["languages-title", "Tale - EZdev Solutions | Anthony Gordon Kruger"],
-      ["portfolio-title", "Portefeulje - EZdev Solutions | Anthony Gordon Kruger"],
+      [
+        "portfolio-title",
+        "Portefeulje - EZdev Solutions | Anthony Gordon Kruger",
+      ],
       ["contact-title", "Kontak - EZdev Solutions | Anthony Gordon Kruger"],
       ["thank-you-title", "Dankie - EZdev Solutions | Anthony Gordon Kruger"],
-      ["privacy-policy-title", "Privaatheidsbeleid - EZdev Solutions | Anthony Gordon Kruger"],
+      [
+        "privacy-policy-title",
+        "Privaatheidsbeleid - EZdev Solutions | Anthony Gordon Kruger",
+      ],
 
       // Footer
       ["footer-all-rights-reserved", "Alle regte voorbehou."],

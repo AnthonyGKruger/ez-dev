@@ -19,7 +19,7 @@ const { t } = useTranslate();
 </script>
 
 <template>
-  <div class="justify-center sm:flex pt-10">
+  <div class="justify-center sm:flex pt-2">
     <div class="space-y-6 cursor-pointer">
       <ul
         class="flex flex-wrap items-center gap-4 text-sm 2xl:text-xl sm:text-base justify-center"
@@ -32,7 +32,7 @@ const { t } = useTranslate();
             rel="noreferrer noopener"
             ><Icon
               :name="link.name"
-              class="hover:!text-primary-gold transition duration-500"
+              class="hover:!text-primary-gold transition duration-500 dark:!text-white !text-neutral-950"
             />
           </NuxtLink>
           <NuxtLink v-else-if="link.isIcon" :to="link.to">

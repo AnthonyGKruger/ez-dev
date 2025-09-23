@@ -48,20 +48,21 @@ const variants = {
       </div>
       <div class="w-full p-1.5 flex flex-col justify-start items-center gap-2">
         <p>
-          {{ t(experience.summary || '') }}
+          {{ t(experience.summary || "") }}
         </p>
-        <div class="flex gap-2 flex-nowrap w-full">
+        <div class="flex gap-2 flex-col md:flex-row w-full">
           <div
             v-if="!!experience.comments.length"
             v-for="comment in experience.comments"
-            class="max-w-[49%] flex gap-2 items-center md:text-md px-3 py-2 rounded-xl border-2 border-primary-gold dark:border-light-gold bg-primary-blue dark:bg-transparent dark:text-white text-light-gold duration-500"
+            class="w-full flex gap-1 items-center md:text-md px-3 py-2 rounded-xl border-2 border-primary-gold dark:border-light-gold bg-primary-blue dark:bg-transparent dark:text-white text-light-gold duration-500"
+            :class="{ 'max-w-[49%]': experience.comments.length > 1 }"
             :title="t(comment)"
           >
             <Icon
               name="mdi:medal"
               class="stroke-primary-gold text-transparent min-w-6 min-h-6"
             />
-            <span class="ml-3 truncate text-ellipsis">{{ t(comment) }}</span>
+            <span class="truncate text-ellipsis">{{ t(comment) }}</span>
           </div>
         </div>
       </div>

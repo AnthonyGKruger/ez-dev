@@ -115,7 +115,7 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
     :content="t('contact-content')"
   />
   <section
-    class="flex flex-col md:flex-row items-center justify-center min-h-screen"
+    class="flex flex-col md:flex-row items-center justify-center min-h-screen text-base-priority"
   >
     <div class="w-full h-full flex items-center justify-center">
       <LottiePlayer
@@ -194,7 +194,7 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
           >
         </div>
         <Button type="submit" :label="t('contact-submit')" class="w-fit" />
-        <p class="text-center text-sm">
+        <p class="text-center text-lg text-base-priority">
           {{ t("contact-socials-text") }}
         </p>
         <UxSocialLinks :links="socialLinks" />
