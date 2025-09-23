@@ -1,18 +1,23 @@
 <script setup lang="ts">
 import { motion } from "motion-v";
 import type { IQualification } from "~/types/qualification";
-defineProps<{ qualification: IQualification }>();
 const { t } = useTranslate();
+const props = defineProps<{ qualification: IQualification; index: number }>();
+
 const variants = {
-  hidden: { opacity: 0, scale: 0 },
+  hidden: {
+    opacity: 0,
+    x: props.index % 2 === 0 ? -200 : 200,
+  },
   visible: {
     opacity: 1,
-    scale: 1,
+    x: 0,
     transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-      type: "smooth",
-      bounce: 0.8,
+      duration: 1,
+      ease: "easeOut",
+      type: "spring",
+      stiffness: 100,
+      damping: 30,
     },
   },
 };

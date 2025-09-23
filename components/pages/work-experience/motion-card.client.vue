@@ -2,17 +2,22 @@
 import { motion } from "motion-v";
 import type { IWorkExperience } from "~/types/workExperience";
 const { t } = useTranslate();
-defineProps<{ experience: IWorkExperience }>();
+const props = defineProps<{ experience: IWorkExperience; index: number }>();
+
 const variants = {
-  hidden: { opacity: 0, scale: 0 },
+  hidden: {
+    opacity: 0,
+    x: props.index % 2 === 0 ? -200 : 200,
+  },
   visible: {
     opacity: 1,
-    scale: 1,
+    x: 0,
     transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-      type: "smooth",
-      bounce: 0.8,
+      duration: 1,
+      ease: "easeOut",
+      type: "spring",
+      stiffness: 100,
+      damping: 30,
     },
   },
 };
