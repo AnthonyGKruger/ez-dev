@@ -13,9 +13,10 @@ const { t } = useTranslate();
     class="flex flex-col gap-7 items-center justify-center text-base-priority bg-light-blue dark:bg-transparent py-7 px-2"
   >
     <PagesQualificationMotionCard
-      v-for="qualification in qualifications"
+      v-for="(qualification, index) in qualifications"
       :key="qualification.id"
       :qualification="qualification"
+      :index="index"
     />
   </div>
 </template>
