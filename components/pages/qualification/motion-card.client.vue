@@ -24,7 +24,7 @@ const variants = {
     initial="hidden"
     whileInView="visible"
     :variants="variants"
-    class="text-primary-blue dark:text-white bg-white dark:bg-transparent rounded-xl mx-auto border-2 border-primary-blue dark:border-primary-gold md:w-3/4 lg:w-3/5"
+    class="text-primary-blue dark:text-white bg-white dark:bg-transparent rounded-xl mx-auto border-2 border-primary-blue dark:border-primary-gold w-full md:w-3/4 lg:w-3/5"
   >
     <div class="w-full p-1.5 flex justify-start items-center gap-2">
       <Icon name="mdi:map-marker-star" class="text-red-500" /><span

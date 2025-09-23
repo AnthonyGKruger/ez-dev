@@ -10,7 +10,7 @@ const { t } = useTranslate();
     :subtitle="t('qualifications-subtitle')"
   />
   <div
-    class="flex flex-col gap-7 items-center justify-center text-base-priority bg-light-blue dark:bg-transparent py-7"
+    class="flex flex-col gap-7 items-center justify-center text-base-priority bg-light-blue dark:bg-transparent py-7 px-2"
   >
     <PagesQualificationMotionCard
       v-for="qualification in qualifications"
