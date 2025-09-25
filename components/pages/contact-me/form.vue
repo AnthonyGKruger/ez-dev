@@ -12,6 +12,7 @@ import { zodResolver } from "@primevue/forms/resolvers/zod";
 import type { FormSubmitEvent } from "@primevue/forms/form";
 import { useTranslate } from "#imports";
 
+const { $gtm } = useNuxtApp();
 const { t } = useTranslate();
 const config = useRuntimeConfig();
 
@@ -95,8 +96,22 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
       );
       if (data.status === 200) {
         addToast("success", t("contact-email-sent-success"));
+        $gtm.pushEvent({
+          event: "contact-form-submit",
+          category: "forms",
+          action: "submit",
+          label: "contact-form-submit-success",
+          value: 1,
+        });
         navigateTo("/thank-you");
       } else {
+        $gtm.pushEvent({
+          event: "contact-form-submit",
+          category: "forms",
+          action: "submit",
+          label: "contact-form-submit-failure" + "",
+          value: 1,
+        });
         addToast("error", t("contact-email-send-failed"));
       }
       console.log(data);

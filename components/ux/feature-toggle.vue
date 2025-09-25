@@ -33,6 +33,7 @@ const consent = useCookie("consent", {
     <div class="relative flex flex-wrap items-center">
       <label :for="name"></label>
       <input
+        :id="name"
         :name="name"
         :checked="checkedValue"
         @change="() => {}"
@@ -61,10 +62,7 @@ const consent = useCookie("consent", {
         ]"
         type="checkbox"
         value=""
-        :id="id"
       />
     </div>
   </article>
 </template>
-
-<style scoped></style>

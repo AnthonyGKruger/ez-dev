@@ -66,5 +66,3 @@ const dateComputed = computed(() => date.value?.getFullYear() || 2025);
     </div>
   </footer>
 </template>
-
-<style scoped></style>

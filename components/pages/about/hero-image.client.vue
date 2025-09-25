@@ -24,14 +24,13 @@ const cardVariants = {
   >
     <motion.div :variants="cardVariants">
       <div class="w-full h-full flex py-9 xl:py-9 lg:py-14 px-9 bg-transparent">
-        <NuxtImg
+        <LazyNuxtImg
           src="/media/AnthonyIllustrated.jpeg"
           alt="Anthony Kruger"
-          class="w-96 rounded-full shadow-lg hover:shadow-xl shadow-primary-gold hover:shadow-light-gold border border-primary-gold hover:border-primary-blue self-center mx-auto transition-all duration-500 hover:relative"
+          class="w-96 aspect-square rounded-full shadow-lg hover:shadow-xl shadow-primary-gold hover:shadow-light-gold border border-primary-gold hover:border-primary-blue self-center mx-auto transition-all duration-500 hover:relative"
+          loading="lazy"
         />
       </div>
     </motion.div>
   </motion.div>
 </template>
-
-<style scoped></style>

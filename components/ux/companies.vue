@@ -19,7 +19,7 @@ const companies = [
 
 <template>
   <section
-    class="flex flex-col w-full gap-2 bg-white dark:bg-transparent border-y border-primary-gold py-9 lg:py-28"
+    class="flex flex-col w-full gap-2 bg-white dark:bg-transparent border-y border-primary-gold py-9 lg:py-28 px-4"
   >
     <h2
       class="text-center text-primary-blue dark:text-white font-extrabold text-xl md:text-3xl py-9"
@@ -27,9 +27,10 @@ const companies = [
       {{ t("companies-heading") }}
     </h2>
     <div class="flex flex-wrap gap-6 justify-center items-center">
-      <NuxtImg
+      <LazyNuxtImg
         v-for="company in companies"
         :key="company.id"
+        :alt="company.name"
         :src="company.logo"
         :class="[
           `grayscale dark:grayscale-0 hover:grayscale-0 opacity-50 hover:opacity-100
@@ -38,9 +39,8 @@ const companies = [
             'dark:invert': company.name === 'Addventures',
           },
         ]"
+        loading="lazy"
       />
     </div>
   </section>
 </template>
-
-<style scoped></style>

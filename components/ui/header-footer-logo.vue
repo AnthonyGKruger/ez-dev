@@ -9,6 +9,10 @@ const logoComputed = computed(() =>
 
 <template>
   <NuxtLink to="/"
-    ><NuxtImg :src="logoComputed" class="w-30 md:w-60 lg:70"
+    ><LazyNuxtImg
+      :src="logoComputed"
+      alt="EZdev"
+      class="w-30 md:w-60 lg:70"
+      loading="lazy"
   /></NuxtLink>
 </template>
