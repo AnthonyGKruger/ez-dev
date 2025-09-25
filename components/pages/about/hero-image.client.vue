@@ -3,10 +3,10 @@ import { motion } from "motion-v";
 
 const cardVariants = {
   offscreen: {
-    x: -4000, // Move the card offscreen initially
+    x: -4000,
   },
   onscreen: {
-    x: 0, // Move the card onscreen with animation
+    x: 0,
     transition: {
       type: "spring",
       bounce: 0.2,
