@@ -40,7 +40,7 @@ export const workExperienceItems: IWorkExperience[] = [
     role: "role-full-stack-web-developer",
     summary: "summary-ezdev",
     dateFrom: "November 2020",
-    dateTo: "Present",
+    dateTo: "September 2024",
     comments: [],
   },
   {

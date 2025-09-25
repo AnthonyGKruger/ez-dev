@@ -1,13 +1,4 @@
-interface HotjarWindow extends Window {
-  hj: {
-    (...args: any[]): void;
-    q?: any[];
-  };
-  _hjSettings: {
-    hjid: number;
-    hjsv: number;
-  };
-}
+import type { HotjarWindow } from '~/types/analytics';
 
 declare const window: HotjarWindow;
 

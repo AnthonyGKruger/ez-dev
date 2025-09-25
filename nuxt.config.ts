@@ -7,7 +7,8 @@ export default defineNuxtConfig({
       emailJsSecureToken: process.env.NUXT_PUBLIC_EMAIL_JS_SECURE_TOKEN,
       linkedInUrl: "",
       githubUrl: "",
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://www.ezdev.co.za",
+      siteUrl:
+        process.env.NUXT_PUBLIC_SITE_URL || "https://www.ezdev.solutions",
       siteName: "EZdev Solutions - Anthony Gordon Kruger's Portfolio",
       siteDescription:
         "Web Developer portfolio: projects, skills, work experience, and contact.",

@@ -55,12 +55,12 @@ const variants = {
         <p>
           {{ t(experience.summary || "") }}
         </p>
-        <div class="flex gap-2 flex-col md:flex-row w-full">
+        <div class="flex gap-2 flex-col lg:flex-row w-full">
           <div
             v-if="!!experience.comments.length"
             v-for="comment in experience.comments"
             class="w-full flex gap-1 items-center md:text-md px-3 py-2 rounded-xl border-2 border-primary-gold dark:border-light-gold bg-primary-blue dark:bg-transparent dark:text-white text-light-gold duration-500"
-            :class="{ 'max-w-[49%]': experience.comments.length > 1 }"
+            :class="{ 'lg:max-w-[49%]': experience.comments.length > 1 }"
             :title="t(comment)"
           >
             <Icon
@@ -74,5 +74,3 @@ const variants = {
     </div>
   </motion.div>
 </template>
-
-<style scoped></style>

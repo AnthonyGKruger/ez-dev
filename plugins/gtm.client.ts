@@ -1,17 +1,9 @@
-interface GTMWindow extends Window {
-  dataLayer: GTMDataLayer[];
-}
-
-interface GTMDataLayer {
-  "gtm.start"?: number;
-  event?: string;
-  [key: string]: any;
-}
-
-interface GTMConfig {
-  gtmId: string;
-  dataLayerName?: string;
-}
+import type {
+  GTMWindow,
+  GTMDataLayer,
+  CustomGTMEvent,
+  GTMConfig,
+} from "~/types/analytics";
 
 declare const window: GTMWindow;
 
@@ -27,6 +19,17 @@ export default defineNuxtPlugin((nuxtApp) => {
     });
   };
 
+  const pushEvent = (eventData: CustomGTMEvent): void => {
+    if (import.meta.dev) {
+      console.log("GTM Event (dev mode):", eventData);
+      return;
+    }
+
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push(eventData);
+    }
+  };
+
   initializeDataLayer();
 
   useHead({
@@ -37,4 +40,12 @@ export default defineNuxtPlugin((nuxtApp) => {
       },
     ],
   });
+
+  return {
+    provide: {
+      gtm: {
+        pushEvent,
+      },
+    },
+  };
 });
