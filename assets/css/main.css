@@ -2,7 +2,7 @@
 @import "tailwindcss-primeui";
 @custom-variant dark (&:where(.dark, .dark *));
 
-html {
+html, body, main {
   overflow-x: hidden;
 }
 @theme {
