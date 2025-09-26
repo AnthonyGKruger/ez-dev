@@ -29,7 +29,7 @@ const variants = {
     initial="hidden"
     whileInView="visible"
     :variants="variants"
-    class="text-primary-blue dark:text-white bg-white dark:bg-transparent rounded-xl mx-auto border-2 border-primary-blue dark:border-primary-gold md:w-3/4 lg:w-3/5"
+    class="text-primary-blue dark:text-white bg-white dark:bg-transparent rounded-xl mx-auto border-2 border-primary-blue dark:border-primary-gold w-full md:w-3/4 lg:w-3/5"
   >
     <div class="w-full p-1.5 flex justify-start items-center gap-2">
       <Icon name="mdi:briefcase-variant" class="text-alternative-gold" /><span
@@ -65,9 +65,9 @@ const variants = {
           >
             <Icon
               name="mdi:medal"
-              class="stroke-primary-gold text-transparent min-w-6 min-h-6"
+              class="stroke-primary-gold text-transparent min-w-2 min-h-2 md:min-w-6 md:min-h-6"
             />
-            <span class="truncate text-ellipsis">{{ t(comment) }}</span>
+            <span class="truncate text-ellipsis w-full">{{ t(comment) }}</span>
           </div>
         </div>
       </div>
