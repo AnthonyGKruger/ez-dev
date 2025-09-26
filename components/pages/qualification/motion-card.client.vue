@@ -51,7 +51,9 @@ const variants = {
           qualification.dateTo
         }}</span>
       </div>
-      <div class="w-full p-1.5 flex justify-start items-center gap-2">
+      <div
+        class="w-full p-1.5 flex flex-col md:flex-row justify-start md:items-center gap-2"
+      >
         <NuxtLink
           v-if="!!qualification.link"
           :to="qualification.link"
@@ -62,7 +64,7 @@ const variants = {
           >
             <Icon
               name="mdi:file-certificate"
-              class="stroke-primary-gold text-transparent w-6 h-6"
+              class="stroke-primary-gold text-transparent !w-6 !h-6"
             />
             <span>{{ t("view-certificate") }}</span>
           </div>
@@ -74,9 +76,9 @@ const variants = {
         >
           <Icon
             name="mdi:medal"
-            class="stroke-primary-gold text-transparent w-6 h-6"
+            class="stroke-primary-gold text-transparent !w-6 !h-6"
           />
-          <span class="ml-3 inline">{{ t(comment) }}</span>
+          <span>{{ t(comment) }}</span>
         </div>
       </div>
     </div>
