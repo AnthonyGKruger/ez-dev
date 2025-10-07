@@ -111,34 +111,16 @@ export const translations: Translations = new Map([
       ["nav-privacy", "Privacy"],
 
       // SEO Titles
-      ["home-title", "Home - EZdev Solutions | Anthony Gordon Kruger"],
-      ["about-title", "About - EZdev Solutions | Anthony Gordon Kruger"],
-      ["skills-title", "Skills - EZdev Solutions | Anthony Gordon Kruger"],
-      [
-        "qualifications-title",
-        "Qualifications - EZdev Solutions | Anthony Gordon Kruger",
-      ],
-      [
-        "work-experience-title",
-        "Work Experience - EZdev Solutions | Anthony Gordon Kruger",
-      ],
-      [
-        "languages-title",
-        "Languages - EZdev Solutions | Anthony Gordon Kruger",
-      ],
-      [
-        "portfolio-title",
-        "Portfolio - EZdev Solutions | Anthony Gordon Kruger",
-      ],
-      ["contact-title", "Contact - EZdev Solutions | Anthony Gordon Kruger"],
-      [
-        "thank-you-title",
-        "Thank You - EZdev Solutions | Anthony Gordon Kruger",
-      ],
-      [
-        "privacy-policy-title",
-        "Privacy Policy - EZdev Solutions | Anthony Gordon Kruger",
-      ],
+      ["home-title", "Home"],
+      ["about-title", "About"],
+      ["skills-title", "Skills"],
+      ["qualifications-title", "Qualifications"],
+      ["work-experience-title", "Work Experience"],
+      ["languages-title", "Languages"],
+      ["portfolio-title", "Portfolio"],
+      ["contact-title", "Contact"],
+      ["thank-you-title", "Thank You"],
+      ["privacy-policy-title", "Privacy Policy"],
 
       // Footer
       ["footer-all-rights-reserved", "All rights reserved."],
@@ -447,28 +429,16 @@ export const translations: Translations = new Map([
       ["nav-privacy", "Privaatheid"],
 
       // SEO Titles
-      ["home-title", "Tuis - EZdev Solutions | Anthony Gordon Kruger"],
-      ["about-title", "Oor - EZdev Solutions | Anthony Gordon Kruger"],
-      ["skills-title", "Vaardighede - EZdev Solutions | Anthony Gordon Kruger"],
-      [
-        "qualifications-title",
-        "Kwalifikasies - EZdev Solutions | Anthony Gordon Kruger",
-      ],
-      [
-        "work-experience-title",
-        "Werkservaring - EZdev Solutions | Anthony Gordon Kruger",
-      ],
-      ["languages-title", "Tale - EZdev Solutions | Anthony Gordon Kruger"],
-      [
-        "portfolio-title",
-        "Portefeulje - EZdev Solutions | Anthony Gordon Kruger",
-      ],
-      ["contact-title", "Kontak - EZdev Solutions | Anthony Gordon Kruger"],
-      ["thank-you-title", "Dankie - EZdev Solutions | Anthony Gordon Kruger"],
-      [
-        "privacy-policy-title",
-        "Privaatheidsbeleid - EZdev Solutions | Anthony Gordon Kruger",
-      ],
+      ["home-title", "Tuis"],
+      ["about-title", "Oor"],
+      ["skills-title", "Vaardighede"],
+      ["qualifications-title", "Kwalifikasies"],
+      ["work-experience-title", "Werkservaring"],
+      ["languages-title", "Tale"],
+      ["portfolio-title", "Portefeulje"],
+      ["contact-title", "Kontak"],
+      ["thank-you-title", "Dankie"],
+      ["privacy-policy-title", "Privaatheidsbeleid"],
 
       // Footer
       ["footer-all-rights-reserved", "Alle regte voorbehou."],

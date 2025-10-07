@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
+    "@nuxtjs/google-fonts",
   ],
   vite: {
     plugins: [tailwindcss()],
