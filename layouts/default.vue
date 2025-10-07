@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { SpeedInsights } from "@vercel/speed-insights/vue";
 const { getLang } = useTranslate();
 onMounted(() => getLang());
 </script>
@@ -13,5 +14,6 @@ onMounted(() => getLang());
     <UxScrollToTop />
     <UxLanguageToggle />
     <UxThemeToggle />
+    <SpeedInsights />
   </div>
 </template>

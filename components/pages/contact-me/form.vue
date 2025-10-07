@@ -7,14 +7,17 @@ import Toast from "~/src/volt/Toast.vue";
 import Button from "~/src/volt/Button.vue";
 import * as z from "zod";
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
-import { addToast } from "~/lib/toast";
 import { zodResolver } from "@primevue/forms/resolvers/zod";
 import type { FormSubmitEvent } from "@primevue/forms/form";
 import { useTranslate } from "#imports";
+import { useToast } from "primevue/usetoast";
 
 const { $gtm } = useNuxtApp();
 const { t } = useTranslate();
 const config = useRuntimeConfig();
+const toast = useToast();
+
+const loading = ref<boolean>(false);
 
 const socialLinks = [
   {
@@ -57,9 +60,15 @@ const resolver = zodResolver(
       .nonempty({ message: "contact-error-name-invalid" })
       .min(2, { message: "contact-error-name-too-short" })
       .max(20, { message: "contact-error-name-too-long" })
-      .refine((value) => new RegExp("^[a-zA-Z]+$").test(value), {
-        message: "contact-error-name-invalid",
-      }),
+      .refine(
+        (value) =>
+          /^(?:[\p{L}\p{M}]+(?:[-'’][\p{L}\p{M}]+)*)(?:\s+[\p{L}\p{M}]+(?:[-'’][\p{L}\p{M}]+)*){0,2}$/u.test(
+            value,
+          ),
+        {
+          message: "contact-error-name-invalid",
+        },
+      ),
     company: z
       .string()
       .nonempty({ message: "contact-error-company-required" })
@@ -69,17 +78,27 @@ const resolver = zodResolver(
       .max(30, {
         message: "contact-error-company-too-long",
       })
-      .refine((value) => new RegExp("^[a-zA-Z0-9]+$").test(value), {
-        message: "contact-error-company-invalid",
-      }),
+      .refine(
+        (value) =>
+          new RegExp("^(?=.*[A-Za-z0-9])[A-Za-z0-9 &'’.,\\-\\/+()]+$").test(
+            value,
+          ),
+        {
+          message: "contact-error-company-invalid",
+        },
+      ),
     comments: z
       .string()
       .nonempty({ message: "contact-error-comments-required" })
       .min(2, { message: "contact-error-comments-too-short" })
       .max(200, { message: "contact-error-comments-too-long" })
-      .refine((value) => new RegExp("^[a-zA-Z0-9]+$").test(value), {
-        message: "contact-error-comments-invalid",
-      }),
+      .refine(
+        (value) =>
+          /^[\p{L}\p{M}\p{N} \t\r\n.,:;!?"'()\-_/&@#%+*]{2,200}$/u.test(value),
+        {
+          message: "contact-error-comments-invalid",
+        },
+      ),
     reply_to: z.email({ message: "contact-error-email-invalid" }).nonempty(),
   }),
 );
@@ -87,6 +106,7 @@ const resolver = zodResolver(
 const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
   const { valid, values } = submitEvent;
   if (valid) {
+    loading.value = true;
     try {
       const data: EmailJSResponseStatus = await emailjs.send(
         "ezdev_smtp_service",
@@ -95,7 +115,12 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
         config.public.emailJsSecureToken as string,
       );
       if (data.status === 200) {
-        addToast("success", t("contact-email-sent-success"));
+        toast.add({
+          severity: "success",
+          summary: t("contact-email-sent-success"),
+          detail: t("contact-email-sent-success-detail"),
+          life: 5000,
+        });
         $gtm.pushEvent({
           event: "contact-form-submit",
           category: "forms",
@@ -109,15 +134,25 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
           event: "contact-form-submit",
           category: "forms",
           action: "submit",
-          label: "contact-form-submit-failure" + "",
+          label: "contact-form-submit-failure",
           value: 1,
         });
-        addToast("error", t("contact-email-send-failed"));
+        toast.add({
+          severity: "error",
+          summary: t("contact-email-send-failed"),
+          life: 5000,
+        });
       }
       console.log(data);
     } catch (e) {
       console.error(e);
-      addToast("error", t("contact-email-send-failed"));
+      toast.add({
+        severity: "error",
+        summary: t("contact-email-send-failed"),
+        life: 5000,
+      });
+    } finally {
+      loading.value = false;
     }
   }
 };
@@ -208,7 +243,33 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
             >{{ t($form.comments.error?.message || "") }}</Message
           >
         </div>
-        <Button type="submit" :label="t('contact-submit')" class="w-fit" />
+        <Button
+          v-if="!loading"
+          type="submit"
+          :label="t('contact-submit')"
+          class="w-fit"
+        />
+        <svg
+          v-if="loading"
+          class="mr-3 -ml-1 size-9 animate-spin text-primary-gold"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            class="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            stroke-width="4"
+          ></circle>
+          <path
+            class="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          ></path>
+        </svg>
         <p class="text-center text-lg text-base-priority">
           {{ t("contact-socials-text") }}
         </p>
