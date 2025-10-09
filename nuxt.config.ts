@@ -2,6 +2,10 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   runtimeConfig: {
+    turnstileSecretKey:
+      process.env.TURNSTILE_SECRET_KEY ||
+      process.env.NUXT_TURNSTILE_SECRET_KEY ||
+      "0x4AAAAAAB5juE_70usqy-nTyuCFeiUKIog",
     public: {
       gtmId: process.env.NUXT_PUBLIC_GTM_ID || "",
       emailJsSecureToken: process.env.NUXT_PUBLIC_EMAIL_JS_SECURE_TOKEN,
@@ -13,6 +17,9 @@ export default defineNuxtConfig({
       siteDescription:
         "Web Developer portfolio: projects, skills, work experience, and contact.",
       siteImage: "/logos/ezdev-logo-black.png",
+      turnstileSiteKey:
+        process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY ||
+        "0x4AAAAAAB5juLHGlS-uZE0-",
     },
   },
   compatibilityDate: "2025-05-15",

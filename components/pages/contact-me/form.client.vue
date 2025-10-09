@@ -17,6 +17,19 @@ const { t } = useTranslate();
 const config = useRuntimeConfig();
 const toast = useToast();
 
+const siteKey = computed(() => config.public.turnstileSiteKey as string);
+const turnstileToken = ref<string | null>(null);
+
+onMounted(() => {
+  // Turnstile implicit rendering callback: must be global
+  (window as any).onTurnstileSuccess = (token: string) => {
+    turnstileToken.value = token;
+  };
+  (window as any).onTurnstileExpired = () => {
+    turnstileToken.value = null;
+  };
+});
+
 const loading = ref<boolean>(false);
 
 const socialLinks = [
@@ -103,57 +116,108 @@ const resolver = zodResolver(
   }),
 );
 
-const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
-  const { valid, values } = submitEvent;
-  if (valid) {
-    loading.value = true;
-    try {
-      const data: EmailJSResponseStatus = await emailjs.send(
-        "ezdev_smtp_service",
-        "ezdev_contact_me",
-        values,
-        config.public.emailJsSecureToken as string,
-      );
-      if (data.status === 200) {
-        toast.add({
-          severity: "success",
-          summary: t("contact-email-sent-success"),
-          detail: t("contact-email-sent-success-detail"),
-          life: 5000,
-        });
-        $gtm.pushEvent({
-          event: "contact-form-submit",
-          category: "forms",
-          action: "submit",
-          label: "contact-form-submit-success",
-          value: 1,
-        });
-        navigateTo("/thank-you");
-      } else {
-        $gtm.pushEvent({
-          event: "contact-form-submit",
-          category: "forms",
-          action: "submit",
-          label: "contact-form-submit-failure",
-          value: 1,
-        });
-        toast.add({
-          severity: "error",
-          summary: t("contact-email-send-failed"),
-          life: 5000,
-        });
+const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
+  const { valid, values } = submitEvent as FormSubmitEvent;
+  if (!valid) return;
+
+  // Ensure we have a Turnstile token (implicit rendering places hidden input)
+  let token: string | null = turnstileToken.value;
+  if (import.meta.client && !token) {
+    const hidden = document.querySelector(
+      'input[name="cf-turnstile-response"]',
+    ) as HTMLInputElement | null;
+    token = hidden?.value || null;
+  }
+  if (!token) {
+    toast.add({
+      severity: "warn",
+      summary: "Please complete the verification.",
+      life: 5000,
+    });
+    return;
+  }
+
+  loading.value = true;
+  try {
+    // Validate token server-side before sending email
+    const verification: any = await $fetch("/api/turnstile-verify", {
+      method: "POST",
+      body: {
+        token,
+        expectedAction: "contact",
+        expectedHostname: import.meta.client ? location.hostname : undefined,
+      },
+    });
+
+    if (!verification?.success) {
+      $gtm.pushEvent({
+        event: "contact-form-submit",
+        category: "forms",
+        action: "verify",
+        label: "turnstile-failed",
+        value: 1,
+      });
+      toast.add({
+        severity: "error",
+        summary: "Verification failed. Please try again.",
+        life: 5000,
+      });
+      return;
+    }
+
+    const data: EmailJSResponseStatus = await emailjs.send(
+      "ezdev_smtp_service",
+      "ezdev_contact_me",
+      values,
+      config.public.emailJsSecureToken as string,
+    );
+
+    if (data.status === 200) {
+      toast.add({
+        severity: "success",
+        summary: t("contact-email-sent-success"),
+        detail: t("contact-email-sent-success-detail"),
+        life: 5000,
+      });
+      $gtm.pushEvent({
+        event: "contact-form-submit",
+        category: "forms",
+        action: "submit",
+        label: "contact-form-submit-success",
+        value: 1,
+      });
+      if (import.meta.client) {
+        sessionStorage.setItem("ezdev-contact-sent", "1");
+        // Reset Turnstile widget and token
+        try {
+          (window as any).turnstile?.reset?.();
+        } catch {}
+        turnstileToken.value = null;
       }
-      console.log(data);
-    } catch (e) {
-      console.error(e);
+      navigateTo("/thank-you");
+    } else {
+      $gtm.pushEvent({
+        event: "contact-form-submit",
+        category: "forms",
+        action: "submit",
+        label: "contact-form-submit-failure",
+        value: 1,
+      });
       toast.add({
         severity: "error",
         summary: t("contact-email-send-failed"),
         life: 5000,
       });
-    } finally {
-      loading.value = false;
     }
+  } catch (e) {
+    console.error(e);
+    toast.add({
+      severity: "error",
+      summary: t("contact-email-send-failed"),
+      life: 5000,
+    });
+  } finally {
+    loading.value = false;
   }
 };
 </script>
@@ -243,6 +307,15 @@ const onFormSubmit = async (submitEvent: FormSubmitEvent) => {
             >{{ t($form.comments.error?.message || "") }}</Message
           >
         </div>
+        <div
+          class="cf-turnstile"
+          :data-sitekey="siteKey"
+          :data-theme="$colorMode.preference"
+          data-size="normal"
+          data-action="contact"
+          data-callback="onTurnstileSuccess"
+          data-expired-callback="onTurnstileExpired"
+        ></div>
         <Button
           v-if="!loading"
           type="submit"
