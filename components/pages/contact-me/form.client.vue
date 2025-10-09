@@ -21,7 +21,6 @@ const siteKey = computed(() => config.public.turnstileSiteKey as string);
 const turnstileToken = ref<string | null>(null);
 
 onMounted(() => {
-  // Turnstile implicit rendering callback: must be global
   (window as any).onTurnstileSuccess = (token: string) => {
     turnstileToken.value = token;
   };
@@ -120,7 +119,6 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
   const { valid, values } = submitEvent as FormSubmitEvent;
   if (!valid) return;
 
-  // Ensure we have a Turnstile token (implicit rendering places hidden input)
   let token: string | null = turnstileToken.value;
   if (import.meta.client && !token) {
     const hidden = document.querySelector(
@@ -139,7 +137,6 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
 
   loading.value = true;
   try {
-    // Validate token server-side before sending email
     const verification: any = await $fetch("/api/turnstile-verify", {
       method: "POST",
       body: {
@@ -188,7 +185,6 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
       });
       if (import.meta.client) {
         sessionStorage.setItem("ezdev-contact-sent", "1");
-        // Reset Turnstile widget and token
         try {
           (window as any).turnstile?.reset?.();
         } catch {}

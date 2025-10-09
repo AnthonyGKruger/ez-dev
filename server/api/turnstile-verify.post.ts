@@ -2,7 +2,6 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig(event);
   const secret = config.turnstileSecretKey as string | undefined;
 
-  // If not configured, indicate not implemented so client can handle gracefully
   if (!secret) {
     setResponseStatus(event, 501);
     return {
@@ -21,7 +20,6 @@ export default defineEventHandler(async (event) => {
     return { success: false, error: "Invalid token" };
   }
 
-  // Determine request IP if available (for extra signal to CF)
   const remoteip = getHeader(event, "cf-connecting-ip")
     || (getHeader(event, "x-forwarded-for") || "").split(",")[0]?.trim()
     || undefined;
@@ -44,7 +42,6 @@ export default defineEventHandler(async (event) => {
 
     const result = await resp.json();
 
-    // Additional checks
     if (result?.success) {
       if (expectedAction && result.action !== expectedAction) {
         return {
