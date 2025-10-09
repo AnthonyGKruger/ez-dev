@@ -3,7 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   runtimeConfig: {
     turnstileSecretKey:
-      process.env.TURNSTILE_SECRET_KEY || ''
+      process.env.TURNSTILE_SECRET_KEY || '',
     public: {
       gtmId: process.env.NUXT_PUBLIC_GTM_ID || "",
       emailJsSecureToken: process.env.NUXT_PUBLIC_EMAIL_JS_SECURE_TOKEN,
