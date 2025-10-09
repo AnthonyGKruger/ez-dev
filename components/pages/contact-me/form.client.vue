@@ -156,7 +156,7 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
       });
       toast.add({
         severity: "error",
-        summary: "Verification failed. Please try again.",
+        summary: "Invisible verification failed.",
         life: 5000,
       });
       return;
