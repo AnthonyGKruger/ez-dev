@@ -190,7 +190,6 @@ html, body, main {
   @apply text-neutral-950 dark:text-neutral-50;
 }
 
-
 ::-webkit-scrollbar {
   width: 0.2em;
 }
