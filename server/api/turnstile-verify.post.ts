@@ -41,7 +41,6 @@ export default defineEventHandler(async (event) => {
     if (body?.idempotencyKey)
       form.append("idempotency_key", body.idempotencyKey);
 
-    console.log(form);
     const resp = await fetch(
       "https://challenges.cloudflare.com/turnstile/v0/siteverify",
       {

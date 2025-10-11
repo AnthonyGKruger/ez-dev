@@ -1,5 +1,10 @@
 <script setup lang="ts">
 const { getLang, setLang } = useTranslate();
+const { trackFeatureUsage } = useGtm();
+const handleToggle = () => {
+  getLang() === "en" ? setLang("af") : setLang("en");
+  trackFeatureUsage("toggle-language", { value: `toggled-to-${getLang()}` });
+};
 </script>
 
 <template>
@@ -10,6 +15,6 @@ const { getLang, setLang } = useTranslate();
     right="0"
     type="language"
     :checked-value="getLang() === 'af'"
-    @toggle="() => (getLang() === 'en' ? setLang('af') : setLang('en'))"
+    @toggle="handleToggle"
   />
 </template>
