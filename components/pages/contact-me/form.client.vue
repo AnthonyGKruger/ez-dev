@@ -297,8 +297,9 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
         <Button
           v-if="!loading"
           type="submit"
-          :label="t('contact-submit')"
           class="w-fit"
+          :disabled="!turnstileToken"
+          :label="t('contact-submit')"
         />
         <svg
           v-if="loading"
