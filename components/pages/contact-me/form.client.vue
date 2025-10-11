@@ -12,9 +12,9 @@ import type { FormSubmitEvent } from "@primevue/forms/form";
 import { useTranslate } from "#imports";
 import { useToast } from "primevue/usetoast";
 
-const { $gtm } = useNuxtApp();
-const { t } = useTranslate();
 const config = useRuntimeConfig();
+const { trackFormSubmit, trackFormVerification } = useGtm();
+const { t } = useTranslate();
 const toast = useToast();
 
 const siteKey = computed(() => config.public.turnstileSiteKey as string);
@@ -147,13 +147,7 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
     });
 
     if (!verification?.success) {
-      $gtm.pushEvent({
-        event: "contact-form-submit",
-        category: "forms",
-        action: "verify",
-        label: "turnstile-failed",
-        value: 1,
-      });
+      trackFormVerification(false);
       toast.add({
         severity: "error",
         summary: "Invisible verification failed.",
@@ -176,13 +170,7 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
         detail: t("contact-email-sent-success-detail"),
         life: 5000,
       });
-      $gtm.pushEvent({
-        event: "contact-form-submit",
-        category: "forms",
-        action: "submit",
-        label: "contact-form-submit-success",
-        value: 1,
-      });
+      trackFormSubmit("contact-form-submit-success", true);
       if (import.meta.client) {
         sessionStorage.setItem("ezdev-contact-sent", "1");
         try {
@@ -192,13 +180,7 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
       }
       navigateTo("/thank-you");
     } else {
-      $gtm.pushEvent({
-        event: "contact-form-submit",
-        category: "forms",
-        action: "submit",
-        label: "contact-form-submit-failure",
-        value: 1,
-      });
+      trackFormSubmit("contact-form-submit-failure", false);
       toast.add({
         severity: "error",
         summary: t("contact-email-send-failed"),

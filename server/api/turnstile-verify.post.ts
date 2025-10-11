@@ -10,7 +10,12 @@ export default defineEventHandler(async (event) => {
     };
   }
 
-  const body = await readBody<{ token?: string; expectedAction?: string; expectedHostname?: string; idempotencyKey?: string }>(event);
+  const body = await readBody<{
+    token?: string;
+    expectedAction?: string;
+    expectedHostname?: string;
+    idempotencyKey?: string;
+  }>(event);
   const token = body?.token || "";
   const expectedAction = body?.expectedAction;
   const expectedHostname = body?.expectedHostname;
@@ -20,9 +25,10 @@ export default defineEventHandler(async (event) => {
     return { success: false, error: "Invalid token" };
   }
 
-  const remoteip = getHeader(event, "cf-connecting-ip")
-    || (getHeader(event, "x-forwarded-for") || "").split(",")[0]?.trim()
-    || undefined;
+  const remoteip =
+    getHeader(event, "cf-connecting-ip") ||
+    (getHeader(event, "x-forwarded-for") || "").split(",")[0]?.trim() ||
+    undefined;
 
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 10000);
@@ -32,13 +38,17 @@ export default defineEventHandler(async (event) => {
     form.append("secret", secret);
     form.append("response", token);
     if (remoteip) form.append("remoteip", remoteip);
-    if (body?.idempotencyKey) form.append("idempotency_key", body.idempotencyKey);
+    if (body?.idempotencyKey)
+      form.append("idempotency_key", body.idempotencyKey);
 
-    const resp = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
-      method: "POST",
-      body: form,
-      signal: controller.signal,
-    });
+    const resp = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        body: form,
+        signal: controller.signal,
+      },
+    );
 
     const result = await resp.json();
 
@@ -51,7 +61,11 @@ export default defineEventHandler(async (event) => {
           received: result.action,
         };
       }
-      if (expectedHostname && result.hostname && result.hostname !== expectedHostname) {
+      if (
+        expectedHostname &&
+        result.hostname &&
+        result.hostname !== expectedHostname
+      ) {
         return {
           success: false,
           error: "hostname_mismatch",

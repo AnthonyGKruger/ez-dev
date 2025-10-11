@@ -7,10 +7,12 @@ const consent = useCookie("consent", {
   watch: true,
 });
 
+const { trackCookieAction } = useGtm();
 const { t } = useTranslate();
 
 const acceptCookie = () => {
   consent.value = true;
+  trackCookieAction("accept");
 };
 </script>
 

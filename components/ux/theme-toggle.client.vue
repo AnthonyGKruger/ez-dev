@@ -1,3 +1,16 @@
+<script setup lang="ts">
+const { trackFeatureUsage } = useGtm();
+const colorMode = useColorMode();
+const handleToggle = () => {
+  colorMode.value === "dark"
+    ? (colorMode.preference = "light")
+    : (colorMode.preference = "dark");
+  trackFeatureUsage("language-toggle", {
+    "previous-theme": colorMode.value === "dark" ? "light" : "dark",
+    "new-theme": colorMode.value,
+  });
+};
+</script>
 <template>
   <UxFeatureToggle
     id="theme-toggle"
@@ -6,11 +19,6 @@
     right="0"
     type="theme"
     :checked-value="$colorMode.value === 'light'"
-    @toggle="
-      () =>
-        $colorMode.value === 'dark'
-          ? ($colorMode.preference = 'light')
-          : ($colorMode.preference = 'dark')
-    "
+    @toggle="handleToggle"
   />
 </template>
