@@ -20,13 +20,91 @@ const toast = useToast();
 const siteKey = computed(() => config.public.turnstileSiteKey as string);
 const turnstileToken = ref<string | null>(null);
 
-onMounted(() => {
-  (window as any).onTurnstileSuccess = (token: string) => {
-    turnstileToken.value = token;
-  };
-  (window as any).onTurnstileExpired = () => {
-    turnstileToken.value = null;
-  };
+const turnstileWidgetId = ref<string | null>(null);
+
+const waitForTurnstile = () =>
+  new Promise<void>((resolve, reject) => {
+    if (import.meta.server) return resolve();
+    const start = Date.now();
+    const timeoutMs = 8000;
+    const tick = () => {
+      if (typeof (window as any).turnstile !== "undefined") return resolve();
+      if (Date.now() - start > timeoutMs)
+        return reject(new Error("Turnstile script failed to load in time."));
+      setTimeout(tick, 500);
+    };
+    tick();
+  });
+
+onMounted(async () => {
+  if (!siteKey.value) return;
+
+  useHead({
+    script: [
+      {
+        key: "cf-turnstile-api",
+        src: "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit",
+        async: true,
+        defer: true,
+      },
+    ],
+  });
+
+  try {
+    await waitForTurnstile();
+  } catch (e) {
+    console.warn(e);
+    return;
+  }
+
+  // Render the widget explicitly when the API is ready
+  try {
+    turnstileWidgetId.value = (window as any).turnstile.render(
+      "#turnstile-container",
+      {
+        sitekey: siteKey.value,
+        callback: (t: string) => {
+          turnstileToken.value = t;
+        },
+        "expired-callback": () => {
+          turnstileToken.value = null;
+        },
+        "error-callback": () => {
+          turnstileToken.value = null;
+        },
+      },
+    );
+
+    // After render, try to read current token and check expiry
+    if (turnstileWidgetId.value) {
+      const token = (window as any).turnstile.getResponse(
+        turnstileWidgetId.value,
+      );
+      const isExpired = (window as any).turnstile.isExpired(
+        turnstileWidgetId.value,
+      );
+      if (isExpired) {
+        turnstileToken.value = null;
+        // Reset/execute only if invisible style requires it
+        try {
+          (window as any).turnstile.reset(turnstileWidgetId.value);
+          (window as any).turnstile.execute?.(turnstileWidgetId.value);
+        } catch {}
+      } else if (token) {
+        turnstileToken.value = token;
+      }
+    }
+  } catch (e) {
+    console.error("Failed to render Turnstile:", e);
+  }
+});
+
+onUnmounted(() => {
+  try {
+    if (turnstileWidgetId.value && (window as any).turnstile?.remove) {
+      (window as any).turnstile.remove(turnstileWidgetId.value);
+    }
+  } catch {}
 });
 
 const loading = ref<boolean>(false);
@@ -174,7 +252,11 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
       if (import.meta.client) {
         sessionStorage.setItem("ezdev-contact-sent", "1");
         try {
-          (window as any).turnstile?.reset?.();
+          if (turnstileWidgetId.value) {
+            (window as any).turnstile?.reset?.(turnstileWidgetId.value);
+          } else {
+            (window as any).turnstile?.reset?.();
+          }
         } catch {}
         turnstileToken.value = null;
       }
@@ -286,14 +368,12 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
           >
         </div>
         <div
-          class="cf-turnstile"
+          id="turnstile-container"
           :data-sitekey="siteKey"
           :data-theme="$colorMode.preference"
           data-size="normal"
           data-action="contact"
-          data-callback="onTurnstileSuccess"
-          data-expired-callback="onTurnstileExpired"
-        ></div>
+        />
         <Button
           v-if="!loading"
           type="submit"

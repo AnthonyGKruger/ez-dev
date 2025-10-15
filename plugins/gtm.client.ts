@@ -32,14 +32,8 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   initializeDataLayer();
 
-  useHead({
-    script: [
-      {
-        src: `https://www.googletagmanager.com/gtm.js?id=${gtmId}`,
-        async: true,
-      },
-    ],
-  });
+  // Script injection is handled globally in app.vue to ensure availability on all pages
+  // and to avoid duplicate injections.
 
   return {
     provide: {
