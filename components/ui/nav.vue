@@ -28,7 +28,7 @@ onMounted(() =>
 </script>
 
 <template>
-  <header class="sticky top-0 left-0 z-50 w-full">
+  <header class="fixed top-0 left-0 z-50 w-full">
     <div
       ref="logo"
       v-if="route.path !== '/'"
