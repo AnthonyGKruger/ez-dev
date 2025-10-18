@@ -5,7 +5,7 @@ const handleToggle = () => {
   colorMode.value === "dark"
     ? (colorMode.preference = "light")
     : (colorMode.preference = "dark");
-  trackFeatureUsage("language-toggle", {
+  trackFeatureUsage("toggle-theme", {
     "previous-theme": colorMode.value === "dark" ? "light" : "dark",
     "new-theme": colorMode.value,
   });
