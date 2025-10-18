@@ -14,15 +14,11 @@ export const translations: Translations = new Map([
       ["about-hero-title", "About Me!"],
       [
         "about-hero-p1",
-        "Fueled by a passion for technology and a knack for problem-solving, I'm a Full Stack Web Developer with a drive to craft intuitive and impactful web experiences.",
+        "Fueled by a passion for technology and a knack for problem-solving, I'm a Web Developer with a drive to craft intuitive and impactful web experiences.",
       ],
       [
         "about-hero-p2",
         "My journey began in the dynamic world of retail, where I honed my leadership and customer-centric skills as a Branch Manager. While exceeding sales targets and building a thriving team, I discovered a hidden passion for web development. This led me to pursue a Bachelor's degree in Information Technology, graduating in 2021 with a comprehensive understanding of web principles.",
-      ],
-      [
-        "about-hero-p3",
-        "Now, I'm eager to combine my technical expertise with my customer-first approach to become a valuable asset to your team. Whether you're looking to build a brand-new website, revamp an existing one, or integrate innovative features, I'm confident I can deliver solutions that exceed expectations.",
       ],
       [
         "about-hero-p4",
@@ -334,10 +330,6 @@ export const translations: Translations = new Map([
       [
         "about-hero-p2",
         "My reis het begin in die dinamiese wêreld van kleinhandel, waar ek my leierskap- en kliëntgefokusde vaardighede as 'n Takbestuurder geslyp het. Terwyl ek verkoopsdoelwitte oortref en 'n florerende span gebou het, het ek 'n verborge passie vir webontwikkeling ontdek. Dit het my gelei om 'n Baccalaureusgraad in Inligtingstegnologie te volg, en ek het in 2021 gegradueer met 'n omvattende begrip van webbeginsels.",
-      ],
-      [
-        "about-hero-p3",
-        "Nou is ek gretig om my tegniese kundigheid te kombineer met my kliënt-eerste benadering om 'n waardevolle bate vir u span te word. Of u nou 'n splinternuwe webwerf wil bou, 'n bestaande een wil opknap, of innoverende kenmerke wil integreer, ek is vol vertroue dat ek oplossings kan lewer wat verwagtinge oortref.",
       ],
       [
         "about-hero-p4",

@@ -26,9 +26,6 @@ const { t } = useTranslate();
             {{ t("about-hero-p2") }}
           </p>
           <p class="text-xl tracking-wide mt-5 text-white">
-            {{ t("about-hero-p3") }}
-          </p>
-          <p class="text-xl tracking-wide mt-5 text-white">
             {{ t("about-hero-p4") }}
           </p>
           <div class="pt-9">
