@@ -3,7 +3,11 @@ import { SpeedInsights } from "@vercel/speed-insights/vue";
 const { getLang } = useTranslate();
 
 const config = useRuntimeConfig();
+const route = useRoute();
 const gtmId = config.public.gtmId as string;
+const marginTopComputed = computed(() =>
+  route?.path === "/" ? "mt-[54px]" : "mt-[111px]",
+);
 onMounted(() => {
   getLang();
   useHead({
@@ -33,10 +37,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative dark:bg-neutral-950">
     <UiMouseHoverOverlay />
     <UiNav />
-    <main class="dark:bg-neutral-950"><slot /></main>
+    <main class="dark:bg-neutral-950" :class="marginTopComputed"><slot /></main>
     <UiFooter />
     <UxCookieNotice />
     <UxScrollToTop />
