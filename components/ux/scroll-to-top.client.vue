@@ -3,7 +3,7 @@ const yScrollPosition = ref<number>(0);
 const { trackFeatureUsage } = useGtm();
 const scrollToTop = () => {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  trackFeatureUsage("scroll-to-top");
+  trackFeatureUsage("scroll-to-top", { value: "clicked scroll-to-top" });
 };
 
 const consent = useCookie("consent", {

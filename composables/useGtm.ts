@@ -12,23 +12,17 @@ export const useGtm = () => {
     $gtm.pushEvent(event);
   };
 
-  const trackFormSubmit = (label: string, success: boolean) => {
+  const trackFormSubmit = (success: boolean) => {
     pushEvent({
       event: "contact-form-submit",
-      category: "forms",
-      action: "submit",
-      label,
-      value: 1,
+      value: `form submitted ${success}`,
     });
   };
 
   const trackFormVerification = (success: boolean) => {
     pushEvent({
-      event: "contact-form-submit",
-      category: "forms",
-      action: "verify",
-      label: success ? "turnstile-success" : "turnstile-failed",
-      value: 1,
+      event: "contact-form-verification",
+      value: success ? "turnstile-success" : "turnstile-failed",
     });
   };
 
@@ -38,21 +32,14 @@ export const useGtm = () => {
   ) => {
     pushEvent({
       event: feature,
-      category: "features",
-      action: feature,
-      label: feature,
-      value: 1,
       ...additionalData,
     });
   };
 
   const trackCookieAction = (action: "accept" | "reject") => {
     pushEvent({
-      event: `${action}-cookie`,
-      category: "cookies",
-      action: `${action}-cookie`,
-      label: `${action}ed-cookie`,
-      value: 1,
+      event: `cookie-consent`,
+      value: `${action}ed-cookie`,
     });
   };
 
