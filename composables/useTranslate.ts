@@ -19,6 +19,8 @@ export default () => {
   });
   const lang = useState<SupportedLang>("i18n-lang", () => savedLang.value);
 
+  const { isTranslationDebug } = useDevTools();
+
   const setLang = (next: SupportedLang) => {
     lang.value = next;
     savedLang.value = next;
@@ -33,6 +35,19 @@ export default () => {
     params?: InterpolateParams,
     fallback?: string,
   ): string => {
+    // If translation debug is enabled, return key with status
+    if (isTranslationDebug.value) {
+      const current = translations.get(lang.value);
+      const en = translations.get("en");
+      const hasTranslation = !!(current?.get(key) ?? en?.get(key) ?? fallback);
+
+      // Log to console when in debug mode
+      console.log(
+        `[Translation Debug] Key: ${key}, Translation: ${hasTranslation ? (current?.get(key) ?? en?.get(key) ?? fallback) : "unset"}`,
+      );
+
+      return `${key}|${hasTranslation ? "1" : "0"}`;
+    }
     const current = translations.get(lang.value);
     const en = translations.get("en");
     let result = current?.get(key) ?? en?.get(key) ?? fallback ?? key;

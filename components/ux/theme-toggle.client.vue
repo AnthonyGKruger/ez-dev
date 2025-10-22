@@ -6,8 +6,8 @@ const handleToggle = () => {
     ? (colorMode.preference = "light")
     : (colorMode.preference = "dark");
   trackFeatureUsage("toggle-theme", {
-    "previous-theme": colorMode.value === "dark" ? "light" : "dark",
-    "new-theme": colorMode.value,
+    "previous-theme": `toggled from ${colorMode.value === "dark" ? "light" : "dark"}`,
+    "new-theme": `toggled to ${colorMode.value}`,
   });
 };
 </script>
