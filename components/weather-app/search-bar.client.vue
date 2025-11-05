@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const { t } = useTranslate();
+const { track } = useGtmTrack();
+
 interface Props {
   modelValue: string;
   loading?: boolean;
@@ -22,8 +25,10 @@ const inputValue = computed({
 });
 
 const handleSearch = () => {
-  if (inputValue.value.trim()) {
-    emit("search", inputValue.value.trim());
+  const q = inputValue.value.trim();
+  if (q) {
+    track('weather-search-click', { query: q });
+    emit("search", q);
   }
 };
 
@@ -34,6 +39,7 @@ const handleKeydown = (e: KeyboardEvent) => {
 };
 
 const handleLocate = () => {
+  track('weather-locate-click');
   emit("locate");
 };
 </script>
@@ -54,7 +60,7 @@ const handleLocate = () => {
         v-model="inputValue"
         @keydown="handleKeydown"
         type="text"
-        placeholder="Search for a city (e.g. New York, London, Tokyo)"
+        :placeholder="t('weather-search-placeholder')"
         class="w-full p-4 pl-10 pr-28 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-primary-blue focus:border-primary-blue dark:bg-neutral-800 dark:border-neutral-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-blue dark:focus:border-primary-blue"
         :disabled="loading"
       />
@@ -65,7 +71,7 @@ const handleLocate = () => {
           :disabled="loading"
           type="button"
           class="p-2 mr-2 text-sm font-medium text-gray-700 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-blue focus:z-10 focus:ring-2 focus:ring-primary-blue focus:text-primary-blue dark:bg-neutral-800 dark:text-gray-400 dark:border-neutral-600 dark:hover:text-white dark:hover:bg-neutral-700 dark:focus:ring-primary-blue disabled:opacity-50 disabled:cursor-not-allowed"
-          title="Use my location"
+          :title="t('weather-use-my-location')"
         >
           <Icon name="mdi:crosshairs-gps" class="w-5 h-5" />
         </button>
@@ -87,7 +93,7 @@ const handleLocate = () => {
     </div>
 
     <div class="mt-2 text-sm text-gray-500 dark:text-gray-400">
-      <p>Enter a city name to get weather information</p>
+      <p>{{ t('weather-search-help') }}</p>
     </div>
   </div>
 </template>

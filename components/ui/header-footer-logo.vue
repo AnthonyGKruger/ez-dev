@@ -1,4 +1,5 @@
 <script setup lang="ts">
+defineProps<{ classOverRide?: string }>();
 const colorMode = useColorMode();
 const logoComputed = computed(() =>
   colorMode.value === "dark"
@@ -12,7 +13,8 @@ const logoComputed = computed(() =>
     ><LazyNuxtImg
       :src="logoComputed"
       alt="EZdev"
-      class="w-30 md:w-60 lg:70"
+      class="h-10 md:h-12 2xl:h-16 w-auto"
+      :class="classOverRide"
       loading="lazy"
   /></NuxtLink>
 </template>

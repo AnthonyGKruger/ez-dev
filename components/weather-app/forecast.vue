@@ -1,18 +1,41 @@
 <script setup lang="ts">
 import type { WeatherResponse, DailyWeather } from "~/types/weather-app";
 
+const { t } = useTranslate();
+const { track } = useGtmTrack();
+
 interface Props {
   weather: WeatherResponse;
 }
 
 const props = defineProps<Props>();
 
-const selectedDayIndex = ref(0);
 const dailyForecast = computed(() => props.weather.daily?.slice(0, 7) || []);
 const hourlyForecast = computed(() => props.weather.hourly || []);
 
+const accordionStates = reactive({
+  currentWeather: true,
+  selectedDay: true,
+  hourlyForecast: false,
+  weeklyForecast: false,
+});
+
+const selectedDayIndex = ref(0);
+
+const trackAccordion = (section: string, isOpen: boolean) => {
+  track('weather-accordion-toggle', { section, isOpen });
+};
+
 const selectDay = (index: number) => {
   selectedDayIndex.value = index;
+  accordionStates.selectedDay = true;
+  const day = dailyForecast.value[index];
+  track('weather-day-selected', {
+    index,
+    dt: day?.dt,
+    isToday: index === 0,
+    isTomorrow: index === 1,
+  });
 };
 
 const selectedDay = computed((): DailyWeather | null => {
@@ -25,34 +48,74 @@ const selectedDayTimestamp = computed((): number => {
 
 const isToday = computed(() => selectedDayIndex.value === 0);
 const isTomorrow = computed(() => selectedDayIndex.value === 1);
+
+watch(selectedDayIndex, () => {
+  accordionStates.selectedDay = true;
+});
+
+watch(
+  () => accordionStates.currentWeather,
+  (open) => track('weather-accordion-toggle', { section: 'current', isOpen: open }),
+);
+watch(
+  () => accordionStates.selectedDay,
+  (open) => track('weather-accordion-toggle', { section: 'day-details', isOpen: open }),
+);
+watch(
+  () => accordionStates.hourlyForecast,
+  (open) => track('weather-accordion-toggle', { section: 'hourly', isOpen: open }),
+);
+watch(
+  () => accordionStates.weeklyForecast,
+  (open) => track('weather-accordion-toggle', { section: 'weekly', isOpen: open }),
+);
 </script>
 
 <template>
-  <div v-if="dailyForecast.length > 0" class="space-y-8">
-    <!-- Current Weather -->
-    <WeatherAppTodayView v-if="weather.current" :weather="weather" />
+  <div v-if="dailyForecast.length > 0" class="space-y-4">
+    <UiAccordion
+      v-if="weather.current"
+      :title="t('weather-accordion-current')"
+      v-model:is-open="accordionStates.currentWeather"
+    >
+      <WeatherAppTodayView :weather="weather" />
+    </UiAccordion>
 
-    <!-- Day Detail View -->
-    <WeatherAppDayView
+    <UiAccordion
       v-if="selectedDay"
-      :day="selectedDay"
-      :is-today="isToday"
-    />
+      :title="t('weather-accordion-day-details')"
+      v-model:is-open="accordionStates.selectedDay"
+    >
+      <WeatherAppDayView :day="selectedDay" :is-today="isToday" />
+    </UiAccordion>
 
-    <!-- Hourly Rain Chart -->
-    <WeatherAppHourlyRainChart
+    <UiAccordion
       v-if="selectedDay"
-      :hourly-data="hourlyForecast"
-      :selected-date="selectedDayTimestamp"
-      :is-today="isToday"
-      :is-tomorrow="isTomorrow"
-    />
+      :title="t('weather-accordion-hourly')"
+      v-model:is-open="accordionStates.hourlyForecast"
+      :disabled="!isToday && !isTomorrow"
+    >
+      <template #default>
+        <WeatherAppHourlyRainChart
+          :hourly-data="hourlyForecast"
+          :selected-date="selectedDayTimestamp"
+          :is-today="isToday"
+          :is-tomorrow="isTomorrow"
+        />
+      </template>
+    </UiAccordion>
 
-    <!-- Week View with Selection -->
-    <WeatherAppWeekView
-      :forecast="dailyForecast"
-      :selected-day-index="selectedDayIndex"
-      @day-selected="selectDay"
-    />
+    <UiAccordion
+      :title="t('weather-accordion-weekly')"
+      v-model:is-open="accordionStates.weeklyForecast"
+    >
+      <template #default>
+        <WeatherAppWeekView
+          :daily-data="dailyForecast"
+          :selected-day="selectedDayIndex"
+          @day-selected="selectDay"
+        />
+      </template>
+    </UiAccordion>
   </div>
 </template>

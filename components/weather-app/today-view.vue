@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { WeatherResponse } from "~/types/weather-app";
 
+const { t } = useTranslate();
+
 interface Props {
   weather: WeatherResponse;
 }
@@ -73,9 +75,8 @@ const getWeatherBackground = (iconCode: string) => {
 
 <template>
   <div v-if="current" class="space-y-8">
-    <!-- Current Weather -->
     <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-4">
-      Today
+      {{ t('today') }}
     </h3>
     <div
       :class="[
@@ -99,7 +100,7 @@ const getWeatherBackground = (iconCode: string) => {
               class="w-24 h-24 mx-auto"
             />
             <p class="text-xl capitalize mt-2">
-              {{ current.weather[0]?.description || "Weather" }}
+              {{ current.weather[0]?.description || t('weather-generic') }}
             </p>
           </div>
         </div>
@@ -107,7 +108,7 @@ const getWeatherBackground = (iconCode: string) => {
         <div class="text-center md:text-right">
           <div class="text-6xl font-bold">{{ Math.round(current.temp) }}°</div>
           <div class="text-lg">
-            Feels like {{ Math.round(current.feels_like) }}°
+            {{ t('feels-like') }} {{ Math.round(current.feels_like) }}°
           </div>
         </div>
       </div>
@@ -116,7 +117,7 @@ const getWeatherBackground = (iconCode: string) => {
         <div class="bg-white/20 p-4 rounded-xl backdrop-blur-sm">
           <div class="flex items-center">
             <Icon name="mdi:water-percent" class="w-6 h-6 mr-2" />
-            <span>Humidity</span>
+            <span>{{ t('humidity') }}</span>
           </div>
           <div class="text-2xl font-bold mt-1">{{ current.humidity }}%</div>
         </div>
@@ -124,7 +125,7 @@ const getWeatherBackground = (iconCode: string) => {
         <div class="bg-white/20 p-4 rounded-xl backdrop-blur-sm">
           <div class="flex items-center">
             <Icon name="mdi:weather-windy" class="w-6 h-6 mr-2" />
-            <span>Wind</span>
+            <span>{{ t('wind') }}</span>
           </div>
           <div class="text-2xl font-bold mt-1">
             {{ current.wind_speed }} m/s
@@ -134,7 +135,7 @@ const getWeatherBackground = (iconCode: string) => {
         <div class="bg-white/20 p-4 rounded-xl backdrop-blur-sm">
           <div class="flex items-center">
             <Icon name="mdi:gauge" class="w-6 h-6 mr-2" />
-            <span>Pressure</span>
+            <span>{{ t('pressure') }}</span>
           </div>
           <div class="text-2xl font-bold mt-1">{{ current.pressure }} hPa</div>
         </div>
@@ -142,7 +143,7 @@ const getWeatherBackground = (iconCode: string) => {
         <div class="bg-white/20 p-4 rounded-xl backdrop-blur-sm">
           <div class="flex items-center">
             <Icon name="mdi:eye" class="w-6 h-6 mr-2" />
-            <span>Visibility</span>
+            <span>{{ t('visibility') }}</span>
           </div>
           <div class="text-2xl font-bold mt-1">
             {{ (current.visibility / 1000).toFixed(1) }} km
@@ -151,7 +152,7 @@ const getWeatherBackground = (iconCode: string) => {
       </div>
 
       <div v-if="today" class="mt-8 pt-6 border-t border-white/30">
-        <h3 class="text-xl font-bold mb-4">Today's Forecast</h3>
+        <h3 class="text-xl font-bold mb-4">{{ t('todays-forecast') }}</h3>
         <div class="flex justify-between items-center">
           <div class="flex items-center">
             <Icon
@@ -171,13 +172,13 @@ const getWeatherBackground = (iconCode: string) => {
           <div>
             <div class="flex items-center">
               <Icon name="mdi:weather-sunset-up" class="w-5 h-5 mr-1" />
-              <span>Sunrise: {{ formatTime(today.sunrise) }}</span>
+              <span>{{ t('sunrise') }}: {{ formatTime(today.sunrise) }}</span>
             </div>
           </div>
           <div>
             <div class="flex items-center">
               <Icon name="mdi:weather-sunset-down" class="w-5 h-5 mr-1" />
-              <span>Sunset: {{ formatTime(today.sunset) }}</span>
+              <span>{{ t('sunset') }}: {{ formatTime(today.sunset) }}</span>
             </div>
           </div>
         </div>
