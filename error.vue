@@ -22,7 +22,7 @@ const handleGoHome = () => {
     <UiNav />
 
     <main class="dark:bg-neutral-950">
-      <section class="py-14">
+      <section class="py-44">
         <div class="container mx-auto">
           <div class="flex flex-col items-center justify-center">
             <LottiePlayer

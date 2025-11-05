@@ -1,16 +1,19 @@
 <script setup lang="ts">
 import type { WeatherResponse } from "~/types/weather-app";
 
+const { t } = useTranslate();
+const { track } = useGtmTrack();
+
 definePageMeta({
   layout: "default",
 });
 
 useHead({
-  title: "Weather App",
+  title: t('weather-title'),
   meta: [
     {
       name: "description",
-      content: "Check the weather in any city around the world",
+      content: t('weather-meta-desc'),
     },
   ],
 });
@@ -24,10 +27,13 @@ const { location, isLocationLoading, locationError, requestLocation } =
   useGeolocation();
 const { fetchWeatherByCity, fetchWeatherByCoordinates } = useWeather();
 
-// Request location on component mount
 onMounted(async () => {
-  // Only request location if we haven't already
+  track('weather-page-view');
   if (!location.value) await handleLocate();
+});
+
+watch(locationError, (val) => {
+  if (val) track('weather-location-error', { message: String(val) });
 });
 
 const handleSearch = async (query: string) => {
@@ -36,14 +42,20 @@ const handleSearch = async (query: string) => {
   loading.value = true;
   error.value = null;
   weatherData.value = null;
+  track('weather-search-request', { query });
 
   try {
-    weatherData.value = await fetchWeatherByCity(query);
+    const result = await fetchWeatherByCity(query);
+    weatherData.value = result;
+    track('weather-search-success', {
+      query,
+      lat: result.lat,
+      lon: result.lon,
+    });
   } catch (err) {
-    error.value =
-      err instanceof Error
-        ? err.message
-        : "Failed to fetch weather data. Please try again.";
+    const message = err instanceof Error ? err.message : t('weather-error-generic');
+    error.value = message;
+    track('weather-search-error', { query, message });
     console.error("Weather search error:", err);
   } finally {
     loading.value = false;
@@ -51,6 +63,7 @@ const handleSearch = async (query: string) => {
 };
 
 const handleLocate = async () => {
+  track('weather-locate-request');
   const userLocation = await requestLocation();
   if (userLocation) {
     loading.value = true;
@@ -63,20 +76,19 @@ const handleLocate = async () => {
       );
       weatherData.value = response;
       searchQuery.value = `${response.lat.toFixed(2)}, ${response.lon.toFixed(2)}`;
+      track('weather-locate-success', { lat: userLocation.lat, lon: userLocation.lon });
+      track('weather-locate-weather-success', { lat: response.lat, lon: response.lon });
     } catch (err) {
-      error.value =
-        err instanceof Error
-          ? err.message
-          : "Failed to fetch weather data for your location.";
+      const message = err instanceof Error ? err.message : t('weather-error-location');
+      error.value = message;
+      track('weather-locate-weather-error', { message });
       console.error("Weather location error:", err);
     } finally {
       loading.value = false;
     }
+  } else {
+    track('weather-locate-denied-or-failed');
   }
-};
-
-const handleSearchUpdate = (query: string) => {
-  searchQuery.value = query;
 };
 </script>
 
@@ -85,7 +97,7 @@ const handleSearchUpdate = (query: string) => {
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-12">
         <h1 class="text-lg text-neutral-600 dark:text-neutral-400">
-          Check the weather in any city around the world
+          {{ t('weather-meta-desc') }}
         </h1>
       </div>
 
@@ -98,7 +110,6 @@ const handleSearchUpdate = (query: string) => {
         />
       </div>
 
-      <!-- Location error message -->
       <div
         v-if="locationError"
         class="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-900 rounded-lg"
@@ -112,7 +123,6 @@ const handleSearchUpdate = (query: string) => {
         </div>
       </div>
 
-      <!-- Search error message -->
       <div
         v-if="error"
         class="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-900 rounded-lg"
@@ -126,7 +136,6 @@ const handleSearchUpdate = (query: string) => {
         </div>
       </div>
 
-      <!-- Loading state -->
       <div
         v-if="loading || isLocationLoading"
         class="flex justify-center my-12"
@@ -139,14 +148,13 @@ const handleSearchUpdate = (query: string) => {
           <p class="text-neutral-600 dark:text-neutral-400">
             {{
               isLocationLoading
-                ? "Getting your location..."
-                : "Loading weather data..."
+                ? t('weather-loading-getting-location')
+                : t('weather-loading-fetching')
             }}
           </p>
         </div>
       </div>
 
-      <!-- Initial state (no search yet) -->
       <div v-else-if="!weatherData && !error" class="text-center py-12">
         <div
           class="inline-block p-4 bg-neutral-100 dark:bg-neutral-800 rounded-full mb-6"
@@ -154,18 +162,17 @@ const handleSearchUpdate = (query: string) => {
           <Icon name="mdi:weather-cloudy" class="w-16 h-16 text-primary-blue" />
         </div>
         <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-2">
-          Welcome to the Weather App
+          {{ t('weather-welcome-title') }}
         </h2>
         <p class="text-neutral-600 dark:text-neutral-400 max-w-md mx-auto">
           {{
             location
-              ? "Search for a city or use the location button to get started"
-              : "Search for a city or allow location access to get started"
+              ? t('weather-welcome-with-location')
+              : t('weather-welcome-no-location')
           }}
         </p>
       </div>
 
-      <!-- Weather data display -->
       <div v-else-if="weatherData" class="mt-8">
         <WeatherAppForecast :weather="weatherData" />
       </div>

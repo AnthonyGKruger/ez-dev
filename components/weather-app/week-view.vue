@@ -1,21 +1,51 @@
 <script setup lang="ts">
 import type { DailyWeather } from "~/types/weather-app";
 
-interface Props {
-  forecast: DailyWeather[];
-  selectedDayIndex: number;
-}
+const { t } = useTranslate();
 
-interface Emits {
-  (e: "day-selected", index: number): void;
+interface Props {
+  dailyData: DailyWeather[];
+  selectedDay: number;
 }
 
 const props = defineProps<Props>();
-const emit = defineEmits<Emits>();
+const emit = defineEmits<{
+  (e: "day-selected", day: number): void;
+}>();
 
 const formatDate = (timestamp: number) => {
   const date = new Date(timestamp * 1000);
   return date.toLocaleDateString(undefined, { weekday: "short" });
+};
+
+const formatDateFull = (timestamp: number) => {
+  const date = new Date(timestamp * 1000);
+  return date.toLocaleDateString(undefined, {
+    weekday: "long",
+    month: "short",
+    day: "numeric",
+  });
+};
+
+const isToday = (timestamp: number) => {
+  const today = new Date();
+  const date = new Date(timestamp * 1000);
+  return (
+    date.getDate() === today.getDate() &&
+    date.getMonth() === today.getMonth() &&
+    date.getFullYear() === today.getFullYear()
+  );
+};
+
+const isTomorrow = (timestamp: number) => {
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const date = new Date(timestamp * 1000);
+  return (
+    date.getDate() === tomorrow.getDate() &&
+    date.getMonth() === tomorrow.getMonth() &&
+    date.getFullYear() === tomorrow.getFullYear()
+  );
 };
 
 const getWeatherIcon = (iconCode: string) => {
@@ -43,84 +73,71 @@ const getWeatherIcon = (iconCode: string) => {
   return iconMap[iconCode] || "mdi:weather-cloudy";
 };
 
-const getWeatherBackground = (iconCode: string) => {
-  if (iconCode.includes("01"))
-    return "bg-gradient-to-br from-blue-400 to-blue-600";
-  if (iconCode.includes("02"))
-    return "bg-gradient-to-br from-blue-300 to-blue-500";
-  if (iconCode.includes("03") || iconCode.includes("04"))
-    return "bg-gradient-to-br from-gray-400 to-gray-600";
-  if (iconCode.includes("09") || iconCode.includes("10"))
-    return "bg-gradient-to-br from-gray-500 to-blue-700";
-  if (iconCode.includes("11"))
-    return "bg-gradient-to-br from-gray-600 to-purple-700";
-  if (iconCode.includes("13"))
-    return "bg-gradient-to-br from-blue-100 to-blue-300";
-  if (iconCode.includes("50"))
-    return "bg-gradient-to-br from-gray-300 to-gray-500";
-  return "bg-gradient-to-br from-blue-400 to-blue-600";
-};
-
-const getPopPercentage = (pop: number) => {
-  return Math.round(pop * 100);
-};
-
 const selectDay = (index: number) => {
   emit("day-selected", index);
 };
 </script>
 
 <template>
-  <div class="mt-8">
-    <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-4">
-      7-Day Forecast
-    </h3>
-    <div
-      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4"
-    >
-      <div
-        v-for="(day, index) in forecast.slice(0, 7)"
-        :key="day.dt"
-        :class="[
-          'rounded-2xl p-4 text-white shadow-lg relative overflow-hidden',
-          getWeatherBackground(day.weather[0]?.icon || ''),
-        ]"
-        @click="selectDay(index)"
-      >
-        <!-- Date -->
-        <div class="text-center mb-2">
-          <span class="font-bold text-lg">
-            {{ index === 0 ? "Today" : formatDate(day.dt) }}
-          </span>
-        </div>
+  <div class="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg">
+    <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-6">
+      {{ t('weather-accordion-weekly') }}
+    </h2>
 
-        <!-- Weather Icon -->
-        <div class="flex justify-center my-2">
-          <Icon
-            :name="getWeatherIcon(day.weather[0]?.icon || '')"
-            class="w-12 h-12"
-          />
-        </div>
+    <div class="overflow-x-auto">
+      <div class="flex flex-nowrap gap-4 pr-2 py-3">
+        <div v-for="(day, index) in dailyData" :key="day.dt" class="px-2 flex-none">
+          <div
+            class="bg-neutral-50 dark:bg-neutral-700 rounded-xl p-4 cursor-pointer transition-all duration-200 hover:shadow-md h-full"
+            :class="{
+              'ring-2 ring-blue-500 bg-blue-50 dark:bg-blue-900/20':
+                selectedDay === index,
+              'hover:bg-neutral-100 dark:hover:bg-neutral-600':
+                selectedDay !== index,
+            }"
+            @click="selectDay(index)"
+          >
+            <div class="text-center">
+              <div
+                class="font-semibold text-neutral-900 dark:text-white"
+                :class="{
+                  'text-blue-600 dark:text-blue-400': selectedDay === index,
+                }"
+              >
+                <span v-if="isToday(day.dt)">{{ t('today') }}</span>
+                <span v-else-if="isTomorrow(day.dt)">{{ t('tomorrow') }}</span>
+                <span v-else>{{ formatDate(day.dt) }}</span>
+              </div>
+              <div class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
+                {{ formatDateFull(day.dt) }}
+              </div>
 
-        <!-- Weather Description -->
-        <div
-          class="text-center text-sm mb-4 h-10 flex items-center justify-center"
-        >
-          <span class="capitalize">
-            {{ day.weather[0]?.description || "Weather" }}
-          </span>
-        </div>
+              <div class="my-3 flex justify-center">
+                <Icon
+                  :name="getWeatherIcon(day.weather[0].icon)"
+                  class="w-12 h-12 text-neutral-700 dark:text-neutral-300"
+                />
+              </div>
 
-        <!-- Rain Chance (Bottom Left) -->
-        <div class="absolute bottom-2 left-2 flex items-center">
-          <Icon name="mdi:weather-rainy" class="w-4 h-4 mr-1" />
-          <span class="text-sm">{{ getPopPercentage(day.pop) }}%</span>
-        </div>
+              <div class="flex justify-between items-center mt-2">
+                <span
+                  class="text-lg font-bold text-neutral-900 dark:text-white"
+                >
+                  {{ Math.round(day.temp.max) }}°
+                </span>
+                <span class="text-neutral-600 dark:text-neutral-400">
+                  {{ Math.round(day.temp.min) }}°
+                </span>
+              </div>
 
-        <!-- Temperature (Bottom Right) -->
-        <div class="absolute bottom-2 right-2 text-sm">
-          <span class="font-bold">{{ Math.round(day.temp.max) }}°</span>
-          <span class="opacity-80">/{{ Math.round(day.temp.min) }}°</span>
+              <div
+                class="mt-2 text-sm text-neutral-600 dark:text-neutral-400 flex items-center justify-center"
+              >
+                <Icon name="mdi:water" class="w-4 h-4 mr-1" />
+                {{ Math.round(day.pop * 100) }}%
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

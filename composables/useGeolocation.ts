@@ -48,7 +48,7 @@ export default () => {
         {
           enableHighAccuracy: true,
           timeout: 10000,
-          maximumAge: 300000, // 5 minutes
+          maximumAge: 300000,
         },
       );
     });
