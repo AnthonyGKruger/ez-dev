@@ -43,10 +43,10 @@ const precipitationData = computed(() => {
 });
 
 const formatHour = (hour: number) => {
-  if (hour === 0) return t('time-12am');
-  if (hour < 12) return t('time-am', { h: hour });
-  if (hour === 12) return t('time-12pm');
-  return t('time-pm', { h: hour - 12 });
+  if (hour === 0) return t("time-12am");
+  if (hour < 12) return t("time-am", { h: hour });
+  if (hour === 12) return t("time-12pm");
+  return t("time-pm", { h: hour - 12 });
 };
 
 const getWeatherIcon = (iconCode: string) => {
@@ -112,14 +112,14 @@ const observeBars = () => {
             animatedBars.value[idx] = true;
             if (!firstBarTracked.value) {
               firstBarTracked.value = true;
-              track('weather-hourly-first-bar-animated');
+              track("weather-hourly-first-bar-animated");
             }
             barObserver.current?.unobserve(target);
           }
         }
       });
     },
-    { threshold: 0.25 }
+    { threshold: 0.25 },
   );
 
   barRefs.value.forEach((el) => {
@@ -141,10 +141,10 @@ watch(
     if (hasHourlyData.value) {
       if (newData.length > 0 && !chartLoadedTracked) {
         chartLoadedTracked = true;
-        track('weather-hourly-chart-loaded', { bars: newData.length });
+        track("weather-hourly-chart-loaded", { bars: newData.length });
       }
       if (newData.length === 0) {
-        track('weather-hourly-no-data');
+        track("weather-hourly-no-data");
       }
     }
   },
@@ -160,9 +160,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg mt-8">
+  <div class="bg-white dark:bg-neutral-800 rounded-2xl shadow-lg mt-8">
     <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-6">
-      {{ t('weather-accordion-hourly') }}
+      {{ t("weather-accordion-hourly") }}
     </h3>
 
     <div v-if="!hasHourlyData" class="text-center py-8">
@@ -171,7 +171,7 @@ onUnmounted(() => {
         class="w-16 h-16 text-blue-500 mx-auto mb-4"
       />
       <p class="text-neutral-600 dark:text-neutral-400">
-        {{ t('hourly-only-today-tomorrow') }}
+        {{ t("hourly-only-today-tomorrow") }}
       </p>
     </div>
 
@@ -181,7 +181,7 @@ onUnmounted(() => {
         class="w-16 h-16 text-yellow-500 mx-auto mb-4"
       />
       <p class="text-neutral-600 dark:text-neutral-400">
-        {{ t('hourly-no-data') }}
+        {{ t("hourly-no-data") }}
       </p>
     </div>
 
@@ -191,7 +191,7 @@ onUnmounted(() => {
         class="w-16 h-16 text-yellow-500 mx-auto mb-4"
       />
       <p class="text-neutral-600 dark:text-neutral-400">
-        {{ t('hourly-no-significant-precip') }}
+        {{ t("hourly-no-significant-precip") }}
       </p>
     </div>
 
@@ -227,10 +227,10 @@ onUnmounted(() => {
                   <div
                     class="w-full rounded-full transition-all duration-700 ease-out"
                     :class="{
-                        'bg-blue-500': hour.precipitation > 0,
-                        'bg-neutral-200 dark:bg-neutral-600':
-                          hour.precipitation === 0,
-                      }"
+                      'bg-blue-500': hour.precipitation > 0,
+                      'bg-neutral-200 dark:bg-neutral-600':
+                        hour.precipitation === 0,
+                    }"
                     :style="{
                       height: animatedBars[index]
                         ? getBarHeight(hour.precipitation)
@@ -262,7 +262,7 @@ onUnmounted(() => {
       class="mt-6 flex items-center justify-center text-sm text-neutral-600 dark:text-neutral-400"
     >
       <Icon name="mdi:information-outline" class="w-4 h-4 mr-2" />
-      <span>{{ t('hourly-legend') }}</span>
+      <span>{{ t("hourly-legend") }}</span>
     </div>
   </div>
 </template>
