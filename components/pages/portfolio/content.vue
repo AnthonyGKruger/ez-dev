@@ -19,5 +19,6 @@ const { t } = useTranslate();
         />
       </div>
     </div>
+    <PagesSideProjectsContent />
   </section>
 </template>
