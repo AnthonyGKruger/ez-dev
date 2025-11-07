@@ -63,19 +63,19 @@ const getWindDirection = (degrees: number) => {
 };
 
 const getUvIndexLevel = (uvi: number) => {
-  if (uvi <= 2) return { level: t('uv-low'), color: "text-green-500" };
-  if (uvi <= 5) return { level: t('uv-moderate'), color: "text-yellow-500" };
-  if (uvi <= 7) return { level: t('uv-high'), color: "text-orange-500" };
-  if (uvi <= 10) return { level: t('uv-very-high'), color: "text-red-500" };
-  return { level: t('uv-extreme'), color: "text-purple-500" };
+  if (uvi <= 2) return { level: t("uv-low"), color: "text-green-500" };
+  if (uvi <= 5) return { level: t("uv-moderate"), color: "text-yellow-500" };
+  if (uvi <= 7) return { level: t("uv-high"), color: "text-orange-500" };
+  if (uvi <= 10) return { level: t("uv-very-high"), color: "text-red-500" };
+  return { level: t("uv-extreme"), color: "text-purple-500" };
 };
 </script>
 
 <template>
-  <div class="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg">
+  <div class="bg-white dark:bg-neutral-800 rounded-2xl shadow-lg">
     <div class="flex justify-between items-center mb-6">
       <h2 class="text-2xl font-bold text-neutral-900 dark:text-white">
-        {{ isToday ? t('today') : formatDate(day.dt) }}
+        {{ isToday ? t("today") : formatDate(day.dt) }}
       </h2>
       <span class="text-lg text-neutral-600 dark:text-neutral-400 capitalize">
         {{ day.weather[0]?.description }}
@@ -93,7 +93,7 @@ const getUvIndexLevel = (uvi: number) => {
             {{ Math.round(day.temp.day) }}°
           </div>
           <div class="text-neutral-600 dark:text-neutral-400">
-            {{ t('feels-like') }} {{ Math.round(day.feels_like.day) }}°
+            {{ t("feels-like") }} {{ Math.round(day.feels_like.day) }}°
           </div>
         </div>
       </div>
@@ -104,13 +104,17 @@ const getUvIndexLevel = (uvi: number) => {
         </div>
         <div class="flex justify-center space-x-4">
           <div class="text-center">
-            <div class="text-neutral-600 dark:text-neutral-400">{{ t('sunrise') }}</div>
+            <div class="text-neutral-600 dark:text-neutral-400">
+              {{ t("sunrise") }}
+            </div>
             <div class="font-medium text-neutral-900 dark:text-white">
               {{ formatTime(day.sunrise) }}
             </div>
           </div>
           <div class="text-center">
-            <div class="text-neutral-600 dark:text-neutral-400">{{ t('sunset') }}</div>
+            <div class="text-neutral-600 dark:text-neutral-400">
+              {{ t("sunset") }}
+            </div>
             <div class="font-medium text-neutral-900 dark:text-white">
               {{ formatTime(day.sunset) }}
             </div>
@@ -123,7 +127,9 @@ const getUvIndexLevel = (uvi: number) => {
       <div class="bg-neutral-100 dark:bg-neutral-700 p-4 rounded-xl">
         <div class="flex items-center mb-2">
           <Icon name="mdi:water-percent" class="w-5 h-5 text-blue-500 mr-2" />
-          <span class="text-neutral-600 dark:text-neutral-400">{{ t('humidity') }}</span>
+          <span class="text-neutral-600 dark:text-neutral-400">{{
+            t("humidity")
+          }}</span>
         </div>
         <div class="text-2xl font-bold text-neutral-900 dark:text-white">
           {{ day.humidity }}%
@@ -133,7 +139,9 @@ const getUvIndexLevel = (uvi: number) => {
       <div class="bg-neutral-100 dark:bg-neutral-700 p-4 rounded-xl">
         <div class="flex items-center mb-2">
           <Icon name="mdi:weather-windy" class="w-5 h-5 text-gray-500 mr-2" />
-          <span class="text-neutral-600 dark:text-neutral-400">{{ t('wind') }}</span>
+          <span class="text-neutral-600 dark:text-neutral-400">{{
+            t("wind")
+          }}</span>
         </div>
         <div class="text-2xl font-bold text-neutral-900 dark:text-white">
           {{ day.wind_speed }} m/s
@@ -146,7 +154,9 @@ const getUvIndexLevel = (uvi: number) => {
       <div class="bg-neutral-100 dark:bg-neutral-700 p-4 rounded-xl">
         <div class="flex items-center mb-2">
           <Icon name="mdi:weather-rainy" class="w-5 h-5 text-blue-400 mr-2" />
-          <span class="text-neutral-600 dark:text-neutral-400">{{ t('rain-chance') }}</span>
+          <span class="text-neutral-600 dark:text-neutral-400">{{
+            t("rain-chance")
+          }}</span>
         </div>
         <div class="text-2xl font-bold text-neutral-900 dark:text-white">
           {{ getPopPercentage(day.pop) }}%
@@ -159,7 +169,9 @@ const getUvIndexLevel = (uvi: number) => {
             name="mdi:white-balance-sunny"
             class="w-5 h-5 text-yellow-500 mr-2"
           />
-          <span class="text-neutral-600 dark:text-neutral-400">{{ t('uv-index') }}</span>
+          <span class="text-neutral-600 dark:text-neutral-400">{{
+            t("uv-index")
+          }}</span>
         </div>
         <div class="text-2xl font-bold" :class="getUvIndexLevel(day.uvi).color">
           {{ day.uvi }}
@@ -177,7 +189,7 @@ const getUvIndexLevel = (uvi: number) => {
       <div class="flex items-center">
         <Icon name="mdi:weather-pouring" class="w-5 h-5 text-blue-500 mr-2" />
         <span class="text-neutral-900 dark:text-white">
-          {{ t('rain-expected', { mm: day.rain }) }}
+          {{ t("rain-expected", { mm: day.rain }) }}
         </span>
       </div>
     </div>

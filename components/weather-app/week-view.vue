@@ -79,14 +79,18 @@ const selectDay = (index: number) => {
 </script>
 
 <template>
-  <div class="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg">
+  <div class="bg-white dark:bg-neutral-800 rounded-2xl shadow-lg">
     <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-6">
-      {{ t('weather-accordion-weekly') }}
+      {{ t("weather-accordion-weekly") }}
     </h2>
 
     <div class="overflow-x-auto">
       <div class="flex flex-nowrap gap-4 pr-2 py-3">
-        <div v-for="(day, index) in dailyData" :key="day.dt" class="px-2 flex-none">
+        <div
+          v-for="(day, index) in dailyData"
+          :key="day.dt"
+          class="px-2 flex-none"
+        >
           <div
             class="bg-neutral-50 dark:bg-neutral-700 rounded-xl p-4 cursor-pointer transition-all duration-200 hover:shadow-md h-full"
             :class="{
@@ -104,8 +108,8 @@ const selectDay = (index: number) => {
                   'text-blue-600 dark:text-blue-400': selectedDay === index,
                 }"
               >
-                <span v-if="isToday(day.dt)">{{ t('today') }}</span>
-                <span v-else-if="isTomorrow(day.dt)">{{ t('tomorrow') }}</span>
+                <span v-if="isToday(day.dt)">{{ t("today") }}</span>
+                <span v-else-if="isTomorrow(day.dt)">{{ t("tomorrow") }}</span>
                 <span v-else>{{ formatDate(day.dt) }}</span>
               </div>
               <div class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
