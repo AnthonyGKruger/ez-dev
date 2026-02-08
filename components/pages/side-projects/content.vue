@@ -14,6 +14,7 @@ const route = useRoute();
       </h1>
       <div class="grid gap-4">
         <NuxtLink
+          pull
           to="/side-projects/weather-app"
           class="block rounded-xl border border-neutral-200 dark:border-neutral-700 p-6 bg-white dark:bg-neutral-800 hover:shadow-md transition-shadow"
         >
