@@ -56,7 +56,7 @@ const isActive = (to: string) => route.path === to;
             :key="item.to"
             role="menuitem"
             aria-haspopup="false"
-            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-primary-gold focus:outline-none focus-visible:outline-none lg:px-8"
+            class="flex items-center justify-end gap-2 py-4 transition-colors duration-300 hover:text-primary-gold focus:outline-none focus-visible:outline-none lg:px-8 text-right"
             :class="{
               'text-primary-gold border-b border-primary-gold': isActive(
                 item.to,
@@ -65,8 +65,10 @@ const isActive = (to: string) => route.path === to;
             :to="item.to"
             @click="isOpen = false"
           >
-            <li role="none" class="flex items-stretch">
-              <span class="capitalize truncate">{{ t(item.name) }}</span>
+            <li role="none" class="flex items-end">
+              <span class="capitalize truncate text-right">{{
+                t(item.name)
+              }}</span>
             </li></NuxtLink
           >
         </ul>
