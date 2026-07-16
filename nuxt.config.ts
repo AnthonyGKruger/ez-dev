@@ -51,6 +51,12 @@ export default defineNuxtConfig({
       htmlAttrs: { class: "dark" },
     },
   },
+  content: {
+    // Enable Nuxt Studio live-preview editing of the content/** JSON.
+    preview: {
+      api: "https://api.nuxt.studio",
+    },
+  },
   icon: {
     mode: "svg",
     size: "2rem",

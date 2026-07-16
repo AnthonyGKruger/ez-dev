@@ -58,5 +58,19 @@ Requires a SQLite adapter (`better-sqlite3`, installed) — Nuxt Content builds 
 local content DB under `.data/` (gitignored). Editing a JSON file triggers a
 rebuild in dev.
 
-Next step if you want a visual editor: connect **Nuxt Studio** to this project;
-no code changes needed — it edits the same `content/**` JSON.
+The per-collection Zod schemas in `content.config.ts` mirror `types/content.ts`.
+Keep the two in sync — the schema drives both validation and the **Nuxt Studio**
+form editor.
+
+## Nuxt Studio (visual editor)
+
+The code side is wired: schemas give Studio the form fields, and
+`content.preview.api` (in `nuxt.config.ts`) enables live preview. To finish
+(these steps are yours — they need the GitHub repo and a deployment):
+
+1. Push this branch and open a repo on GitHub.
+2. Deploy the site (Vercel/Netlify/etc.) so Studio has a preview URL.
+3. Go to https://nuxt.studio, sign in with GitHub, and import the repo.
+4. Studio reads `content.config.ts` and renders a form for each collection
+   (`skills`, `portfolio`, `workExperience`, `qualifications`, `site`) in both
+   `en` and `af`. Edits are committed back to `content/**` as normal PRs/commits.

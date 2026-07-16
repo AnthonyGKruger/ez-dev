@@ -28,12 +28,13 @@ export default defineNuxtPlugin(async () => {
   for (const collection of COLLECTIONS) {
     const docs = await queryCollection(collection).all();
     for (const doc of docs) {
-      // Under a passthrough schema, the JSON fields live in `meta`; `stem`
+      // With per-collection schemas the JSON fields are top-level on the doc
+      // (alongside Nuxt Content metadata like id/stem). `stem`
       // (e.g. "en/skills" | "af/skills") carries the locale.
-      const d = doc as { stem?: string; id?: string; meta?: unknown };
+      const d = doc as { stem?: string; id?: string };
       const stem = String(d.stem ?? d.id ?? "");
       const locale = /(^|\/)af(\/|$)/.test(stem) ? "af" : "en";
-      next[locale][collection] = d.meta ?? doc;
+      next[locale][collection] = doc;
     }
   }
   store.value = next;
