@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { portfolioItems } from "~/assets/config/data";
-const { t } = useTranslate();
+const content = useContent("portfolio");
 
 const projects = computed(() =>
-  portfolioItems.map((p, i) => ({
+  content.value.projects.map((p, i) => ({
     ...p,
     index: String(i + 1).padStart(2, "0"),
     domain: p.link?.replace("https://", "").replace("www.", "") || "",
@@ -16,7 +15,7 @@ const projects = computed(() =>
     <!-- Section header -->
     <div class="flex items-center gap-5 mb-5">
       <div class="mono text-[13px] tracking-[.16em] text-primary-gold">
-        // SELECTED WORK
+        {{ content.eyebrow }}
       </div>
       <div class="flex-1 h-px bg-primary-gold/20"></div>
     </div>
@@ -24,11 +23,10 @@ const projects = computed(() =>
       class="flex items-end justify-between gap-6 mb-[52px] flex-wrap"
     >
       <h1 class="text-[56px] font-black tracking-[-0.02em] text-[#f4f7fa]">
-        Products I've shipped
+        {{ content.heading }}
       </h1>
       <p class="mono text-[13px] text-[oklch(70%_0.02_250)] max-w-[26em] text-right">
-        Dominating the web one project at a time — from brand e-commerce to
-        full SaaS platforms.
+        {{ content.intro }}
       </p>
     </div>
 
@@ -91,7 +89,7 @@ const projects = computed(() =>
             </h3>
           </div>
           <p class="text-[15px] leading-relaxed text-[oklch(78%_0.02_250)] mt-3 mb-[18px] flex-1">
-            {{ t(p.description) }}
+            {{ p.description }}
           </p>
 
           <!-- Action buttons -->

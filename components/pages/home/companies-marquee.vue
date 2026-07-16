@@ -1,11 +1,6 @@
 <script setup lang="ts">
-const { t } = useTranslate();
-const companies = [
-  { logo: "/media/logos/ds-logo.png", name: "Digital Stream" },
-  { logo: "/media/logos/DPTS.png", name: "DPTS" },
-  { logo: "/media/logos/mumbi-logo.png", name: "Mumbi Trust Administrators" },
-  { logo: "/media/logos/av-logo.png", name: "Addventures" },
-];
+const site = useContent("site");
+const companies = computed(() => site.value.companies);
 </script>
 
 <template>
@@ -13,7 +8,7 @@ const companies = [
     <h2
       class="mono text-sm tracking-[.1em] text-primary-gold text-center mb-8"
     >
-      {{ t?.("companies-heading") || "Some Of The Awesome Companies That I Have Worked With" }}
+      {{ companies.heading }}
     </h2>
     <div class="overflow-hidden relative max-w-[1240px] mx-auto">
       <div
@@ -22,7 +17,7 @@ const companies = [
       >
         <template v-for="n in 2" :key="n">
           <img
-            v-for="c in companies"
+            v-for="c in companies.items"
             :key="`${n}-${c.name}`"
             :src="c.logo"
             :alt="c.name"

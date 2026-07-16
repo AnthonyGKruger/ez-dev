@@ -42,18 +42,6 @@ export const translations: Translations = new Map([
       ["home-typed-build-together", "Let's build something together!"],
       ["home-typed-portfolio", "Have a look at my portfolio!"],
       ["home-typed-contact", "Contact me!"],
-      ["home-hero-eyebrow", "// ANTHONY KRUGER — FULL-STACK WEB DEVELOPER"],
-      ["home-hero-headline", "I design & build web products teams"],
-      ["home-hero-headline-accent", "rely on."],
-      [
-        "home-hero-lead",
-        "A BSc IT and {years} years shipping production apps end to end — from SaaS platforms to e-commerce — with Nuxt, Next.js and TypeScript.",
-      ],
-      ["home-hero-cta-work", "VIEW SELECTED WORK"],
-      ["home-hero-cta-touch", "GET IN TOUCH"],
-      ["home-stat-years", "YEARS SHIPPING"],
-      ["home-stat-degree", "8 DISTINCTIONS"],
-      ["home-stat-products", "PRODUCTS BUILT"],
 
       // Contact page
       ["contact-subtitle", "Let's Build Something Together!"],
@@ -161,10 +149,6 @@ export const translations: Translations = new Map([
       ["cookie-accept", "Accept"],
 
       // Companies
-      [
-        "companies-heading",
-        "Some Of The Awesome Companies That I Have Worked With",
-      ],
 
       // Languages page labels
       ["language-english", "English"],
@@ -176,82 +160,10 @@ export const translations: Translations = new Map([
       ["portfolio-view", "View"],
       ["portfolio-referral-letter", "Referral Letter"],
       ["portfolio-code", "Code"],
-      [
-        "portfolio-votera-desc",
-        "A smart HOA-management SaaS platform for South African communities — digital voting, maintenance tracking, resident directory and transparent governance in one portal.",
-      ],
-      [
-        "portfolio-chilli-desc",
-        "E-commerce storefront for a premium small-batch fermented hot-sauce brand — product catalogue, cart and checkout, built for a fast, tactile browsing experience.",
-      ],
-      [
-        "portfolio-ds-desc",
-        "Digital marketing agency website built using Next.js and Tailwind CSS (the code for this project is unfortunately not available for public viewing)",
-      ],
-      [
-        "portfolio-mumbi-desc",
-        "Accounting firm website built using Next.js and Tailwind CSS",
-      ],
 
       // Work Experience
-      ["work-heading", "Check Out My Work Experience Below"],
-      ["work-subtitle", "Hard Work & Perseverance"],
-      ["role-full-stack-web-developer", "Full Stack Web Developer"],
-      ["role-front-end-web-developer", "Front End Web Developer"],
-      ["role-branch-manager", "Branch Manager"],
-      ["role-sales-manager", "Sales Manager"],
-      ["role-sales-consultant", "Sales Consultant"],
-      ["role-administrator", "Administrator"],
-      [
-        "summary-ezdev",
-        "I am responsible for creating dynamic and user-friendly web applications using a modern stack including Next.js, React.js, and Tailwind CSS. My role spans front-end development, UI/UX, CMS and e-commerce integrations, database and server-side development, version control, performance optimization, security, testing, debugging, documentation, collaboration, and continuous learning.",
-      ],
-      [
-        "summary-osiris",
-        "As a Front-End Developer for Osiris Trading, I play a key role in designing and developing responsive, user-friendly web applications, features and optimizations using modern JavaScript frameworks and best practices in UI/UX design. I collaborated closely with cross-functional teams to ensure seamless integration with back-end services, optimized website performance, and enhanced cross-browser compatibility. My focus on mobile-first design, accessibility, and performance lead to improved user engagement and site efficiency, while my expertise in version control and Agile workflows ensure timely and high-quality project delivery.",
-      ],
-      [
-        "summary-dpts",
-        "Led a web development team building dynamic websites and e-commerce stores for international clients. Migrated code and parameters to QA and production and administered Microsoft Azure cloud environments for web and back-office servers. This provided hands-on experience complementing my Bachelor's degree in Information Technology.",
-      ],
-      [
-        "summary-lw-branch-manager",
-        "Directing all operational aspects including distribution, customer service, human resources, administration and sales in accordance with the company's objectives. Providing training, coaching, development and motivation for branch personnel. Developing forecasts and financial objectives.",
-      ],
-      ["comment-completed-poe", "Successfully completed Portfolio of Evidence"],
-      [
-        "comment-integration-corporate",
-        "Successful integration into corporate working environments",
-      ],
-      ["comment-managing-flagship-branch", "Managing the flagship branch"],
-      ["comment-team-of-the-year", "Team of the year"],
-      [
-        "comment-proved-worth-transfer-flagship",
-        "Proved my worth and transferred to flagship branch",
-      ],
-      ["comment-two-performance-awards", "Received two performance awards"],
-      [
-        "comment-reached-managerial-after-two-years",
-        "Reached managerial status after two years",
-      ],
-      [
-        "comment-handled-incoming-queries",
-        "Successfully handled all incoming queries",
-      ],
-      ["comment-managed-it-support", "Managed all IT support issues"],
 
       // Skills
-      ["skills-heading", "Some Of The Skills & Awesome Technologies I Use!"],
-      [
-        "skills-nuxt-desc",
-        "My daily driver. Both professionally and personally.",
-      ],
-      ["skills-next-desc", "Where my passion for web dev all started."],
-      [
-        "skills-tailwind-desc",
-        "My favourite CSS framework to ship code faster!",
-      ],
-      ["skills-typescript-desc", "For fool-proof code."],
 
       // Privacy Policy
       ["privacy-subtitle", "All About Privacy"],
@@ -323,12 +235,6 @@ export const translations: Translations = new Map([
       ["go-home", "Go Home"],
 
       // Qualifications
-      ["view-certificate", "View Certificate"],
-      ["qualifications-heading", "Have A Look At My Qualifications"],
-      ["qualifications-subtitle", "Always Leveling Up"],
-      ["qual-systems-dev-specialized", "Specialized in Systems Development "],
-      ["qual-8-distinctions", "8 Distinctions"],
-      ["qual-half-colours-academics", "Half Colours for Academics"],
 
       // Thank You Page
       ["thank-you-title", "Thank You!"],
@@ -381,18 +287,6 @@ export const translations: Translations = new Map([
       ["home-typed-build-together", "Kom ons bou saam iets!"],
       ["home-typed-portfolio", "Kyk gerus na my portefeulje!"],
       ["home-typed-contact", "Kontak my!"],
-      ["home-hero-eyebrow", "// ANTHONY KRUGER — VOLSTAPEL-WEBONTWIKKELAAR"],
-      ["home-hero-headline", "Ek ontwerp & bou webprodukte waarop spanne"],
-      ["home-hero-headline-accent", "staatmaak."],
-      [
-        "home-hero-lead",
-        "'n BSc IT en {years} jaar se ondervinding om produksie-toepassings van begin tot einde te lewer — van SaaS-platforms tot e-handel — met Nuxt, Next.js en TypeScript.",
-      ],
-      ["home-hero-cta-work", "SIEN GEKOSE WERK"],
-      ["home-hero-cta-touch", "KOM IN KONTAK"],
-      ["home-stat-years", "JARE SE LEWERING"],
-      ["home-stat-degree", "8 ONDERSKEIDINGS"],
-      ["home-stat-products", "PRODUKTE GEBOU"],
 
       // Contact page
       ["contact-subtitle", "Kom ons bou saam iets!"],
@@ -503,10 +397,6 @@ export const translations: Translations = new Map([
       ["cookie-accept", "Aanvaar"],
 
       // Companies
-      [
-        "companies-heading",
-        "Sommige van die ongelooflike maatskappye waarmee ek gewerk het",
-      ],
 
       // Languages page labels
       ["language-english", "Engels"],
@@ -518,82 +408,10 @@ export const translations: Translations = new Map([
       ["portfolio-view", "Bekyk"],
       ["portfolio-referral-letter", "Verwysingsbrief"],
       ["portfolio-code", "Kode"],
-      [
-        "portfolio-votera-desc",
-        "'n Slim HOA-bestuur SaaS-platform vir Suid-Afrikaanse gemeenskappe — digitale stemming, instandhoudingsopsporing, inwonergids en deursigtige bestuur in een portaal.",
-      ],
-      [
-        "portfolio-chilli-desc",
-        "E-handelswinkel vir 'n premium kleinbatch-gefermenteerde brandsous-handelsmerk — produkkatalogus, mandjie en betaling, gebou vir 'n vinnige, tasbare blaai-ervaring.",
-      ],
-      [
-        "portfolio-ds-desc",
-        "Digitale bemarkingsagentskap-webwerf gebou met Next.js en Tailwind CSS (die kode vir hierdie projek is ongelukkig nie publiek beskikbaar nie)",
-      ],
-      [
-        "portfolio-mumbi-desc",
-        "Rekenmeestersfirma-webwerf gebou met Next.js en Tailwind CSS",
-      ],
 
       // Work Experience
-      ["work-heading", "Kyk na my werkservaring hieronder"],
-      ["work-subtitle", "Harde werk en deursettingsvermoë"],
-      ["role-full-stack-web-developer", "Volstapel Webontwikkelaar"],
-      ["role-front-end-web-developer", "Front-End Webontwikkelaar"],
-      ["role-branch-manager", "Takbestuurder"],
-      ["role-sales-manager", "Verkoopsbestuurder"],
-      ["role-sales-consultant", "Verkoopsconsultant"],
-      ["role-administrator", "Administrateur"],
-      [
-        "summary-ezdev",
-        "Ek is verantwoordelik vir die skep van dinamiese en gebruikersvriendelike webtoepassings met 'n moderne stapel wat Next.js, React.js en Tailwind CSS insluit. My rol sluit front-end ontwikkeling, UI/UX, CMS- en e-handel-integrasies, databasis- en bedienerkant-ontwikkeling, weergawebeheer, werkverrigting-optimalisering, sekuriteit, toetsing en ontfouting, dokumentasie, samewerking en voortdurende leer in.",
-      ],
-      [
-        "summary-osiris",
-        "As 'n Front-End Ontwikkelaar vir Osiris Trading speel ek 'n sleutelrol in die ontwerp en ontwikkeling van responsiewe, gebruikersvriendelike webtoepassings, funksies en optimiserings deur moderne JavaScript-raamwerke en beste praktyke in UI/UX-ontwerp te gebruik. Ek het nou saamgewerk met kruisfunksionele spanne om naadlose integrasie met agterkant-dienste te verseker, webwerf-werkverrigting geoptimaliseer, en kruis-blaaier-verenigbaarheid verbeter. My fokus op mobiel-eerste ontwerp, toeganklikheid en werkverrigting het gelei tot verbeterde gebruikersbetrokkenheid en werf-doeltreffendheid, terwyl my kundigheid in weergawebeheer en Agile-werkvloeie tydige en hoë-kwaliteit projekliewering verseker.",
-      ],
-      [
-        "summary-dpts",
-        "Het 'n webontwikkelingspan gelei wat dinamiese webwerwe en e-handelswinkels vir internasionale kliënte gebou het. Kode en parameters na QA en produksie gemigreer en Microsoft Azure-wolkomgewings vir web- en rugkantoorbedieners geadministreer. Dit het praktiese ervaring gebied wat my Baccalaureusgraad in Inligtingstegnologie aangevul het.",
-      ],
-      [
-        "summary-lw-branch-manager",
-        "Rig alle operasionele aspekte insluitend distribusie, kliëntediens, menslike hulpbronne, administrasie en verkope in ooreenstemming met die maatskappy se doelwitte. Verskaf opleiding, afrigting, ontwikkeling en motivering vir takpersoneel. Ontwikkel vooruitskattings en finansiële doelwitte.",
-      ],
-      ["comment-completed-poe", "Portefeulje van Bewyse suksesvol voltooi"],
-      [
-        "comment-integration-corporate",
-        "Suksesvolle integrasie in korporatiewe werksomgewings",
-      ],
-      ["comment-managing-flagship-branch", "Bestuur van die vlagskip-tak"],
-      ["comment-team-of-the-year", "Span van die jaar"],
-      [
-        "comment-proved-worth-transfer-flagship",
-        "Waarde bewys en oorgeplaas na vlagskip-tak",
-      ],
-      ["comment-two-performance-awards", "Twee prestasietoekennings ontvang"],
-      [
-        "comment-reached-managerial-after-two-years",
-        "Bestuursvlak na twee jaar bereik",
-      ],
-      [
-        "comment-handled-incoming-queries",
-        "Alle inkomende navrae suksesvol hanteer",
-      ],
-      ["comment-managed-it-support", "Alle IT-ondersteuningskwessies bestuur"],
 
       // Skills
-      [
-        "skills-heading",
-        "Van die vaardighede en wonderlike tegnologieë wat ek gebruik!",
-      ],
-      ["skills-nuxt-desc", "My daaglikse keuse. Professioneel en persoonlik."],
-      ["skills-next-desc", "Waar my passie vir webontwikkeling begin het."],
-      [
-        "skills-tailwind-desc",
-        "My gunsteling CSS-raamwerk om vinniger te lewer!",
-      ],
-      ["skills-typescript-desc", "Vir foutvaste kode."],
 
       // Privacy Policy
       ["privacy-subtitle", "Alles oor Privaatheid"],
@@ -671,12 +489,6 @@ export const translations: Translations = new Map([
       ["go-home", "Gaan Tuis"],
 
       // Qualifications
-      ["view-certificate", "Bekyk Sertifikaat"],
-      ["qualifications-heading", "Kyk na My Kwalifikasies"],
-      ["qualifications-subtitle", "Altyd Besig om op te Gradeer"],
-      ["qual-systems-dev-specialized", "Stelsels Ontwikkeling Gespesialiseerd"],
-      ["qual-8-distinctions", "8 Onderskeidings"],
-      ["qual-half-colours-academics", "Half Kleure vir Akademiese Prestasie"],
 
       // Thank You Page
       ["thank-you-title", "Dankie!"],

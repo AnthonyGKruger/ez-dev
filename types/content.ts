@@ -64,8 +64,64 @@ export interface HeroContent {
   specBottom: [string, string];
 }
 
+export interface Company {
+  name: string;
+  logo: string;
+}
+
+export interface CompaniesContent {
+  heading: string;
+  items: Company[];
+}
+
 export interface SiteContent {
   hero: HeroContent;
+  companies: CompaniesContent;
+}
+
+export interface WorkExperienceEntry {
+  id: string;
+  company: string;
+  /** Localized role title */
+  role: string;
+  /** Localized summary; null when the entry has no description */
+  summary: string | null;
+  dateFrom: string;
+  dateTo: string;
+  /** Localized highlight badges */
+  comments: string[];
+}
+
+export interface WorkExperienceContent {
+  eyebrow: string;
+  heading: string;
+  tagline: string;
+  entries: WorkExperienceEntry[];
+}
+
+export interface Certification {
+  id: string;
+  title: string;
+  institution: string;
+  link: string;
+}
+
+export interface QualificationsContent {
+  eyebrow: string;
+  heading: string;
+  tagline: string;
+  featured: {
+    period: string;
+    title: string;
+    saqa: string;
+    tags: string[];
+  };
+  certsLabel: string;
+  certs: Certification[];
+  nsc: {
+    title: string;
+    meta: string;
+  };
 }
 
 /** Maps a content collection name to its shape (used by useContent). */
@@ -73,4 +129,6 @@ export interface ContentCollections {
   skills: SkillsContent;
   portfolio: PortfolioContent;
   site: SiteContent;
+  workExperience: WorkExperienceContent;
+  qualifications: QualificationsContent;
 }

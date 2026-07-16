@@ -2,6 +2,10 @@
 const { t } = useTranslate();
 const yearsExp = new Date().getFullYear() - 2020;
 
+const site = useContent("site");
+const hero = computed(() => site.value.hero);
+const withYears = (s: string) => s.replace("{years}", String(yearsExp));
+
 // Terminal typing effect
 const typed = ref("");
 let timer: ReturnType<typeof setTimeout> | undefined;
@@ -86,20 +90,18 @@ onUnmounted(() => {
       <!-- Left: copy -->
       <div>
         <p class="mono text-[13px] tracking-[.18em] text-primary-gold mb-6">
-          {{ t("home-hero-eyebrow") }}
+          {{ hero.eyebrow }}
         </p>
         <h1
           class="text-[44px] sm:text-[56px] lg:text-[64px] leading-[1.03] font-black tracking-[-0.02em] text-[#f4f7fa]"
         >
-          {{ t("home-hero-headline") }}
-          <span class="text-light-gold">{{
-            t("home-hero-headline-accent")
-          }}</span>
+          {{ hero.headline }}
+          <span class="text-light-gold">{{ hero.headlineAccent }}</span>
         </h1>
         <p
           class="text-[19px] leading-[1.6] text-[oklch(80%_0.02_250)] mt-7 max-w-[34em]"
         >
-          {{ t("home-hero-lead", { years: String(yearsExp) }) }}
+          {{ withYears(hero.lead) }}
         </p>
         <p class="mono text-[15px] mt-[22px] text-[oklch(75%_0.02_250)] min-h-[1.5em]">
           $ <span class="text-light-gold">anthony</span> --status "<span
@@ -114,42 +116,26 @@ onUnmounted(() => {
             to="/portfolio"
             class="mono inline-flex items-center gap-2 px-[26px] py-3.5 rounded-[9px] text-sm font-bold tracking-[.03em] bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold hover:-translate-y-0.5"
           >
-            {{ t("home-hero-cta-work") }}
+            {{ hero.ctaWork }}
           </NuxtLink>
           <NuxtLink
             to="/contact-me"
             class="mono inline-flex items-center gap-2 px-[26px] py-3.5 rounded-[9px] text-sm font-bold tracking-[.03em] bg-transparent text-light-gold border border-primary-gold/50 transition-all duration-300 hover:border-light-gold hover:bg-primary-gold/10"
           >
-            {{ t("home-hero-cta-touch") }}
+            {{ hero.ctaTouch }}
           </NuxtLink>
         </div>
 
         <!-- Stats -->
         <div class="mono flex gap-7 mt-11 flex-wrap">
-          <div>
+          <div v-for="stat in hero.stats" :key="stat.label">
             <div class="text-[26px] font-bold text-light-gold">
-              {{ yearsExp }}+
+              {{ withYears(stat.value) }}
             </div>
             <div
               class="text-[11px] tracking-[.12em] text-[oklch(65%_0.02_250)] mt-1"
             >
-              {{ t("home-stat-years") }}
-            </div>
-          </div>
-          <div>
-            <div class="text-[26px] font-bold text-light-gold">BSc IT</div>
-            <div
-              class="text-[11px] tracking-[.12em] text-[oklch(65%_0.02_250)] mt-1"
-            >
-              {{ t("home-stat-degree") }}
-            </div>
-          </div>
-          <div>
-            <div class="text-[26px] font-bold text-light-gold">10+</div>
-            <div
-              class="text-[11px] tracking-[.12em] text-[oklch(65%_0.02_250)] mt-1"
-            >
-              {{ t("home-stat-products") }}
+              {{ stat.label }}
             </div>
           </div>
         </div>
@@ -164,7 +150,7 @@ onUnmounted(() => {
           <div
             class="mono flex justify-between text-[11px] tracking-[.1em] text-primary-gold mb-6"
           >
-            <span>BRAND MARK</span><span>v.2026</span>
+            <span>{{ hero.specTop[0] }}</span><span>{{ hero.specTop[1] }}</span>
           </div>
           <svg
             id="home-hero"
@@ -237,7 +223,7 @@ onUnmounted(() => {
           <div
             class="mono flex justify-between text-[11px] tracking-[.08em] text-[oklch(60%_0.02_250)] mt-6 pt-4 border-t border-primary-gold/20"
           >
-            <span>NUXT · NEXT · TS</span><span>SSR · SSG · SPA</span>
+            <span>{{ hero.specBottom[0] }}</span><span>{{ hero.specBottom[1] }}</span>
           </div>
           <!-- corner brackets -->
           <span

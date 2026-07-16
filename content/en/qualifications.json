@@ -1,0 +1,66 @@
+{
+  "eyebrow": "// CREDENTIALS",
+  "heading": "Always leveling up",
+  "tagline": "FORMAL & CONTINUOUS LEARNING",
+  "featured": {
+    "period": "2019 — 2021 · RICHFIELD GRADUATE INSTITUTE OF TECHNOLOGY",
+    "title": "BSc IT",
+    "saqa": "— SAQA ID #35954",
+    "tags": ["SYSTEMS DEVELOPMENT", "8 DISTINCTIONS"]
+  },
+  "certsLabel": "CERTIFICATIONS & COURSES",
+  "certs": [
+    {
+      "id": "q10",
+      "title": "The Nuxt 3 Bootcamp - The Complete Developer Guide",
+      "institution": "Udemy",
+      "link": "https://www.ude.my/UC-32411633-c966-4999-a6ae-dcf78d2634a8/"
+    },
+    {
+      "id": "q9",
+      "title": "Understanding TypeScript",
+      "institution": "Udemy",
+      "link": "https://ude.my/UC-46def24d-ef97-401e-bd1d-c6f82ceaa605"
+    },
+    {
+      "id": "q8",
+      "title": "React - The Complete Guide 2024 (incl. React Router & Redux)",
+      "institution": "Udemy",
+      "link": "https://ude.my/UC-1215eba0-6856-407b-9d7d-91a49469e4c9"
+    },
+    {
+      "id": "q7",
+      "title": "Next.js 14 & React - The Complete Guide",
+      "institution": "Udemy",
+      "link": "https://ude.my/UC-a8475fc7-ea9f-4f40-9eb1-31f973a73b5a"
+    },
+    {
+      "id": "q3",
+      "title": "CSS - The Complete Guide 2023 (incl. Flexbox, Grid & Sass)",
+      "institution": "Udemy",
+      "link": "https://ude.my/UC-7da085a8-c110-4724-b20f-452494369b0e"
+    },
+    {
+      "id": "q2",
+      "title": "The Complete Web Developer in 2022: Zero to Mastery",
+      "institution": "Udemy",
+      "link": "https://ude.my/UC-1d4f7fd3-ec81-4317-b99d-5747cbcd16ac"
+    },
+    {
+      "id": "q4",
+      "title": "6.00.2x Introduction to Computational Thinking and Data Science",
+      "institution": "MiTx Online",
+      "link": "https://courses.edx.org/certificates/fa03b6b8c0a04312945e938093948cd2"
+    },
+    {
+      "id": "q5",
+      "title": "6.00.1x: Introduction to Computer Science and Programming Using Python",
+      "institution": "MiTx Online",
+      "link": "https://courses.edx.org/certificates/4a21f40f94dc4d5da93426422982fc1b"
+    }
+  ],
+  "nsc": {
+    "title": "National Senior Certificate",
+    "meta": "2006 — 2010 · Lyttleton Manor High School · Half Colours for Academics"
+  }
+}

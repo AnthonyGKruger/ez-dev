@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { workExperienceItems } from "~/assets/config/data";
-const { t } = useTranslate();
+const content = useContent("workExperience");
 </script>
 
 <template>
@@ -8,16 +7,16 @@ const { t } = useTranslate();
     <!-- Section header -->
     <div class="flex items-center gap-5 mb-5">
       <div class="mono text-[13px] tracking-[.16em] text-primary-gold">
-        // EXPERIENCE
+        {{ content.eyebrow }}
       </div>
       <div class="flex-1 h-px bg-primary-gold/20"></div>
     </div>
     <div class="flex items-end justify-between gap-6 mb-[52px] flex-wrap">
       <h1 class="text-[56px] font-black tracking-[-0.02em] text-[#f4f7fa]">
-        Where I've built
+        {{ content.heading }}
       </h1>
       <p class="mono text-[13px] text-[oklch(70%_0.02_250)]">
-        HARD WORK &amp; PERSEVERANCE
+        {{ content.tagline }}
       </p>
     </div>
 
@@ -31,7 +30,7 @@ const { t } = useTranslate();
 
       <div class="flex flex-col gap-3.5">
         <div
-          v-for="w in workExperienceItems"
+          v-for="w in content.entries"
           :key="w.id"
           class="relative border border-primary-gold/25 rounded-2xl bg-surface-bg p-6 transition-colors duration-[.4s] hover:border-primary-gold/60"
         >
@@ -48,13 +47,13 @@ const { t } = useTranslate();
             </span>
           </div>
           <p class="mono text-[13px] tracking-[.04em] text-light-gold mt-2">
-            {{ t(w.role) }}
+            {{ w.role }}
           </p>
           <p
             v-if="w.summary"
             class="text-[15px] leading-relaxed text-[oklch(76%_0.02_250)] mt-3.5"
           >
-            {{ t(w.summary) }}
+            {{ w.summary }}
           </p>
 
           <!-- Highlight badges -->
@@ -65,7 +64,7 @@ const { t } = useTranslate();
               class="mono inline-flex items-center gap-[7px] text-xs px-3 py-1.5 rounded-[7px] bg-primary-gold/10 text-light-gold border border-primary-gold/25"
             >
               <Icon name="mdi:medal" size="14" class="text-light-gold" />
-              {{ t(c) }}
+              {{ c }}
             </span>
           </div>
         </div>

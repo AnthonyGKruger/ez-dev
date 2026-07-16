@@ -13,5 +13,14 @@
     ],
     "specTop": ["BRAND MARK", "v.2026"],
     "specBottom": ["NUXT · NEXT · TS", "SSR · SSG · SPA"]
+  },
+  "companies": {
+    "heading": "Sommige van die ongelooflike maatskappye waarmee ek gewerk het",
+    "items": [
+      { "name": "Digital Stream", "logo": "/media/logos/ds-logo.png" },
+      { "name": "DPTS", "logo": "/media/logos/DPTS.png" },
+      { "name": "Mumbi Trust Administrators", "logo": "/media/logos/mumbi-logo.png" },
+      { "name": "Addventures", "logo": "/media/logos/av-logo.png" }
+    ]
   }
 }

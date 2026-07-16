@@ -24,22 +24,36 @@ skills.value.items;                  // typed SkillItem[]
 The `{years}` token in `site.json` (hero lead + first stat) is interpolated at
 render time by the consuming component.
 
+Filenames match their collection key exactly (`workExperience.json`,
+`qualifications.json`, …) so `useContent(key)` resolves `content/<locale>/<key>.json`.
+
 ## Status
 
-- **Migrated:** `skills` (grid + home preview consume `useContent`)
-- **Scaffolded (JSON ready, not yet wired):** `portfolio`, `site.hero`
-- **Next:** `work-experience`, `qualifications`, full `site` copy (about, contact,
-  companies, footer), then retire `assets/config/data.ts` and the structured
-  entries in `assets/config/translations.ts`.
+- **Migrated (component reads from `useContent`):** `skills`, `portfolio`,
+  `workExperience`, `qualifications`, `site.hero`, `site.companies`.
+  `assets/config/data.ts` has been removed and the corresponding structured
+  strings pruned from `assets/config/translations.ts`.
+- **Still key-based i18n microcopy** (stays in `translations.ts`): nav/footer
+  labels, contact-form labels & errors, cookie notice, thank-you, privacy,
+  languages page, SEO titles, the hero typing strings.
+- **Next slice:** the About page (`about/hero.vue`, `home/about-preview.vue`)
+  and the contact-page prose, which still hold hardcoded copy — move into
+  `site.about` / `site.contact`.
 
-## Upgrade path → Nuxt Content
+## Runtime choice → why the glob loader, not @nuxt/content (yet)
 
-`useContent()` is the only seam. It currently reads the per-locale JSON via
-`import.meta.glob`. To move to Nuxt Content v3:
+`useContent()` reads the per-locale JSON synchronously via `import.meta.glob`
+(bundled by Vite). This was chosen over installing `@nuxt/content` because:
 
-1. `npm i @nuxt/content`, add `@nuxt/content` to `modules`.
-2. Add `content.config.ts` defining a collection per locale (source
-   `en/**`, `af/**`) with a Zod schema mirroring `types/content.ts`.
-3. Replace the body of `useContent()` with `queryCollection(...)`.
+- Nuxt Content's `queryCollection()` is **async** (file → build-time DB →
+  runtime query). Adopting it would turn every content read into
+  `useAsyncData`, and live EN/AF switching would need explicit refetch/watch —
+  today it "just works" reactively through the `computed`.
+- For a small, static, SSG portfolio the DB layer buys little.
 
-No component changes required — the returned shape stays the same.
+`useContent()` is the single seam, so adopting Nuxt Content later is localized:
+1. `npm i @nuxt/content`, add it to `modules`.
+2. Add `content.config.ts` with a collection per locale (`en/**`, `af/**`) and
+   a Zod schema mirroring `types/content.ts`.
+3. Swap the body of `useContent()` for `queryCollection(...)` (returning the
+   same shape). Worth doing if/when you want the **Nuxt Studio** visual editor.
