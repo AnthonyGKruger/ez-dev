@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const { t } = useTranslate();
+const site = useContent("site");
+const cta = computed(() => site.value.contact.cta);
 </script>
 
 <template>
@@ -9,17 +10,16 @@ const { t } = useTranslate();
     >
       <div class="flex-1 text-center lg:text-left">
         <h2 class="text-[42px] font-black tracking-[-0.02em] leading-[1.05] text-[#f4f7fa]">
-          {{ t("contact-heading-revamp") || "Let's build something together." }}
+          {{ cta.heading }}
         </h2>
         <p class="text-lg leading-relaxed text-[oklch(78%_0.02_250)] mt-6 max-w-[30em]">
-          Have a project in mind, or a role you're hiring for? Get in touch and
-          I'll get back to you shortly.
+          {{ cta.subtitle }}
         </p>
         <NuxtLink
           to="/contact-me"
           class="mono inline-flex items-center gap-2 mt-8 px-[26px] py-3.5 rounded-[9px] text-sm font-bold tracking-[.03em] bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold hover:-translate-y-0.5"
         >
-          {{ t("nav-start-project") }} &rarr;
+          {{ cta.button }} &rarr;
         </NuxtLink>
       </div>
       <div class="flex-shrink-0 w-[200px] h-[200px]">

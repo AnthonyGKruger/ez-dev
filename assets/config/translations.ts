@@ -11,22 +11,6 @@ export const translations: Translations = new Map([
       //About
       ["languages-i-am-fluent-in", "Languages I am fluent in."],
       ["keep-up-with-the-lingo", "Keep up with the lingo"],
-      ["about-hero-title", "About Me!"],
-      [
-        "about-hero-p1",
-        "Fueled by a passion for technology and a knack for problem-solving, I'm a Web Developer with a drive to craft intuitive and impactful web experiences.",
-      ],
-      [
-        "about-hero-p2",
-        "My journey began in the dynamic world of retail, where I honed my leadership and customer-centric skills as a Branch Manager. While exceeding sales targets and building a thriving team, I discovered a hidden passion for web development. This led me to pursue a Bachelor's degree in Information Technology, graduating in 2021 with a comprehensive understanding of web principles.",
-      ],
-      [
-        "about-hero-p4",
-        "Let's build the web together! I'm excited to discuss your project and showcase how my unique blend of experience and technical knowledge can bring your vision to life. Feel free to reach out through my contact form and let's connect!",
-      ],
-      ["cta-lets-chat", "Let's Chat"],
-      ["about-see-work", "SEE MY WORK"],
-      ["contact-heading-revamp", "Let's build something together."],
 
       //Home
       [
@@ -256,22 +240,6 @@ export const translations: Translations = new Map([
       //About
       ["languages-i-am-fluent-in", "Tale waarin ek vlot is."],
       ["keep-up-with-the-lingo", "Bly op hoogte van die jargon"],
-      ["about-hero-title", "Oor My!"],
-      [
-        "about-hero-p1",
-        "Gedryf deur 'n passie vir tegnologie en 'n aanvoeling vir probleemoplossing, is ek 'n webontwikkelaar met 'n dryfkrag om intuïtiewe en impakvolle web-ervarings te skep.",
-      ],
-      [
-        "about-hero-p2",
-        "My reis het begin in die dinamiese wêreld van kleinhandel, waar ek my leierskap- en kliëntgefokusde vaardighede as 'n Takbestuurder geslyp het. Terwyl ek verkoopsdoelwitte oortref en 'n florerende span gebou het, het ek 'n verborge passie vir webontwikkeling ontdek. Dit het my gelei om 'n Baccalaureusgraad in Inligtingstegnologie te volg, en ek het in 2021 gegradueer met 'n omvattende begrip van webbeginsels.",
-      ],
-      [
-        "about-hero-p4",
-        "Kom ons bou die web saam! Ek is opgewonde om u projek te bespreek en te wys hoe my unieke mengsel van ervaring en tegniese kennis u visie tot lewe kan bring. Voel vry om my te kontak deur my kontakvorm en kom ons skakel!",
-      ],
-      ["cta-lets-chat", "Kom gesels"],
-      ["about-see-work", "SIEN MY WERK"],
-      ["contact-heading-revamp", "Kom ons bou saam iets."],
 
       //Home
       [

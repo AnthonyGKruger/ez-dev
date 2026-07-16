@@ -30,15 +30,14 @@ Filenames match their collection key exactly (`workExperience.json`,
 ## Status
 
 - **Migrated (component reads from `useContent`):** `skills`, `portfolio`,
-  `workExperience`, `qualifications`, `site.hero`, `site.companies`.
+  `workExperience`, `qualifications`, and `site` (`hero`, `companies`, `about`,
+  `contact`). The About page + home preview, the contact form and the home
+  contact CTA all read from `site.about` / `site.contact`.
   `assets/config/data.ts` has been removed and the corresponding structured
   strings pruned from `assets/config/translations.ts`.
 - **Still key-based i18n microcopy** (stays in `translations.ts`): nav/footer
-  labels, contact-form labels & errors, cookie notice, thank-you, privacy,
+  labels, contact-form validation errors, cookie notice, thank-you, privacy,
   languages page, SEO titles, the hero typing strings.
-- **Next slice:** the About page (`about/hero.vue`, `home/about-preview.vue`)
-  and the contact-page prose, which still hold hardcoded copy — move into
-  `site.about` / `site.contact`.
 
 ## Runtime choice → why the glob loader, not @nuxt/content (yet)
 

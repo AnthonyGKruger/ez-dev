@@ -17,6 +17,9 @@ const { trackFormSubmit, trackFormVerification } = useGtm();
 const { t } = useTranslate();
 const toast = useToast();
 
+const site = useContent("site");
+const contact = computed(() => site.value.contact);
+
 const siteKey = computed(() => config.public.turnstileSiteKey as string);
 const turnstileToken = ref<string | null>(null);
 const turnstileWidgetId = ref<string | null>(null);
@@ -151,7 +154,7 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
     <!-- Section header -->
     <div class="flex items-center gap-5 mb-11">
       <div class="mono text-[13px] tracking-[.16em] text-primary-gold">
-        // CONTACT
+        {{ contact.eyebrow }}
       </div>
       <div class="flex-1 h-px bg-primary-gold/20"></div>
     </div>
@@ -160,17 +163,16 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
       <!-- Left: Text + Lottie + social -->
       <div>
         <h1 class="text-[52px] font-black tracking-[-0.02em] leading-[1.05] text-[#f4f7fa]">
-          Let's build something together.
+          {{ contact.heading }}
         </h1>
         <p class="text-lg leading-relaxed text-[oklch(78%_0.02_250)] mt-6 mb-8 max-w-[30em]">
-          Have a project in mind, or a role you're hiring for? Fill in the form
-          and I'll get back to you shortly.
+          {{ contact.subtitle }}
         </p>
         <div class="w-[220px] h-[220px]">
           <LottiePlayer src="/lotties/ContactMe.json" height="220px" width="220px" />
         </div>
         <p class="mono text-xs tracking-[.1em] text-primary-gold mt-2 mb-3.5">
-          YOU CAN ALSO REACH ME AT
+          {{ contact.reachMeAt }}
         </p>
         <div class="flex gap-3.5">
           <a
@@ -216,29 +218,29 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
           class="flex flex-col gap-4"
         >
           <div class="flex flex-col gap-[7px]">
-            <label class="mono text-xs tracking-[.06em] text-[oklch(72%_0.02_250)]">NAME</label>
-            <InputText name="from_name" type="text" placeholder="Your name" fluid />
+            <label class="mono text-xs tracking-[.06em] text-[oklch(72%_0.02_250)]">{{ contact.form.name.label }}</label>
+            <InputText name="from_name" type="text" :placeholder="contact.form.name.placeholder" fluid />
             <Message v-if="$form.from_name?.invalid" severity="error" size="small" variant="simple">
               {{ t($form.from_name.error?.message || "") }}
             </Message>
           </div>
           <div class="flex flex-col gap-[7px]">
-            <label class="mono text-xs tracking-[.06em] text-[oklch(72%_0.02_250)]">EMAIL</label>
-            <InputText name="reply_to" type="text" placeholder="you@company.com" fluid />
+            <label class="mono text-xs tracking-[.06em] text-[oklch(72%_0.02_250)]">{{ contact.form.email.label }}</label>
+            <InputText name="reply_to" type="text" :placeholder="contact.form.email.placeholder" fluid />
             <Message v-if="$form.reply_to?.invalid" severity="error" size="small" variant="simple">
               {{ t($form.reply_to.error?.message || "") }}
             </Message>
           </div>
           <div class="flex flex-col gap-[7px]">
-            <label class="mono text-xs tracking-[.06em] text-[oklch(72%_0.02_250)]">COMPANY</label>
-            <InputText name="company" type="text" placeholder="Your company" fluid />
+            <label class="mono text-xs tracking-[.06em] text-[oklch(72%_0.02_250)]">{{ contact.form.company.label }}</label>
+            <InputText name="company" type="text" :placeholder="contact.form.company.placeholder" fluid />
             <Message v-if="$form.company?.invalid" severity="error" size="small" variant="simple">
               {{ t($form.company.error?.message || "") }}
             </Message>
           </div>
           <div class="flex flex-col gap-[7px]">
-            <label class="mono text-xs tracking-[.06em] text-[oklch(72%_0.02_250)]">PROJECT DETAILS</label>
-            <Textarea name="comments" type="text" placeholder="Tell me about your project..." :rows="4" fluid />
+            <label class="mono text-xs tracking-[.06em] text-[oklch(72%_0.02_250)]">{{ contact.form.details.label }}</label>
+            <Textarea name="comments" type="text" :placeholder="contact.form.details.placeholder" :rows="4" fluid />
             <Message v-if="$form.comments?.invalid" severity="error" size="small" variant="simple">
               {{ t($form.comments.error?.message || "") }}
             </Message>
@@ -259,7 +261,7 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
             class="mono mt-1.5 px-3.5 py-3.5 rounded-[10px] border-none bg-primary-gold text-body-bg text-sm font-bold tracking-[.04em] cursor-pointer transition-all duration-300 hover:bg-light-gold w-full"
             :disabled="!turnstileToken"
           >
-            SEND MESSAGE &rarr;
+            {{ contact.form.submit }}
           </button>
           <svg
             v-if="loading"

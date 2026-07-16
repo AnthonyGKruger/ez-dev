@@ -74,9 +74,53 @@ export interface CompaniesContent {
   items: Company[];
 }
 
+export interface FactCard {
+  icon: string;
+  title: string;
+  desc: string;
+}
+
+export interface AboutContent {
+  eyebrow: string;
+  photoName: string;
+  photoLocation: string;
+  headline: string;
+  headlineAccent: string;
+  paragraphs: string[];
+  ctaChat: string;
+  ctaWork: string;
+  factCards: FactCard[];
+}
+
+export interface ContactField {
+  label: string;
+  placeholder: string;
+}
+
+export interface ContactContent {
+  eyebrow: string;
+  heading: string;
+  subtitle: string;
+  reachMeAt: string;
+  form: {
+    name: ContactField;
+    email: ContactField;
+    company: ContactField;
+    details: ContactField;
+    submit: string;
+  };
+  cta: {
+    heading: string;
+    subtitle: string;
+    button: string;
+  };
+}
+
 export interface SiteContent {
   hero: HeroContent;
   companies: CompaniesContent;
+  about: AboutContent;
+  contact: ContactContent;
 }
 
 export interface WorkExperienceEntry {

@@ -22,5 +22,54 @@
       { "name": "Mumbi Trust Administrators", "logo": "/media/logos/mumbi-logo.png" },
       { "name": "Addventures", "logo": "/media/logos/av-logo.png" }
     ]
+  },
+  "about": {
+    "eyebrow": "// ABOUT",
+    "photoName": "ANTHONY KRUGER",
+    "photoLocation": "PRETORIA, ZA",
+    "headline": "Building the web,",
+    "headlineAccent": "end to end.",
+    "paragraphs": [
+      "Fueled by a passion for technology and a knack for problem-solving, I'm a web developer with a drive to craft intuitive and impactful web experiences.",
+      "My journey began in the dynamic world of retail, where I honed my leadership and customer-centric skills as a Branch Manager. While exceeding sales targets and building a thriving team, I discovered a passion for web development — which led me to a Bachelor's degree in Information Technology, graduating in 2021 with a comprehensive understanding of web principles.",
+      "Since then I've shipped production apps end to end — from SaaS platforms to e-commerce — for agencies, trading companies and my own clients through EZdev Solutions."
+    ],
+    "ctaChat": "Let's Chat",
+    "ctaWork": "SEE MY WORK",
+    "factCards": [
+      {
+        "icon": "mdi:school",
+        "title": "BSc IT, 2021",
+        "desc": "Richfield Graduate Institute of Technology — specialised in systems development, 8 distinctions."
+      },
+      {
+        "icon": "mdi:rocket-launch",
+        "title": "6+ years shipping",
+        "desc": "Production web apps across agencies, trading and my own clients — front-end to full-stack."
+      },
+      {
+        "icon": "mdi:translate",
+        "title": "Bilingual delivery",
+        "desc": "Fluent in English and Afrikaans — comfortable building and communicating in both."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "// CONTACT",
+    "heading": "Let's build something together.",
+    "subtitle": "Have a project in mind, or a role you're hiring for? Fill in the form and I'll get back to you shortly.",
+    "reachMeAt": "YOU CAN ALSO REACH ME AT",
+    "form": {
+      "name": { "label": "NAME", "placeholder": "Your name" },
+      "email": { "label": "EMAIL", "placeholder": "you@company.com" },
+      "company": { "label": "COMPANY", "placeholder": "Your company" },
+      "details": { "label": "PROJECT DETAILS", "placeholder": "Tell me about your project..." },
+      "submit": "SEND MESSAGE →"
+    },
+    "cta": {
+      "heading": "Let's build something together.",
+      "subtitle": "Have a project in mind, or a role you're hiring for? Get in touch and I'll get back to you shortly.",
+      "button": "START A PROJECT"
+    }
   }
 }
