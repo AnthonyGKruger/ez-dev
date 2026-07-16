@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "eyebrow": "// ANTHONY KRUGER — FULL-STACK WEB DEVELOPER",
+    "headline": "I design & build web products teams",
+    "headlineAccent": "rely on.",
+    "lead": "A BSc IT and {years} years shipping production apps end to end — from SaaS platforms to e-commerce — with Nuxt, Next.js and TypeScript.",
+    "ctaWork": "VIEW SELECTED WORK",
+    "ctaTouch": "GET IN TOUCH",
+    "stats": [
+      { "value": "{years}+", "label": "YEARS SHIPPING" },
+      { "value": "BSc IT", "label": "8 DISTINCTIONS" },
+      { "value": "10+", "label": "PRODUCTS BUILT" }
+    ],
+    "specTop": ["BRAND MARK", "v.2026"],
+    "specBottom": ["NUXT · NEXT · TS", "SSR · SSG · SPA"]
+  }
+}

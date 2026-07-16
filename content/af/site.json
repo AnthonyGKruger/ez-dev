@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "eyebrow": "// ANTHONY KRUGER — VOLSTAPEL-WEBONTWIKKELAAR",
+    "headline": "Ek ontwerp & bou webprodukte waarop spanne",
+    "headlineAccent": "staatmaak.",
+    "lead": "'n BSc IT en {years} jaar se ondervinding om produksie-toepassings van begin tot einde te lewer — van SaaS-platforms tot e-handel — met Nuxt, Next.js en TypeScript.",
+    "ctaWork": "SIEN GEKOSE WERK",
+    "ctaTouch": "KOM IN KONTAK",
+    "stats": [
+      { "value": "{years}+", "label": "JARE SE LEWERING" },
+      { "value": "BSc IT", "label": "8 ONDERSKEIDINGS" },
+      { "value": "10+", "label": "PRODUKTE GEBOU" }
+    ],
+    "specTop": ["BRAND MARK", "v.2026"],
+    "specBottom": ["NUXT · NEXT · TS", "SSR · SSG · SPA"]
+  }
+}

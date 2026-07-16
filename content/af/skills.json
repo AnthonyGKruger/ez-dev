@@ -1,0 +1,40 @@
+{
+  "eyebrow": "// STAPEL",
+  "heading": "Gereedskap wat ek daagliks gebruik",
+  "flipHint": "TIK / SWEEF OM TE DRAAI →",
+  "items": [
+    {
+      "name": "nuxt",
+      "icon": "skill-icons:nuxtjs-dark",
+      "description": "My daaglikse keuse. Professioneel en persoonlik."
+    },
+    {
+      "name": "next",
+      "icon": "skill-icons:nextjs-light",
+      "description": "Waar my passie vir webontwikkeling begin het."
+    },
+    {
+      "name": "tailwindcss",
+      "icon": "skill-icons:tailwindcss-dark",
+      "description": "My gunsteling CSS-raamwerk om vinniger te lewer!"
+    },
+    {
+      "name": "typescript",
+      "icon": "skill-icons:typescript",
+      "description": "Vir foutvaste kode."
+    }
+  ],
+  "alsoComfortableLabel": "OOK GEMAKLIK MET",
+  "alsoComfortable": [
+    "Vue 3",
+    "Node.js",
+    "JavaScript",
+    "HTML & CSS",
+    "Git",
+    "Microsoft Azure",
+    "Figma",
+    "SEO",
+    "Toeganklikheid",
+    "Agile / Scrum"
+  ]
+}

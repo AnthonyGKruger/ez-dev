@@ -1,0 +1,40 @@
+{
+  "eyebrow": "// STACK",
+  "heading": "Tools I reach for daily",
+  "flipHint": "TAP / HOVER TO FLIP →",
+  "items": [
+    {
+      "name": "nuxt",
+      "icon": "skill-icons:nuxtjs-dark",
+      "description": "My daily driver. Both professionally and personally."
+    },
+    {
+      "name": "next",
+      "icon": "skill-icons:nextjs-light",
+      "description": "Where my passion for web dev all started."
+    },
+    {
+      "name": "tailwindcss",
+      "icon": "skill-icons:tailwindcss-dark",
+      "description": "My favourite CSS framework to ship code faster!"
+    },
+    {
+      "name": "typescript",
+      "icon": "skill-icons:typescript",
+      "description": "For fool-proof code."
+    }
+  ],
+  "alsoComfortableLabel": "ALSO COMFORTABLE WITH",
+  "alsoComfortable": [
+    "Vue 3",
+    "Node.js",
+    "JavaScript",
+    "HTML & CSS",
+    "Git",
+    "Microsoft Azure",
+    "Figma",
+    "SEO",
+    "Accessibility",
+    "Agile / Scrum"
+  ]
+}

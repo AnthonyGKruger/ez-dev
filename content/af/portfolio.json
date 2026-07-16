@@ -1,0 +1,40 @@
+{
+  "eyebrow": "// GEKOSE WERK",
+  "heading": "Produkte wat ek gelewer het",
+  "intro": "Ek oorheers die web een projek op 'n slag — van handelsmerk-e-handel tot volledige SaaS-platforms.",
+  "projects": [
+    {
+      "id": "p4",
+      "title": "Votera",
+      "description": "'n Slim HOA-bestuur SaaS-platform vir Suid-Afrikaanse gemeenskappe — digitale stemming, instandhoudingsopsporing, inwonergids en deursigtige bestuur in een portaal.",
+      "link": "https://votera.co.za",
+      "image": "",
+      "sourceCode": ""
+    },
+    {
+      "id": "p5",
+      "title": "Chilli Collective",
+      "description": "E-handelswinkel vir 'n premium kleinbatch-gefermenteerde brandsous-handelsmerk — produkkatalogus, mandjie en betaling, gebou vir 'n vinnige, tasbare blaai-ervaring.",
+      "link": "https://chilli-collective.com",
+      "image": "",
+      "sourceCode": ""
+    },
+    {
+      "id": "p3",
+      "title": "Digital Stream",
+      "description": "Digitale bemarkingsagentskap-webwerf gebou met Next.js en Tailwind CSS (die kode vir hierdie projek is ongelukkig nie publiek beskikbaar nie)",
+      "link": "https://digitalstream.co.za",
+      "image": "/media/logos/ds-logo.png",
+      "sourceCode": "",
+      "referralLetter": "/media/referral-letters/Digital Stream Referral Letter - Anthony Kruger - web - signed.pdf"
+    },
+    {
+      "id": "p1",
+      "title": "Mumbi Trust Administrators",
+      "description": "Rekenmeestersfirma-webwerf gebou met Next.js en Tailwind CSS",
+      "link": "https://mumbi.co.za",
+      "image": "/media/logos/mumbi-logo.png",
+      "sourceCode": "https://github.com/AnthonyGKruger/Mumbi-Trust-Administrators"
+    }
+  ]
+}
