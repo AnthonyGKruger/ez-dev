@@ -3,7 +3,6 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   runtimeConfig: {
     turnstileSecretKey: process.env.TURNSTILE_SECRET_KEY || "",
-    openWeatherApiKey: process.env.OPEN_WEATHER_API_KEY || "",
     public: {
       gtmId: process.env.NUXT_PUBLIC_GTM_ID || "",
       emailJsSecureToken: process.env.NUXT_PUBLIC_EMAIL_JS_SECURE_TOKEN || "",
@@ -14,7 +13,7 @@ export default defineNuxtConfig({
       siteName: "EZdev Solutions - Anthony Gordon Kruger's Portfolio",
       siteDescription:
         "Web Developer portfolio: projects, skills, work experience, and contact.",
-      siteImage: "/logos/ezdev-logo-black.png",
+      siteImage: "/media/logos/ezdev-logo-white.png",
       turnstileSiteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY || "",
     },
   },
@@ -26,7 +25,6 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/image",
     "@nuxt/scripts",
-    "@nuxtjs/color-mode",
     "motion-v/nuxt",
     "@nuxt/icon",
     "@vueuse/nuxt",
@@ -38,16 +36,19 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  colorMode: {
-    preference: "dark",
-    fallback: "light",
-    hid: "nuxt-color-mode-script",
-    globalName: "__NUXT_COLOR_MODE__",
-    componentName: "ColorScheme",
-    classPrefix: "",
-    classSuffix: "",
-    storage: "localStorage",
-    storageKey: "nuxt-color-mode",
+  googleFonts: {
+    families: {
+      Roboto: [300, 400, 500, 700, 900],
+      "JetBrains+Mono": [400, 500, 700],
+    },
+    display: "swap",
+  },
+  app: {
+    // Dark-only site: keep the `dark` class present so Tailwind `dark:`
+    // variants and the volt components always render in dark.
+    head: {
+      htmlAttrs: { class: "dark" },
+    },
   },
   icon: {
     mode: "svg",

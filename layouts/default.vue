@@ -9,17 +9,16 @@ onMounted(() => getLang());
 </script>
 
 <template>
-  <div class="relative dark:bg-neutral-950">
+  <div class="relative bg-body-bg min-h-screen">
     <UiMouseHoverOverlay />
     <UiNav />
-    <main class="dark:bg-neutral-950 mt-10">
+    <main>
       <slot />
     </main>
     <UiFooter />
     <UxCookieNotice />
     <UxScrollToTop />
     <UxLanguageToggle />
-    <UxThemeToggle />
     <DevOnly>
       <ToolsDevTools />
     </DevOnly>

@@ -1,111 +1,94 @@
 <script setup lang="ts">
-import { primaryButtonPassthrough } from "~/src/passthroughs/button.passthrough";
 const route = useRoute();
 const { t } = useTranslate();
 const isOpen = ref(false);
-const isHome = computed(() => route.path === "/");
+
 const navItems = [
-  { name: "nav-about", to: "/about" },
-  { name: "nav-skills", to: "/skills" },
-  { name: "nav-qualifications", to: "/qualifications" },
-  { name: "nav-work-experience", to: "/work-experience" },
-  { name: "nav-languages", to: "/languages" },
-  { name: "nav-portfolio", to: "/portfolio" },
-  { name: "side-projects-title", to: "/side-projects" },
+  { label: "About", to: "/about" },
+  { label: "Work", to: "/portfolio" },
+  { label: "Skills", to: "/skills" },
+  { label: "Experience", to: "/work-experience" },
+  { label: "Qualifications", to: "/qualifications" },
+  { label: "Languages", to: "/languages" },
 ];
 
-const inlineNavItems = [
-  { name: "nav-about", to: "/about" },
-  { name: "nav-qualifications", to: "/qualifications" },
-  { name: "nav-work-experience", to: "/work-experience" },
-  { name: "nav-portfolio", to: "/portfolio" },
-  { name: "side-projects-title", to: "/side-projects" },
-];
-
-const isActive = (to: string) => route.path === to;
+const isActive = (to: string) => {
+  if (to === "/") return route.path === "/";
+  return route.path.startsWith(to);
+};
 </script>
 
 <template>
-  <header
-    class="fixed top-0 z-50 w-full border-b shadow-lg border-slate-200 bg-white/90 shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 md:border-slate-200 md:backdrop-blur-sm md:after:hidden dark:bg-neutral-950 dark:border-neutral-800"
+  <!-- Top status bar -->
+  <div
+    class="mono flex items-center justify-between gap-4 px-7 py-2 text-xs tracking-[.06em] text-light-gold bg-surface-bg border-b border-primary-gold/25"
   >
-    <div
-      class="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]"
-    >
+    <span class="inline-flex items-center gap-2">
+      <span
+        class="w-2 h-2 rounded-full bg-primary-gold"
+        style="box-shadow: 0 0 0 3px oklch(62.28% 0.083 75.89 / .25)"
+      ></span>
+      {{ t("nav-available") }}
+    </span>
+    <span class="text-[oklch(70%_0.02_250)]">{{ t("nav-location") }}</span>
+  </div>
+
+  <!-- Main nav -->
+  <header
+    class="sticky top-0 z-50 w-full border-b border-primary-gold/20"
+    style="background: oklch(19% 0.03 253 / .82); backdrop-filter: blur(10px)"
+  >
+    <div class="mx-auto max-w-[1240px] px-7">
       <nav
-        aria-label="main navigation"
-        class="flex h-[3.5rem] items-center justify-between gap-2 lg:gap-4 font-medium text-slate-700 dark:text-neutral-200"
+        class="flex h-16 items-center justify-between gap-4"
         role="navigation"
+        aria-label="main navigation"
       >
-        <UiHeaderFooterLogo
-          class="flex-shrink-0 mr-2"
-          :class-over-ride="`${isHome ? '!h-6' : 'h-10 md:h-12 2xl:h-16'} w-auto`"
-        />
-        <span class="sr-only">Home</span>
-
-        <ul
-          role="menubar"
-          aria-label="Select page"
-          class="inset-0 left-0 top-0 ml-auto h-screen w-screen justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 dark:bg-neutral-900/95 px-8 pb-12 pt-28 font-medium transition-[opacity,visibility] duration-300"
-          :class="[
-            isOpen ? 'fixed opacity-100 z-40' : 'hidden opacity-0 z-[-1]',
-          ]"
-        >
-          <NuxtLink
-            v-for="item in navItems"
-            :key="item.to"
-            role="menuitem"
-            aria-haspopup="false"
-            class="flex items-center justify-end gap-2 py-4 transition-colors duration-300 hover:text-primary-gold focus:outline-none focus-visible:outline-none lg:px-8 text-right"
-            :class="{
-              'text-primary-gold border-b border-primary-gold': isActive(
-                item.to,
-              ),
-            }"
-            :to="item.to"
-            @click="isOpen = false"
+        <!-- Logo -->
+        <NuxtLink to="/" class="flex items-center gap-2.5">
+          <img
+            src="/media/logos/code.svg"
+            alt="EZdev"
+            class="h-[22px] w-auto"
+            style="filter: invert(84%) sepia(24%) saturate(500%) hue-rotate(2deg) brightness(96%)"
+          />
+          <span class="mono text-sm font-bold tracking-[.14em] text-[#eef2f6]"
+            >EZ&bull;DEV</span
           >
-            <li role="none" class="flex items-end">
-              <span class="capitalize truncate text-right">{{
-                t(item.name)
-              }}</span>
-            </li></NuxtLink
-          >
-        </ul>
+        </NuxtLink>
 
-        <div class="flex items-center gap-3 px-0">
+        <!-- Desktop nav links + CTA -->
+        <div class="flex items-center gap-1">
           <ul
-            role="menubar"
-            aria-label="Inline navigation"
-            class="hidden lg:flex lg:items-stretch lg:h-full lg:w-auto lg:gap-0"
+            class="mono hidden lg:flex items-center gap-0.5 text-[13px] tracking-[.04em] list-none m-0 p-0"
           >
-            <NuxtLink
-              v-for="item in inlineNavItems"
-              :key="item.to + '-inline-right'"
-              role="menuitem"
-              aria-haspopup="false"
-              class="flex items-center gap-2 py-4 px-4 transition-colors duration-300 hover:text-primary-gold focus:outline-none focus-visible:outline-none"
-              :class="{
-                'text-primary-gold': isActive(item.to),
-              }"
-              :to="item.to"
-            >
-              <li role="none" class="flex items-stretch">
-                <span class="capitalize truncate">{{ t(item.name) }}</span>
-              </li>
-            </NuxtLink>
+            <li v-for="item in navItems" :key="item.to">
+              <NuxtLink
+                :to="item.to"
+                class="block px-[13px] py-2 transition-colors duration-[.25s]"
+                :class="
+                  isActive(item.to)
+                    ? 'text-light-gold border-b-2 border-primary-gold pb-1.5'
+                    : 'text-[oklch(78%_0.02_250)] hover:text-light-gold'
+                "
+                @click="isOpen = false"
+              >
+                {{ item.label }}
+              </NuxtLink>
+            </li>
           </ul>
 
+          <!-- CTA -->
           <NuxtLink
             to="/contact-me"
-            class="inline-flex items-center"
-            :class="primaryButtonPassthrough"
+            class="mono inline-flex items-center gap-2 ml-2 px-[18px] py-[9px] rounded-lg text-[13px] font-bold tracking-[.04em] bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold"
           >
-            <span>{{ t("nav-contact") }}</span>
+            {{ t("nav-start-project") }} &rarr;
           </NuxtLink>
 
+          <!-- Hamburger -->
           <button
-            class="relative block w-10 h-10 z-50 outline-none"
+            class="relative block w-10 h-10 lg:hidden outline-none"
             :aria-expanded="isOpen ? 'true' : 'false'"
             aria-label="Toggle navigation"
             @click="isOpen = !isOpen"
@@ -115,19 +98,19 @@ const isActive = (to: string) => route.path === to;
             >
               <span
                 aria-hidden="true"
-                class="absolute block h-0.5 w-9/12 -translate-y-2 transform rounded-full bg-slate-900 dark:bg-neutral-100 transition-all duration-300"
+                class="absolute block h-0.5 w-9/12 -translate-y-2 transform rounded-full bg-[#eef2f6] transition-all duration-300"
                 :class="{
                   'rotate-45 translate-y-0 -translate-x-0.5 !w-6': isOpen,
                 }"
               ></span>
               <span
                 aria-hidden="true"
-                class="absolute block h-0.5 w-6 transform rounded-full bg-slate-900 dark:bg-neutral-100 transition duration-300"
+                class="absolute block h-0.5 w-6 transform rounded-full bg-[#eef2f6] transition duration-300"
                 :class="{ 'opacity-0': isOpen }"
               ></span>
               <span
                 aria-hidden="true"
-                class="absolute block h-0.5 w-1/2 origin-top-left translate-y-2 transform rounded-full bg-slate-900 dark:bg-neutral-100 transition-all duration-300"
+                class="absolute block h-0.5 w-1/2 origin-top-left translate-y-2 transform rounded-full bg-[#eef2f6] transition-all duration-300"
                 :class="{ '-rotate-45 w-6': isOpen }"
               ></span>
             </div>
@@ -136,4 +119,38 @@ const isActive = (to: string) => route.path === to;
       </nav>
     </div>
   </header>
+
+  <!-- Mobile menu -->
+  <div
+    class="fixed inset-0 z-40 lg:hidden transition-opacity duration-300"
+    :class="isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'"
+    style="background: oklch(19% 0.03 253 / .97); backdrop-filter: blur(16px)"
+  >
+    <nav
+      class="flex flex-col items-center justify-center h-full gap-4"
+      role="navigation"
+    >
+      <NuxtLink
+        v-for="item in navItems"
+        :key="item.to + '-mobile'"
+        :to="item.to"
+        class="mono text-xl tracking-[.06em] py-3 px-6 transition-colors duration-300"
+        :class="
+          isActive(item.to)
+            ? 'text-light-gold'
+            : 'text-[oklch(78%_0.02_250)] hover:text-light-gold'
+        "
+        @click="isOpen = false"
+      >
+        {{ item.label }}
+      </NuxtLink>
+      <NuxtLink
+        to="/contact-me"
+        class="mono mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-bold tracking-[.04em] bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold"
+        @click="isOpen = false"
+      >
+        {{ t("nav-start-project") }} &rarr;
+      </NuxtLink>
+    </nav>
+  </div>
 </template>

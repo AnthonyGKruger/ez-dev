@@ -5,6 +5,22 @@ import type { IQualification } from "~/types/qualification";
 
 export const portfolioItems: IPortfolioItem[] = [
   {
+    id: "p4",
+    title: "Votera",
+    description: "portfolio-votera-desc",
+    link: "https://votera.co.za",
+    image: "",
+    sourceCode: "",
+  },
+  {
+    id: "p5",
+    title: "Chilli Collective",
+    description: "portfolio-chilli-desc",
+    link: "https://chilli-collective.com",
+    image: "",
+    sourceCode: "",
+  },
+  {
     id: "p3",
     title: "Digital Stream",
     description: "portfolio-ds-desc",
@@ -101,11 +117,6 @@ export const skills: ISkills[] = [
     name: "nuxt",
     description: "skills-nuxt-desc",
     icon: "skill-icons:nuxtjs-dark",
-  },
-  {
-    name: "stencil",
-    description: "skills-stencil-desc",
-    icon: "skill-icons:react-dark",
   },
   {
     name: "next",

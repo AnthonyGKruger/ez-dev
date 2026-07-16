@@ -10,7 +10,7 @@ const handleToggle = () => {
 <template>
   <UxFeatureToggle
     id="language-toggle"
-    name="theme-toggle"
+    name="language-toggle"
     bottom="70px"
     right="0"
     type="language"

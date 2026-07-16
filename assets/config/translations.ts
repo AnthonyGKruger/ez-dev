@@ -25,6 +25,8 @@ export const translations: Translations = new Map([
         "Let's build the web together! I'm excited to discuss your project and showcase how my unique blend of experience and technical knowledge can bring your vision to life. Feel free to reach out through my contact form and let's connect!",
       ],
       ["cta-lets-chat", "Let's Chat"],
+      ["about-see-work", "SEE MY WORK"],
+      ["contact-heading-revamp", "Let's build something together."],
 
       //Home
       [
@@ -40,6 +42,18 @@ export const translations: Translations = new Map([
       ["home-typed-build-together", "Let's build something together!"],
       ["home-typed-portfolio", "Have a look at my portfolio!"],
       ["home-typed-contact", "Contact me!"],
+      ["home-hero-eyebrow", "// ANTHONY KRUGER — FULL-STACK WEB DEVELOPER"],
+      ["home-hero-headline", "I design & build web products teams"],
+      ["home-hero-headline-accent", "rely on."],
+      [
+        "home-hero-lead",
+        "A BSc IT and {years} years shipping production apps end to end — from SaaS platforms to e-commerce — with Nuxt, Next.js and TypeScript.",
+      ],
+      ["home-hero-cta-work", "VIEW SELECTED WORK"],
+      ["home-hero-cta-touch", "GET IN TOUCH"],
+      ["home-stat-years", "YEARS SHIPPING"],
+      ["home-stat-degree", "8 DISTINCTIONS"],
+      ["home-stat-products", "PRODUCTS BUILT"],
 
       // Contact page
       ["contact-subtitle", "Let's Build Something Together!"],
@@ -105,6 +119,9 @@ export const translations: Translations = new Map([
       ["nav-portfolio", "Portfolio"],
       ["nav-contact", "Contact"],
       ["nav-privacy", "Privacy"],
+      ["nav-available", "AVAILABLE FOR SELECT PROJECTS"],
+      ["nav-location", "PRETORIA, ZA · UTC+2"],
+      ["nav-start-project", "START A PROJECT"],
 
       // SEO Titles
       ["home-title", "Home"],
@@ -120,6 +137,12 @@ export const translations: Translations = new Map([
 
       // Footer
       ["footer-all-rights-reserved", "All rights reserved."],
+      [
+        "footer-tagline",
+        "Full-stack web development. Building fast, reliable products for teams that ship.",
+      ],
+      ["footer-site", "SITE"],
+      ["footer-elsewhere", "ELSEWHERE"],
 
       // Download resume
       [
@@ -153,6 +176,14 @@ export const translations: Translations = new Map([
       ["portfolio-view", "View"],
       ["portfolio-referral-letter", "Referral Letter"],
       ["portfolio-code", "Code"],
+      [
+        "portfolio-votera-desc",
+        "A smart HOA-management SaaS platform for South African communities — digital voting, maintenance tracking, resident directory and transparent governance in one portal.",
+      ],
+      [
+        "portfolio-chilli-desc",
+        "E-commerce storefront for a premium small-batch fermented hot-sauce brand — product catalogue, cart and checkout, built for a fast, tactile browsing experience.",
+      ],
       [
         "portfolio-ds-desc",
         "Digital marketing agency website built using Next.js and Tailwind CSS (the code for this project is unfortunately not available for public viewing)",
@@ -214,10 +245,6 @@ export const translations: Translations = new Map([
       [
         "skills-nuxt-desc",
         "My daily driver. Both professionally and personally.",
-      ],
-      [
-        "skills-stencil-desc",
-        "I use this to create cross-platform components.",
       ],
       ["skills-next-desc", "Where my passion for web dev all started."],
       [
@@ -315,74 +342,6 @@ export const translations: Translations = new Map([
         "Thank you for contacting me, I will get back to you shortly... In the meantime, why not carry on looking around?",
       ],
 
-      // Side Projects
-      ["side-projects-title", "Side projects"],
-
-      // Weather App
-      ["weather-title", "Weather App"],
-      [
-        "weather-meta-desc",
-        "Check the weather in any city around the world.",
-      ],
-      ["weather-error-generic", "Failed to fetch weather data. Please try again."],
-      [
-        "weather-error-location",
-        "Failed to fetch weather data for your location.",
-      ],
-      ["weather-loading-getting-location", "Getting your location..."],
-      ["weather-loading-fetching", "Loading weather data..."],
-      ["weather-welcome-title", "Welcome to the Weather App"],
-      [
-        "weather-welcome-with-location",
-        "Search for a city or use the location button to get started",
-      ],
-      [
-        "weather-welcome-no-location",
-        "Search for a city or allow location access to get started",
-      ],
-      ["weather-accordion-current", "Current Weather"],
-      ["weather-accordion-day-details", "Day Details"],
-      ["weather-accordion-hourly", "Hourly Forecast"],
-      ["weather-accordion-weekly", "7-Day Forecast"],
-      ["today", "Today"],
-      ["tomorrow", "Tomorrow"],
-      ["weather-generic", "Weather"],
-      ["feels-like", "Feels like"],
-      ["humidity", "Humidity"],
-      ["wind", "Wind"],
-      ["pressure", "Pressure"],
-      ["visibility", "Visibility"],
-      ["todays-forecast", "Today's Forecast"],
-      ["sunrise", "Sunrise"],
-      ["sunset", "Sunset"],
-      ["uv-index", "UV Index"],
-      ["rain-chance", "Rain Chance"],
-      ["uv-low", "Low"],
-      ["uv-moderate", "Moderate"],
-      ["uv-high", "High"],
-      ["uv-very-high", "Very High"],
-      ["uv-extreme", "Extreme"],
-      ["rain-expected", "{mm}mm of rain expected"],
-      ["time-12am", "12 AM"],
-      ["time-12pm", "12 PM"],
-      ["time-am", "{h} AM"],
-      ["time-pm", "{h} PM"],
-      [
-        "hourly-only-today-tomorrow",
-        "Detailed hourly forecasts are only available for today and tomorrow",
-      ],
-      ["hourly-no-data", "No hourly data available for this day"],
-      ["hourly-no-significant-precip", "No significant precipitation expected"],
-      ["hourly-legend", "Precipitation probability per hour"],
-      [
-        "weather-search-placeholder",
-        "Search for a city (e.g. New York, London, Tokyo)",
-      ],
-      ["weather-use-my-location", "Use my location"],
-      [
-        "weather-search-help",
-        "Enter a city name to get weather information",
-      ],
     ]),
   ],
   [
@@ -405,6 +364,8 @@ export const translations: Translations = new Map([
         "Kom ons bou die web saam! Ek is opgewonde om u projek te bespreek en te wys hoe my unieke mengsel van ervaring en tegniese kennis u visie tot lewe kan bring. Voel vry om my te kontak deur my kontakvorm en kom ons skakel!",
       ],
       ["cta-lets-chat", "Kom gesels"],
+      ["about-see-work", "SIEN MY WERK"],
+      ["contact-heading-revamp", "Kom ons bou saam iets."],
 
       //Home
       [
@@ -420,6 +381,18 @@ export const translations: Translations = new Map([
       ["home-typed-build-together", "Kom ons bou saam iets!"],
       ["home-typed-portfolio", "Kyk gerus na my portefeulje!"],
       ["home-typed-contact", "Kontak my!"],
+      ["home-hero-eyebrow", "// ANTHONY KRUGER — VOLSTAPEL-WEBONTWIKKELAAR"],
+      ["home-hero-headline", "Ek ontwerp & bou webprodukte waarop spanne"],
+      ["home-hero-headline-accent", "staatmaak."],
+      [
+        "home-hero-lead",
+        "'n BSc IT en {years} jaar se ondervinding om produksie-toepassings van begin tot einde te lewer — van SaaS-platforms tot e-handel — met Nuxt, Next.js en TypeScript.",
+      ],
+      ["home-hero-cta-work", "SIEN GEKOSE WERK"],
+      ["home-hero-cta-touch", "KOM IN KONTAK"],
+      ["home-stat-years", "JARE SE LEWERING"],
+      ["home-stat-degree", "8 ONDERSKEIDINGS"],
+      ["home-stat-products", "PRODUKTE GEBOU"],
 
       // Contact page
       ["contact-subtitle", "Kom ons bou saam iets!"],
@@ -488,6 +461,9 @@ export const translations: Translations = new Map([
       ["nav-portfolio", "Portefeulje"],
       ["nav-contact", "Kontak"],
       ["nav-privacy", "Privaatheid"],
+      ["nav-available", "BESKIKBAAR VIR SELEKTE PROJEKTE"],
+      ["nav-location", "PRETORIA, ZA · UTC+2"],
+      ["nav-start-project", "BEGIN 'N PROJEK"],
 
       // SEO Titles
       ["home-title", "Tuis"],
@@ -503,6 +479,12 @@ export const translations: Translations = new Map([
 
       // Footer
       ["footer-all-rights-reserved", "Alle regte voorbehou."],
+      [
+        "footer-tagline",
+        "Volstapel-webontwikkeling. Bou vinnige, betroubare produkte vir spanne wat lewer.",
+      ],
+      ["footer-site", "WEBWERF"],
+      ["footer-elsewhere", "ELDERS"],
 
       // Download resume
       [
@@ -536,6 +518,14 @@ export const translations: Translations = new Map([
       ["portfolio-view", "Bekyk"],
       ["portfolio-referral-letter", "Verwysingsbrief"],
       ["portfolio-code", "Kode"],
+      [
+        "portfolio-votera-desc",
+        "'n Slim HOA-bestuur SaaS-platform vir Suid-Afrikaanse gemeenskappe — digitale stemming, instandhoudingsopsporing, inwonergids en deursigtige bestuur in een portaal.",
+      ],
+      [
+        "portfolio-chilli-desc",
+        "E-handelswinkel vir 'n premium kleinbatch-gefermenteerde brandsous-handelsmerk — produkkatalogus, mandjie en betaling, gebou vir 'n vinnige, tasbare blaai-ervaring.",
+      ],
       [
         "portfolio-ds-desc",
         "Digitale bemarkingsagentskap-webwerf gebou met Next.js en Tailwind CSS (die kode vir hierdie projek is ongelukkig nie publiek beskikbaar nie)",
@@ -598,10 +588,6 @@ export const translations: Translations = new Map([
         "Van die vaardighede en wonderlike tegnologieë wat ek gebruik!",
       ],
       ["skills-nuxt-desc", "My daaglikse keuse. Professioneel en persoonlik."],
-      [
-        "skills-stencil-desc",
-        "Ek gebruik dit om kruisplatform-komponente te bou.",
-      ],
       ["skills-next-desc", "Waar my passie vir webontwikkeling begin het."],
       [
         "skills-tailwind-desc",
@@ -704,80 +690,6 @@ export const translations: Translations = new Map([
         "Dankie dat jy my gekontak het, ek sal binnekort by jou terugkom... Intussen, hoekom kyk jy nie gerus rond nie?",
       ],
 
-      // Side Projects
-      ["side-projects-title", "Newe Projekte"],
-
-      // Weather App
-      ["weather-title", "Weer Toep"],
-      [
-        "weather-meta-desc",
-        "Kyk die weer in enige stad regoor die wêreld.",
-      ],
-      [
-        "weather-error-generic",
-        "Kon nie weerdata laai nie. Probeer asseblief weer.",
-      ],
-      [
-        "weather-error-location",
-        "Kon nie weerdata vir jou ligging kry nie.",
-      ],
-      ["weather-loading-getting-location", "Verkry jou ligging..."],
-      ["weather-loading-fetching", "Laai weerdetail..."],
-      ["weather-welcome-title", "Welkom by die Weer Toep"],
-      [
-        "weather-welcome-with-location",
-        "Soek vir 'n stad of gebruik die liggingknoppie om te begin",
-      ],
-      [
-        "weather-welcome-no-location",
-        "Soek vir 'n stad of laat liggingtoegang toe om te begin",
-      ],
-      ["weather-accordion-current", "Huidige Weer"],
-      ["weather-accordion-day-details", "Dag Besonderhede"],
-      ["weather-accordion-hourly", "Uurlikse Voorspelling"],
-      ["weather-accordion-weekly", "7-Dae Voorspelling"],
-      ["today", "Vandag"],
-      ["tomorrow", "Môre"],
-      ["weather-generic", "Weer"],
-      ["feels-like", "Voel soos"],
-      ["humidity", "Humiditeit"],
-      ["wind", "Wind"],
-      ["pressure", "Druk"],
-      ["visibility", "Sigbaarheid"],
-      ["todays-forecast", "Vandag se Voorspelling"],
-      ["sunrise", "Sonsopkoms"],
-      ["sunset", "Sonsondergang"],
-      ["uv-index", "UV-Indeks"],
-      ["rain-chance", "Reën Kans"],
-      ["uv-low", "Laag"],
-      ["uv-moderate", "Matig"],
-      ["uv-high", "Hoog"],
-      ["uv-very-high", "Baie Hoog"],
-      ["uv-extreme", "Ekstreem"],
-      ["rain-expected", "{mm}mm reën word verwag"],
-      ["time-12am", "12 vm"],
-      ["time-12pm", "12 nm"],
-      ["time-am", "{h} vm"],
-      ["time-pm", "{h} nm"],
-      [
-        "hourly-only-today-tomorrow",
-        "Gedetailleerde uurlikse voorspellings is slegs beskikbaar vir vandag en môre",
-      ],
-      ["hourly-no-data", "Geen uurlikse data beskikbaar vir hierdie dag nie"],
-      [
-        "hourly-no-significant-precip",
-        "Geen beduidende neerslag word verwag nie",
-      ],
-      ["hourly-legend", "Neerslag waarskynlikheid per uur"],
-      [
-        "weather-search-placeholder",
-        "Soek vir 'n stad (bv. New York, Londen, Tokio)",
-      ],
-      ["weather-use-my-location", "Gebruik my ligging"],
-      [
-        "weather-search-help",
-        "Voer 'n stadsnaam in om weerinligting te kry",
-      ],
     ]),
   ],
 ]);

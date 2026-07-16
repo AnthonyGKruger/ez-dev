@@ -1,36 +1,6 @@
 <script setup lang="ts">
 const date = ref<Date>();
 const { t } = useTranslate();
-const footerNavs = [
-  {
-    to: "/",
-    name: "nav-about",
-  },
-  {
-    to: "/portfolio",
-    name: "nav-portfolio",
-  },
-  {
-    to: "/contact-me",
-    name: "nav-contact",
-  },
-  {
-    to: "/privacy-policy",
-    name: "nav-privacy",
-  },
-  {
-    to: "https://github.com/AnthonyGKruger",
-    name: "skill-icons:github-dark",
-    isIcon: true,
-    isExternal: true,
-  },
-  {
-    to: "https://www.linkedin.com/in/anthony-gordon-kruger-ezdev/",
-    name: "skill-icons:linkedin",
-    isIcon: true,
-    isExternal: true,
-  },
-];
 
 onMounted(() => (date.value = new Date()));
 
@@ -38,31 +8,91 @@ const dateComputed = computed(() => date.value?.getFullYear() || 2025);
 </script>
 
 <template>
-  <footer
-    class="mx-auto border-t border-primary-gold bg-white dark:bg-neutral-950 dark:text-white"
-  >
-    <UxCompanies />
+  <footer class="border-t border-primary-gold/25 bg-surface-bg/50">
     <div
-      class="flex dark:bg-neutral-950 items-center justify-center w-full pt-4"
+      class="max-w-[1240px] mx-auto px-7 pt-[52px] pb-7 flex items-start justify-between gap-8 flex-wrap"
     >
-      <UiHeaderFooterLogo />
-    </div>
-    <div class="mx-auto">
-      <UxSocialLinks :links="footerNavs" />
-      <div
-        class="mt-10 py-5 border-t border-primary-gold text-center bg-alternative-blue dark:bg-transparent text-white cursor-auto"
-      >
-        <p>
-          © {{ dateComputed + " " }}
-          <NuxtLink
-            to="/"
-            class="hover:text-light-gold dark:hover:text-primary-gold duration-500"
+      <!-- Logo + tagline -->
+      <div>
+        <div class="flex items-center gap-2.5">
+          <img
+            src="/media/logos/code.svg"
+            alt="EZdev"
+            class="h-5 w-auto"
+            style="filter: invert(84%) sepia(24%) saturate(500%) hue-rotate(2deg) brightness(96%)"
+          />
+          <span class="mono text-sm font-bold tracking-[.14em] text-[#eef2f6]"
+            >EZ&bull;DEV</span
           >
-            EZdev Solutions (PTY) LTD.
-          </NuxtLink>
-          {{ t("footer-all-rights-reserved") }}
+        </div>
+        <p class="text-sm text-[oklch(70%_0.02_250)] mt-3.5 max-w-[24em]">
+          {{ t("footer-tagline") }}
         </p>
       </div>
+
+      <!-- Link columns -->
+      <div class="mono flex gap-14 text-[13px]">
+        <!-- SITE -->
+        <div class="flex flex-col gap-3">
+          <span
+            class="text-[11px] tracking-[.12em] text-primary-gold"
+          >{{ t("footer-site") }}</span>
+          <NuxtLink
+            to="/portfolio"
+            class="text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
+            >{{ t("nav-portfolio") }}</NuxtLink
+          >
+          <NuxtLink
+            to="/about"
+            class="text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
+            >{{ t("nav-about") }}</NuxtLink
+          >
+          <NuxtLink
+            to="/contact-me"
+            class="text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
+            >{{ t("nav-contact") }}</NuxtLink
+          >
+          <NuxtLink
+            to="/privacy-policy"
+            class="text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
+            >{{ t("nav-privacy") }}</NuxtLink
+          >
+        </div>
+
+        <!-- ELSEWHERE -->
+        <div class="flex flex-col gap-3">
+          <span
+            class="text-[11px] tracking-[.12em] text-primary-gold"
+          >{{ t("footer-elsewhere") }}</span>
+          <a
+            href="https://github.com/AnthonyGKruger"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
+            >GitHub &nearr;</a
+          >
+          <a
+            href="https://www.linkedin.com/in/anthony-gordon-kruger-ezdev/"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
+            >LinkedIn &nearr;</a
+          >
+          <a
+            href="mailto:anthony@ezdev.solutions"
+            class="text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
+            >Email &nearr;</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div
+      class="mono border-t border-primary-gold/20 py-[18px] px-7 text-center text-xs tracking-[.04em] text-[oklch(65%_0.02_250)]"
+    >
+      &copy; {{ dateComputed }} EZdev Solutions (PTY) LTD.
+      {{ t("footer-all-rights-reserved") }}
     </div>
   </footer>
 </template>
