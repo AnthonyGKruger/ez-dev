@@ -39,20 +39,24 @@ Filenames match their collection key exactly (`workExperience.json`,
   labels, contact-form validation errors, cookie notice, thank-you, privacy,
   languages page, SEO titles, the hero typing strings.
 
-## Runtime choice → why the glob loader, not @nuxt/content (yet)
+## How it's wired (Nuxt Content v3)
 
-`useContent()` reads the per-locale JSON synchronously via `import.meta.glob`
-(bundled by Vite). This was chosen over installing `@nuxt/content` because:
+- `content.config.ts` declares one **data** collection per content type
+  (`skills`, `portfolio`, `workExperience`, `qualifications`, `site`); each
+  `source` glob matches both locale dirs. Schemas are passthrough — the typed
+  shapes live in `types/content.ts`.
+- `plugins/content.ts` preloads every collection for **both** locales into a
+  `useState("content")` store at startup (awaited on the server, serialized to
+  the client). This is what keeps `useContent()` **synchronous** and lets live
+  EN/AF switching resolve instantly with no refetch — Nuxt Content's
+  `queryCollection()` is itself async, so reading it eagerly once avoids
+  turning every consumer into `useAsyncData`.
+- `useContent(collection)` reads that store, resolves the active locale (via
+  `useTranslate`), and falls back to `en`.
 
-- Nuxt Content's `queryCollection()` is **async** (file → build-time DB →
-  runtime query). Adopting it would turn every content read into
-  `useAsyncData`, and live EN/AF switching would need explicit refetch/watch —
-  today it "just works" reactively through the `computed`.
-- For a small, static, SSG portfolio the DB layer buys little.
+Requires a SQLite adapter (`better-sqlite3`, installed) — Nuxt Content builds a
+local content DB under `.data/` (gitignored). Editing a JSON file triggers a
+rebuild in dev.
 
-`useContent()` is the single seam, so adopting Nuxt Content later is localized:
-1. `npm i @nuxt/content`, add it to `modules`.
-2. Add `content.config.ts` with a collection per locale (`en/**`, `af/**`) and
-   a Zod schema mirroring `types/content.ts`.
-3. Swap the body of `useContent()` for `queryCollection(...)` (returning the
-   same shape). Worth doing if/when you want the **Nuxt Studio** visual editor.
+Next step if you want a visual editor: connect **Nuxt Studio** to this project;
+no code changes needed — it edits the same `content/**` JSON.
