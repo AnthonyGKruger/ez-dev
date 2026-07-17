@@ -19,7 +19,7 @@ export default defineNuxtConfig({
       siteName: "EZdev Solutions - Anthony Gordon Kruger's Portfolio",
       siteDescription:
         "Web Developer portfolio: projects, skills, work experience, and contact.",
-      siteImage: "/media/logos/ezdev-logo-white.png",
+      siteImage: "/media/og-image.png",
       turnstileSiteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY || "",
     },
   },
@@ -114,7 +114,8 @@ export default defineNuxtConfig({
   seo: {
     meta: {
       // Site-wide og/twitter fallbacks; pages override via useSeo().
-      ogImage: "/media/logos/ezdev-logo-white.png",
+      // 1200x630 branded card generated from the hero design.
+      ogImage: "/media/og-image.png",
       twitterCard: "summary_large_image",
     },
   },
