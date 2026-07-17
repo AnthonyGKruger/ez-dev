@@ -115,7 +115,7 @@ export const translations: Translations = new Map([
       ["footer-all-rights-reserved", "All rights reserved."],
       [
         "footer-tagline",
-        "Web development. Building fast, reliable products for teams that ship.",
+        "Web development. Building fast, reliable products for teams that deliver.",
       ],
       ["footer-site", "SITE"],
       ["footer-elsewhere", "ELSEWHERE"],

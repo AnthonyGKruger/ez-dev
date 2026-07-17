@@ -3,13 +3,13 @@
     "eyebrow": "// ANTHONY KRUGER · WEB DEVELOPER",
     "headline": "I design & build web products teams",
     "headlineAccent": "rely on.",
-    "lead": "A BSc IT and {years} years shipping production apps end to end, from SaaS platforms to e-commerce, with Nuxt, Next.js and TypeScript.",
+    "lead": "A BSc IT and {years} years delivering production apps end to end, from SaaS platforms to e-commerce, with Nuxt, Next.js and TypeScript.",
     "ctaWork": "VIEW SELECTED WORK",
     "ctaTouch": "GET IN TOUCH",
     "stats": [
       {
         "value": "{years}+",
-        "label": "YEARS SHIPPING"
+        "label": "YEARS EXPERIENCE"
       },
       {
         "value": "BSc IT",
@@ -59,7 +59,7 @@
     "paragraphs": [
       "Fueled by a passion for technology and a knack for problem-solving, I'm a web developer with a drive to craft intuitive and impactful web experiences.",
       "My journey began in the dynamic world of retail, where I honed my leadership and customer-centric skills as a Branch Manager. While exceeding sales targets and building a thriving team, I discovered a passion for web development, which led me to a Bachelor's degree in Information Technology, graduating in 2021 with a comprehensive understanding of web principles.",
-      "Since then I've shipped production apps end to end, from SaaS platforms to e-commerce, for agencies, trading companies and my own clients through EZdev Solutions."
+      "Since then I've delivered production apps end to end, from SaaS platforms to e-commerce, for agencies, trading companies and my own clients through EZdev Solutions."
     ],
     "ctaChat": "Let's Chat",
     "ctaWork": "SEE MY WORK",
@@ -71,7 +71,7 @@
       },
       {
         "icon": "mdi:rocket-launch",
-        "title": "6+ years shipping",
+        "title": "6+ years building",
         "desc": "Production web apps across agencies, trading and my own clients, front end to back end."
       },
       {

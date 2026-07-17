@@ -9,7 +9,7 @@
     "stats": [
       {
         "value": "{years}+",
-        "label": "JARE SE LEWERING"
+        "label": "JARE ONDERVINDING"
       },
       {
         "value": "BSc IT",
@@ -71,7 +71,7 @@
       },
       {
         "icon": "mdi:rocket-launch",
-        "title": "6+ jaar se lewering",
+        "title": "6+ jaar se bouwerk",
         "desc": "Produksie-webtoepassings oor agentskappe, handel en my eie kliënte, van front-end tot back-end."
       },
       {

@@ -1,6 +1,6 @@
 {
   "eyebrow": "// SELECTED WORK",
-  "heading": "Products I've shipped",
+  "heading": "Products I've built",
   "intro": "Dominating the web one project at a time, from brand e-commerce to full SaaS platforms.",
   "labels": {
     "visit": "VISIT",
@@ -10,7 +10,7 @@
   },
   "viewAll": {
     "label": "ALL WORK",
-    "text": "See every project I've shipped"
+    "text": "See every project I've delivered"
   },
   "projects": [
     {
