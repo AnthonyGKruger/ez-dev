@@ -6,16 +6,16 @@
     {
       "code": "EN",
       "name": "English",
-      "level": "FLUENT · PROFESSIONAL",
+      "level": "FLUENT · NATIVE",
       "pct": "100%",
-      "note": "My primary working language — client communication, documentation and day-to-day development."
+      "note": "Home language and my primary working language — client communication, documentation and day-to-day development."
     },
     {
       "code": "AF",
       "name": "Afrikaans",
-      "level": "FLUENT · NATIVE",
+      "level": "FLUENT · PROFESSIONAL",
       "pct": "100%",
-      "note": "Home language — I build, present and support clients comfortably in Afrikaans too."
+      "note": "I build, present and support clients comfortably in Afrikaans too."
     }
   ]
 }

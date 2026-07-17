@@ -4,7 +4,12 @@ export default function useSeo() {
   const { t, getLang } = useTranslate();
 
   const origin = (config.public.siteUrl as string)?.replace(/\/$/, "") || "";
-  const canonical = origin + (route.fullPath || "/");
+  // Canonical must not carry query strings or hashes — route.path only.
+  const canonical = origin + (route.path || "/");
+
+  /** og:image / twitter:image must be absolute URLs. */
+  const absolute = (url: string) =>
+    /^https?:\/\//.test(url) ? url : origin + url;
 
   const setSeo = (
     keyBase: string,
@@ -18,7 +23,9 @@ export default function useSeo() {
         undefined,
         config.public.siteDescription as unknown as string,
       );
-    const image = overrides?.image ?? (config.public.siteImage as string);
+    const image = absolute(
+      overrides?.image ?? (config.public.siteImage as string),
+    );
 
     useSeoMeta({
       title,
@@ -26,6 +33,9 @@ export default function useSeo() {
       ogTitle: title,
       ogDescription: description,
       ogImage: image,
+      ogUrl: canonical,
+      ogType: "website",
+      ogSiteName: config.public.siteName as string,
       twitterCard: "summary_large_image",
       twitterTitle: title,
       twitterDescription: description,
@@ -36,11 +46,10 @@ export default function useSeo() {
       htmlAttrs: {
         lang: getLang(),
       },
-      link: [
-        { rel: "canonical", href: canonical },
-        { rel: "alternate", hreflang: "en", href: origin + route.fullPath },
-        { rel: "alternate", hreflang: "af", href: origin + route.fullPath },
-      ],
+      // No hreflang alternates: the EN/AF switch is cookie-based on the same
+      // URL, and hreflang requires distinct URLs per locale. The crawlable
+      // content is English.
+      link: [{ rel: "canonical", href: canonical }],
     });
   };
 

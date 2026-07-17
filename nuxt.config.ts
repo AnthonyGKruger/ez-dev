@@ -118,10 +118,25 @@ export default defineNuxtConfig({
       twitterCard: "summary_large_image",
     },
   },
+  // nuxt-schema-org reads identity from module options, not app.config.
+  schemaOrg: {
+    identity: {
+      type: "Person",
+      name: "Anthony Gordon Kruger",
+      url: "https://www.ezdev.solutions",
+      sameAs: [
+        "https://github.com/AnthonyGKruger",
+        "https://www.linkedin.com/in/anthony-gordon-kruger-ezdev/",
+      ],
+      jobTitle: "Full-Stack Web Developer",
+    },
+  },
   sitemap: {
     defaults: {
       changefreq: "weekly",
       priority: 0.7,
     },
+    // Post-submit page; noindex (see pages/thank-you/index.vue).
+    exclude: ["/thank-you"],
   },
 });

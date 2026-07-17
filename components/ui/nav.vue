@@ -48,12 +48,7 @@ const isActive = (to: string) => {
       >
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center gap-2.5">
-          <img
-            src="/media/logos/code.svg"
-            alt="EZdev"
-            class="h-[22px] w-auto"
-            style="filter: invert(84%) sepia(24%) saturate(500%) hue-rotate(2deg) brightness(96%)"
-          />
+          <img src="/media/logos/code.svg" alt="EZdev" class="h-[22px] w-auto" />
           <span class="mono text-sm font-bold tracking-[.14em] text-[#eef2f6]"
             >EZ&bull;DEV</span
           >

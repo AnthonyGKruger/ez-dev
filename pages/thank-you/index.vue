@@ -7,6 +7,10 @@ setSeo("thank-you", {
   description: t("thank-you-description"),
 });
 
+// Post-submit page (redirects without the session flag) — keep it out of
+// search results.
+useSeoMeta({ robots: "noindex, nofollow" });
+
 onMounted(() => {
   try {
     const key = "ezdev-contact-sent";

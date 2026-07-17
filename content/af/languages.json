@@ -6,16 +6,16 @@
     {
       "code": "EN",
       "name": "Engels",
-      "level": "VLOT · PROFESSIONEEL",
+      "level": "VLOT · MOEDERTAAL",
       "pct": "100%",
-      "note": "My primêre werkstaal — kliëntkommunikasie, dokumentasie en dag-tot-dag ontwikkeling."
+      "note": "Huistaal en my primêre werkstaal — kliëntkommunikasie, dokumentasie en dag-tot-dag ontwikkeling."
     },
     {
       "code": "AF",
       "name": "Afrikaans",
-      "level": "VLOT · MOEDERTAAL",
+      "level": "VLOT · PROFESSIONEEL",
       "pct": "100%",
-      "note": "Huistaal — ek bou, bied aan en ondersteun kliënte net so gemaklik in Afrikaans."
+      "note": "Ek bou, bied aan en ondersteun kliënte net so gemaklik in Afrikaans."
     }
   ]
 }
