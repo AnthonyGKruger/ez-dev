@@ -143,7 +143,16 @@ const site = z.object({
   }),
   companies: z.object({
     heading: z.string(),
-    items: z.array(z.object({ name: z.string(), logo: z.string() })),
+    items: z.array(
+      z.object({
+        name: z.string(),
+        logo: z.string(),
+        // Intrinsic image dimensions; reserve layout before the logo loads
+        // so the marquee track width doesn't shift mid-animation.
+        width: z.number().optional(),
+        height: z.number().optional(),
+      }),
+    ),
   }),
   about: z.object({
     eyebrow: z.string(),

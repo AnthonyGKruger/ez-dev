@@ -34,19 +34,27 @@
     "items": [
       {
         "name": "Digital Stream",
-        "logo": "/media/logos/ds-logo.png"
+        "logo": "/media/logos/ds-logo.png",
+        "width": 626,
+        "height": 75
       },
       {
         "name": "DPTS",
-        "logo": "/media/logos/DPTS.png"
+        "logo": "/media/logos/DPTS.png",
+        "width": 672,
+        "height": 184
       },
       {
         "name": "Mumbi Trust Administrators",
-        "logo": "/media/logos/mumbi-logo.png"
+        "logo": "/media/logos/mumbi-logo.png",
+        "width": 400,
+        "height": 146
       },
       {
         "name": "Addventures",
-        "logo": "/media/logos/av-logo.png"
+        "logo": "/media/logos/av-logo.png",
+        "width": 214,
+        "height": 42
       }
     ]
   },

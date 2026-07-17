@@ -79,6 +79,9 @@ export interface HeroContent {
 export interface Company {
   name: string;
   logo: string;
+  /** Intrinsic image dimensions, used to reserve layout before load */
+  width?: number;
+  height?: number;
 }
 
 export interface CompaniesContent {
