@@ -3,10 +3,13 @@
   "heading": "Always leveling up",
   "tagline": "FORMAL & CONTINUOUS LEARNING",
   "featured": {
-    "period": "2019 — 2021 · RICHFIELD GRADUATE INSTITUTE OF TECHNOLOGY",
+    "period": "2019 - 2021 · RICHFIELD GRADUATE INSTITUTE OF TECHNOLOGY",
     "title": "BSc IT",
-    "saqa": "— SAQA ID #35954",
-    "tags": ["SYSTEMS DEVELOPMENT", "8 DISTINCTIONS"]
+    "saqa": "SAQA ID #35954",
+    "tags": [
+      "SYSTEMS DEVELOPMENT",
+      "8 DISTINCTIONS"
+    ]
   },
   "certsLabel": "CERTIFICATIONS & COURSES",
   "certs": [
@@ -61,6 +64,6 @@
   ],
   "nsc": {
     "title": "National Senior Certificate",
-    "meta": "2006 — 2010 · Lyttleton Manor High School · Half Colours for Academics"
+    "meta": "2006 - 2010 · Lyttleton Manor High School · Half Colours for Academics"
   }
 }

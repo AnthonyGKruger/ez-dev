@@ -129,7 +129,7 @@ export default defineNuxtConfig({
         "https://github.com/AnthonyGKruger",
         "https://www.linkedin.com/in/anthony-gordon-kruger-ezdev/",
       ],
-      jobTitle: "Full-Stack Web Developer",
+      jobTitle: "Web Developer",
     },
   },
   sitemap: {

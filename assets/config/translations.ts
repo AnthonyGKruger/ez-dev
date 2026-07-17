@@ -115,7 +115,7 @@ export const translations: Translations = new Map([
       ["footer-all-rights-reserved", "All rights reserved."],
       [
         "footer-tagline",
-        "Full-stack web development. Building fast, reliable products for teams that ship.",
+        "Web development. Building fast, reliable products for teams that ship.",
       ],
       ["footer-site", "SITE"],
       ["footer-elsewhere", "ELSEWHERE"],
@@ -354,7 +354,7 @@ export const translations: Translations = new Map([
       ["footer-all-rights-reserved", "Alle regte voorbehou."],
       [
         "footer-tagline",
-        "Volstapel-webontwikkeling. Bou vinnige, betroubare produkte vir spanne wat lewer.",
+        "Webontwikkeling. Bou vinnige, betroubare produkte vir spanne wat lewer.",
       ],
       ["footer-site", "WEBWERF"],
       ["footer-elsewhere", "ELDERS"],

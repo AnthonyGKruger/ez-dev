@@ -3,10 +3,13 @@
   "heading": "Altyd besig om op te gradeer",
   "tagline": "FORMELE & DEURLOPENDE LEER",
   "featured": {
-    "period": "2019 — 2021 · RICHFIELD GRADUATE INSTITUTE OF TECHNOLOGY",
+    "period": "2019 - 2021 · RICHFIELD GRADUATE INSTITUTE OF TECHNOLOGY",
     "title": "BSc IT",
-    "saqa": "— SAQA ID #35954",
-    "tags": ["STELSELONTWIKKELING", "8 ONDERSKEIDINGS"]
+    "saqa": "SAQA ID #35954",
+    "tags": [
+      "STELSELONTWIKKELING",
+      "8 ONDERSKEIDINGS"
+    ]
   },
   "certsLabel": "SERTIFIKATE & KURSUSSE",
   "certs": [
@@ -61,6 +64,6 @@
   ],
   "nsc": {
     "title": "Nasionale Senior Sertifikaat",
-    "meta": "2006 — 2010 · Lyttleton Manor Hoërskool · Half Kleure vir Akademiese Prestasie"
+    "meta": "2006 - 2010 · Lyttleton Manor Hoërskool · Half Kleure vir Akademiese Prestasie"
   }
 }

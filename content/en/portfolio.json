@@ -1,7 +1,7 @@
 {
   "eyebrow": "// SELECTED WORK",
   "heading": "Products I've shipped",
-  "intro": "Dominating the web one project at a time — from brand e-commerce to full SaaS platforms.",
+  "intro": "Dominating the web one project at a time, from brand e-commerce to full SaaS platforms.",
   "labels": {
     "visit": "VISIT",
     "code": "CODE",
@@ -16,7 +16,7 @@
     {
       "id": "p4",
       "title": "Votera",
-      "description": "A smart HOA-management SaaS platform for South African communities — digital voting, maintenance tracking, resident directory and transparent governance in one portal.",
+      "description": "A smart HOA-management SaaS platform for South African communities: digital voting, maintenance tracking, resident directory and transparent governance in one portal.",
       "link": "https://votera.co.za",
       "image": "",
       "sourceCode": ""
@@ -24,7 +24,7 @@
     {
       "id": "p5",
       "title": "Chilli Collective",
-      "description": "E-commerce storefront for a premium small-batch fermented hot-sauce brand — product catalogue, cart and checkout, built for a fast, tactile browsing experience.",
+      "description": "E-commerce storefront for a premium small-batch fermented hot-sauce brand: product catalogue, cart and checkout, built for a fast, tactile browsing experience.",
       "link": "https://chilli-collective.com",
       "image": "",
       "sourceCode": ""

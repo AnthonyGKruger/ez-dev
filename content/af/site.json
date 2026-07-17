@@ -1,9 +1,9 @@
 {
   "hero": {
-    "eyebrow": "// ANTHONY KRUGER — VOLSTAPEL-WEBONTWIKKELAAR",
+    "eyebrow": "// ANTHONY KRUGER · WEBONTWIKKELAAR",
     "headline": "Ek ontwerp & bou webprodukte waarop spanne",
     "headlineAccent": "staatmaak.",
-    "lead": "'n BSc IT en {years} jaar se ondervinding om produksie-toepassings van begin tot einde te lewer — van SaaS-platforms tot e-handel — met Nuxt, Next.js en TypeScript.",
+    "lead": "'n BSc IT en {years} jaar se ondervinding om produksie-toepassings van begin tot einde te lewer, van SaaS-platforms tot e-handel, met Nuxt, Next.js en TypeScript.",
     "ctaWork": "SIEN GEKOSE WERK",
     "ctaTouch": "KOM IN KONTAK",
     "stats": [
@@ -58,8 +58,8 @@
     "headlineAccent": "van begin tot einde.",
     "paragraphs": [
       "Gedryf deur 'n passie vir tegnologie en 'n aanvoeling vir probleemoplossing, is ek 'n webontwikkelaar met 'n dryfkrag om intuïtiewe en impakvolle web-ervarings te skep.",
-      "My reis het begin in die dinamiese wêreld van kleinhandel, waar ek my leierskap- en kliëntgefokusde vaardighede as 'n Takbestuurder geslyp het. Terwyl ek verkoopsdoelwitte oortref en 'n florerende span gebou het, het ek 'n passie vir webontwikkeling ontdek — wat my gelei het tot 'n Baccalaureusgraad in Inligtingstegnologie, en ek het in 2021 gegradueer met 'n omvattende begrip van webbeginsels.",
-      "Sedertdien het ek produksie-toepassings van begin tot einde gelewer — van SaaS-platforms tot e-handel — vir agentskappe, handelsmaatskappye en my eie kliënte deur EZdev Solutions."
+      "My reis het begin in die dinamiese wêreld van kleinhandel, waar ek my leierskap- en kliëntgefokusde vaardighede as 'n Takbestuurder geslyp het. Terwyl ek verkoopsdoelwitte oortref en 'n florerende span gebou het, het ek 'n passie vir webontwikkeling ontdek, wat my gelei het tot 'n Baccalaureusgraad in Inligtingstegnologie, en ek het in 2021 gegradueer met 'n omvattende begrip van webbeginsels.",
+      "Sedertdien het ek produksie-toepassings van begin tot einde gelewer, van SaaS-platforms tot e-handel, vir agentskappe, handelsmaatskappye en my eie kliënte deur EZdev Solutions."
     ],
     "ctaChat": "Kom gesels",
     "ctaWork": "SIEN MY WERK",
@@ -67,17 +67,17 @@
       {
         "icon": "mdi:school",
         "title": "BSc IT, 2021",
-        "desc": "Richfield Graduate Institute of Technology — gespesialiseer in stelselontwikkeling, 8 onderskeidings."
+        "desc": "Richfield Graduate Institute of Technology, gespesialiseer in stelselontwikkeling, 8 onderskeidings."
       },
       {
         "icon": "mdi:rocket-launch",
         "title": "6+ jaar se lewering",
-        "desc": "Produksie-webtoepassings oor agentskappe, handel en my eie kliënte — front-end tot volstapel."
+        "desc": "Produksie-webtoepassings oor agentskappe, handel en my eie kliënte, van front-end tot back-end."
       },
       {
         "icon": "mdi:translate",
         "title": "Tweetalige lewering",
-        "desc": "Vlot in Engels en Afrikaans — gemaklik om in beide te bou en te kommunikeer."
+        "desc": "Vlot in Engels en Afrikaans, gemaklik om in beide te bou en te kommunikeer."
       }
     ]
   },
@@ -114,7 +114,7 @@
   "thankYou": {
     "eyebrow": "// BOODSKAP GESTUUR",
     "heading": "Dankie!",
-    "message": "Dankie dat jy uitgereik het — ek sal binnekort by jou terugkom. Intussen, hoekom kyk jy nie gerus verder rond nie?",
+    "message": "Dankie dat jy uitgereik het! Ek sal binnekort by jou terugkom. Intussen, hoekom kyk jy nie gerus verder rond nie?",
     "ctaHome": "TERUG NA TUIS",
     "ctaWork": "BEKYK MY WERK"
   }

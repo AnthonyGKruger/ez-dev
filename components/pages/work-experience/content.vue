@@ -43,7 +43,7 @@ const content = useContent("workExperience");
           <div class="flex items-baseline justify-between gap-4 flex-wrap">
             <h3 class="text-[21px] font-bold text-[#f4f7fa]">{{ w.company }}</h3>
             <span class="mono text-xs tracking-[.06em] text-primary-gold whitespace-nowrap">
-              {{ w.dateFrom }} — {{ w.dateTo }}
+              {{ w.dateFrom }} - {{ w.dateTo }}
             </span>
           </div>
           <p class="mono text-[13px] tracking-[.04em] text-light-gold mt-2">

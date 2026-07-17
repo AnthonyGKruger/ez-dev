@@ -1,7 +1,7 @@
 {
   "eyebrow": "// GEKOSE WERK",
   "heading": "Produkte wat ek gelewer het",
-  "intro": "Ek oorheers die web een projek op 'n slag — van handelsmerk-e-handel tot volledige SaaS-platforms.",
+  "intro": "Ek oorheers die web een projek op 'n slag, van handelsmerk-e-handel tot volledige SaaS-platforms.",
   "labels": {
     "visit": "BESOEK",
     "code": "KODE",
@@ -16,7 +16,7 @@
     {
       "id": "p4",
       "title": "Votera",
-      "description": "'n Slim HOA-bestuur SaaS-platform vir Suid-Afrikaanse gemeenskappe — digitale stemming, instandhoudingsopsporing, inwonergids en deursigtige bestuur in een portaal.",
+      "description": "'n Slim HOA-bestuur SaaS-platform vir Suid-Afrikaanse gemeenskappe: digitale stemming, instandhoudingsopsporing, inwonergids en deursigtige bestuur in een portaal.",
       "link": "https://votera.co.za",
       "image": "",
       "sourceCode": ""
@@ -24,7 +24,7 @@
     {
       "id": "p5",
       "title": "Chilli Collective",
-      "description": "E-handelswinkel vir 'n premium kleinbatch-gefermenteerde brandsous-handelsmerk — produkkatalogus, mandjie en betaling, gebou vir 'n vinnige, tasbare blaai-ervaring.",
+      "description": "E-handelswinkel vir 'n premium kleinbatch-gefermenteerde brandsous-handelsmerk: produkkatalogus, mandjie en betaling, gebou vir 'n vinnige, tasbare blaai-ervaring.",
       "link": "https://chilli-collective.com",
       "image": "",
       "sourceCode": ""

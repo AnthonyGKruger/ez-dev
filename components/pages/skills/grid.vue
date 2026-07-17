@@ -37,7 +37,7 @@ const toggleFlip = (i: number) => {
         role="button"
         tabindex="0"
         :aria-pressed="flipped.has(i)"
-        :aria-label="`${skill.name} — ${skill.description}`"
+        :aria-label="`${skill.name}: ${skill.description}`"
         @click="toggleFlip(i)"
         @keydown.enter.prevent="toggleFlip(i)"
         @keydown.space.prevent="toggleFlip(i)"
