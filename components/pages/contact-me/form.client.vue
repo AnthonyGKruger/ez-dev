@@ -58,10 +58,17 @@ onMounted(async () => {
     return;
   }
   try {
+    // Explicit rendering ignores data-* attributes on the container, so
+    // action/theme/size must be passed here. The server verify checks the
+    // token's action against "contact" — without it every submit fails
+    // with action_mismatch.
     turnstileWidgetId.value = (window as any).turnstile.render(
       "#turnstile-container",
       {
         sitekey: siteKey.value,
+        action: "contact",
+        theme: "dark",
+        size: "normal",
         callback: (t: string) => { turnstileToken.value = t; },
         "expired-callback": () => { turnstileToken.value = null; },
         "error-callback": () => { turnstileToken.value = null; },
@@ -246,14 +253,7 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
             </Message>
           </div>
 
-          <div
-            id="turnstile-container"
-            :data-sitekey="siteKey"
-            data-theme="dark"
-            data-size="normal"
-            data-action="contact"
-            class="mt-1"
-          />
+          <div id="turnstile-container" class="mt-1" />
 
           <button
             v-if="!loading"

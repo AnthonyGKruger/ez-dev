@@ -1,3 +1,15 @@
+/**
+ * Cloudflare's official Turnstile test secrets (always-pass / always-fail /
+ * token-spent). Their siteverify responses carry hostname "example.com" and
+ * no action, so the strict action/hostname consistency checks below would
+ * reject every request in local dev — skip them for test keys.
+ */
+const TEST_SECRETS = new Set([
+  "1x0000000000000000000000000000000AA",
+  "2x0000000000000000000000000000000AA",
+  "3x0000000000000000000000000000000AA",
+]);
+
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig(event);
   const secret = config.turnstileSecretKey as string | undefined;
@@ -52,7 +64,7 @@ export default defineEventHandler(async (event) => {
 
     const result = await resp.json();
 
-    if (result?.success) {
+    if (result?.success && !TEST_SECRETS.has(secret)) {
       if (expectedAction && result.action !== expectedAction) {
         return {
           success: false,
@@ -64,7 +76,7 @@ export default defineEventHandler(async (event) => {
       if (
         expectedHostname &&
         result.hostname &&
-        result.hostname !== expectedHostname
+        result.hostname.toLowerCase() !== expectedHostname.toLowerCase()
       ) {
         return {
           success: false,
