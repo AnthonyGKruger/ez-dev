@@ -28,6 +28,16 @@ const portfolio = z.object({
   eyebrow: z.string(),
   heading: z.string(),
   intro: z.string(),
+  labels: z.object({
+    visit: z.string(),
+    code: z.string(),
+    referralLetter: z.string(),
+    screenshot: z.string(),
+  }),
+  viewAll: z.object({
+    label: z.string(),
+    text: z.string(),
+  }),
   projects: z.array(
     z.object({
       id: z.string(),
@@ -39,6 +49,40 @@ const portfolio = z.object({
       referralLetter: z.string().optional(),
     }),
   ),
+});
+
+const languages = z.object({
+  eyebrow: z.string(),
+  heading: z.string(),
+  tagline: z.string(),
+  items: z.array(
+    z.object({
+      code: z.string(),
+      name: z.string(),
+      level: z.string(),
+      pct: z.string(),
+      note: z.string(),
+    }),
+  ),
+});
+
+const privacy = z.object({
+  eyebrow: z.string(),
+  heading: z.string(),
+  intro: z.string(),
+  lastUpdated: z.string(),
+  topics: z.array(
+    z.object({
+      num: z.string(),
+      title: z.string(),
+      body: z.string(),
+    }),
+  ),
+  contact: z.object({
+    label: z.string(),
+    text: z.string(),
+    email: z.string(),
+  }),
 });
 
 const workExperience = z.object({
@@ -132,6 +176,13 @@ const site = z.object({
       button: z.string(),
     }),
   }),
+  thankYou: z.object({
+    eyebrow: z.string(),
+    heading: z.string(),
+    message: z.string(),
+    ctaHome: z.string(),
+    ctaWork: z.string(),
+  }),
 });
 
 export default defineContentConfig({
@@ -141,5 +192,7 @@ export default defineContentConfig({
     workExperience: defineCollection({ type: "data", source: "**/workExperience.json", schema: workExperience }),
     qualifications: defineCollection({ type: "data", source: "**/qualifications.json", schema: qualifications }),
     site: defineCollection({ type: "data", source: "**/site.json", schema: site }),
+    languages: defineCollection({ type: "data", source: "**/languages.json", schema: languages }),
+    privacy: defineCollection({ type: "data", source: "**/privacy.json", schema: privacy }),
   },
 });

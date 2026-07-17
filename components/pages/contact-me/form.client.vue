@@ -106,7 +106,7 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
     token = hidden?.value || null;
   }
   if (!token) {
-    toast.add({ severity: "warn", summary: "Please complete the verification.", life: 5000 });
+    toast.add({ severity: "warn", summary: t("contact-verification-required"), life: 5000 });
     return;
   }
 
@@ -119,7 +119,7 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
 
     if (!verification?.success) {
       trackFormVerification(false);
-      toast.add({ severity: "error", summary: "Invisible verification failed.", life: 5000 });
+      toast.add({ severity: "error", summary: t("contact-verification-failed"), life: 5000 });
       return;
     }
 

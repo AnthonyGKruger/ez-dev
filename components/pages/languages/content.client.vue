@@ -1,22 +1,5 @@
 <script setup lang="ts">
-const { t } = useTranslate();
-
-const languages = [
-  {
-    code: "EN",
-    name: "English",
-    level: "FLUENT · PROFESSIONAL",
-    pct: "100%",
-    note: "My primary working language — client communication, documentation and day-to-day development.",
-  },
-  {
-    code: "AF",
-    name: "Afrikaans",
-    level: "FLUENT · NATIVE",
-    pct: "100%",
-    note: "Home language — I build, present and support clients comfortably in Afrikaans too.",
-  },
-];
+const content = useContent("languages");
 </script>
 
 <template>
@@ -24,22 +7,22 @@ const languages = [
     <!-- Section header -->
     <div class="flex items-center gap-5 mb-5">
       <div class="mono text-[13px] tracking-[.16em] text-primary-gold">
-        // LANGUAGES
+        {{ content.eyebrow }}
       </div>
       <div class="flex-1 h-px bg-primary-gold/20"></div>
     </div>
     <div class="flex items-end justify-between gap-6 mb-[52px] flex-wrap">
       <h1 class="text-[56px] font-black tracking-[-0.02em] text-[#f4f7fa]">
-        Languages I'm fluent in
+        {{ content.heading }}
       </h1>
       <p class="mono text-[13px] text-[oklch(70%_0.02_250)]">
-        KEEP UP WITH THE LINGO
+        {{ content.tagline }}
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div
-        v-for="l in languages"
+        v-for="l in content.items"
         :key="l.code"
         class="border border-primary-gold/25 rounded-2xl bg-surface-bg p-8"
       >

@@ -1,0 +1,48 @@
+{
+  "eyebrow": "// PRIVACY POLICY",
+  "heading": "All about privacy",
+  "intro": "This privacy policy applies to ezdev.solutions and explains how I use any personal information I collect about you when you use this website.",
+  "lastUpdated": "LAST UPDATED 02/09/2025",
+  "topics": [
+    {
+      "num": "01",
+      "title": "What information I collect",
+      "body": "I collect information about you when you complete a form on my website. The information you give me may include your name, company name and email address."
+    },
+    {
+      "num": "02",
+      "title": "How I use the information",
+      "body": "I collect information to better understand how visitors use my website, to improve it, and to respond to you if you contact me through the site."
+    },
+    {
+      "num": "03",
+      "title": "Access & corrections",
+      "body": "You have the right to request a copy of the information I hold about you if you have contacted me before. Email me and I'll provide it."
+    },
+    {
+      "num": "04",
+      "title": "Cookies",
+      "body": "I may use cookies to give you the best experience and help improve the site. A cookie is a small file placed on your device when you visit a website — you can manage or delete cookies as you wish."
+    },
+    {
+      "num": "05",
+      "title": "Other websites",
+      "body": "My website may link to other websites. This privacy policy only applies to this website, so when you follow links elsewhere you should read their own policies."
+    },
+    {
+      "num": "06",
+      "title": "Changes to this policy",
+      "body": "I keep this privacy policy under regular review and will post any updates on this page."
+    },
+    {
+      "num": "07",
+      "title": "How to contact me",
+      "body": "Please get in touch if you have any questions about this privacy policy or the information I hold about you."
+    }
+  ],
+  "contact": {
+    "label": "CONTACT",
+    "text": "Questions about this policy or the information I hold about you? Email",
+    "email": "anthony@ezdev.solutions"
+  }
+}

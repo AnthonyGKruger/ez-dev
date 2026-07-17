@@ -14,6 +14,8 @@ const COLLECTIONS = [
   "workExperience",
   "qualifications",
   "site",
+  "languages",
+  "privacy",
 ] as const;
 
 type Store = Record<string, Record<string, unknown>>;

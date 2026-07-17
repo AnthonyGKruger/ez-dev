@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const { t } = useTranslate();
+const site = useContent("site");
+const thankYou = computed(() => site.value.thankYou);
 </script>
 
 <template>
@@ -11,27 +12,26 @@ const { t } = useTranslate();
         <LottiePlayer src="/lotties/ContactMe.json" height="200px" width="200px" />
       </div>
       <p class="mono text-[13px] tracking-[.16em] text-primary-gold mb-4">
-        // MESSAGE SENT
+        {{ thankYou.eyebrow }}
       </p>
       <h1 class="text-[52px] font-black tracking-[-0.02em] text-[#f4f7fa]">
-        Thank you!
+        {{ thankYou.heading }}
       </h1>
       <p class="text-lg leading-relaxed text-[oklch(80%_0.02_250)] mt-5 mb-9">
-        Thanks for reaching out — I'll get back to you shortly. In the meantime,
-        why not carry on looking around?
+        {{ thankYou.message }}
       </p>
       <div class="flex gap-3.5 justify-center flex-wrap">
         <NuxtLink
           to="/"
           class="mono inline-flex items-center gap-2 px-[26px] py-3.5 rounded-[9px] text-sm font-bold tracking-[.03em] bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold"
         >
-          BACK TO HOME
+          {{ thankYou.ctaHome }}
         </NuxtLink>
         <NuxtLink
           to="/portfolio"
           class="mono inline-flex items-center gap-2 px-[26px] py-3.5 rounded-[9px] text-sm font-bold tracking-[.03em] bg-transparent text-light-gold border border-primary-gold/50 transition-all duration-300 hover:border-light-gold hover:bg-primary-gold/10"
         >
-          VIEW MY WORK
+          {{ thankYou.ctaWork }}
         </NuxtLink>
       </div>
     </div>

@@ -59,7 +59,7 @@ const projects = computed(() =>
             style="background: repeating-linear-gradient(135deg, oklch(26% 0.05 251) 0 12px, oklch(23% 0.045 252) 12px 24px)"
           >
             <span class="mono text-[22px] font-bold text-light-gold tracking-[.02em]">{{ p.title }}</span>
-            <span class="mono text-[11px] tracking-[.1em] text-[oklch(62%_0.02_250)]">↳ SCREENSHOT</span>
+            <span class="mono text-[11px] tracking-[.1em] text-[oklch(62%_0.02_250)]">↳ {{ content.labels.screenshot }}</span>
           </div>
         </div>
 
@@ -80,7 +80,7 @@ const projects = computed(() =>
               rel="noreferrer noopener"
               class="mono inline-flex items-center gap-[7px] px-[18px] py-2.5 rounded-lg text-[13px] font-bold bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold"
             >
-              VISIT &nearr;
+              {{ content.labels.visit }} &nearr;
             </a>
             <a
               v-if="p.sourceCode"
@@ -89,7 +89,7 @@ const projects = computed(() =>
               rel="noreferrer noopener"
               class="mono inline-flex items-center gap-[7px] px-[18px] py-2.5 rounded-lg text-[13px] font-bold bg-transparent text-light-gold border border-primary-gold/40 transition-all duration-300 hover:border-light-gold"
             >
-              CODE
+              {{ content.labels.code }}
             </a>
             <a
               v-if="p.referralLetter"
@@ -99,7 +99,7 @@ const projects = computed(() =>
               class="mono inline-flex items-center gap-[7px] px-[18px] py-2.5 rounded-lg text-[13px] font-bold bg-transparent text-[oklch(78%_0.02_250)] border border-primary-gold/40"
             >
               <Icon name="mdi:email-newsletter" size="15" class="text-light-gold" />
-              REFERRAL LETTER
+              {{ content.labels.referralLetter }}
             </a>
           </div>
         </div>

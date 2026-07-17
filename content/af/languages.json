@@ -1,0 +1,21 @@
+{
+  "eyebrow": "// TALE",
+  "heading": "Tale waarin ek vlot is",
+  "tagline": "BLY OP HOOGTE VAN DIE JARGON",
+  "items": [
+    {
+      "code": "EN",
+      "name": "Engels",
+      "level": "VLOT · PROFESSIONEEL",
+      "pct": "100%",
+      "note": "My primêre werkstaal — kliëntkommunikasie, dokumentasie en dag-tot-dag ontwikkeling."
+    },
+    {
+      "code": "AF",
+      "name": "Afrikaans",
+      "level": "VLOT · MOEDERTAAL",
+      "pct": "100%",
+      "note": "Huistaal — ek bou, bied aan en ondersteun kliënte net so gemaklik in Afrikaans."
+    }
+  ]
+}

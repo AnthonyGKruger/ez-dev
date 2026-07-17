@@ -48,6 +48,8 @@ export const translations: Translations = new Map([
         "contact-email-send-failed",
         "Your email could not be sent. Please try again later.",
       ],
+      ["contact-verification-required", "Please complete the verification."],
+      ["contact-verification-failed", "Invisible verification failed."],
 
       // Validation errors
       ["contact-error-name-invalid", "Please enter a valid name."],
@@ -84,9 +86,11 @@ export const translations: Translations = new Map([
       // Navigation
       ["nav-home", "Home"],
       ["nav-about", "About"],
+      ["nav-work", "Work"],
       ["nav-skills", "Skills"],
       ["nav-qualifications", "Qualifications"],
       ["nav-work-experience", "Work Experience"],
+      ["nav-experience", "Experience"],
       ["nav-languages", "Languages"],
       ["nav-portfolio", "Portfolio"],
       ["nav-contact", "Contact"],
@@ -274,6 +278,11 @@ export const translations: Translations = new Map([
         "contact-email-send-failed",
         "Jou e-pos kon nie gestuur word nie. Probeer asseblief later weer.",
       ],
+      [
+        "contact-verification-required",
+        "Voltooi asseblief die verifikasie.",
+      ],
+      ["contact-verification-failed", "Onsigbare verifikasie het misluk."],
 
       // Validation errors
       ["contact-error-name-invalid", "Voer asseblief 'n geldige naam in."],
@@ -316,9 +325,11 @@ export const translations: Translations = new Map([
       // Navigation
       ["nav-home", "Tuis"],
       ["nav-about", "Oor"],
+      ["nav-work", "Werk"],
       ["nav-skills", "Vaardighede"],
       ["nav-qualifications", "Kwalifikasies"],
       ["nav-work-experience", "Werkservaring"],
+      ["nav-experience", "Ervaring"],
       ["nav-languages", "Tale"],
       ["nav-portfolio", "Portefeulje"],
       ["nav-contact", "Kontak"],

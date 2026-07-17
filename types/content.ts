@@ -42,6 +42,18 @@ export interface PortfolioContent {
   eyebrow: string;
   heading: string;
   intro: string;
+  /** Localized labels for the project-card action buttons and placeholder */
+  labels: {
+    visit: string;
+    code: string;
+    referralLetter: string;
+    screenshot: string;
+  };
+  /** "See all work" strip shown under the home-page preview */
+  viewAll: {
+    label: string;
+    text: string;
+  };
   projects: PortfolioProject[];
 }
 
@@ -116,11 +128,59 @@ export interface ContactContent {
   };
 }
 
+export interface ThankYouContent {
+  eyebrow: string;
+  heading: string;
+  message: string;
+  ctaHome: string;
+  ctaWork: string;
+}
+
 export interface SiteContent {
   hero: HeroContent;
   companies: CompaniesContent;
   about: AboutContent;
   contact: ContactContent;
+  thankYou: ThankYouContent;
+}
+
+export interface LanguageItem {
+  /** Short code shown in the badge, e.g. "EN" */
+  code: string;
+  name: string;
+  /** e.g. "FLUENT · NATIVE" */
+  level: string;
+  /** Proficiency shown next to the bar, e.g. "100%" */
+  pct: string;
+  /** Localized note under the proficiency bar */
+  note: string;
+}
+
+export interface LanguagesContent {
+  eyebrow: string;
+  heading: string;
+  tagline: string;
+  items: LanguageItem[];
+}
+
+export interface PrivacyTopic {
+  num: string;
+  title: string;
+  body: string;
+}
+
+export interface PrivacyContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  /** e.g. "LAST UPDATED 02/09/2025" */
+  lastUpdated: string;
+  topics: PrivacyTopic[];
+  contact: {
+    label: string;
+    text: string;
+    email: string;
+  };
 }
 
 export interface WorkExperienceEntry {
@@ -175,4 +235,6 @@ export interface ContentCollections {
   site: SiteContent;
   workExperience: WorkExperienceContent;
   qualifications: QualificationsContent;
+  languages: LanguagesContent;
+  privacy: PrivacyContent;
 }

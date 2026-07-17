@@ -1,9 +1,10 @@
 <script setup lang="ts">
 const { setSeo } = useSeo();
 const { t } = useTranslate();
+const workExperience = useContent("workExperience");
 setSeo("work", {
   title: t("work-experience-title"),
-  description: t("work-subtitle"),
+  description: workExperience.value.tagline,
 });
 </script>
 

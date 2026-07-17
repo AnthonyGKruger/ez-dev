@@ -4,8 +4,8 @@ Site content lives here as JSON, split **per locale**:
 
 ```
 content/
-  en/  portfolio.json  skills.json  site.json  (work-experience.json, qualifications.json — next)
-  af/  portfolio.json  skills.json  site.json
+  en/  portfolio.json  skills.json  site.json  workExperience.json  qualifications.json  languages.json  privacy.json
+  af/  portfolio.json  skills.json  site.json  workExperience.json  qualifications.json  languages.json  privacy.json
 ```
 
 Each locale directory holds fully-translated content — no translation keys, the
@@ -29,20 +29,22 @@ Filenames match their collection key exactly (`workExperience.json`,
 
 ## Status
 
-- **Migrated (component reads from `useContent`):** `skills`, `portfolio`,
-  `workExperience`, `qualifications`, and `site` (`hero`, `companies`, `about`,
-  `contact`). The About page + home preview, the contact form and the home
-  contact CTA all read from `site.about` / `site.contact`.
+- **Migrated (component reads from `useContent`):** `skills`, `portfolio`
+  (incl. card action labels + home "all work" strip), `workExperience`,
+  `qualifications`, `languages`, `privacy`, and `site` (`hero`, `companies`,
+  `about`, `contact`, `thankYou`). The About page + home preview, the contact
+  form, the home contact CTA and the thank-you page all read from `site.*`.
   `assets/config/data.ts` has been removed and the corresponding structured
   strings pruned from `assets/config/translations.ts`.
 - **Still key-based i18n microcopy** (stays in `translations.ts`): nav/footer
-  labels, contact-form validation errors, cookie notice, thank-you, privacy,
-  languages page, SEO titles, the hero typing strings.
+  labels, contact-form validation errors + verification toasts, cookie notice,
+  SEO titles, the hero typing strings, error pages.
 
 ## How it's wired (Nuxt Content v3)
 
 - `content.config.ts` declares one **data** collection per content type
-  (`skills`, `portfolio`, `workExperience`, `qualifications`, `site`); each
+  (`skills`, `portfolio`, `workExperience`, `qualifications`, `site`,
+  `languages`, `privacy`); each
   `source` glob matches both locale dirs. Schemas are passthrough — the typed
   shapes live in `types/content.ts`.
 - `plugins/content.ts` preloads every collection for **both** locales into a
@@ -73,7 +75,7 @@ itself at **`/_studio`**. Setup docs: https://nuxt.studio/setup
   back via GitHub.
 - The per-collection Zod schemas in `content.config.ts` drive Studio's form
   editor for each collection (`skills`, `portfolio`, `workExperience`,
-  `qualifications`, `site`) in both `en` and `af`.
+  `qualifications`, `site`, `languages`, `privacy`) in both `en` and `af`.
 
 **Local dev:** run `npm run dev`, open `/_studio` (or the floating button) —
 no auth needed; edits sync straight to the files in `content/**`, you commit

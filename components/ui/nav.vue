@@ -3,14 +3,14 @@ const route = useRoute();
 const { t } = useTranslate();
 const isOpen = ref(false);
 
-const navItems = [
-  { label: "About", to: "/about" },
-  { label: "Work", to: "/portfolio" },
-  { label: "Skills", to: "/skills" },
-  { label: "Experience", to: "/work-experience" },
-  { label: "Qualifications", to: "/qualifications" },
-  { label: "Languages", to: "/languages" },
-];
+const navItems = computed(() => [
+  { label: t("nav-about"), to: "/about" },
+  { label: t("nav-work"), to: "/portfolio" },
+  { label: t("nav-skills"), to: "/skills" },
+  { label: t("nav-experience"), to: "/work-experience" },
+  { label: t("nav-qualifications"), to: "/qualifications" },
+  { label: t("nav-languages"), to: "/languages" },
+]);
 
 const isActive = (to: string) => {
   if (to === "/") return route.path === "/";

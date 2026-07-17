@@ -1,7 +1,8 @@
 <script setup lang="ts">
 const { setSeo } = useSeo();
 const { t } = useTranslate();
-setSeo("skills", { title: t("skills-title"), description: t("skills-heading") });
+const skills = useContent("skills");
+setSeo("skills", { title: t("skills-title"), description: skills.value.heading });
 </script>
 
 <template>

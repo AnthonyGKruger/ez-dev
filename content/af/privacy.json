@@ -1,0 +1,48 @@
+{
+  "eyebrow": "// PRIVAATHEIDSBELEID",
+  "heading": "Alles oor privaatheid",
+  "intro": "Hierdie privaatheidsbeleid is van toepassing op ezdev.solutions en verduidelik hoe ek enige persoonlike inligting wat ek oor jou versamel gebruik wanneer jy hierdie webwerf gebruik.",
+  "lastUpdated": "LAAS OPGEDATEER 02/09/2025",
+  "topics": [
+    {
+      "num": "01",
+      "title": "Watter inligting ek versamel",
+      "body": "Ek versamel inligting oor jou wanneer jy 'n vorm op my webwerf voltooi. Die inligting wat jy my gee kan jou naam, maatskappynaam en e-posadres insluit."
+    },
+    {
+      "num": "02",
+      "title": "Hoe ek die inligting gebruik",
+      "body": "Ek versamel inligting om beter te verstaan hoe besoekers my webwerf gebruik, om dit te verbeter, en om op jou te reageer as jy my deur die werf kontak."
+    },
+    {
+      "num": "03",
+      "title": "Toegang & regstellings",
+      "body": "Jy het die reg om 'n kopie te vra van die inligting wat ek oor jou hou as jy my voorheen gekontak het. Stuur vir my 'n e-pos en ek sal dit verskaf."
+    },
+    {
+      "num": "04",
+      "title": "Koekies",
+      "body": "Ek mag koekies gebruik om jou die beste ervaring te gee en die werf te help verbeter. 'n Koekie is 'n klein lêer wat op jou toestel geplaas word wanneer jy 'n webwerf besoek — jy kan koekies bestuur of uitvee soos jy wil."
+    },
+    {
+      "num": "05",
+      "title": "Ander webwerwe",
+      "body": "My webwerf kan na ander webwerwe skakel. Hierdie privaatheidsbeleid is slegs van toepassing op hierdie webwerf, so wanneer jy skakels elders volg, moet jy hul eie beleide lees."
+    },
+    {
+      "num": "06",
+      "title": "Veranderinge aan hierdie beleid",
+      "body": "Ek hou hierdie privaatheidsbeleid onder gereelde hersiening en sal enige opdaterings op hierdie bladsy plaas."
+    },
+    {
+      "num": "07",
+      "title": "Hoe om my te kontak",
+      "body": "Kontak my gerus as jy enige vrae het oor hierdie privaatheidsbeleid of die inligting wat ek oor jou hou."
+    }
+  ],
+  "contact": {
+    "label": "KONTAK",
+    "text": "Vrae oor hierdie beleid of die inligting wat ek oor jou hou? E-pos",
+    "email": "anthony@ezdev.solutions"
+  }
+}

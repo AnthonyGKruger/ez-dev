@@ -7,20 +7,47 @@
     "ctaWork": "SIEN GEKOSE WERK",
     "ctaTouch": "KOM IN KONTAK",
     "stats": [
-      { "value": "{years}+", "label": "JARE SE LEWERING" },
-      { "value": "BSc IT", "label": "8 ONDERSKEIDINGS" },
-      { "value": "10+", "label": "PRODUKTE GEBOU" }
+      {
+        "value": "{years}+",
+        "label": "JARE SE LEWERING"
+      },
+      {
+        "value": "BSc IT",
+        "label": "8 ONDERSKEIDINGS"
+      },
+      {
+        "value": "10+",
+        "label": "PRODUKTE GEBOU"
+      }
     ],
-    "specTop": ["BRAND MARK", "v.2026"],
-    "specBottom": ["NUXT · NEXT · TS", "SSR · SSG · SPA"]
+    "specTop": [
+      "BRAND MARK",
+      "v.2026"
+    ],
+    "specBottom": [
+      "NUXT · NEXT · TS",
+      "SSR · SSG · SPA"
+    ]
   },
   "companies": {
     "heading": "Sommige van die ongelooflike maatskappye waarmee ek gewerk het",
     "items": [
-      { "name": "Digital Stream", "logo": "/media/logos/ds-logo.png" },
-      { "name": "DPTS", "logo": "/media/logos/DPTS.png" },
-      { "name": "Mumbi Trust Administrators", "logo": "/media/logos/mumbi-logo.png" },
-      { "name": "Addventures", "logo": "/media/logos/av-logo.png" }
+      {
+        "name": "Digital Stream",
+        "logo": "/media/logos/ds-logo.png"
+      },
+      {
+        "name": "DPTS",
+        "logo": "/media/logos/DPTS.png"
+      },
+      {
+        "name": "Mumbi Trust Administrators",
+        "logo": "/media/logos/mumbi-logo.png"
+      },
+      {
+        "name": "Addventures",
+        "logo": "/media/logos/av-logo.png"
+      }
     ]
   },
   "about": {
@@ -60,10 +87,22 @@
     "subtitle": "Het jy 'n projek in gedagte, of 'n rol waarvoor jy werf? Vul die vorm in en ek sal binnekort by jou terugkom.",
     "reachMeAt": "JY KAN MY OOK BEREIK BY",
     "form": {
-      "name": { "label": "NAAM", "placeholder": "Jou naam" },
-      "email": { "label": "E-POS", "placeholder": "jy@maatskappy.com" },
-      "company": { "label": "MAATSKAPPY", "placeholder": "Jou maatskappy" },
-      "details": { "label": "PROJEKBESONDERHEDE", "placeholder": "Vertel my van jou projek..." },
+      "name": {
+        "label": "NAAM",
+        "placeholder": "Jou naam"
+      },
+      "email": {
+        "label": "E-POS",
+        "placeholder": "jy@maatskappy.com"
+      },
+      "company": {
+        "label": "MAATSKAPPY",
+        "placeholder": "Jou maatskappy"
+      },
+      "details": {
+        "label": "PROJEKBESONDERHEDE",
+        "placeholder": "Vertel my van jou projek..."
+      },
       "submit": "STUUR BOODSKAP →"
     },
     "cta": {
@@ -71,5 +110,12 @@
       "subtitle": "Het jy 'n projek in gedagte, of 'n rol waarvoor jy werf? Kom in kontak en ek sal binnekort by jou terugkom.",
       "button": "BEGIN 'N PROJEK"
     }
+  },
+  "thankYou": {
+    "eyebrow": "// BOODSKAP GESTUUR",
+    "heading": "Dankie!",
+    "message": "Dankie dat jy uitgereik het — ek sal binnekort by jou terugkom. Intussen, hoekom kyk jy nie gerus verder rond nie?",
+    "ctaHome": "TERUG NA TUIS",
+    "ctaWork": "BEKYK MY WERK"
   }
 }
