@@ -19,17 +19,15 @@ onBeforeUnmount(() => window.removeEventListener("scroll", () => null));
 </script>
 
 <template>
-  <div
-    class="rounded-full border-2 mr-4 bottom-32 fixed right-0 z-40 h-10 w-10 text-xl bg-white dark:bg-black flex items-center justify-center dark:border-light-gold border-alternative-blue dark:hover:bg-light-gold hover:bg-light-blue dark:hover:text-black hover:scale-105 transition-all duration-500"
-    :class="{
-      block: showScrollToTop,
-      hidden: !showScrollToTop,
-    }"
+  <button
+    aria-label="Back to top"
+    class="rounded-full border mr-4 bottom-32 fixed right-0 z-40 h-10 w-10 text-xl bg-surface-bg border-primary-gold/60 text-light-gold items-center justify-center cursor-pointer hover:border-light-gold hover:bg-primary-gold/10 hover:scale-105 transition-all duration-300"
+    :class="showScrollToTop ? 'flex' : 'hidden'"
     @click="scrollToTop"
   >
     <Icon
       name="mdi:menu-up"
-      class="dark:text-white text-alternative-blue hover:text-light-gold dark:hover:text-black hover:scale-105 animate-bounce duration-500"
+      class="text-light-gold animate-bounce duration-500"
     />
-  </div>
+  </button>
 </template>
