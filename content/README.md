@@ -64,13 +64,23 @@ form editor.
 
 ## Nuxt Studio (visual editor)
 
-The code side is wired: schemas give Studio the form fields, and
-`content.preview.api` (in `nuxt.config.ts`) enables live preview. To finish
-(these steps are yours — they need the GitHub repo and a deployment):
+Studio is the **self-hosted `nuxt-studio` module** (the old hosted
+nuxt.studio platform was replaced by it) — the editor is served by this site
+itself at **`/_studio`**. Setup docs: https://nuxt.studio/setup
 
-1. Push this branch and open a repo on GitHub.
-2. Deploy the site (Vercel/Netlify/etc.) so Studio has a preview URL.
-3. Go to https://nuxt.studio, sign in with GitHub, and import the repo.
-4. Studio reads `content.config.ts` and renders a form for each collection
-   (`skills`, `portfolio`, `workExperience`, `qualifications`, `site`) in both
-   `en` and `af`. Edits are committed back to `content/**` as normal PRs/commits.
+- `nuxt.config.ts` registers the module and points `studio.repository` at
+  `AnthonyGKruger/ez-dev` (branch `main`) so production edits can be committed
+  back via GitHub.
+- The per-collection Zod schemas in `content.config.ts` drive Studio's form
+  editor for each collection (`skills`, `portfolio`, `workExperience`,
+  `qualifications`, `site`) in both `en` and `af`.
+
+**Local dev:** run `npm run dev`, open `/_studio` (or the floating button) —
+no auth needed; edits sync straight to the files in `content/**`, you commit
+them yourself.
+
+**Production:** requires an SSR deployment (`nuxt build`, e.g. Vercel) and a
+GitHub OAuth app for editor login — set `STUDIO_GITHUB_CLIENT_ID` /
+`STUDIO_GITHUB_CLIENT_SECRET` on the deployment (see `.env.example`; the OAuth
+app's callback URL is `https://<domain>/__nuxt_studio/auth/github`). In
+production Studio commits/publishes changes to the repo directly from the UI.

@@ -8,11 +8,15 @@ watch(route, () => close());
 
 <template>
   <div>
+    <!-- Compact edge tab: keeps clear of Nuxt Studio (bottom-left), Nuxt
+         DevTools (bottom-center) and the site's own floating UI (right). -->
     <button
       @click="toggle"
-      class="fixed bottom-6 left-6 z-50 bg-primary-blue text-white px-4 py-2 rounded-full shadow-lg hover:bg-light-blue transition-all duration-300 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+      title="Dev Tools"
+      aria-label="Open Dev Tools"
+      class="fixed top-1/2 -translate-y-1/2 left-0 z-50 flex items-center justify-center w-8 h-10 rounded-r-lg shadow-lg opacity-40 hover:opacity-100 bg-neutral-800 text-white hover:bg-neutral-700 transition-all duration-300"
     >
-      Open Dev Tools
+      <Icon name="mdi:tools" size="18" />
     </button>
 
     <div

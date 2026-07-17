@@ -19,22 +19,23 @@ const acceptCookie = () => {
 <template>
   <article
     v-if="!consent"
-    class="text-neutral-950 dark:text-white w-full md:w-3/4 lg:w-1/3 mx-w-[768px] bg-white dark:bg-black border rounded-xl px-4 p-2 bottom-3 fixed right-0 z-10 border-[#624111] dark:border-light-gold"
+    role="dialog"
+    aria-label="Cookie notice"
+    class="fixed bottom-4 right-4 left-4 md:left-auto md:max-w-[420px] z-40 rounded-[18px] border border-primary-gold/35 bg-surface-bg/95 shadow-2xl overflow-hidden"
+    style="backdrop-filter: blur(12px)"
   >
-    <div class="container pt-0 m-auto">
-      <div class="flex justify-start items-center">
-        <LottiePlayer height="5rem" width="5rem" src="lotties/Cookies.json" />
-        <p class="xl:text-2xl text-xl md:pt-2 truncate text-ellipsis">
-          {{ t("cookie-title") }}
-        </p>
-      </div>
+    <div class="flex items-center gap-2 px-5 pt-3 pb-2">
+      <LottiePlayer height="3.5rem" width="3.5rem" src="lotties/Cookies.json" />
+      <p class="mono text-sm font-bold tracking-[.08em] text-light-gold">
+        {{ t("cookie-title") }}
+      </p>
     </div>
 
-    <div class="p-3 border-t border-[#624111] dark:border-light-gold">
-      <p class="xl:text-lg text-sm">
+    <div class="px-5 pb-5 pt-3 border-t border-primary-gold/25">
+      <p class="text-sm leading-relaxed text-[oklch(78%_0.02_250)]">
         {{ t("cookie-text-1") }}
         <NuxtLink
-          class="hover:text-[#624111] dark:text-light-gold duration-500 font-lightbold underline"
+          class="text-light-gold underline duration-300 hover:text-primary-gold"
           to="/privacy-policy"
         >
           {{ t("cookie-privacy-policy") }}

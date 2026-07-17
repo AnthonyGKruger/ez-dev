@@ -21,16 +21,18 @@ const isActive = (to: string) => {
 <template>
   <!-- Top status bar -->
   <div
-    class="mono flex items-center justify-between gap-4 px-7 py-2 text-xs tracking-[.06em] text-light-gold bg-surface-bg border-b border-primary-gold/25"
+    class="mono flex items-center justify-between gap-4 px-4 sm:px-7 py-2 text-[10px] sm:text-xs tracking-[.06em] text-light-gold bg-surface-bg border-b border-primary-gold/25"
   >
-    <span class="inline-flex items-center gap-2">
+    <span class="inline-flex items-center gap-2 whitespace-nowrap">
       <span
-        class="w-2 h-2 rounded-full bg-primary-gold"
+        class="w-2 h-2 shrink-0 rounded-full bg-primary-gold"
         style="box-shadow: 0 0 0 3px oklch(62.28% 0.083 75.89 / .25)"
       ></span>
       {{ t("nav-available") }}
     </span>
-    <span class="text-[oklch(70%_0.02_250)]">{{ t("nav-location") }}</span>
+    <span class="text-[oklch(70%_0.02_250)] whitespace-nowrap">{{
+      t("nav-location")
+    }}</span>
   </div>
 
   <!-- Main nav -->
@@ -81,7 +83,7 @@ const isActive = (to: string) => {
           <!-- CTA -->
           <NuxtLink
             to="/contact-me"
-            class="mono inline-flex items-center gap-2 ml-2 px-[18px] py-[9px] rounded-lg text-[13px] font-bold tracking-[.04em] bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold"
+            class="mono inline-flex items-center gap-2 ml-2 px-3 sm:px-[18px] py-[9px] rounded-lg text-[13px] font-bold tracking-[.04em] whitespace-nowrap bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold"
           >
             {{ t("nav-start-project") }} &rarr;
           </NuxtLink>

@@ -39,22 +39,22 @@ const dateComputed = computed(() => date.value?.getFullYear() || 2025);
           >{{ t("footer-site") }}</span>
           <NuxtLink
             to="/portfolio"
-            class="text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
+            class="py-1.5 -my-1.5 text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
             >{{ t("nav-portfolio") }}</NuxtLink
           >
           <NuxtLink
             to="/about"
-            class="text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
+            class="py-1.5 -my-1.5 text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
             >{{ t("nav-about") }}</NuxtLink
           >
           <NuxtLink
             to="/contact-me"
-            class="text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
+            class="py-1.5 -my-1.5 text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
             >{{ t("nav-contact") }}</NuxtLink
           >
           <NuxtLink
             to="/privacy-policy"
-            class="text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
+            class="py-1.5 -my-1.5 text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
             >{{ t("nav-privacy") }}</NuxtLink
           >
         </div>
@@ -68,19 +68,19 @@ const dateComputed = computed(() => date.value?.getFullYear() || 2025);
             href="https://github.com/AnthonyGKruger"
             target="_blank"
             rel="noreferrer noopener"
-            class="text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
+            class="py-1.5 -my-1.5 text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
             >GitHub &nearr;</a
           >
           <a
             href="https://www.linkedin.com/in/anthony-gordon-kruger-ezdev/"
             target="_blank"
             rel="noreferrer noopener"
-            class="text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
+            class="py-1.5 -my-1.5 text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
             >LinkedIn &nearr;</a
           >
           <a
             href="mailto:anthony@ezdev.solutions"
-            class="text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
+            class="py-1.5 -my-1.5 text-[oklch(78%_0.02_250)] hover:text-light-gold transition-colors duration-300"
             >Email &nearr;</a
           >
         </div>

@@ -6,11 +6,6 @@ const scrollToTop = () => {
   trackFeatureUsage("scroll-to-top", { value: "clicked scroll-to-top" });
 };
 
-const consent = useCookie("consent", {
-  default: () => false,
-  watch: true,
-});
-
 const showScrollToTop = computed(() => yScrollPosition.value > 100);
 
 onMounted(() => {
@@ -28,7 +23,7 @@ onBeforeUnmount(() => window.removeEventListener("scroll", () => null));
     class="rounded-full border-2 mr-4 bottom-32 fixed right-0 z-40 h-10 w-10 text-xl bg-white dark:bg-black flex items-center justify-center dark:border-light-gold border-alternative-blue dark:hover:bg-light-gold hover:bg-light-blue dark:hover:text-black hover:scale-105 transition-all duration-500"
     :class="{
       block: showScrollToTop,
-      hidden: !showScrollToTop || !consent,
+      hidden: !showScrollToTop,
     }"
     @click="scrollToTop"
   >
