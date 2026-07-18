@@ -79,6 +79,7 @@ const isActive = (to: string) => {
           <NuxtLink
             to="/contact-me"
             class="mono inline-flex items-center gap-2 ml-2 px-3 sm:px-[18px] py-[9px] rounded-lg text-[13px] font-bold tracking-[.04em] whitespace-nowrap bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold"
+            @click="isOpen = false"
           >
             {{ t("nav-start-project") }} &rarr;
           </NuxtLink>
