@@ -8,17 +8,13 @@
     "referralLetter": "REFERRAL LETTER",
     "screenshot": "SCREENSHOT"
   },
-  "viewAll": {
-    "label": "ALL WORK",
-    "text": "See every project I've delivered"
-  },
   "projects": [
     {
       "id": "p4",
       "title": "Votera",
       "description": "A smart HOA-management SaaS platform for South African communities: digital voting, maintenance tracking, resident directory and transparent governance in one portal.",
       "link": "https://votera.co.za",
-      "image": "",
+      "image": "/media/votera.png",
       "sourceCode": ""
     },
     {
@@ -26,7 +22,7 @@
       "title": "Chilli Collective",
       "description": "E-commerce storefront for a premium small-batch fermented hot-sauce brand: product catalogue, cart and checkout, built for a fast, tactile browsing experience.",
       "link": "https://chilli-collective.com",
-      "image": "",
+      "image": "/media/chili-collective.png",
       "sourceCode": ""
     },
     {
@@ -34,7 +30,7 @@
       "title": "Digital Stream",
       "description": "Digital marketing agency website built using Next.js and Tailwind CSS (the code for this project is unfortunately not available for public viewing)",
       "link": "https://digitalstream.co.za",
-      "image": "/media/logos/ds-logo.png",
+      "image": "/media/digital-stream.png",
       "sourceCode": "",
       "referralLetter": "/media/referral-letters/Digital Stream Referral Letter - Anthony Kruger - web - signed.pdf"
     },
@@ -43,8 +39,12 @@
       "title": "Mumbi Trust Administrators",
       "description": "Accounting firm website built using Next.js and Tailwind CSS",
       "link": "https://mumbi.co.za",
-      "image": "/media/logos/mumbi-logo.png",
+      "image": "/media/mumbi.png",
       "sourceCode": "https://github.com/AnthonyGKruger/Mumbi-Trust-Administrators"
     }
-  ]
+  ],
+  "viewAll": {
+    "label": "ALL WORK",
+    "text": "See every project I've delivered"
+  }
 }
