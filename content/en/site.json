@@ -1,63 +1,4 @@
 {
-  "hero": {
-    "eyebrow": "// ANTHONY KRUGER · WEB DEVELOPER",
-    "headline": "I design & build web products teams",
-    "headlineAccent": "rely on.",
-    "lead": "A BSc IT and {years} years delivering production apps end to end, from SaaS platforms to e-commerce, with Nuxt, Next.js and TypeScript.",
-    "ctaWork": "VIEW SELECTED WORK",
-    "ctaTouch": "GET IN TOUCH",
-    "stats": [
-      {
-        "value": "{years}+",
-        "label": "YEARS EXPERIENCE"
-      },
-      {
-        "value": "BSc IT",
-        "label": "8 DISTINCTIONS"
-      },
-      {
-        "value": "10+",
-        "label": "PRODUCTS BUILT"
-      }
-    ],
-    "specTop": [
-      "EZDEV SOLUTIONS",
-      "PRETORIA, ZA"
-    ],
-    "specBottom": [
-      "NUXT · NEXT · TS",
-      "SSR · SSG · SPA"
-    ]
-  },
-  "companies": {
-    "heading": "Some Of The Awesome Companies That I Have Worked With",
-    "items": [
-      {
-        "name": "Digital Stream",
-        "logo": "/media/logos/ds-logo.png",
-        "width": 626,
-        "height": 75
-      },
-      {
-        "name": "DPTS",
-        "logo": "/media/logos/DPTS.png",
-        "width": 672,
-        "height": 184
-      },
-      {
-        "name": "Mumbi Trust Administrators",
-        "logo": "/media/logos/mumbi-logo.png",
-        "width": 400,
-        "height": 146
-      },
-      {
-        "name": "Addventures",
-        "logo": "/media/logos/av-logo.png",
-        "width": 214,
-        "height": 42
-      }
-    ]
-  },
   "about": {
     "eyebrow": "// ABOUT",
     "photoName": "ANTHONY KRUGER",
@@ -86,6 +27,35 @@
         "icon": "mdi:translate",
         "title": "Bilingual delivery",
         "desc": "Fluent in English and Afrikaans, comfortable building and communicating in both."
+      }
+    ]
+  },
+  "companies": {
+    "heading": "Some Of The Awesome Companies That I Have Worked With",
+    "items": [
+      {
+        "name": "Digital Stream",
+        "logo": "/media/logos/ds-logo.png",
+        "width": 626,
+        "height": 75
+      },
+      {
+        "name": "DPTS",
+        "logo": "/media/logos/DPTS.png",
+        "width": 672,
+        "height": 184
+      },
+      {
+        "name": "Mumbi Trust Administrators",
+        "logo": "/media/logos/mumbi-logo.png",
+        "width": 400,
+        "height": 146
+      },
+      {
+        "name": "Addventures",
+        "logo": "/media/logos/av-logo.png",
+        "width": 214,
+        "height": 42
       }
     ]
   },
@@ -118,6 +88,36 @@
       "subtitle": "Have a project in mind, or a role you're hiring for? Get in touch and I'll get back to you shortly.",
       "button": "START A PROJECT"
     }
+  },
+  "hero": {
+    "eyebrow": "// ANTHONY KRUGER · WEB DEVELOPER",
+    "headline": "I build web products and features teams",
+    "headlineAccent": "rely on.",
+    "lead": "A BSc IT and {years} years delivering production apps end to end, from SaaS platforms to e-commerce, with Nuxt, Next.js and TypeScript.",
+    "ctaWork": "VIEW SELECTED WORK",
+    "ctaTouch": "GET IN TOUCH",
+    "stats": [
+      {
+        "value": "{years}+",
+        "label": "YEARS EXPERIENCE"
+      },
+      {
+        "value": "BSc IT",
+        "label": "8 DISTINCTIONS"
+      },
+      {
+        "value": "10+",
+        "label": "PRODUCTS BUILT"
+      }
+    ],
+    "specTop": [
+      "EZDEV SOLUTIONS",
+      "PRETORIA, ZA"
+    ],
+    "specBottom": [
+      "NUXT · NEXT · TS",
+      "SSR · SSG · SPA"
+    ]
   },
   "thankYou": {
     "eyebrow": "// MESSAGE SENT",

@@ -1,63 +1,4 @@
 {
-  "hero": {
-    "eyebrow": "// ANTHONY KRUGER · WEBONTWIKKELAAR",
-    "headline": "Ek ontwerp & bou webprodukte waarop spanne",
-    "headlineAccent": "staatmaak.",
-    "lead": "'n BSc IT en {years} jaar se ondervinding om produksie-toepassings van begin tot einde te lewer, van SaaS-platforms tot e-handel, met Nuxt, Next.js en TypeScript.",
-    "ctaWork": "SIEN GEKOSE WERK",
-    "ctaTouch": "KOM IN KONTAK",
-    "stats": [
-      {
-        "value": "{years}+",
-        "label": "JARE ONDERVINDING"
-      },
-      {
-        "value": "BSc IT",
-        "label": "8 ONDERSKEIDINGS"
-      },
-      {
-        "value": "10+",
-        "label": "PRODUKTE GEBOU"
-      }
-    ],
-    "specTop": [
-      "EZDEV SOLUTIONS",
-      "PRETORIA, ZA"
-    ],
-    "specBottom": [
-      "NUXT · NEXT · TS",
-      "SSR · SSG · SPA"
-    ]
-  },
-  "companies": {
-    "heading": "Sommige van die ongelooflike maatskappye waarmee ek gewerk het",
-    "items": [
-      {
-        "name": "Digital Stream",
-        "logo": "/media/logos/ds-logo.png",
-        "width": 626,
-        "height": 75
-      },
-      {
-        "name": "DPTS",
-        "logo": "/media/logos/DPTS.png",
-        "width": 672,
-        "height": 184
-      },
-      {
-        "name": "Mumbi Trust Administrators",
-        "logo": "/media/logos/mumbi-logo.png",
-        "width": 400,
-        "height": 146
-      },
-      {
-        "name": "Addventures",
-        "logo": "/media/logos/av-logo.png",
-        "width": 214,
-        "height": 42
-      }
-    ]
-  },
   "about": {
     "eyebrow": "// OOR MY",
     "photoName": "ANTHONY KRUGER",
@@ -86,6 +27,35 @@
         "icon": "mdi:translate",
         "title": "Tweetalige lewering",
         "desc": "Vlot in Engels en Afrikaans, gemaklik om in beide te bou en te kommunikeer."
+      }
+    ]
+  },
+  "companies": {
+    "heading": "Sommige van die ongelooflike maatskappye waarmee ek gewerk het",
+    "items": [
+      {
+        "name": "Digital Stream",
+        "logo": "/media/logos/ds-logo.png",
+        "width": 626,
+        "height": 75
+      },
+      {
+        "name": "DPTS",
+        "logo": "/media/logos/DPTS.png",
+        "width": 672,
+        "height": 184
+      },
+      {
+        "name": "Mumbi Trust Administrators",
+        "logo": "/media/logos/mumbi-logo.png",
+        "width": 400,
+        "height": 146
+      },
+      {
+        "name": "Addventures",
+        "logo": "/media/logos/av-logo.png",
+        "width": 214,
+        "height": 42
       }
     ]
   },
@@ -118,6 +88,36 @@
       "subtitle": "Het jy 'n projek in gedagte, of 'n rol waarvoor jy werf? Kom in kontak en ek sal binnekort by jou terugkom.",
       "button": "BEGIN 'N PROJEK"
     }
+  },
+  "hero": {
+    "eyebrow": "// ANTHONY KRUGER · WEBONTWIKKELAAR",
+    "headline": "Ek bou webprodukte waarop spanne",
+    "headlineAccent": "staatmaak.",
+    "lead": "'n BSc IT en {years} jaar se ondervinding om produksie-toepassings van begin tot einde te lewer, van SaaS-platforms tot e-handel, met Nuxt, Next.js en TypeScript.",
+    "ctaWork": "SIEN GEKOSE WERK",
+    "ctaTouch": "KOM IN KONTAK",
+    "stats": [
+      {
+        "value": "{years}+",
+        "label": "JARE ONDERVINDING"
+      },
+      {
+        "value": "BSc IT",
+        "label": "8 ONDERSKEIDINGS"
+      },
+      {
+        "value": "10+",
+        "label": "PRODUKTE GEBOU"
+      }
+    ],
+    "specTop": [
+      "EZDEV SOLUTIONS",
+      "PRETORIA, ZA"
+    ],
+    "specBottom": [
+      "NUXT · NEXT · TS",
+      "SSR · SSG · SPA"
+    ]
   },
   "thankYou": {
     "eyebrow": "// BOODSKAP GESTUUR",

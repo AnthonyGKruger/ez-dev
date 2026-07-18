@@ -1,7 +1,18 @@
 {
+  "alsoComfortable": [
+    "Vue 3",
+    "HTML & CSS",
+    "Git",
+    "Microsoft Azure",
+    "Figma",
+    "SEO",
+    "Accessibility",
+    "React"
+  ],
+  "alsoComfortableLabel": "ALSO COMFORTABLE WITH",
   "eyebrow": "// STACK",
-  "heading": "Tools I reach for daily",
   "flipHint": "TAP / HOVER TO FLIP →",
+  "heading": "Tools I reach for daily",
   "items": [
     {
       "name": "nuxt",
@@ -23,18 +34,5 @@
       "icon": "skill-icons:typescript",
       "description": "For fool-proof code."
     }
-  ],
-  "alsoComfortableLabel": "ALSO COMFORTABLE WITH",
-  "alsoComfortable": [
-    "Vue 3",
-    "Node.js",
-    "JavaScript",
-    "HTML & CSS",
-    "Git",
-    "Microsoft Azure",
-    "Figma",
-    "SEO",
-    "Accessibility",
-    "Agile / Scrum"
   ]
 }
