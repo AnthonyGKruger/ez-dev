@@ -61,10 +61,11 @@ const content = useContent("workExperience");
             <span
               v-for="c in w.comments"
               :key="c"
-              class="mono inline-flex items-center gap-[7px] text-xs px-3 py-1.5 rounded-[7px] bg-primary-gold/10 text-light-gold border border-primary-gold/25"
+              :title="c"
+              class="mono flex items-center gap-[7px] text-xs leading-tight px-3 py-2 h-[34px] w-full sm:w-[240px] rounded-[7px] bg-primary-gold/10 text-light-gold border border-primary-gold/25"
             >
-              <Icon name="mdi:medal" size="14" class="text-light-gold" />
-              {{ c }}
+              <Icon name="mdi:medal" class="text-light-gold shrink-0 w-3.5 h-3.5" />
+              <span class="truncate min-w-0">{{ c }}</span>
             </span>
           </div>
         </div>
