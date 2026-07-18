@@ -175,7 +175,7 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
         <p class="text-lg leading-relaxed text-[oklch(78%_0.02_250)] mt-6 mb-8 max-w-[30em]">
           {{ contact.subtitle }}
         </p>
-        <div class="w-[220px] h-[220px]">
+        <div class="w-[220px] h-[220px] mx-auto lg:mx-0">
           <LottiePlayer src="/lotties/ContactMe.json" height="220px" width="220px" />
         </div>
         <p class="mono text-xs tracking-[.1em] text-primary-gold mt-2 mb-3.5">

@@ -46,12 +46,12 @@ const projects = computed(() =>
         </div>
 
         <!-- Image / placeholder -->
-        <div class="aspect-[16/9] flex items-center justify-center bg-[#fff] p-[38px]">
+        <div class="aspect-[16/9] bg-[#fff] overflow-hidden">
           <img
             v-if="p.image"
             :src="p.image"
             :alt="p.title"
-            class="max-w-[80%] max-h-[70%] object-contain"
+            class="w-full h-full object-cover"
           />
           <div
             v-else
