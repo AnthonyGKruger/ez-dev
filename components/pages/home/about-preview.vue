@@ -12,9 +12,11 @@ const about = computed(() => site.value.about);
       <div class="flex-1 h-px bg-primary-gold/20"></div>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-[.85fr_1.15fr] gap-14 items-center">
+    <div
+      class="grid grid-cols-1 lg:grid-cols-[.85fr_1.15fr] gap-14 items-center"
+    >
       <!-- Photo card -->
-      <div class="relative reveal-l">
+      <div class="relative reveal-l hidden lg:block">
         <div
           class="relative border border-primary-gold/35 rounded-[18px] overflow-hidden bg-surface-bg"
         >
@@ -32,10 +34,10 @@ const about = computed(() => site.value.about);
         </div>
         <span
           class="absolute -top-1.5 -left-1.5 w-[18px] h-[18px] border-t-2 border-l-2 border-light-gold"
-        ></span>
+        />
         <span
           class="absolute -bottom-1.5 -right-1.5 w-[18px] h-[18px] border-b-2 border-r-2 border-light-gold"
-        ></span>
+        />
       </div>
 
       <!-- Text -->

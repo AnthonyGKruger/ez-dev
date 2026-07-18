@@ -9,10 +9,14 @@ const cta = computed(() => site.value.contact.cta);
       class="flex flex-col lg:flex-row items-center gap-14 border border-primary-gold/30 rounded-[18px] bg-surface-bg p-8 lg:p-12"
     >
       <div class="flex-1 text-center lg:text-left">
-        <h2 class="text-[42px] font-black tracking-[-0.02em] leading-[1.05] text-[#f4f7fa]">
+        <h2
+          class="text-[42px] font-black tracking-[-0.02em] leading-[1.05] text-[#f4f7fa]"
+        >
           {{ cta.heading }}
         </h2>
-        <p class="text-lg leading-relaxed text-[oklch(78%_0.02_250)] mt-6 max-w-[30em]">
+        <p
+          class="text-lg leading-relaxed text-[oklch(78%_0.02_250)] mt-6 max-w-[30em]"
+        >
           {{ cta.subtitle }}
         </p>
         <NuxtLink
@@ -22,7 +26,7 @@ const cta = computed(() => site.value.contact.cta);
           {{ cta.button }} &rarr;
         </NuxtLink>
       </div>
-      <div class="flex-shrink-0 w-[200px] h-[200px]">
+      <div class="flex-shrink-0 mx-auto">
         <LottiePlayer src="/lotties/ContactMe.json" />
       </div>
     </div>

@@ -142,7 +142,7 @@ onUnmounted(() => {
       </div>
 
       <!-- Right: spec panel with animated brand mark -->
-      <div class="relative">
+      <div class="relative hidden lg:block">
         <div
           class="relative border border-primary-gold/35 rounded-2xl px-8 py-10"
           style="background: oklch(23% 0.045 252 / 0.6)"

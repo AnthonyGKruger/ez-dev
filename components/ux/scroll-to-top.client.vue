@@ -21,7 +21,7 @@ onBeforeUnmount(() => window.removeEventListener("scroll", () => null));
 <template>
   <button
     aria-label="Back to top"
-    class="rounded-full border mr-4 bottom-32 fixed right-0 z-40 h-10 w-10 text-xl bg-surface-bg border-primary-gold/60 text-light-gold items-center justify-center cursor-pointer hover:border-light-gold hover:bg-primary-gold/10 hover:scale-105 transition-all duration-300"
+    class="rounded-full border mr-4 bottom-16 fixed right-0 z-40 h-10 w-10 text-xl bg-surface-bg border-primary-gold/60 text-light-gold items-center justify-center cursor-pointer hover:border-light-gold hover:bg-primary-gold/80 hover:scale-105 transition-all duration-300"
     :class="showScrollToTop ? 'flex' : 'hidden'"
     @click="scrollToTop"
   >

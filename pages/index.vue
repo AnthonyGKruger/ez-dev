@@ -8,10 +8,12 @@ useScrollReveal();
 </script>
 
 <template>
-  <PagesHomeHero />
-  <PagesHomeCompaniesMarquee />
-  <PagesHomeAboutPreview />
-  <PagesHomePortfolioPreview />
-  <PagesHomeSkillsPreview />
-  <PagesHomeContactCta />
+  <main>
+    <PagesHomeHero />
+    <PagesHomeCompaniesMarquee />
+    <PagesHomeAboutPreview />
+    <PagesHomePortfolioPreview />
+    <PagesHomeSkillsPreview />
+    <PagesHomeContactCta />
+  </main>
 </template>

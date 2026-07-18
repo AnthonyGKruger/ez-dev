@@ -11,7 +11,7 @@ const handleToggle = () => {
   <UxFeatureToggle
     id="language-toggle"
     name="language-toggle"
-    bottom="70px"
+    bottom="8px"
     right="0"
     type="language"
     :checked-value="getLang() === 'af'"
