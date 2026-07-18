@@ -47,7 +47,7 @@ const isActive = (to: string) => {
         aria-label="main navigation"
       >
         <!-- Logo -->
-        <NuxtLink to="/" class="flex items-center gap-2.5">
+        <NuxtLink to="/" class="flex items-center gap-2.5" @click="isOpen = false">
           <img src="/media/logos/code.svg" alt="EZdev" class="h-[22px] w-auto" />
           <span class="mono text-sm font-bold tracking-[.14em] text-[#eef2f6]"
             >EZ&bull;DEV</span
