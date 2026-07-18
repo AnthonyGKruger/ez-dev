@@ -68,7 +68,7 @@ onMounted(async () => {
         sitekey: siteKey.value,
         action: "contact",
         theme: "dark",
-        size: "normal",
+        size: "flexible",
         callback: (t: string) => { turnstileToken.value = t; },
         "expired-callback": () => { turnstileToken.value = null; },
         "error-callback": () => { turnstileToken.value = null; },
@@ -253,7 +253,10 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
             </Message>
           </div>
 
-          <div id="turnstile-container" class="mt-1" />
+          <div class="flex flex-col gap-[7px]">
+            <label class="mono text-xs tracking-[.06em] text-[oklch(72%_0.02_250)]">{{ contact.form.verify.label }}</label>
+            <div id="turnstile-container" class="min-h-[65px] [&_iframe]:!w-full" />
+          </div>
 
           <button
             v-if="!loading"

@@ -177,6 +177,7 @@ const site = z.object({
       email: field,
       company: field,
       details: field,
+      verify: z.object({ label: z.string() }),
       submit: z.string(),
     }),
     cta: z.object({

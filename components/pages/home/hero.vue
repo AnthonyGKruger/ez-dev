@@ -103,7 +103,7 @@ onUnmounted(() => {
         >
           {{ withYears(hero.lead) }}
         </p>
-        <p class="mono text-[15px] mt-[22px] text-[oklch(75%_0.02_250)] min-h-[1.5em]">
+        <p class="mono text-[15px] mt-[22px] text-[oklch(75%_0.02_250)] min-h-[3em] sm:min-h-[1.5em]">
           $ <span class="text-light-gold">anthony</span> --status "<span
             class="text-[#f4f7fa]"
             >{{ typed }}</span
