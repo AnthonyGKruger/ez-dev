@@ -1,12 +1,9 @@
 {
-  "eyebrow": "// ERVARING",
-  "heading": "Waar ek gebou het",
-  "tagline": "HARDE WERK & DEURSETTINGSVERMOË",
   "entries": [
     {
       "id": "w7",
-      "company": "Osiris Trading (Pty) Ltd",
-      "role": "Front-End Webontwikkelaar",
+      "company": "Betway Africa",
+      "role": "Ingenieur Ⅲ",
       "summary": "As 'n Front-End Ontwikkelaar vir Osiris Trading speel ek 'n sleutelrol in die ontwerp en ontwikkeling van responsiewe, gebruikersvriendelike webtoepassings, funksies en optimiserings deur moderne JavaScript-raamwerke en beste praktyke in UI/UX-ontwerp te gebruik. Ek het nou saamgewerk met kruisfunksionele spanne om naadlose integrasie met agterkant-dienste te verseker, webwerf-werkverrigting geoptimaliseer, en kruis-blaaier-verenigbaarheid verbeter. My fokus op mobiel-eerste ontwerp, toeganklikheid en werkverrigting het gelei tot verbeterde gebruikersbetrokkenheid en werf-doeltreffendheid, terwyl my kundigheid in weergawebeheer en Agile-werkvloeie tydige en hoë-kwaliteit projekliewering verseker.",
       "dateFrom": "October 2024",
       "dateTo": "Present",
@@ -18,8 +15,10 @@
       "role": "Volstapel Webontwikkelaar",
       "summary": "Ek is verantwoordelik vir die skep van dinamiese en gebruikersvriendelike webtoepassings met 'n moderne stapel wat Next.js, React.js en Tailwind CSS insluit. My rol sluit front-end ontwikkeling, UI/UX, CMS- en e-handel-integrasies, databasis- en bedienerkant-ontwikkeling, weergawebeheer, werkverrigting-optimalisering, sekuriteit, toetsing en ontfouting, dokumentasie, samewerking en voortdurende leer in.",
       "dateFrom": "November 2020",
-      "dateTo": "September 2024",
-      "comments": []
+      "dateTo": "Present",
+      "comments": [
+        "Part-time"
+      ]
     },
     {
       "id": "w1",
@@ -32,48 +31,9 @@
         "Portefeulje van Bewyse suksesvol voltooi",
         "Suksesvolle integrasie in korporatiewe werksomgewings"
       ]
-    },
-    {
-      "id": "w2",
-      "company": "The Lighting Warehouse: Menlyn & Centurion",
-      "role": "Takbestuurder",
-      "summary": "Rig alle operasionele aspekte insluitend distribusie, kliëntediens, menslike hulpbronne, administrasie en verkope in ooreenstemming met die maatskappy se doelwitte. Verskaf opleiding, afrigting, ontwikkeling en motivering vir takpersoneel. Ontwikkel vooruitskattings en finansiële doelwitte.",
-      "dateFrom": "June 2018",
-      "dateTo": "September 2024",
-      "comments": ["Bestuur van die vlagskip-tak", "Span van die jaar"]
-    },
-    {
-      "id": "w3",
-      "company": "The Lighting Warehouse: Menlyn & Zambezi",
-      "role": "Verkoopsbestuurder",
-      "summary": null,
-      "dateFrom": "August 2016",
-      "dateTo": "May 2018",
-      "comments": ["Waarde bewys en oorgeplaas na vlagskip-tak"]
-    },
-    {
-      "id": "w4",
-      "company": "The Lighting Warehouse: Centurion",
-      "role": "Verkoopsconsultant",
-      "summary": null,
-      "dateFrom": "June 2014",
-      "dateTo": "July 2016",
-      "comments": [
-        "Twee prestasietoekennings ontvang",
-        "Bestuursvlak na twee jaar bereik"
-      ]
-    },
-    {
-      "id": "w6",
-      "company": "Precision Financial Services",
-      "role": "Administrateur",
-      "summary": null,
-      "dateFrom": "January 2014",
-      "dateTo": "April 2014",
-      "comments": [
-        "Alle inkomende navrae suksesvol hanteer",
-        "Alle IT-ondersteuningskwessies bestuur"
-      ]
     }
-  ]
+  ],
+  "eyebrow": "// ERVARING",
+  "heading": "Waar ek gebou het",
+  "tagline": "HARDE WERK & DEURSETTINGSVERMOË"
 }

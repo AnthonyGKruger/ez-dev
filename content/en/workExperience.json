@@ -1,12 +1,9 @@
 {
-  "eyebrow": "// EXPERIENCE",
-  "heading": "Where I've built",
-  "tagline": "HARD WORK & PERSEVERANCE",
   "entries": [
     {
       "id": "w7",
-      "company": "Osiris Trading (Pty) Ltd",
-      "role": "Front End Web Developer",
+      "company": "Betway Africa",
+      "role": "Engineer Ⅲ",
       "summary": "As a Front-End Developer for Osiris Trading, I play a key role in designing and developing responsive, user-friendly web applications, features and optimizations using modern JavaScript frameworks and best practices in UI/UX design. I collaborated closely with cross-functional teams to ensure seamless integration with back-end services, optimized website performance, and enhanced cross-browser compatibility. My focus on mobile-first design, accessibility, and performance lead to improved user engagement and site efficiency, while my expertise in version control and Agile workflows ensure timely and high-quality project delivery.",
       "dateFrom": "October 2024",
       "dateTo": "Present",
@@ -18,8 +15,10 @@
       "role": "Full Stack Web Developer",
       "summary": "I am responsible for creating dynamic and user-friendly web applications using a modern stack including Next.js, React.js, and Tailwind CSS. My role spans front-end development, UI/UX, CMS and e-commerce integrations, database and server-side development, version control, performance optimization, security, testing, debugging, documentation, collaboration, and continuous learning.",
       "dateFrom": "November 2020",
-      "dateTo": "September 2024",
-      "comments": []
+      "dateTo": "Present",
+      "comments": [
+        "Part-time"
+      ]
     },
     {
       "id": "w1",
@@ -32,48 +31,9 @@
         "Successfully completed Portfolio of Evidence",
         "Successful integration into corporate working environments"
       ]
-    },
-    {
-      "id": "w2",
-      "company": "The Lighting Warehouse: Menlyn & Centurion",
-      "role": "Branch Manager",
-      "summary": "Directing all operational aspects including distribution, customer service, human resources, administration and sales in accordance with the company's objectives. Providing training, coaching, development and motivation for branch personnel. Developing forecasts and financial objectives.",
-      "dateFrom": "June 2018",
-      "dateTo": "September 2024",
-      "comments": ["Managing the flagship branch", "Team of the year"]
-    },
-    {
-      "id": "w3",
-      "company": "The Lighting Warehouse: Menlyn & Zambezi",
-      "role": "Sales Manager",
-      "summary": null,
-      "dateFrom": "August 2016",
-      "dateTo": "May 2018",
-      "comments": ["Proved my worth and transferred to flagship branch"]
-    },
-    {
-      "id": "w4",
-      "company": "The Lighting Warehouse: Centurion",
-      "role": "Sales Consultant",
-      "summary": null,
-      "dateFrom": "June 2014",
-      "dateTo": "July 2016",
-      "comments": [
-        "Received two performance awards",
-        "Reached managerial status after two years"
-      ]
-    },
-    {
-      "id": "w6",
-      "company": "Precision Financial Services",
-      "role": "Administrator",
-      "summary": null,
-      "dateFrom": "January 2014",
-      "dateTo": "April 2014",
-      "comments": [
-        "Successfully handled all incoming queries",
-        "Managed all IT support issues"
-      ]
     }
-  ]
+  ],
+  "eyebrow": "// EXPERIENCE",
+  "heading": "Where I've built",
+  "tagline": "HARD WORK & PERSEVERANCE"
 }
