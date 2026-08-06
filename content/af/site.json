@@ -81,9 +81,6 @@
         "label": "PROJEKBESONDERHEDE",
         "placeholder": "Vertel my van jou projek..."
       },
-      "verify": {
-        "label": "BEVESTIG JY IS MENSLIK"
-      },
       "submit": "STUUR BOODSKAP →"
     },
     "cta": {

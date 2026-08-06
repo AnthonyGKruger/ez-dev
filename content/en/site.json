@@ -81,9 +81,6 @@
         "label": "PROJECT DETAILS",
         "placeholder": "Tell me about your project..."
       },
-      "verify": {
-        "label": "VERIFY YOU'RE HUMAN"
-      },
       "submit": "SEND MESSAGE →"
     },
     "cta": {
@@ -94,7 +91,7 @@
   },
   "hero": {
     "eyebrow": "// ANTHONY KRUGER · WEB DEVELOPER",
-    "headline": "I build web products and features teams",
+    "headline": "I build web solutions that teams",
     "headlineAccent": "rely on.",
     "lead": "A BSc IT and {years} years delivering production apps end to end, from SaaS platforms to e-commerce, with Nuxt, Next.js and TypeScript.",
     "ctaWork": "VIEW SELECTED WORK",
