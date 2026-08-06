@@ -8,17 +8,13 @@
     "referralLetter": "VERWYSINGSBRIEF",
     "screenshot": "SKERMSKOOT"
   },
-  "viewAll": {
-    "label": "ALLE WERK",
-    "text": "Sien elke projek wat ek gelewer het"
-  },
   "projects": [
     {
       "id": "p4",
       "title": "Votera",
       "description": "'n Slim HOA-bestuur SaaS-platform vir Suid-Afrikaanse gemeenskappe: digitale stemming, instandhoudingsopsporing, inwonergids en deursigtige bestuur in een portaal.",
       "link": "https://votera.co.za",
-      "image": "",
+      "image": "/media/Screenshot-2026-08-06-at-03.27.42.png",
       "sourceCode": ""
     },
     {
@@ -46,5 +42,9 @@
       "image": "/media/logos/mumbi-logo.png",
       "sourceCode": "https://github.com/AnthonyGKruger/Mumbi-Trust-Administrators"
     }
-  ]
+  ],
+  "viewAll": {
+    "label": "ALLE WERK",
+    "text": "Sien elke projek wat ek gelewer het"
+  }
 }
