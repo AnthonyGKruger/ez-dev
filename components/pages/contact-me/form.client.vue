@@ -254,7 +254,7 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
           </div>
 
           <div class="flex flex-col gap-[7px]">
-            <label class="mono text-xs tracking-[.06em] text-[oklch(72%_0.02_250)]">{{ contact.form.verify.label }}</label>
+            <label class="mono text-xs tracking-[.06em] text-[oklch(72%_0.02_250)]">{{ contact.form.verify?.label }}</label>
             <div id="turnstile-container" class="w-full" />
           </div>
 

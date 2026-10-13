@@ -81,6 +81,9 @@
         "label": "PROJECT DETAILS",
         "placeholder": "Tell me about your project..."
       },
+      "verify": {
+        "label": "VERIFY YOU'RE HUMAN"
+      },
       "submit": "SEND MESSAGE →"
     },
     "cta": {
