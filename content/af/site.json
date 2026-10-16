@@ -84,11 +84,6 @@
         "label": "BEVESTIG JY IS MENSLIK"
       },
       "submit": "STUUR BOODSKAP →"
-    },
-    "cta": {
-      "heading": "Kom ons bou saam iets.",
-      "subtitle": "Het jy 'n projek in gedagte, of 'n rol waarvoor jy werf? Kom in kontak en ek sal binnekort by jou terugkom.",
-      "button": "BEGIN 'N PROJEK"
     }
   },
   "thankYou": {
@@ -189,6 +184,14 @@
       "eyebrow": "Stapel",
       "title": "Gereedskap waarmee ons bou",
       "alsoLabel": "Ook gemaklik met"
+    },
+    "cta": {
+      "eyebrow": "Kontak",
+      "title": "Het jy 'n produk om te bou?",
+      "titleAccent": "Kom ons gesels.",
+      "reply": "Ons antwoord binne een werksdag.",
+      "email": "anthony@ezdev.solutions",
+      "button": "Begin 'n projek"
     }
   }
 }

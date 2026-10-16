@@ -167,6 +167,14 @@ const site = z.object({
       photoAlt: z.string(),
       cta: z.string(),
     }),
+    cta: z.object({
+      eyebrow: z.string(),
+      title: z.string(),
+      titleAccent: z.string(),
+      reply: z.string(),
+      email: z.string(),
+      button: z.string(),
+    }),
     stack: z.object({
       eyebrow: z.string(),
       title: z.string(),
@@ -222,11 +230,6 @@ const site = z.object({
       details: field,
       verify: z.object({ label: z.string() }),
       submit: z.string(),
-    }),
-    cta: z.object({
-      heading: z.string(),
-      subtitle: z.string(),
-      button: z.string(),
     }),
   }),
   thankYou: z.object({

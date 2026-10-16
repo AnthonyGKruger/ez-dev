@@ -84,11 +84,6 @@
         "label": "VERIFY YOU'RE HUMAN"
       },
       "submit": "SEND MESSAGE →"
-    },
-    "cta": {
-      "heading": "Let's build something together.",
-      "subtitle": "Have a project in mind, or a role you're hiring for? Get in touch and I'll get back to you shortly.",
-      "button": "START A PROJECT"
     }
   },
   "thankYou": {
@@ -189,6 +184,14 @@
       "eyebrow": "Stack",
       "title": "Tools we build with",
       "alsoLabel": "Also comfortable with"
+    },
+    "cta": {
+      "eyebrow": "Contact",
+      "title": "Have a product to build?",
+      "titleAccent": "Let's talk.",
+      "reply": "We reply within one business day.",
+      "email": "anthony@ezdev.solutions",
+      "button": "Start a project"
     }
   }
 }

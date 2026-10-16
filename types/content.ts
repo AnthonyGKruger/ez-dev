@@ -81,6 +81,14 @@ export interface HomeContent {
   trusted: { label: string };
   work: WorkLabels;
   stack: { eyebrow: string; title: string; alsoLabel: string };
+  cta: {
+    eyebrow: string;
+    title: string;
+    titleAccent: string;
+    reply: string;
+    email: string;
+    button: string;
+  };
   about: {
     eyebrow: string;
     title: string;
@@ -143,11 +151,6 @@ export interface ContactContent {
     company: ContactField;
     details: ContactField;
     submit: string;
-  };
-  cta: {
-    heading: string;
-    subtitle: string;
-    button: string;
   };
 }
 
