@@ -188,13 +188,6 @@ html, body, main {
   transform: none !important;
 }
 
-/* ── Marquee ── */
-@keyframes marquee {
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 /* ── Scrollbar ── */
 ::-webkit-scrollbar {
   width: 0.5em;

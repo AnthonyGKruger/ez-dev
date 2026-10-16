@@ -84,6 +84,7 @@ export interface HomeHeroContent {
 
 export interface HomeContent {
   hero: HomeHeroContent;
+  trusted: { label: string };
 }
 
 export interface Company {
@@ -95,7 +96,6 @@ export interface Company {
 }
 
 export interface CompaniesContent {
-  heading: string;
   items: Company[];
 }
 

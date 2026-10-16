@@ -1,55 +1,29 @@
 <script setup lang="ts">
 const site = useContent("site");
-const companies = computed(() => site.value.companies);
+const label = computed(() => site.value.home.trusted.label);
+const companies = computed(() => site.value.companies.items);
 </script>
 
 <template>
-  <section class="border-t border-b border-primary-gold py-7 px-4">
-    <h2
-      class="mono text-sm tracking-[.1em] text-primary-gold text-center mb-8"
+  <section :aria-label="label" class="border-b border-primary-gold/10">
+    <div
+      class="mx-auto max-w-[1240px] px-[clamp(16px,5vw,24px)] py-9 md:flex md:items-center md:gap-14 md:py-11"
     >
-      {{ companies.heading }}
-    </h2>
-    <div class="overflow-hidden relative max-w-[1240px] mx-auto">
-      <div class="marquee-track flex items-center">
-        <!--
-          Two identical copies; each copy (including its trailing pr-16,
-          which stands in for the flex gap) is exactly 50% of the track, so
-          the translateX(-50%) loop point is seamless. Putting both copies
-          in one gapped flex row instead leaves an odd number of gaps and
-          the loop jumps by half a gap.
-        -->
-        <div
-          v-for="n in 2"
-          :key="n"
-          class="flex gap-16 items-center pr-16"
-          :aria-hidden="n === 2 ? 'true' : undefined"
-        >
+      <p class="eyebrow flex-none text-center md:text-left">{{ label }}</p>
+      <ul
+        class="mt-5.5 grid grid-cols-2 justify-items-center gap-x-4 gap-y-6 md:mt-0 md:flex md:flex-1 md:items-center md:justify-between md:gap-10"
+      >
+        <li v-for="c in companies" :key="c.name" class="flex w-full justify-center md:w-auto">
           <img
-            v-for="c in companies.items"
-            :key="`${n}-${c.name}`"
             :src="c.logo"
-            :alt="n === 1 ? c.name : ''"
+            :alt="c.name"
             :width="c.width"
             :height="c.height"
-            class="h-12 w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300"
-            style="filter: grayscale(1)"
+            loading="lazy"
+            class="h-6 w-auto max-w-full object-contain opacity-80 brightness-0 invert transition-opacity hover:opacity-100 md:h-7"
           />
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
-
-<style scoped>
-.marquee-track {
-  width: max-content;
-  animation: marquee 30s linear infinite;
-  will-change: transform;
-}
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track {
-    animation: none;
-  }
-}
-</style>

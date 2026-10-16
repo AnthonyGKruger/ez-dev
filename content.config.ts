@@ -149,9 +149,9 @@ const site = z.object({
         }),
       ),
     }),
+    trusted: z.object({ label: z.string() }),
   }),
   companies: z.object({
-    heading: z.string(),
     items: z.array(
       z.object({
         name: z.string(),

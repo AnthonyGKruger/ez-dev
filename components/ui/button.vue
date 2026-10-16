@@ -13,7 +13,7 @@ const props = withDefaults(
     href?: string;
     type?: "button" | "submit" | "reset";
   }>(),
-  { variant: "secondary", size: "md", type: "button" },
+  { variant: "secondary", size: "md", to: undefined, href: undefined, type: "button" },
 );
 
 const classes = computed(() => [

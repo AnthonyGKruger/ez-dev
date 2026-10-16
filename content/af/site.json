@@ -31,7 +31,6 @@
     ]
   },
   "companies": {
-    "heading": "Sommige van die ongelooflike maatskappye waarmee ek gewerk het",
     "items": [
       {
         "name": "Digital Stream",
@@ -48,8 +47,8 @@
       {
         "name": "Mumbi Trust Administrators",
         "logo": "/media/logos/mumbi-logo.png",
-        "width": 400,
-        "height": 146
+        "width": 380,
+        "height": 83
       },
       {
         "name": "Addventures",
@@ -135,6 +134,9 @@
           "alt": "Chilli Collective se aanlynwinkel"
         }
       ]
+    },
+    "trusted": {
+      "label": "Vertrou deur"
     }
   }
 }
