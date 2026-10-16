@@ -11,6 +11,7 @@ useScrollReveal();
   <main>
     <PagesHomeHero />
     <PagesHomeCompaniesMarquee />
+    <PagesHomeServicesPreview />
     <PagesHomeAboutPreview />
     <PagesHomePortfolioPreview />
     <PagesHomeSkillsPreview />

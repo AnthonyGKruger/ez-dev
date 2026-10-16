@@ -21,7 +21,7 @@ const companies = computed(() => site.value.companies.items);
             :height="c.height"
             loading="lazy"
             class="h-6 w-auto max-w-full object-contain opacity-80 brightness-0 invert transition-opacity hover:opacity-100 md:h-7"
-          />
+          >
         </li>
       </ul>
     </div>

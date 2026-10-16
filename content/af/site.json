@@ -137,6 +137,30 @@
     },
     "trusted": {
       "label": "Vertrou deur"
+    },
+    "services": {
+      "eyebrow": "Dienste",
+      "title": "Wat ons doen",
+      "items": [
+        {
+          "slug": "saas",
+          "title": "SaaS-platforms",
+          "body": "Multi-huurder-webtoepassings, paneelborde en fakturering, van MVP tot produksie.",
+          "proof": "In die praktyk: Votera"
+        },
+        {
+          "slug": "e-commerce",
+          "title": "E-handel",
+          "body": "Aanlynwinkels, betaalpunte en betalings, gebou en bedryf asof dit ons eie is.",
+          "proof": "In die praktyk: Chilli Collective"
+        },
+        {
+          "slug": "web",
+          "title": "Webwerwe en onderhoud",
+          "body": "Vinnige besigheidswebwerwe, plus deurlopende ondersteuning.",
+          "proof": "In die praktyk: kliëntewerk"
+        }
+      ]
     }
   }
 }

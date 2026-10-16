@@ -85,6 +85,11 @@ export interface HomeHeroContent {
 export interface HomeContent {
   hero: HomeHeroContent;
   trusted: { label: string };
+  services: {
+    eyebrow: string;
+    title: string;
+    items: { slug: string; title: string; body: string; proof: string }[];
+  };
 }
 
 export interface Company {

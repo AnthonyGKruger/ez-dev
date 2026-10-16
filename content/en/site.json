@@ -137,6 +137,30 @@
     },
     "trusted": {
       "label": "Trusted by"
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "What we do",
+      "items": [
+        {
+          "slug": "saas",
+          "title": "SaaS platforms",
+          "body": "Multi-tenant web apps, dashboards and billing, from MVP to production.",
+          "proof": "In practice: Votera"
+        },
+        {
+          "slug": "e-commerce",
+          "title": "E-commerce",
+          "body": "Storefronts, checkout and payments, built and run like our own.",
+          "proof": "In practice: Chilli Collective"
+        },
+        {
+          "slug": "web",
+          "title": "Websites & maintenance",
+          "body": "Fast business sites, plus ongoing support.",
+          "proof": "In practice: client work"
+        }
+      ]
     }
   }
 }

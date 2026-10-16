@@ -150,6 +150,18 @@ const site = z.object({
       ),
     }),
     trusted: z.object({ label: z.string() }),
+    services: z.object({
+      eyebrow: z.string(),
+      title: z.string(),
+      items: z.array(
+        z.object({
+          slug: z.string(),
+          title: z.string(),
+          body: z.string(),
+          proof: z.string(),
+        }),
+      ),
+    }),
   }),
   companies: z.object({
     items: z.array(
