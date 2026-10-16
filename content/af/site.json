@@ -92,41 +92,49 @@
       "button": "BEGIN 'N PROJEK"
     }
   },
-  "hero": {
-    "eyebrow": "// ANTHONY KRUGER · WEBONTWIKKELAAR",
-    "headline": "Ek bou webprodukte waarop spanne",
-    "headlineAccent": "staatmaak.",
-    "lead": "'n BSc IT en {years} jaar se ondervinding om produksie-toepassings van begin tot einde te lewer, van SaaS-platforms tot e-handel, met Nuxt, Next.js en TypeScript.",
-    "ctaWork": "SIEN GEKOSE WERK",
-    "ctaTouch": "KOM IN KONTAK",
-    "stats": [
-      {
-        "value": "{years}+",
-        "label": "JARE ONDERVINDING"
-      },
-      {
-        "value": "BSc IT",
-        "label": "8 ONDERSKEIDINGS"
-      },
-      {
-        "value": "10+",
-        "label": "PRODUKTE GEBOU"
-      }
-    ],
-    "specTop": [
-      "EZDEV SOLUTIONS",
-      "PRETORIA, ZA"
-    ],
-    "specBottom": [
-      "NUXT · NEXT · TS",
-      "SSR · SSG · SPA"
-    ]
-  },
   "thankYou": {
     "eyebrow": "// BOODSKAP GESTUUR",
     "heading": "Dankie!",
     "message": "Dankie dat jy uitgereik het! Ek sal binnekort by jou terugkom. Intussen, hoekom kyk jy nie gerus verder rond nie?",
     "ctaHome": "TERUG NA TUIS",
     "ctaWork": "BEKYK MY WERK"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "EZdev Solutions · Pretoria",
+      "title": "Ons bou en bedryf sagtewareprodukte",
+      "titleAccent": "— insluitend ons eie.",
+      "lead": "Sagteware-ateljee in Pretoria. Ons ontwerp, bou en bedryf SaaS-platforms en e-handel vir ons eie produkte en vir kliënte, van begin tot einde.",
+      "ctaPrimary": "Begin 'n projek",
+      "ctaSecondary": "Sien ons werk",
+      "stats": [
+        {
+          "value": "{years}+",
+          "label": "Jare ondervinding"
+        },
+        {
+          "value": "2",
+          "label": "Ons eie produkte"
+        },
+        {
+          "value": "[N]",
+          "label": "Projekte afgelewer"
+        }
+      ],
+      "showcase": [
+        {
+          "domain": "votera.co.za",
+          "caption": "ons produk",
+          "image": "/media/votera.png",
+          "alt": "Votera se paneelbord"
+        },
+        {
+          "domain": "chilli-collective.com",
+          "caption": "ons produk",
+          "image": "/media/chili-collective.png",
+          "alt": "Chilli Collective se aanlynwinkel"
+        }
+      ]
+    }
   }
 }

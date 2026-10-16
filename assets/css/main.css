@@ -27,7 +27,7 @@ html, body, main {
 
 /* ── Global resets ──
    Kept in @layer base so Tailwind utilities (@layer utilities) can override
-   them — unlayered element selectors would beat every text-*/hover:text-*
+   them; unlayered element selectors would beat every text and hover:text
    utility on links. */
 @layer base {
   body {
@@ -47,8 +47,77 @@ html, body, main {
   color: #eef2f6;
 }
 
-.mono {
+/* A @utility (not a plain class) so the shared patterns below can @apply it. */
+@utility mono {
   font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── Shared patterns (studio design system) ── */
+@layer components {
+  /* eyebrow: mono, tracked, gold small caps */
+  .eyebrow {
+    @apply mono text-[11px] md:text-xs font-medium uppercase tracking-[0.18em] text-primary-gold;
+  }
+
+  /* browser-chrome frame */
+  /* overflow: clip + a 1px clip margin keeps images clipped to the frame
+     while letting the -1px corner brackets show at full 2px width. */
+  .frame {
+    @apply relative rounded border border-primary-gold/20 bg-surface-bg;
+    overflow: clip;
+    overflow-clip-margin: 1px;
+  }
+  .frame-chrome {
+    @apply flex h-8 md:h-9 items-center gap-3 border-b border-primary-gold/15 px-3.5 bg-body-bg/40;
+  }
+  .frame-dot {
+    @apply size-2 md:size-[9px] rounded-full bg-current opacity-30;
+  }
+
+  /* gold corner brackets: 4 spans inside a .frame */
+  .bracket {
+    @apply pointer-events-none absolute size-3.5 md:size-[18px] border-primary-gold;
+  }
+  .bracket-tl { @apply -top-px -left-px border-t-2 border-l-2; }
+  .bracket-tr { @apply -top-px -right-px border-t-2 border-r-2; }
+  .bracket-bl { @apply -bottom-px -left-px border-b-2 border-l-2; }
+  .bracket-br { @apply -bottom-px -right-px border-b-2 border-r-2; }
+
+  /* faint gold grid backdrop (hero + closing CTA) */
+  .grid-backdrop {
+    background-image:
+      linear-gradient(color-mix(in oklch, var(--color-primary-gold) 7%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in oklch, var(--color-primary-gold) 7%, transparent) 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: radial-gradient(ellipse 70% 80% at 30% 40%, #000 30%, transparent 80%);
+  }
+  @media (min-width: 768px) {
+    .grid-backdrop { background-size: 48px 48px; }
+  }
+
+  /* product badge */
+  .badge-product {
+    @apply mono inline-flex h-6 items-center px-2.5 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.16em] text-light-gold border border-primary-gold/60 bg-primary-gold/15;
+  }
+
+  /* chips */
+  .chip {
+    @apply mono inline-flex min-h-9 items-center gap-2 rounded-sm border border-primary-gold/25 px-3 text-xs normal-case tracking-wide;
+  }
+
+  /* buttons (rendered through <UiButton>) */
+  .btn {
+    @apply mono inline-flex min-h-12 items-center justify-center gap-2.5 whitespace-nowrap rounded-sm px-6 text-[13px] font-bold uppercase tracking-[0.12em] no-underline transition-colors duration-150 active:translate-y-px focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-light-gold;
+  }
+  .btn-sm {
+    @apply min-h-11 px-[18px] text-xs;
+  }
+  .btn-primary {
+    @apply border border-primary-gold bg-primary-gold text-body-bg hover:border-light-gold hover:bg-light-gold;
+  }
+  .btn-secondary {
+    @apply border border-primary-gold/55 bg-transparent text-light-gold hover:border-primary-gold hover:bg-primary-gold/10 hover:text-[#f4f7fa];
+  }
 }
 
 /* ── PrimeVue surface palette (dark-only) ── */
@@ -96,96 +165,6 @@ html, body, main {
   --p-text-hover-color: #eef2f6;
   --p-text-muted-color: oklch(65% 0.02 250);
   --p-text-hover-muted-color: oklch(75% 0.02 250);
-}
-
-/* ── SVG logo animation ── */
-#home-hero g {
-  animation: fillIn 5s ease forwards;
-}
-@keyframes fillIn {
-  0%,
-  42% {
-    fill: transparent;
-  }
-  100% {
-    fill: oklch(85.9% 0.072 82.67);
-  }
-}
-#path1 {
-  stroke-dashoffset: 21554;
-  animation: sign 6s ease;
-  animation-fill-mode: forwards;
-}
-#path2 {
-  stroke-dasharray: 18843;
-  stroke-dashoffset: 18843;
-  animation: sign 4s ease;
-}
-#path3 {
-  stroke-dasharray: 2248;
-  stroke-dashoffset: 2248;
-  animation: sign 4s ease;
-  animation-fill-mode: forwards;
-}
-#path4 {
-  stroke-dasharray: 1535;
-  stroke-dashoffset: 1535;
-  animation: sign 4s ease;
-  animation-fill-mode: forwards;
-}
-#path5 {
-  stroke-dasharray: 1528;
-  stroke-dashoffset: 1528;
-  animation: sign 4s ease;
-  animation-fill-mode: forwards;
-}
-#path6 {
-  stroke-dasharray: 3247;
-  stroke-dashoffset: 3247;
-  animation: sign 4s ease;
-  animation-fill-mode: forwards;
-}
-#path7 {
-  stroke-dasharray: 3237;
-  stroke-dashoffset: 3237;
-  animation: sign 4s ease;
-  animation-fill-mode: forwards;
-}
-#path8 {
-  stroke-dasharray: 3790;
-  stroke-dashoffset: 3790;
-  animation: sign 4s ease;
-  animation-fill-mode: forwards;
-}
-#path9 {
-  stroke-dasharray: 3329;
-  stroke-dashoffset: 3329;
-  animation: sign 4s ease;
-  animation-fill-mode: forwards;
-}
-#path10 {
-  stroke-dasharray: 2680;
-  stroke-dashoffset: 2680;
-  animation: sign 4s ease;
-  animation-fill-mode: forwards;
-}
-#path11 {
-  stroke-dasharray: 756;
-  stroke-dashoffset: 756;
-  animation: sign 4s ease;
-  animation-fill-mode: forwards;
-}
-#path12 {
-  stroke-dasharray: 21554;
-  stroke-dashoffset: 21554;
-  animation: sign 4s ease;
-  animation-fill-mode: forwards;
-}
-
-@keyframes sign {
-  to {
-    stroke-dashoffset: 0;
-  }
 }
 
 /* ── Scroll-reveal animations ── */

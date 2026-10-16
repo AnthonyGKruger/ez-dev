@@ -13,9 +13,17 @@ export default function useSeo() {
 
   const setSeo = (
     keyBase: string,
-    overrides?: Partial<{ title: string; description: string; image: string }>,
+    overrides?: Partial<{
+      title: string;
+      description: string;
+      image: string;
+      /** Use the title as-is, without the "%s · EZdev Solutions" template. */
+      rawTitle: boolean;
+    }>,
   ) => {
-    const title = overrides?.title ?? t(`${keyBase}-title`, undefined, "EZdev");
+    const siteName = config.public.siteName as string;
+    const title =
+      overrides?.title ?? t(`${keyBase}-title`, undefined, siteName);
     const description =
       overrides?.description ??
       t(
@@ -35,7 +43,7 @@ export default function useSeo() {
       ogImage: image,
       ogUrl: canonical,
       ogType: "website",
-      ogSiteName: config.public.siteName as string,
+      ogSiteName: siteName,
       twitterCard: "summary_large_image",
       twitterTitle: title,
       twitterDescription: description,
@@ -43,6 +51,7 @@ export default function useSeo() {
     });
 
     useHead({
+      ...(overrides?.rawTitle ? { titleTemplate: null } : {}),
       htmlAttrs: {
         lang: getLang(),
       },

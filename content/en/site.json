@@ -92,41 +92,49 @@
       "button": "START A PROJECT"
     }
   },
-  "hero": {
-    "eyebrow": "// ANTHONY KRUGER · WEB DEVELOPER",
-    "headline": "I build web solutions that teams",
-    "headlineAccent": "rely on.",
-    "lead": "A BSc IT and {years} years delivering production apps end to end, from SaaS platforms to e-commerce, with Nuxt, Next.js and TypeScript.",
-    "ctaWork": "VIEW SELECTED WORK",
-    "ctaTouch": "GET IN TOUCH",
-    "stats": [
-      {
-        "value": "{years}+",
-        "label": "YEARS EXPERIENCE"
-      },
-      {
-        "value": "BSc IT",
-        "label": "8 DISTINCTIONS"
-      },
-      {
-        "value": "10+",
-        "label": "PRODUCTS BUILT"
-      }
-    ],
-    "specTop": [
-      "EZDEV SOLUTIONS",
-      "PRETORIA, ZA"
-    ],
-    "specBottom": [
-      "NUXT · NEXT · TS",
-      "SSR · SSG · SPA"
-    ]
-  },
   "thankYou": {
     "eyebrow": "// MESSAGE SENT",
     "heading": "Thank you!",
     "message": "Thanks for reaching out! I'll get back to you shortly. In the meantime, why not carry on looking around?",
     "ctaHome": "BACK TO HOME",
     "ctaWork": "VIEW MY WORK"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "EZdev Solutions · Pretoria",
+      "title": "We build and run software products",
+      "titleAccent": "— including our own.",
+      "lead": "Software studio in Pretoria. We design, build and operate SaaS platforms and e-commerce for our own products and for clients, end to end.",
+      "ctaPrimary": "Start a project",
+      "ctaSecondary": "See our work",
+      "stats": [
+        {
+          "value": "{years}+",
+          "label": "Years experience"
+        },
+        {
+          "value": "2",
+          "label": "Our own products"
+        },
+        {
+          "value": "[N]",
+          "label": "Projects shipped"
+        }
+      ],
+      "showcase": [
+        {
+          "domain": "votera.co.za",
+          "caption": "our product",
+          "image": "/media/votera.png",
+          "alt": "Votera dashboard"
+        },
+        {
+          "domain": "chilli-collective.com",
+          "caption": "our product",
+          "image": "/media/chili-collective.png",
+          "alt": "Chilli Collective storefront"
+        }
+      ]
+    }
   }
 }

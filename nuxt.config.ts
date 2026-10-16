@@ -16,9 +16,9 @@ export default defineNuxtConfig({
       githubUrl: "",
       siteUrl:
         process.env.NUXT_PUBLIC_SITE_URL || "https://www.ezdev.solutions",
-      siteName: "EZdev Solutions - Anthony Gordon Kruger's Portfolio",
+      siteName: "EZdev Solutions",
       siteDescription:
-        "Web Developer portfolio: projects, skills, work experience, and contact.",
+        "Pretoria software studio. We design, build and run SaaS platforms and e-commerce for our own products and for clients.",
       siteImage: "/media/og-image.png",
       turnstileSiteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY || "",
     },
@@ -95,7 +95,7 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: { class: "dark" },
       // Overrides the nuxt-seo-utils default of "%s | <site.name>".
-      titleTemplate: "%s • EZdev",
+      titleTemplate: "%s · EZdev Solutions",
     },
   },
   icon: {
@@ -107,9 +107,9 @@ export default defineNuxtConfig({
   // Non-production environments are automatically marked non-indexable.
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || "https://www.ezdev.solutions",
-    name: "EZdev Solutions - Anthony Gordon Kruger's Portfolio",
+    name: "EZdev Solutions",
     description:
-      "Web Developer portfolio: projects, skills, work experience, and contact.",
+      "Pretoria software studio. We design, build and run SaaS platforms and e-commerce for our own products and for clients.",
   },
   seo: {
     meta: {
@@ -122,14 +122,15 @@ export default defineNuxtConfig({
   // nuxt-schema-org reads identity from module options, not app.config.
   schemaOrg: {
     identity: {
-      type: "Person",
-      name: "Anthony Gordon Kruger",
+      type: "Organization",
+      name: "EZdev Solutions",
       url: "https://www.ezdev.solutions",
+      logo: "/media/logos/ezdev-logo.png",
+      email: "anthony@ezdev.solutions",
       sameAs: [
         "https://github.com/AnthonyGKruger",
         "https://www.linkedin.com/in/anthony-gordon-kruger-ezdev/",
       ],
-      jobTitle: "Web Developer",
     },
   },
   sitemap: {

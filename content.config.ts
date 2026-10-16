@@ -130,16 +130,25 @@ const qualifications = z.object({
 const field = z.object({ label: z.string(), placeholder: z.string() });
 
 const site = z.object({
-  hero: z.object({
-    eyebrow: z.string(),
-    headline: z.string(),
-    headlineAccent: z.string(),
-    lead: z.string(),
-    ctaWork: z.string(),
-    ctaTouch: z.string(),
-    stats: z.array(z.object({ value: z.string(), label: z.string() })),
-    specTop: z.array(z.string()),
-    specBottom: z.array(z.string()),
+  home: z.object({
+    hero: z.object({
+      eyebrow: z.string(),
+      title: z.string(),
+      titleAccent: z.string(),
+      // Supports the {years} token, interpolated at render time.
+      lead: z.string(),
+      ctaPrimary: z.string(),
+      ctaSecondary: z.string(),
+      stats: z.array(z.object({ value: z.string(), label: z.string() })),
+      showcase: z.array(
+        z.object({
+          domain: z.string(),
+          caption: z.string(),
+          image: z.string(),
+          alt: z.string(),
+        }),
+      ),
+    }),
   }),
   companies: z.object({
     heading: z.string(),

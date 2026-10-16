@@ -63,17 +63,27 @@ export interface HeroStat {
   label: string;
 }
 
-export interface HeroContent {
+export interface ShowcaseItem {
+  domain: string;
+  caption: string;
+  image: string;
+  alt: string;
+}
+
+export interface HomeHeroContent {
   eyebrow: string;
-  headline: string;
-  headlineAccent: string;
+  title: string;
+  titleAccent: string;
   /** Lead paragraph; supports the {years} token */
   lead: string;
-  ctaWork: string;
-  ctaTouch: string;
+  ctaPrimary: string;
+  ctaSecondary: string;
   stats: HeroStat[];
-  specTop: [string, string];
-  specBottom: [string, string];
+  showcase: ShowcaseItem[];
+}
+
+export interface HomeContent {
+  hero: HomeHeroContent;
 }
 
 export interface Company {
@@ -140,7 +150,7 @@ export interface ThankYouContent {
 }
 
 export interface SiteContent {
-  hero: HeroContent;
+  home: HomeContent;
   companies: CompaniesContent;
   about: AboutContent;
   contact: ContactContent;
