@@ -261,7 +261,7 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
           <button
             v-if="!loading"
             type="submit"
-            class="mono mt-1.5 px-3.5 py-3.5 rounded-[10px] border-none bg-primary-gold text-body-bg text-sm font-bold tracking-[.04em] cursor-pointer transition-all duration-300 hover:bg-light-gold w-full"
+            class="btn btn-primary mt-1.5 w-full cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
             :disabled="!turnstileToken"
           >
             {{ contact.form.submit }}

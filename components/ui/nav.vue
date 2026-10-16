@@ -76,13 +76,15 @@ const isActive = (to: string) => {
           </ul>
 
           <!-- CTA -->
-          <NuxtLink
+          <UiButton
+            variant="primary"
+            size="sm"
             to="/contact-me"
-            class="mono inline-flex items-center gap-2 ml-2 px-3 sm:px-[18px] py-[9px] rounded-lg text-[13px] font-bold tracking-[.04em] whitespace-nowrap bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold"
+            class="ml-2"
             @click="isOpen = false"
           >
-            {{ t("nav-start-project") }} &rarr;
-          </NuxtLink>
+            {{ t("nav-start-project") }}
+          </UiButton>
 
           <!-- Hamburger -->
           <button
@@ -142,13 +144,14 @@ const isActive = (to: string) => {
       >
         {{ item.label }}
       </NuxtLink>
-      <NuxtLink
+      <UiButton
+        variant="primary"
         to="/contact-me"
-        class="mono mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-bold tracking-[.04em] bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold"
+        class="mt-4"
         @click="isOpen = false"
       >
-        {{ t("nav-start-project") }} &rarr;
-      </NuxtLink>
+        {{ t("nav-start-project") }}
+      </UiButton>
     </nav>
   </div>
 </template>

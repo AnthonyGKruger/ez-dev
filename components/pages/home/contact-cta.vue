@@ -19,12 +19,7 @@ const cta = computed(() => site.value.contact.cta);
         >
           {{ cta.subtitle }}
         </p>
-        <NuxtLink
-          to="/contact-me"
-          class="mono inline-flex items-center gap-2 mt-8 px-[26px] py-3.5 rounded-[9px] text-sm font-bold tracking-[.03em] bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold hover:-translate-y-0.5"
-        >
-          {{ cta.button }} &rarr;
-        </NuxtLink>
+        <UiButton variant="primary" to="/contact-me" class="mt-8">{{ cta.button }}</UiButton>
       </div>
       <div class="flex-shrink-0 mx-auto">
         <LottiePlayer src="/lotties/ContactMe.json" />

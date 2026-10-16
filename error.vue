@@ -52,12 +52,7 @@ const handleGoHome = () => {
             </div>
 
             <div class="flex gap-4 mt-6">
-              <button
-                @click="handleGoHome"
-                class="mono inline-flex items-center gap-2 px-[26px] py-3.5 rounded-[9px] text-sm font-bold tracking-[.03em] bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold"
-              >
-                {{ t("go-home") }}
-              </button>
+              <UiButton @click="handleGoHome">{{ t("go-home") }}</UiButton>
             </div>
           </div>
         </div>

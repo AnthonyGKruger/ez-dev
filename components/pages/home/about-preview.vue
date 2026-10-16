@@ -61,18 +61,8 @@ const about = computed(() => site.value.about);
           {{ para }}
         </p>
         <div class="flex gap-3.5 mt-8 flex-wrap">
-          <NuxtLink
-            to="/contact-me"
-            class="mono inline-flex items-center gap-2 px-[26px] py-3.5 rounded-[9px] text-sm font-bold tracking-[.03em] bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold hover:-translate-y-0.5"
-          >
-            {{ about.ctaChat }} &rarr;
-          </NuxtLink>
-          <NuxtLink
-            to="/portfolio"
-            class="mono inline-flex items-center gap-2 px-[26px] py-3.5 rounded-[9px] text-sm font-bold tracking-[.03em] bg-transparent text-light-gold border border-primary-gold/50 transition-all duration-300 hover:border-light-gold hover:bg-primary-gold/10"
-          >
-            {{ about.ctaWork }}
-          </NuxtLink>
+          <UiButton to="/contact-me">{{ about.ctaChat }}</UiButton>
+          <UiButton to="/portfolio">{{ about.ctaWork }}</UiButton>
         </div>
       </div>
     </div>

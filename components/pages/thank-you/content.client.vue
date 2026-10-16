@@ -21,18 +21,8 @@ const thankYou = computed(() => site.value.thankYou);
         {{ thankYou.message }}
       </p>
       <div class="flex gap-3.5 justify-center flex-wrap">
-        <NuxtLink
-          to="/"
-          class="mono inline-flex items-center gap-2 px-[26px] py-3.5 rounded-[9px] text-sm font-bold tracking-[.03em] bg-primary-gold text-body-bg transition-all duration-300 hover:bg-light-gold"
-        >
-          {{ thankYou.ctaHome }}
-        </NuxtLink>
-        <NuxtLink
-          to="/portfolio"
-          class="mono inline-flex items-center gap-2 px-[26px] py-3.5 rounded-[9px] text-sm font-bold tracking-[.03em] bg-transparent text-light-gold border border-primary-gold/50 transition-all duration-300 hover:border-light-gold hover:bg-primary-gold/10"
-        >
-          {{ thankYou.ctaWork }}
-        </NuxtLink>
+        <UiButton to="/">{{ thankYou.ctaHome }}</UiButton>
+        <UiButton to="/portfolio">{{ thankYou.ctaWork }}</UiButton>
       </div>
     </div>
   </section>
