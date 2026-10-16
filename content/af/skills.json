@@ -6,22 +6,26 @@
     {
       "name": "nuxt",
       "icon": "skill-icons:nuxtjs-dark",
-      "description": "My daaglikse keuse. Professioneel en persoonlik."
+      "description": "My daaglikse keuse. Professioneel en persoonlik.",
+      "label": "Nuxt"
     },
     {
       "name": "next",
       "icon": "skill-icons:nextjs-light",
-      "description": "Waar my passie vir webontwikkeling begin het."
+      "description": "Waar my passie vir webontwikkeling begin het.",
+      "label": "Next.js"
     },
     {
       "name": "tailwindcss",
       "icon": "skill-icons:tailwindcss-dark",
-      "description": "My gunsteling CSS-raamwerk om vinniger netjiese UI's te bou!"
+      "description": "My gunsteling CSS-raamwerk om vinniger netjiese UI's te bou!",
+      "label": "Tailwind CSS"
     },
     {
       "name": "typescript",
       "icon": "skill-icons:typescript",
-      "description": "Vir foutvaste kode."
+      "description": "Vir foutvaste kode.",
+      "label": "TypeScript"
     }
   ],
   "alsoComfortableLabel": "OOK GEMAKLIK MET",

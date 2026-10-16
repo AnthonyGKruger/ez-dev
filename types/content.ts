@@ -11,8 +11,10 @@ import type { IPortfolioItem } from "./portfolio";
  */
 
 export interface SkillItem {
-  /** Display name, e.g. "nuxt" */
+  /** Lowercase id, e.g. "nuxt" */
   name: string;
+  /** Display label, e.g. "Next.js" */
+  label?: string;
   /** Iconify id, e.g. "skill-icons:nuxtjs-dark" */
   icon: string;
   /** Localized one-line description shown on the flipped card */
@@ -78,6 +80,7 @@ export interface HomeContent {
   hero: HomeHeroContent;
   trusted: { label: string };
   work: WorkLabels;
+  stack: { eyebrow: string; title: string; alsoLabel: string };
   about: {
     eyebrow: string;
     title: string;

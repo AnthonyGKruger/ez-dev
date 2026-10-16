@@ -184,6 +184,11 @@
       "role": "Stigter",
       "photoAlt": "Anthony Kruger, stigter van EZdev Solutions",
       "cta": "Kom ons gesels"
+    },
+    "stack": {
+      "eyebrow": "Stapel",
+      "title": "Gereedskap waarmee ons bou",
+      "alsoLabel": "Ook gemaklik met"
     }
   }
 }

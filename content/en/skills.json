@@ -17,22 +17,26 @@
     {
       "name": "nuxt",
       "icon": "skill-icons:nuxtjs-dark",
-      "description": "My daily driver. Both professionally and personally."
+      "description": "My daily driver. Both professionally and personally.",
+      "label": "Nuxt"
     },
     {
       "name": "next",
       "icon": "skill-icons:nextjs-light",
-      "description": "Where my passion for web dev all started."
+      "description": "Where my passion for web dev all started.",
+      "label": "Next.js"
     },
     {
       "name": "tailwindcss",
       "icon": "skill-icons:tailwindcss-dark",
-      "description": "My favourite CSS framework for building polished UIs faster!"
+      "description": "My favourite CSS framework for building polished UIs faster!",
+      "label": "Tailwind CSS"
     },
     {
       "name": "typescript",
       "icon": "skill-icons:typescript",
-      "description": "For fool-proof code."
+      "description": "For fool-proof code.",
+      "label": "TypeScript"
     }
   ]
 }

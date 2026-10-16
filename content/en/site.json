@@ -184,6 +184,11 @@
       "role": "Founder",
       "photoAlt": "Anthony Kruger, founder of EZdev Solutions",
       "cta": "Let's chat"
+    },
+    "stack": {
+      "eyebrow": "Stack",
+      "title": "Tools we build with",
+      "alsoLabel": "Also comfortable with"
     }
   }
 }

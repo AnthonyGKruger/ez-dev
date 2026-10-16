@@ -16,6 +16,8 @@ const skills = z.object({
   items: z.array(
     z.object({
       name: z.string(),
+      // Display label, e.g. "Next.js" (name is the lowercase id).
+      label: z.string().optional(),
       icon: z.string(),
       description: z.string(),
     }),
@@ -164,6 +166,11 @@ const site = z.object({
       role: z.string(),
       photoAlt: z.string(),
       cta: z.string(),
+    }),
+    stack: z.object({
+      eyebrow: z.string(),
+      title: z.string(),
+      alsoLabel: z.string(),
     }),
     services: z.object({
       eyebrow: z.string(),
