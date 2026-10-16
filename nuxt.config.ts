@@ -18,7 +18,7 @@ export default defineNuxtConfig({
         process.env.NUXT_PUBLIC_SITE_URL || "https://www.ezdev.solutions",
       siteName: "EZdev Solutions",
       siteDescription:
-        "Software studio. We design, build and run SaaS platforms and e-commerce for our own products and for clients.",
+        "Dev house. We design, build and run SaaS platforms and e-commerce for our own products and for clients.",
       siteImage: "/media/og-image.png",
       turnstileSiteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY || "",
     },
@@ -113,7 +113,7 @@ export default defineNuxtConfig({
     url: process.env.NUXT_PUBLIC_SITE_URL || "https://www.ezdev.solutions",
     name: "EZdev Solutions",
     description:
-      "Software studio. We design, build and run SaaS platforms and e-commerce for our own products and for clients.",
+      "Dev house. We design, build and run SaaS platforms and e-commerce for our own products and for clients.",
   },
   seo: {
     meta: {

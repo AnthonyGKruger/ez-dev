@@ -95,7 +95,7 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "EZdev Solutions · Software studio",
+      "eyebrow": "EZdev Solutions · Dev house",
       "title": "We build and run software products,",
       "titleAccent": "including our own.",
       "lead": "We design, build and operate SaaS platforms and e-commerce for our own products and for clients, end to end.",
@@ -170,7 +170,7 @@
     },
     "about": {
       "eyebrow": "About",
-      "title": "A studio that runs what it builds",
+      "title": "A dev house that runs what it builds",
       "body": [
         "EZdev Solutions was founded by Anthony Kruger, a developer with a BSc in IT who has spent years shipping production web apps for agencies, businesses and clients.",
         "Today EZdev runs two products of its own, Votera and Chilli Collective, and builds for clients. Operating our own platforms means we feel every slow page and failed payment ourselves, and that is the standard we bring to client work."
@@ -208,7 +208,7 @@
     "language": "Language"
   },
   "footer": {
-    "blurb": "EZdev Solutions is a software studio. We build and run SaaS and e-commerce, for our own products and for clients.",
+    "blurb": "EZdev Solutions is a dev house. We build and run SaaS and e-commerce, for our own products and for clients.",
     "siteHeading": "Site",
     "productsHeading": "Our products",
     "productsNote": "Built and run by EZdev",

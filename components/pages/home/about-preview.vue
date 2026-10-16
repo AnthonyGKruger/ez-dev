@@ -2,8 +2,7 @@
 const site = useContent("site");
 const about = computed(() => site.value.home.about);
 
-// Swap for "/media/anthony-headshot.jpg" once a real headshot exists.
-const photo = "/media/anthony-headshot-placeholder.svg";
+const photo = "/media/anthony-headshot.jpg";
 </script>
 
 <template>
@@ -18,7 +17,7 @@ const photo = "/media/anthony-headshot-placeholder.svg";
       <div class="[grid-area:head] min-[900px]:self-end">
         <p class="eyebrow mb-2.5 md:mb-3.5">{{ about.eyebrow }}</p>
         <h2
-          class="max-w-[620px] text-[length:clamp(30px,1.4vw_+_24px,44px)] leading-[1.1] font-black tracking-[-0.03em] text-[#f4f7fa]"
+          class="max-w-[720px] text-[length:clamp(30px,1.4vw_+_24px,44px)] leading-[1.1] font-black tracking-[-0.03em] text-[#f4f7fa]"
         >
           {{ about.title }}
         </h2>
@@ -29,8 +28,8 @@ const photo = "/media/anthony-headshot-placeholder.svg";
           <img
             :src="photo"
             :alt="about.photoAlt"
-            width="400"
-            height="500"
+            width="765"
+            height="1024"
             loading="lazy"
             class="block h-full w-full object-cover object-top"
           >
