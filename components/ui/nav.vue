@@ -77,17 +77,20 @@ watch(() => route.fullPath, () => (isOpen.value = false));
           @click="isOpen = !isOpen"
         >
           <span class="absolute top-1/2 left-1/2 w-6 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">
+            <!-- Each state gets its own classes: conflicting utilities on one
+                 element (e.g. -translate-y-2 + translate-y-0) don't resolve by
+                 class order in Tailwind v4. -->
             <span
-              class="absolute block h-0.5 w-9/12 -translate-y-2 rounded-full bg-[#eef2f6] transition-all duration-300"
-              :class="{ '!w-6 translate-y-0 rotate-45': isOpen }"
+              class="absolute block h-0.5 rounded-full bg-[#eef2f6] transition-all duration-300"
+              :class="isOpen ? 'w-6 translate-y-0 rotate-45' : 'w-[18px] -translate-y-2'"
             />
             <span
               class="absolute block h-0.5 w-6 rounded-full bg-[#eef2f6] transition duration-300"
               :class="{ 'opacity-0': isOpen }"
             />
             <span
-              class="absolute block h-0.5 w-1/2 translate-y-2 rounded-full bg-[#eef2f6] transition-all duration-300"
-              :class="{ '!w-6 translate-y-0 -rotate-45': isOpen }"
+              class="absolute block h-0.5 rounded-full bg-[#eef2f6] transition-all duration-300"
+              :class="isOpen ? 'w-6 translate-y-0 -rotate-45' : 'w-3 translate-y-2'"
             />
           </span>
         </button>
