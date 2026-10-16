@@ -156,6 +156,15 @@ const site = z.object({
       visit: z.string(),
       referral: z.string(),
     }),
+    about: z.object({
+      eyebrow: z.string(),
+      title: z.string(),
+      body: z.array(z.string()),
+      caption: z.string(),
+      role: z.string(),
+      photoAlt: z.string(),
+      cta: z.string(),
+    }),
     services: z.object({
       eyebrow: z.string(),
       title: z.string(),

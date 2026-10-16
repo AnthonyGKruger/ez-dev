@@ -172,6 +172,18 @@
       "all": "Alle werk",
       "visit": "Besoek",
       "referral": "Verwysingsbrief"
+    },
+    "about": {
+      "eyebrow": "Oor ons",
+      "title": "'n Ateljee wat self bedryf wat dit bou",
+      "body": [
+        "Anthony Kruger het EZdev gestig nadat hy van takbestuur in die kleinhandel na sagteware oorgeskakel het, en het in 2021 met 'n BSc in IT gegradueer.",
+        "Vandag bedryf EZdev twee eie produkte, Votera en Chilli Collective, en bou vir kliënte. Omdat ons ons eie platforms bedryf, voel ons elke stadige bladsy en mislukte betaling self, en dit is die standaard wat ons na kliëntewerk bring."
+      ],
+      "caption": "Anthony Kruger",
+      "role": "Stigter",
+      "photoAlt": "Anthony Kruger, stigter van EZdev Solutions",
+      "cta": "Kom ons gesels"
     }
   }
 }

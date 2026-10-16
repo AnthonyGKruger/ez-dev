@@ -1,68 +1,61 @@
 <script setup lang="ts">
 const site = useContent("site");
-const about = computed(() => site.value.about);
+const about = computed(() => site.value.home.about);
+
+// Swap for "/media/anthony-headshot.jpg" once a real headshot exists.
+const photo = "/media/anthony-headshot-placeholder.svg";
 </script>
 
 <template>
-  <section class="max-w-[1240px] mx-auto px-7 py-20 reveal">
-    <div class="flex items-center gap-5 mb-5">
-      <div class="eyebrow">
-        {{ about.eyebrow }}
-      </div>
-      <div class="flex-1 h-px bg-primary-gold/20"></div>
-    </div>
-
+  <section
+    id="about"
+    class="mx-auto max-w-[1240px] px-[clamp(16px,5vw,24px)] pt-[clamp(64px,8vw,120px)]"
+  >
+    <!-- Grid areas: heading leads on small screens, photo left from 900px -->
     <div
-      class="grid grid-cols-1 lg:grid-cols-[.85fr_1.15fr] gap-14 items-center"
+      class="grid gap-6 [grid-template-areas:'head'_'photo'_'body'] min-[900px]:grid-cols-[clamp(300px,32vw,420px)_minmax(0,1fr)] min-[900px]:grid-rows-[auto_1fr] min-[900px]:gap-x-[clamp(40px,5vw,72px)] min-[900px]:gap-y-5 min-[900px]:[grid-template-areas:'photo_head'_'photo_body']"
     >
-      <!-- Photo card -->
-      <div class="relative reveal-l hidden lg:block">
-        <div
-          class="relative border border-primary-gold/35 rounded-[18px] overflow-hidden bg-surface-bg"
+      <div class="[grid-area:head] min-[900px]:self-end">
+        <p class="eyebrow mb-2.5 md:mb-3.5">{{ about.eyebrow }}</p>
+        <h2
+          class="max-w-[620px] text-[length:clamp(30px,1.4vw_+_24px,44px)] leading-[1.1] font-black tracking-[-0.03em] text-[#f4f7fa]"
         >
-          <div
-            class="mono flex justify-between text-[11px] tracking-[.1em] text-primary-gold px-4 py-3 border-b border-primary-gold/20"
-          >
-            <span>{{ about.photoName }}</span>
-            <span>{{ about.photoLocation }}</span>
-          </div>
-          <img
-            src="/media/AnthonyIllustrated.jpeg"
-            alt="Anthony Kruger"
-            class="w-full block"
-          />
-        </div>
-        <span
-          class="absolute -top-1.5 -left-1.5 w-[18px] h-[18px] border-t-2 border-l-2 border-light-gold"
-        />
-        <span
-          class="absolute -bottom-1.5 -right-1.5 w-[18px] h-[18px] border-b-2 border-r-2 border-light-gold"
-        />
+          {{ about.title }}
+        </h2>
       </div>
 
-      <!-- Text -->
-      <div class="reveal-r">
-        <h1
-          class="text-[56px] leading-[1.05] font-black tracking-[-0.02em] text-[#f4f7fa]"
-        >
-          {{ about.headline }}<br /><span class="text-light-gold">{{
-            about.headlineAccent
-          }}</span>
-        </h1>
+      <figure class="w-full max-w-[360px] [grid-area:photo] min-[900px]:max-w-none">
+        <div class="frame aspect-[4/5] p-[clamp(10px,1vw,14px)]">
+          <img
+            :src="photo"
+            :alt="about.photoAlt"
+            width="400"
+            height="500"
+            loading="lazy"
+            class="block h-full w-full object-cover object-top"
+          >
+          <span class="bracket bracket-tl" aria-hidden="true" />
+          <span class="bracket bracket-tr" aria-hidden="true" />
+          <span class="bracket bracket-bl" aria-hidden="true" />
+          <span class="bracket bracket-br" aria-hidden="true" />
+        </div>
+        <figcaption class="mono mt-3 text-[10px] tracking-[0.12em] uppercase md:text-[11px]">
+          {{ about.caption }}
+          <span class="text-primary-gold">· {{ about.role }}</span>
+        </figcaption>
+      </figure>
+
+      <div class="flex max-w-[620px] flex-col gap-4 [grid-area:body] md:gap-5">
         <p
-          v-for="(para, i) in about.paragraphs"
+          v-for="(para, i) in about.body"
           :key="i"
-          :class="
-            i === 0
-              ? 'text-lg leading-relaxed text-[oklch(82%_0.02_250)] mt-7'
-              : 'text-base leading-relaxed text-[oklch(76%_0.02_250)] mt-[18px]'
-          "
+          class="leading-relaxed"
+          :class="i === 0 ? 'text-[length:clamp(17px,0.2vw_+_16px,19px)] text-[oklch(80%_0.02_250)]' : ''"
         >
           {{ para }}
         </p>
-        <div class="flex gap-3.5 mt-8 flex-wrap">
-          <UiButton to="/contact-me">{{ about.ctaChat }}</UiButton>
-          <UiButton to="/portfolio">{{ about.ctaWork }}</UiButton>
+        <div class="pt-1">
+          <UiButton to="/contact-me">{{ about.cta }}</UiButton>
         </div>
       </div>
     </div>

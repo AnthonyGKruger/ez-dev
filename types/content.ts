@@ -78,6 +78,15 @@ export interface HomeContent {
   hero: HomeHeroContent;
   trusted: { label: string };
   work: WorkLabels;
+  about: {
+    eyebrow: string;
+    title: string;
+    body: string[];
+    caption: string;
+    role: string;
+    photoAlt: string;
+    cta: string;
+  };
   services: {
     eyebrow: string;
     title: string;

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" role="img" aria-hidden="true">
+  <!-- Neutral placeholder until a real headshot exists. Colours are the
+       site's surface-bg / body-bg tokens converted to hex. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c1e31"/>
+      <stop offset="1" stop-color="#0a1421"/>
+    </linearGradient>
+    <linearGradient id="fig" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#29394c"/>
+      <stop offset="1" stop-color="#1f2f41"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <circle cx="200" cy="190" r="78" fill="url(#fig)"/>
+  <path d="M52 500c0-96 66-176 148-176s148 80 148 176z" fill="url(#fig)"/>
+</svg>
