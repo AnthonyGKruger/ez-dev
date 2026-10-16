@@ -61,8 +61,8 @@
   "contact": {
     "eyebrow": "CONTACT",
     "heading": "Let's build something together.",
-    "subtitle": "Have a project in mind, or a role you're hiring for? Fill in the form and I'll get back to you shortly.",
-    "reachMeAt": "YOU CAN ALSO REACH ME AT",
+    "subtitle": "Have a product or project in mind? Fill in the form and we'll reply within one business day.",
+    "reachMeAt": "YOU CAN ALSO REACH US AT",
     "form": {
       "name": {
         "label": "NAME",
@@ -89,9 +89,9 @@
   "thankYou": {
     "eyebrow": "MESSAGE SENT",
     "heading": "Thank you!",
-    "message": "Thanks for reaching out! I'll get back to you shortly. In the meantime, why not carry on looking around?",
+    "message": "Thanks for reaching out! We'll reply within one business day. In the meantime, why not carry on looking around?",
     "ctaHome": "BACK TO HOME",
-    "ctaWork": "VIEW MY WORK"
+    "ctaWork": "SEE OUR WORK"
   },
   "home": {
     "hero": {

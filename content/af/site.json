@@ -61,8 +61,8 @@
   "contact": {
     "eyebrow": "KONTAK",
     "heading": "Kom ons bou saam iets.",
-    "subtitle": "Het jy 'n projek in gedagte, of 'n rol waarvoor jy werf? Vul die vorm in en ek sal binnekort by jou terugkom.",
-    "reachMeAt": "JY KAN MY OOK BEREIK BY",
+    "subtitle": "Het jy 'n produk of projek in gedagte? Vul die vorm in en ons antwoord binne een werksdag.",
+    "reachMeAt": "JY KAN ONS OOK BEREIK BY",
     "form": {
       "name": {
         "label": "NAAM",
@@ -89,9 +89,9 @@
   "thankYou": {
     "eyebrow": "BOODSKAP GESTUUR",
     "heading": "Dankie!",
-    "message": "Dankie dat jy uitgereik het! Ek sal binnekort by jou terugkom. Intussen, hoekom kyk jy nie gerus verder rond nie?",
+    "message": "Dankie dat jy uitgereik het! Ons antwoord binne een werksdag. Intussen, hoekom kyk jy nie gerus verder rond nie?",
     "ctaHome": "TERUG NA TUIS",
-    "ctaWork": "BEKYK MY WERK"
+    "ctaWork": "SIEN ONS WERK"
   },
   "home": {
     "hero": {
