@@ -11,7 +11,7 @@ const thankYou = computed(() => site.value.thankYou);
       <div class="w-[200px] h-[200px] mx-auto mb-2">
         <LottiePlayer src="/lotties/ContactMe.json" height="200px" width="200px" />
       </div>
-      <p class="mono text-[13px] tracking-[.16em] text-primary-gold mb-4">
+      <p class="eyebrow mb-4">
         {{ thankYou.eyebrow }}
       </p>
       <h1 class="text-[52px] font-black tracking-[-0.02em] text-[#f4f7fa]">

@@ -1,6 +1,6 @@
 {
   "about": {
-    "eyebrow": "// ABOUT",
+    "eyebrow": "ABOUT",
     "photoName": "ANTHONY KRUGER",
     "photoLocation": "PRETORIA, ZA",
     "headline": "Building the web,",
@@ -59,7 +59,7 @@
     ]
   },
   "contact": {
-    "eyebrow": "// CONTACT",
+    "eyebrow": "CONTACT",
     "heading": "Let's build something together.",
     "subtitle": "Have a project in mind, or a role you're hiring for? Fill in the form and I'll get back to you shortly.",
     "reachMeAt": "YOU CAN ALSO REACH ME AT",
@@ -92,7 +92,7 @@
     }
   },
   "thankYou": {
-    "eyebrow": "// MESSAGE SENT",
+    "eyebrow": "MESSAGE SENT",
     "heading": "Thank you!",
     "message": "Thanks for reaching out! I'll get back to you shortly. In the meantime, why not carry on looking around?",
     "ctaHome": "BACK TO HOME",

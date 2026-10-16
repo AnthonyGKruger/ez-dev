@@ -6,8 +6,9 @@ const content = useContent("privacy");
   <section class="max-w-[820px] mx-auto px-7 pt-20 pb-24">
     <!-- Section header -->
     <div class="flex items-center gap-5 mb-5">
-      <div class="mono text-[13px] tracking-[.16em] text-primary-gold">
-        {{ content.eyebrow }}
+      <div class="eyebrow">
+        <!-- Strip the legacy "// " prefix at render time; privacy.json is left as is. -->
+        {{ content.eyebrow.replace(/^\/\/\s*/, "") }}
       </div>
       <div class="flex-1 h-px bg-primary-gold/20"></div>
     </div>

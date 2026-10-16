@@ -1,6 +1,6 @@
 {
   "about": {
-    "eyebrow": "// OOR MY",
+    "eyebrow": "OOR MY",
     "photoName": "ANTHONY KRUGER",
     "photoLocation": "PRETORIA, ZA",
     "headline": "Bou die web,",
@@ -59,7 +59,7 @@
     ]
   },
   "contact": {
-    "eyebrow": "// KONTAK",
+    "eyebrow": "KONTAK",
     "heading": "Kom ons bou saam iets.",
     "subtitle": "Het jy 'n projek in gedagte, of 'n rol waarvoor jy werf? Vul die vorm in en ek sal binnekort by jou terugkom.",
     "reachMeAt": "JY KAN MY OOK BEREIK BY",
@@ -92,7 +92,7 @@
     }
   },
   "thankYou": {
-    "eyebrow": "// BOODSKAP GESTUUR",
+    "eyebrow": "BOODSKAP GESTUUR",
     "heading": "Dankie!",
     "message": "Dankie dat jy uitgereik het! Ek sal binnekort by jou terugkom. Intussen, hoekom kyk jy nie gerus verder rond nie?",
     "ctaHome": "TERUG NA TUIS",

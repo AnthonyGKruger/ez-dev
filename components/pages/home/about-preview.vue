@@ -6,7 +6,7 @@ const about = computed(() => site.value.about);
 <template>
   <section class="max-w-[1240px] mx-auto px-7 py-20 reveal">
     <div class="flex items-center gap-5 mb-5">
-      <div class="mono text-[13px] tracking-[.16em] text-primary-gold">
+      <div class="eyebrow">
         {{ about.eyebrow }}
       </div>
       <div class="flex-1 h-px bg-primary-gold/20"></div>
