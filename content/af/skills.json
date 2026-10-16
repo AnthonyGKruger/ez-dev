@@ -31,14 +31,13 @@
   "alsoComfortableLabel": "OOK GEMAKLIK MET",
   "alsoComfortable": [
     "Vue 3",
-    "Node.js",
-    "JavaScript",
     "HTML & CSS",
     "Git",
     "Microsoft Azure",
     "Figma",
     "SEO",
     "Toeganklikheid",
-    "Agile / Scrum"
+    "React",
+    "TanStack"
   ]
 }

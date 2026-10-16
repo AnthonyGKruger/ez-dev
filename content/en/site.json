@@ -2,7 +2,7 @@
   "about": {
     "eyebrow": "ABOUT",
     "photoName": "ANTHONY KRUGER",
-    "photoLocation": "PRETORIA, ZA",
+    "photoLocation": "EZDEV SOLUTIONS",
     "headline": "Building the web,",
     "headlineAccent": "end to end.",
     "paragraphs": [
@@ -95,10 +95,10 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "EZdev Solutions · Pretoria",
-      "title": "We build and run software products",
-      "titleAccent": "— including our own.",
-      "lead": "Software studio in Pretoria. We design, build and operate SaaS platforms and e-commerce for our own products and for clients, end to end.",
+      "eyebrow": "EZdev Solutions · Software studio",
+      "title": "We build and run software products,",
+      "titleAccent": "including our own.",
+      "lead": "We design, build and operate SaaS platforms and e-commerce for our own products and for clients, end to end.",
       "ctaPrimary": "Start a project",
       "ctaSecondary": "See our work",
       "stats": [
@@ -172,7 +172,7 @@
       "eyebrow": "About",
       "title": "A studio that runs what it builds",
       "body": [
-        "Anthony Kruger founded EZdev after moving from retail branch management into software, graduating with a BSc in IT in 2021.",
+        "EZdev Solutions was founded by Anthony Kruger, a developer with a BSc in IT who has spent years shipping production web apps for agencies, businesses and clients.",
         "Today EZdev runs two products of its own, Votera and Chilli Collective, and builds for clients. Operating our own platforms means we feel every slow page and failed payment ourselves, and that is the standard we bring to client work."
       ],
       "caption": "Anthony Kruger",
@@ -195,8 +195,7 @@
     }
   },
   "banner": {
-    "available": "Available for select projects",
-    "location": "Pretoria, ZA · UTC+2"
+    "available": "Available for select projects"
   },
   "nav": {
     "work": "Work",
@@ -209,7 +208,7 @@
     "language": "Language"
   },
   "footer": {
-    "blurb": "EZdev Solutions is a software studio in Pretoria. We build and run SaaS and e-commerce, for our own products and for clients.",
+    "blurb": "EZdev Solutions is a software studio. We build and run SaaS and e-commerce, for our own products and for clients.",
     "siteHeading": "Site",
     "productsHeading": "Our products",
     "productsNote": "Built and run by EZdev",

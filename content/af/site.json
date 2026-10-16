@@ -2,7 +2,7 @@
   "about": {
     "eyebrow": "OOR MY",
     "photoName": "ANTHONY KRUGER",
-    "photoLocation": "PRETORIA, ZA",
+    "photoLocation": "EZDEV SOLUTIONS",
     "headline": "Bou die web,",
     "headlineAccent": "van begin tot einde.",
     "paragraphs": [
@@ -95,10 +95,10 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "EZdev Solutions · Pretoria",
-      "title": "Ons bou en bedryf sagtewareprodukte",
-      "titleAccent": "— insluitend ons eie.",
-      "lead": "Sagteware-ateljee in Pretoria. Ons ontwerp, bou en bedryf SaaS-platforms en e-handel vir ons eie produkte en vir kliënte, van begin tot einde.",
+      "eyebrow": "EZdev Solutions · Sagteware-ateljee",
+      "title": "Ons bou en bedryf sagtewareprodukte,",
+      "titleAccent": "insluitend ons eie.",
+      "lead": "Ons ontwerp, bou en bedryf SaaS-platforms en e-handel vir ons eie produkte en vir kliënte, van begin tot einde.",
       "ctaPrimary": "Begin 'n projek",
       "ctaSecondary": "Sien ons werk",
       "stats": [
@@ -172,7 +172,7 @@
       "eyebrow": "Oor ons",
       "title": "'n Ateljee wat self bedryf wat dit bou",
       "body": [
-        "Anthony Kruger het EZdev gestig nadat hy van takbestuur in die kleinhandel na sagteware oorgeskakel het, en het in 2021 met 'n BSc in IT gegradueer.",
+        "EZdev Solutions is gestig deur Anthony Kruger, 'n ontwikkelaar met 'n BSc in IT wat al jare lank produksie-webtoepassings vir agentskappe, besighede en kliënte lewer.",
         "Vandag bedryf EZdev twee eie produkte, Votera en Chilli Collective, en bou vir kliënte. Omdat ons ons eie platforms bedryf, voel ons elke stadige bladsy en mislukte betaling self, en dit is die standaard wat ons na kliëntewerk bring."
       ],
       "caption": "Anthony Kruger",
@@ -195,8 +195,7 @@
     }
   },
   "banner": {
-    "available": "Beskikbaar vir uitgesoekte projekte",
-    "location": "Pretoria, ZA · UTC+2"
+    "available": "Beskikbaar vir uitgesoekte projekte"
   },
   "nav": {
     "work": "Werk",
@@ -209,7 +208,7 @@
     "language": "Taal"
   },
   "footer": {
-    "blurb": "EZdev Solutions is 'n sagteware-ateljee in Pretoria. Ons bou en bedryf SaaS en e-handel, vir ons eie produkte en vir kliënte.",
+    "blurb": "EZdev Solutions is 'n sagteware-ateljee. Ons bou en bedryf SaaS en e-handel, vir ons eie produkte en vir kliënte.",
     "siteHeading": "Webwerf",
     "productsHeading": "Ons produkte",
     "productsNote": "Gebou en bedryf deur EZdev",

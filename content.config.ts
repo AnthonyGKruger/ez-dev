@@ -127,7 +127,7 @@ const qualifications = z.object({
 const field = z.object({ label: z.string(), placeholder: z.string() });
 
 const site = z.object({
-  banner: z.object({ available: z.string(), location: z.string() }),
+  banner: z.object({ available: z.string() }),
   nav: z.object({
     work: z.string(),
     services: z.string(),

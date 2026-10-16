@@ -96,11 +96,10 @@ export const translations: Translations = new Map([
       ["nav-contact", "Contact"],
       ["nav-privacy", "Privacy"],
       ["nav-available", "AVAILABLE FOR SELECT PROJECTS"],
-      ["nav-location", "PRETORIA, ZA · UTC+2"],
       ["nav-start-project", "START A PROJECT"],
 
       // SEO Titles
-      ["home-title", "EZdev Solutions · Software studio in Pretoria"],
+      ["home-title", "EZdev Solutions · Software studio"],
       ["about-title", "About"],
       ["skills-title", "Skills"],
       ["qualifications-title", "Qualifications"],
@@ -335,11 +334,10 @@ export const translations: Translations = new Map([
       ["nav-contact", "Kontak"],
       ["nav-privacy", "Privaatheid"],
       ["nav-available", "BESKIKBAAR VIR SELEKTE PROJEKTE"],
-      ["nav-location", "PRETORIA, ZA · UTC+2"],
       ["nav-start-project", "BEGIN 'N PROJEK"],
 
       // SEO Titles
-      ["home-title", "EZdev Solutions · Sagteware-ateljee in Pretoria"],
+      ["home-title", "EZdev Solutions · Sagteware-ateljee"],
       ["about-title", "Oor"],
       ["skills-title", "Vaardighede"],
       ["qualifications-title", "Kwalifikasies"],

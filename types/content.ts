@@ -163,7 +163,7 @@ export interface ThankYouContent {
 }
 
 export interface SiteContent {
-  banner: { available: string; location: string };
+  banner: { available: string };
   nav: {
     work: string;
     services: string;

@@ -29,9 +29,6 @@ watch(() => route.fullPath, () => (isOpen.value = false));
         <span aria-hidden="true" class="size-1.5 rounded-full bg-light-gold md:size-[7px]" />
         {{ banner.available }}
       </span>
-      <span aria-hidden="true" class="hidden h-3 w-px bg-primary-gold/50 sm:block" />
-      <span class="sr-only">·</span>
-      <span>{{ banner.location }}</span>
     </p>
   </div>
 
