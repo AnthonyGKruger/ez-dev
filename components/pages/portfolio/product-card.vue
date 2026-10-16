@@ -55,7 +55,11 @@ withDefaults(defineProps<{
         <li v-for="tag in project.stack" :key="tag" class="chip min-h-7 text-[11px]">{{ tag }}</li>
       </ul>
       <div class="mt-auto pt-1">
-        <UiButton size="sm" :href="project.link">{{ labels.visit }} {{ project.domain }}</UiButton>
+        <UiButton size="sm" :href="project.link">
+          {{ labels.visit }}
+          <!-- The domain is in the chrome bar too; drop it where the label can't fit. -->
+          <span class="-ml-1 max-[359px]:hidden">{{ project.domain }}</span>
+        </UiButton>
       </div>
     </div>
   </UiFrame>

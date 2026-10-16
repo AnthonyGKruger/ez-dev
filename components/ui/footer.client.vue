@@ -22,8 +22,9 @@ const products = [
   { label: "Chilli Collective", href: "https://chilli-collective.com" },
 ];
 
+// 44px tap height on touch layouts, compact 32px rows on desktop.
 const linkClass =
-  "block py-2.5 text-[15px] transition-colors hover:text-[#f4f7fa] min-[900px]:py-0 min-[900px]:leading-8";
+  "flex min-h-11 items-center text-[15px] transition-colors hover:text-[#f4f7fa] min-[900px]:block min-[900px]:min-h-0 min-[900px]:leading-8";
 const headingClass = "eyebrow mb-3";
 </script>
 
@@ -75,7 +76,9 @@ const headingClass = "eyebrow mb-3";
             <li>
               <NuxtLink to="/contact-me" :class="linkClass">{{ footer.contactForm }}</NuxtLink>
             </li>
-            <li class="py-2.5 text-[15px] min-[900px]:py-0 min-[900px]:leading-8">{{ footer.location }}</li>
+            <li class="flex min-h-11 items-center text-[15px] min-[900px]:block min-[900px]:min-h-0 min-[900px]:leading-8">
+              {{ footer.location }}
+            </li>
           </ul>
         </div>
       </div>
