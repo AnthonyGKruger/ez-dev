@@ -18,7 +18,6 @@ onMounted(() => getLang());
     <UiFooter />
     <UxCookieNotice />
     <UxScrollToTop />
-    <UxLanguageToggle />
     <DevOnly>
       <ToolsDevTools />
     </DevOnly>

@@ -24,6 +24,10 @@ export default defineNuxtConfig({
     },
   },
   compatibilityDate: "2025-05-15",
+  // The brief links to /contact; the page lives at /contact-me.
+  routeRules: {
+    "/contact": { redirect: "/contact-me" },
+  },
   devtools: { enabled: !cleanDevUi },
   css: ["~/assets/css/main.css"],
   modules: [

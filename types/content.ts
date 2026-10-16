@@ -163,6 +163,29 @@ export interface ThankYouContent {
 }
 
 export interface SiteContent {
+  banner: { available: string; location: string };
+  nav: {
+    work: string;
+    services: string;
+    about: string;
+    contact: string;
+    cta: string;
+    menuOpen: string;
+    menuClose: string;
+    language: string;
+  };
+  footer: {
+    blurb: string;
+    siteHeading: string;
+    productsHeading: string;
+    productsNote: string;
+    contactHeading: string;
+    contactForm: string;
+    location: string;
+    /** Supports the {year} token */
+    copyright: string;
+    privacy: string;
+  };
   home: HomeContent;
   companies: CompaniesContent;
   about: AboutContent;

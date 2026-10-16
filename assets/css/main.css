@@ -30,6 +30,11 @@ html, body, main {
    them; unlayered element selectors would beat every text and hover:text
    utility on links. */
 @layer base {
+  /* In-page anchors (/#services, /#work...) land below the sticky nav. */
+  section[id] {
+    scroll-margin-top: 88px;
+  }
+
   body {
     background: var(--color-body-bg);
     color: oklch(78% 0.02 250);

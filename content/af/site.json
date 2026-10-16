@@ -193,5 +193,30 @@
       "email": "anthony@ezdev.solutions",
       "button": "Begin 'n projek"
     }
+  },
+  "banner": {
+    "available": "Beskikbaar vir uitgesoekte projekte",
+    "location": "Pretoria, ZA · UTC+2"
+  },
+  "nav": {
+    "work": "Werk",
+    "services": "Dienste",
+    "about": "Oor ons",
+    "contact": "Kontak",
+    "cta": "Begin 'n projek",
+    "menuOpen": "Maak kieslys oop",
+    "menuClose": "Maak kieslys toe",
+    "language": "Taal"
+  },
+  "footer": {
+    "blurb": "EZdev Solutions is 'n sagteware-ateljee in Pretoria. Ons bou en bedryf SaaS en e-handel, vir ons eie produkte en vir kliënte.",
+    "siteHeading": "Webwerf",
+    "productsHeading": "Ons produkte",
+    "productsNote": "Gebou en bedryf deur EZdev",
+    "contactHeading": "Kontak",
+    "contactForm": "Kontakvorm",
+    "location": "Pretoria, Suid-Afrika",
+    "copyright": "© {year} EZdev Solutions",
+    "privacy": "Privaatheidsbeleid"
   }
 }

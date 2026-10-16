@@ -127,6 +127,29 @@ const qualifications = z.object({
 const field = z.object({ label: z.string(), placeholder: z.string() });
 
 const site = z.object({
+  banner: z.object({ available: z.string(), location: z.string() }),
+  nav: z.object({
+    work: z.string(),
+    services: z.string(),
+    about: z.string(),
+    contact: z.string(),
+    cta: z.string(),
+    menuOpen: z.string(),
+    menuClose: z.string(),
+    language: z.string(),
+  }),
+  footer: z.object({
+    blurb: z.string(),
+    siteHeading: z.string(),
+    productsHeading: z.string(),
+    productsNote: z.string(),
+    contactHeading: z.string(),
+    contactForm: z.string(),
+    location: z.string(),
+    // Supports the {year} token.
+    copyright: z.string(),
+    privacy: z.string(),
+  }),
   home: z.object({
     hero: z.object({
       eyebrow: z.string(),

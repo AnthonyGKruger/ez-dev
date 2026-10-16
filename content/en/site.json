@@ -193,5 +193,30 @@
       "email": "anthony@ezdev.solutions",
       "button": "Start a project"
     }
+  },
+  "banner": {
+    "available": "Available for select projects",
+    "location": "Pretoria, ZA · UTC+2"
+  },
+  "nav": {
+    "work": "Work",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Start a project",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "language": "Language"
+  },
+  "footer": {
+    "blurb": "EZdev Solutions is a software studio in Pretoria. We build and run SaaS and e-commerce, for our own products and for clients.",
+    "siteHeading": "Site",
+    "productsHeading": "Our products",
+    "productsNote": "Built and run by EZdev",
+    "contactHeading": "Contact",
+    "contactForm": "Contact form",
+    "location": "Pretoria, South Africa",
+    "copyright": "© {year} EZdev Solutions",
+    "privacy": "Privacy policy"
   }
 }
