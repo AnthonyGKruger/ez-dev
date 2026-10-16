@@ -5,7 +5,7 @@ const companies = computed(() => site.value.companies.items);
 </script>
 
 <template>
-  <section :aria-label="label" class="border-b border-primary-gold/10">
+  <section :aria-label="label" class="reveal border-b border-primary-gold/10">
     <div
       class="mx-auto max-w-[1240px] px-[clamp(16px,5vw,24px)] py-9 md:flex md:items-center md:gap-14 md:py-11"
     >

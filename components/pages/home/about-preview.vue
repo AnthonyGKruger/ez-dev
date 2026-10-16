@@ -13,7 +13,7 @@ const photo = "/media/anthony-headshot-placeholder.svg";
   >
     <!-- Grid areas: heading leads on small screens, photo left from 900px -->
     <div
-      class="grid gap-6 [grid-template-areas:'head'_'photo'_'body'] min-[900px]:grid-cols-[clamp(300px,32vw,420px)_minmax(0,1fr)] min-[900px]:grid-rows-[auto_1fr] min-[900px]:gap-x-[clamp(40px,5vw,72px)] min-[900px]:gap-y-5 min-[900px]:[grid-template-areas:'photo_head'_'photo_body']"
+      class="reveal grid gap-6 [grid-template-areas:'head'_'photo'_'body'] min-[900px]:grid-cols-[clamp(300px,32vw,420px)_minmax(0,1fr)] min-[900px]:grid-rows-[auto_1fr] min-[900px]:gap-x-[clamp(40px,5vw,72px)] min-[900px]:gap-y-5 min-[900px]:[grid-template-areas:'photo_head'_'photo_body']"
     >
       <div class="[grid-area:head] min-[900px]:self-end">
         <p class="eyebrow mb-2.5 md:mb-3.5">{{ about.eyebrow }}</p>

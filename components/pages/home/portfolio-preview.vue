@@ -7,7 +7,7 @@ const { labels, products, clients } = useWork();
     id="work"
     class="mx-auto max-w-[1240px] px-[clamp(16px,5vw,24px)] pt-[clamp(64px,7vw,100px)]"
   >
-    <div class="flex items-end justify-between gap-6">
+    <div class="reveal flex items-end justify-between gap-6">
       <div>
         <p class="eyebrow mb-2.5 md:mb-3.5">{{ labels.eyebrow }}</p>
         <h2
@@ -26,7 +26,7 @@ const { labels, products, clients } = useWork();
       </h3>
       <span class="h-px flex-1 bg-primary-gold/20" aria-hidden="true" />
     </div>
-    <ul class="grid gap-5 md:grid-cols-2 md:gap-6">
+    <ul class="grid gap-5 md:grid-cols-2 md:gap-6" data-reveal-stagger>
       <li v-for="p in products" :key="p.id">
         <PagesPortfolioProductCard :project="p" :labels="labels" />
       </li>
@@ -39,7 +39,7 @@ const { labels, products, clients } = useWork();
       </h3>
       <span class="h-px flex-1 bg-primary-gold/20" aria-hidden="true" />
     </div>
-    <ul class="grid gap-4 min-[1100px]:grid-cols-2 min-[1100px]:gap-6">
+    <ul class="grid gap-4 min-[1100px]:grid-cols-2 min-[1100px]:gap-6" data-reveal-stagger>
       <li v-for="p in clients" :key="p.id">
         <PagesPortfolioClientCard :project="p" :labels="labels" />
       </li>

@@ -10,7 +10,7 @@ const stack = computed(() => site.value.home.stack);
     class="mx-auto max-w-[1240px] px-[clamp(16px,5vw,24px)] pt-[clamp(64px,7vw,100px)]"
   >
     <div
-      class="frame grid gap-4 px-[clamp(20px,2.6vw,36px)] py-[clamp(24px,2.4vw,32px)] min-[900px]:grid-cols-[200px_minmax(0,1fr)] min-[900px]:items-start min-[900px]:gap-10"
+      class="reveal frame grid gap-4 px-[clamp(20px,2.6vw,36px)] py-[clamp(24px,2.4vw,32px)] min-[900px]:grid-cols-[200px_minmax(0,1fr)] min-[900px]:items-start min-[900px]:gap-10"
     >
       <div>
         <p class="eyebrow mb-2">{{ stack.eyebrow }}</p>

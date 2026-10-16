@@ -8,14 +8,16 @@ const services = computed(() => site.value.home.services);
     id="services"
     class="mx-auto max-w-[1240px] px-[clamp(16px,5vw,24px)] pt-[clamp(64px,8vw,120px)]"
   >
-    <p class="eyebrow mb-2.5 md:mb-3.5">{{ services.eyebrow }}</p>
-    <h2
+    <div class="reveal">
+      <p class="eyebrow mb-2.5 md:mb-3.5">{{ services.eyebrow }}</p>
+      <h2
       class="mb-7 text-[length:clamp(30px,1.4vw_+_24px,44px)] leading-[1.1] font-black tracking-[-0.03em] text-[#f4f7fa] md:mb-12"
     >
       {{ services.title }}
-    </h2>
+      </h2>
+    </div>
 
-    <ul class="grid gap-4 min-[720px]:grid-cols-3 min-[720px]:gap-5">
+    <ul class="grid gap-4 min-[720px]:grid-cols-3 min-[720px]:gap-5" data-reveal-stagger>
       <li v-for="(item, i) in services.items" :key="item.slug" class="flex">
         <UiFrame
           :label="item.slug"

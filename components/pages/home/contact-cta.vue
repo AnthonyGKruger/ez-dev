@@ -9,7 +9,7 @@ const cta = computed(() => site.value.home.cta);
     class="mx-auto max-w-[1240px] px-[clamp(16px,5vw,24px)] pt-[clamp(64px,7vw,100px)] pb-20 md:pb-30"
   >
     <div
-      class="frame flex flex-col gap-7 px-[clamp(24px,4.4vw,64px)] py-[clamp(40px,5vw,72px)] min-[900px]:flex-row min-[900px]:items-center min-[900px]:justify-between min-[900px]:gap-12"
+      class="reveal frame flex flex-col gap-7 px-[clamp(24px,4.4vw,64px)] py-[clamp(40px,5vw,72px)] min-[900px]:flex-row min-[900px]:items-center min-[900px]:justify-between min-[900px]:gap-12"
     >
       <div class="grid-backdrop cta-backdrop pointer-events-none absolute inset-0" aria-hidden="true" />
 
