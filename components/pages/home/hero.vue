@@ -66,7 +66,11 @@ const sizesB = "100vw sm:60vw lg:380px";
 
         <!-- Stats: label-then-value in the DOM, number shown first visually -->
         <dl
-          class="mt-2 grid max-w-[540px] grid-cols-3 border-t border-primary-gold/20 md:mt-3"
+          class="mt-2 grid border-t border-primary-gold/20 md:mt-3"
+          :style="{
+            gridTemplateColumns: `repeat(${hero.stats.length}, minmax(0, 1fr))`,
+            maxWidth: `${hero.stats.length * 180}px`,
+          }"
         >
           <div
             v-for="(stat, i) in hero.stats"
