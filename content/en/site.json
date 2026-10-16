@@ -161,6 +161,17 @@
           "proof": "In practice: client work"
         }
       ]
+    },
+    "work": {
+      "eyebrow": "Work",
+      "title": "Our work",
+      "products": "Our products",
+      "clients": "Client work",
+      "productBadge": "EZdev product",
+      "clientLabel": "Client",
+      "all": "All work",
+      "visit": "Visit",
+      "referral": "Referral letter"
     }
   }
 }

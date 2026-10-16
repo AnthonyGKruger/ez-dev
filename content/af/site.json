@@ -161,6 +161,17 @@
           "proof": "In die praktyk: kliëntewerk"
         }
       ]
+    },
+    "work": {
+      "eyebrow": "Werk",
+      "title": "Ons werk",
+      "products": "Ons produkte",
+      "clients": "Kliëntewerk",
+      "productBadge": "EZdev-produk",
+      "clientLabel": "Kliënt",
+      "all": "Alle werk",
+      "visit": "Besoek",
+      "referral": "Verwysingsbrief"
     }
   }
 }

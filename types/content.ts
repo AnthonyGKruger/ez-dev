@@ -1,3 +1,5 @@
+import type { IPortfolioItem } from "./portfolio";
+
 /**
  * Content models for the JSON content layer (content/<locale>/*.json).
  *
@@ -26,35 +28,25 @@ export interface SkillsContent {
   alsoComfortable: string[];
 }
 
-export interface PortfolioProject {
-  id: string;
-  title: string;
-  /** Localized description */
-  description: string;
-  link: string;
-  /** Public path to a logo/screenshot; empty string renders the placeholder card */
-  image: string;
-  sourceCode?: string;
-  referralLetter?: string;
-}
+export type PortfolioProject = IPortfolioItem;
 
 export interface PortfolioContent {
   eyebrow: string;
   heading: string;
   intro: string;
-  /** Localized labels for the project-card action buttons and placeholder */
-  labels: {
-    visit: string;
-    code: string;
-    referralLetter: string;
-    screenshot: string;
-  };
-  /** "See all work" strip shown under the home-page preview */
-  viewAll: {
-    label: string;
-    text: string;
-  };
   projects: PortfolioProject[];
+}
+
+export interface WorkLabels {
+  eyebrow: string;
+  title: string;
+  products: string;
+  clients: string;
+  productBadge: string;
+  clientLabel: string;
+  all: string;
+  visit: string;
+  referral: string;
 }
 
 export interface HeroStat {
@@ -85,6 +77,7 @@ export interface HomeHeroContent {
 export interface HomeContent {
   hero: HomeHeroContent;
   trusted: { label: string };
+  work: WorkLabels;
   services: {
     eyebrow: string;
     title: string;

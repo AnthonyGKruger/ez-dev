@@ -55,7 +55,7 @@ const sizesB = "100vw sm:60vw lg:380px";
               quality="80"
               loading="eager"
               fetchpriority="high"
-              class="block aspect-[16/10] w-full object-cover object-top"
+              class="block aspect-video w-full object-cover object-top"
             />
           </UiFrame>
           <figcaption class="mono mt-2.5 text-[10px] uppercase tracking-[0.12em]">
@@ -113,7 +113,7 @@ const sizesB = "100vw sm:60vw lg:380px";
               quality="80"
               loading="eager"
               fetchpriority="high"
-              class="block aspect-[16/10] w-full object-cover object-top"
+              class="block aspect-video w-full object-cover object-top"
             />
           </UiFrame>
         </figure>
@@ -132,7 +132,7 @@ const sizesB = "100vw sm:60vw lg:380px";
               format="webp"
               quality="80"
               loading="lazy"
-              class="block aspect-[16/10] w-full object-cover object-top"
+              class="block aspect-video w-full object-cover object-top"
             />
           </UiFrame>
           <figcaption

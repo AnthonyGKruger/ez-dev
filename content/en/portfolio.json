@@ -1,50 +1,60 @@
 {
-  "eyebrow": "// SELECTED WORK",
-  "heading": "Products I've built",
-  "intro": "Dominating the web one project at a time, from brand e-commerce to full SaaS platforms.",
-  "labels": {
-    "visit": "VISIT",
-    "code": "CODE",
-    "referralLetter": "REFERRAL LETTER",
-    "screenshot": "SCREENSHOT"
-  },
+  "eyebrow": "Work",
+  "heading": "Our work",
+  "intro": "Two products we own and operate, and the sites we build for clients.",
   "projects": [
     {
       "id": "p4",
+      "kind": "product",
       "title": "Votera",
-      "description": "A smart HOA-management SaaS platform for South African communities: digital voting, maintenance tracking, resident directory and transparent governance in one portal.",
+      "category": "SaaS",
+      "description": "HOA and sectional-title management for South African communities: digital voting, maintenance tracking, a resident directory and governance in one place. Built and run by EZdev.",
       "link": "https://votera.co.za",
       "image": "/media/votera.png",
-      "sourceCode": ""
+      "metric": {
+        "value": "",
+        "label": ""
+      }
     },
     {
       "id": "p5",
+      "kind": "product",
       "title": "Chilli Collective",
-      "description": "E-commerce storefront for a premium small-batch fermented hot-sauce brand: product catalogue, cart and checkout, built for a fast, tactile browsing experience.",
+      "category": "E-commerce",
+      "description": "Our own small-batch hot-sauce brand. We built and run the storefront, payments and order flow.",
       "link": "https://chilli-collective.com",
       "image": "/media/chili-collective.png",
-      "sourceCode": ""
+      "metric": {
+        "value": "",
+        "label": ""
+      }
     },
     {
       "id": "p3",
+      "kind": "client",
       "title": "Digital Stream",
-      "description": "Digital marketing agency website built using Next.js and Tailwind CSS (the code for this project is unfortunately not available for public viewing)",
+      "category": "Marketing agency",
+      "description": "Website for a digital marketing agency, built with Next.js and Tailwind CSS.",
       "link": "https://digitalstream.co.za",
       "image": "/media/digital-stream.png",
-      "sourceCode": "",
-      "referralLetter": "/media/referral-letters/Digital Stream Referral Letter - Anthony Kruger - web - signed.pdf"
+      "stack": [
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "referralLetter": "/media/referral-letters/digital-stream-referral-letter.pdf"
     },
     {
       "id": "p1",
+      "kind": "client",
       "title": "Mumbi Trust Administrators",
-      "description": "Accounting firm website built using Next.js and Tailwind CSS",
+      "category": "Accounting & trusts",
+      "description": "Website for an accounting and trust administration firm, built with Next.js and Tailwind CSS.",
       "link": "https://mumbi.co.za",
       "image": "/media/mumbi.png",
-      "sourceCode": ""
+      "stack": [
+        "Next.js",
+        "Tailwind CSS"
+      ]
     }
-  ],
-  "viewAll": {
-    "label": "ALL WORK",
-    "text": "See every project I've delivered"
-  }
+  ]
 }

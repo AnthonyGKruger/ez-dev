@@ -28,24 +28,19 @@ const portfolio = z.object({
   eyebrow: z.string(),
   heading: z.string(),
   intro: z.string(),
-  labels: z.object({
-    visit: z.string(),
-    code: z.string(),
-    referralLetter: z.string(),
-    screenshot: z.string(),
-  }),
-  viewAll: z.object({
-    label: z.string(),
-    text: z.string(),
-  }),
   projects: z.array(
     z.object({
       id: z.string(),
+      // "product" = built and run by EZdev; "client" = client work.
+      kind: z.enum(["product", "client"]),
       title: z.string(),
+      category: z.string().optional(),
       description: z.string(),
       link: z.string(),
       image: z.string(),
-      sourceCode: z.string().optional(),
+      // Products only; rendered only when value is non-empty.
+      metric: z.object({ value: z.string(), label: z.string() }).optional(),
+      stack: z.array(z.string()).optional(),
       referralLetter: z.string().optional(),
     }),
   ),
@@ -150,6 +145,17 @@ const site = z.object({
       ),
     }),
     trusted: z.object({ label: z.string() }),
+    work: z.object({
+      eyebrow: z.string(),
+      title: z.string(),
+      products: z.string(),
+      clients: z.string(),
+      productBadge: z.string(),
+      clientLabel: z.string(),
+      all: z.string(),
+      visit: z.string(),
+      referral: z.string(),
+    }),
     services: z.object({
       eyebrow: z.string(),
       title: z.string(),

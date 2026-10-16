@@ -106,7 +106,7 @@ export const translations: Translations = new Map([
       ["qualifications-title", "Qualifications"],
       ["work-experience-title", "Work Experience"],
       ["languages-title", "Languages"],
-      ["portfolio-title", "Portfolio"],
+      ["portfolio-title", "Our work"],
       ["contact-title", "Contact"],
       ["thank-you-title", "Thank You"],
       ["privacy-policy-title", "Privacy Policy"],
@@ -144,7 +144,7 @@ export const translations: Translations = new Map([
 
       // Portfolio
       ["portfolio-heading", "Check Out My Portfolio"],
-      ["portfolio-subtitle", "Dominating The Web One Project At A Time"],
+      ["portfolio-subtitle", "Two products we own and operate, and the sites we build for clients."],
       ["portfolio-view", "View"],
       ["portfolio-referral-letter", "Referral Letter"],
       ["portfolio-code", "Code"],
@@ -345,7 +345,7 @@ export const translations: Translations = new Map([
       ["qualifications-title", "Kwalifikasies"],
       ["work-experience-title", "Werkservaring"],
       ["languages-title", "Tale"],
-      ["portfolio-title", "Portefeulje"],
+      ["portfolio-title", "Ons werk"],
       ["contact-title", "Kontak"],
       ["thank-you-title", "Dankie"],
       ["privacy-policy-title", "Privaatheidsbeleid"],
@@ -383,7 +383,7 @@ export const translations: Translations = new Map([
 
       // Portfolio
       ["portfolio-heading", "Kyk na my portefeulje"],
-      ["portfolio-subtitle", "Heers oor die web een projek op 'n slag"],
+      ["portfolio-subtitle", "Twee produkte wat ons besit en bedryf, en die webwerwe wat ons vir kliënte bou."],
       ["portfolio-view", "Bekyk"],
       ["portfolio-referral-letter", "Verwysingsbrief"],
       ["portfolio-code", "Kode"],

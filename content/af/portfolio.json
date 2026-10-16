@@ -1,50 +1,60 @@
 {
-  "eyebrow": "// GEKOSE WERK",
-  "heading": "Produkte wat ek gebou het",
-  "intro": "Ek oorheers die web een projek op 'n slag, van handelsmerk-e-handel tot volledige SaaS-platforms.",
-  "labels": {
-    "visit": "BESOEK",
-    "code": "KODE",
-    "referralLetter": "VERWYSINGSBRIEF",
-    "screenshot": "SKERMSKOOT"
-  },
+  "eyebrow": "Werk",
+  "heading": "Ons werk",
+  "intro": "Twee produkte wat ons besit en bedryf, en die webwerwe wat ons vir kliënte bou.",
   "projects": [
     {
       "id": "p4",
+      "kind": "product",
       "title": "Votera",
-      "description": "'n SaaS-platform vir die bestuur van gemeenskapskemas in Suid-Afrika, vir huiseienaarsverenigings, regspersone en bestuursagente: heffings en state, digitale vergaderings en stemming, instandhoudingsopsporing, inwonerkommunikasie en deursigtige bestuur in een portaal.",
+      "category": "SaaS",
+      "description": "HOA- en deeltitelbestuur vir Suid-Afrikaanse gemeenskappe: digitale stemming, instandhoudingsopsporing, 'n inwonergids en bestuur op een plek. Gebou en bedryf deur EZdev.",
       "link": "https://votera.co.za",
       "image": "/media/votera.png",
-      "sourceCode": ""
+      "metric": {
+        "value": "",
+        "label": ""
+      }
     },
     {
       "id": "p5",
+      "kind": "product",
       "title": "Chilli Collective",
-      "description": "E-handelswinkel vir 'n premium kleinbatch-gefermenteerde brandsous-handelsmerk: produkkatalogus, mandjie en betaling, gebou vir 'n vinnige, tasbare blaai-ervaring.",
+      "category": "E-handel",
+      "description": "Ons eie kleinbatch-brandsous-handelsmerk. Ons het die aanlynwinkel, betalings en bestelproses gebou en bedryf dit self.",
       "link": "https://chilli-collective.com",
       "image": "/media/chili-collective.png",
-      "sourceCode": ""
+      "metric": {
+        "value": "",
+        "label": ""
+      }
     },
     {
       "id": "p3",
+      "kind": "client",
       "title": "Digital Stream",
-      "description": "Digitale bemarkingsagentskap-webwerf gebou met Next.js en Tailwind CSS (die kode vir hierdie projek is ongelukkig nie publiek beskikbaar nie)",
+      "category": "Bemarkingsagentskap",
+      "description": "Webwerf vir 'n digitale bemarkingsagentskap, gebou met Next.js en Tailwind CSS.",
       "link": "https://digitalstream.co.za",
       "image": "/media/digital-stream.png",
-      "sourceCode": "",
-      "referralLetter": "/media/referral-letters/Digital Stream Referral Letter - Anthony Kruger - web - signed.pdf"
+      "stack": [
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "referralLetter": "/media/referral-letters/digital-stream-referral-letter.pdf"
     },
     {
       "id": "p1",
+      "kind": "client",
       "title": "Mumbi Trust Administrators",
-      "description": "Rekenmeestersfirma-webwerf gebou met Next.js en Tailwind CSS",
+      "category": "Rekeningkunde en trusts",
+      "description": "Webwerf vir 'n rekeningkunde- en trustadministrasiefirma, gebou met Next.js en Tailwind CSS.",
       "link": "https://mumbi.co.za",
       "image": "/media/mumbi.png",
-      "sourceCode": ""
+      "stack": [
+        "Next.js",
+        "Tailwind CSS"
+      ]
     }
-  ],
-  "viewAll": {
-    "label": "ALLE WERK",
-    "text": "Sien elke projek wat ek gelewer het"
-  }
+  ]
 }
