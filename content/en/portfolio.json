@@ -12,7 +12,7 @@
     {
       "id": "p4",
       "title": "Votera",
-      "description": "A community scheme management SaaS platform for South African HOAs, body corporates and managing agents: levies and statements, digital meetings and voting, maintenance tracking, resident communication and transparent governance in one portal.",
+      "description": "A smart HOA-management SaaS platform for South African communities: digital voting, maintenance tracking, resident directory and transparent governance in one portal.",
       "link": "https://votera.co.za",
       "image": "/media/Screenshot-2026-10-09-at-03.15.23.png",
       "sourceCode": ""
@@ -40,7 +40,7 @@
       "description": "Accounting firm website built using Next.js and Tailwind CSS",
       "link": "https://mumbi.co.za",
       "image": "/media/mumbi.png",
-      "sourceCode": "https://github.com/AnthonyGKruger/Mumbi-Trust-Administrators"
+      "sourceCode": ""
     }
   ],
   "viewAll": {
