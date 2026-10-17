@@ -61,7 +61,7 @@
   "contact": {
     "eyebrow": "CONTACT",
     "heading": "Let's build something together.",
-    "subtitle": "Have a product or project in mind? Fill in the form and we'll reply within one business day.",
+    "subtitle": "Have a product or project in mind? Fill in the form and we'll reply within two business days.",
     "reachMeAt": "YOU CAN ALSO REACH US AT",
     "form": {
       "name": {
@@ -89,7 +89,7 @@
   "thankYou": {
     "eyebrow": "MESSAGE SENT",
     "heading": "Thank you!",
-    "message": "Thanks for reaching out! We'll reply within one business day. In the meantime, why not carry on looking around?",
+    "message": "Thanks for reaching out! We'll reply within two business days. In the meantime, why not carry on looking around?",
     "ctaHome": "BACK TO HOME",
     "ctaWork": "SEE OUR WORK"
   },
@@ -98,7 +98,7 @@
       "eyebrow": "EZdev Solutions · Dev house",
       "title": "Websites, web apps and e-commerce.",
       "titleAccent": "Done end to end.",
-      "lead": "We design, build and run software for clients and for our own products, so we know what it takes to keep it working.",
+      "lead": "We design, build and run our own software products, and take on a small number of client projects, so we know what it takes to keep things working.",
       "ctaPrimary": "Start a project",
       "ctaSecondary": "See our work",
       "stats": [
@@ -185,13 +185,13 @@
       "eyebrow": "Contact",
       "title": "Have a product to build?",
       "titleAccent": "Let's talk.",
-      "reply": "We reply within one business day.",
+      "reply": "We take on a small number of projects and reply within two business days.",
       "email": "anthony@ezdev.solutions",
       "button": "Start a project"
     }
   },
   "banner": {
-    "available": "Available for select projects"
+    "available": "Taking on a small number of projects"
   },
   "nav": {
     "work": "Work",

@@ -61,7 +61,7 @@
   "contact": {
     "eyebrow": "KONTAK",
     "heading": "Kom ons bou saam iets.",
-    "subtitle": "Het jy 'n produk of projek in gedagte? Vul die vorm in en ons antwoord binne een werksdag.",
+    "subtitle": "Het jy 'n produk of projek in gedagte? Vul die vorm in en ons antwoord binne twee werksdae.",
     "reachMeAt": "JY KAN ONS OOK BEREIK BY",
     "form": {
       "name": {
@@ -89,7 +89,7 @@
   "thankYou": {
     "eyebrow": "BOODSKAP GESTUUR",
     "heading": "Dankie!",
-    "message": "Dankie dat jy uitgereik het! Ons antwoord binne een werksdag. Intussen, hoekom kyk jy nie gerus verder rond nie?",
+    "message": "Dankie dat jy uitgereik het! Ons antwoord binne twee werksdae. Intussen, hoekom kyk jy nie gerus verder rond nie?",
     "ctaHome": "TERUG NA TUIS",
     "ctaWork": "SIEN ONS WERK"
   },
@@ -98,7 +98,7 @@
       "eyebrow": "EZdev Solutions · Ontwikkelingshuis",
       "title": "Webwerwe, webtoepassings en e-handel.",
       "titleAccent": "Van begin tot einde.",
-      "lead": "Ons ontwerp, bou en bedryf sagteware vir kliënte en vir ons eie produkte, so ons weet wat dit verg om dit aan die gang te hou.",
+      "lead": "Ons ontwerp, bou en bedryf ons eie sagtewareprodukte en neem 'n klein aantal kliëntprojekte aan, so ons weet wat dit verg om dinge aan die gang te hou.",
       "ctaPrimary": "Begin 'n projek",
       "ctaSecondary": "Sien ons werk",
       "stats": [
@@ -185,13 +185,13 @@
       "eyebrow": "Kontak",
       "title": "Het jy 'n produk om te bou?",
       "titleAccent": "Kom ons gesels.",
-      "reply": "Ons antwoord binne een werksdag.",
+      "reply": "Ons neem 'n klein aantal projekte aan en antwoord binne twee werksdae.",
       "email": "anthony@ezdev.solutions",
       "button": "Begin 'n projek"
     }
   },
   "banner": {
-    "available": "Beskikbaar vir uitgesoekte projekte"
+    "available": "Ons neem 'n klein aantal projekte aan"
   },
   "nav": {
     "work": "Werk",

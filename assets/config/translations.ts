@@ -95,7 +95,7 @@ export const translations: Translations = new Map([
       ["nav-portfolio", "Portfolio"],
       ["nav-contact", "Contact"],
       ["nav-privacy", "Privacy"],
-      ["nav-available", "AVAILABLE FOR SELECT PROJECTS"],
+      ["nav-available", "TAKING ON A SMALL NUMBER OF PROJECTS"],
       ["nav-start-project", "START A PROJECT"],
 
       // SEO Titles
@@ -333,7 +333,7 @@ export const translations: Translations = new Map([
       ["nav-portfolio", "Portefeulje"],
       ["nav-contact", "Kontak"],
       ["nav-privacy", "Privaatheid"],
-      ["nav-available", "BESKIKBAAR VIR SELEKTE PROJEKTE"],
+      ["nav-available", "ONS NEEM 'N KLEIN AANTAL PROJEKTE AAN"],
       ["nav-start-project", "BEGIN 'N PROJEK"],
 
       // SEO Titles
