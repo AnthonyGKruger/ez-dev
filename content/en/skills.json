@@ -10,33 +10,32 @@
     "React",
     "TanStack"
   ],
-  "alsoComfortableLabel": "ALSO COMFORTABLE WITH",
+  "alsoComfortableLabel": "Also comfortable with",
   "eyebrow": "STACK",
-  "flipHint": "TAP / HOVER TO FLIP →",
-  "heading": "Tools I reach for daily",
+  "heading": "Tools we build with",
   "items": [
     {
       "name": "nuxt",
       "icon": "skill-icons:nuxtjs-dark",
-      "description": "My daily driver. Both professionally and personally.",
+      "description": "Our default for full-stack web apps: server rendering, routing and APIs in one framework.",
       "label": "Nuxt"
     },
     {
       "name": "next",
       "icon": "skill-icons:nextjs-light",
-      "description": "Where my passion for web dev all started.",
+      "description": "The React framework behind our client websites, with fast static and server-rendered pages.",
       "label": "Next.js"
     },
     {
       "name": "tailwindcss",
       "icon": "skill-icons:tailwindcss-dark",
-      "description": "My favourite CSS framework for building polished UIs faster!",
+      "description": "Utility-first styling that keeps interfaces consistent and quick to change.",
       "label": "Tailwind CSS"
     },
     {
       "name": "typescript",
       "icon": "skill-icons:typescript",
-      "description": "For fool-proof code.",
+      "description": "Typed code across the stack, so whole classes of bugs are caught before they ship.",
       "label": "TypeScript"
     }
   ]

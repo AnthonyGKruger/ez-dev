@@ -11,7 +11,6 @@ import { defineContentConfig, defineCollection, z } from "@nuxt/content";
 const skills = z.object({
   eyebrow: z.string(),
   heading: z.string(),
-  flipHint: z.string(),
   items: z.array(
     z.object({
       name: z.string(),

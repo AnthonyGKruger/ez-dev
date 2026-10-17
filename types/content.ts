@@ -15,14 +15,13 @@ export interface SkillItem {
   label?: string;
   /** Iconify id, e.g. "skill-icons:nuxtjs-dark" */
   icon: string;
-  /** Localized one-line description shown on the flipped card */
+  /** One-line description of how we use it, shown on the /skills card */
   description: string;
 }
 
 export interface SkillsContent {
   eyebrow: string;
   heading: string;
-  flipHint: string;
   items: SkillItem[];
   alsoComfortableLabel: string;
   alsoComfortable: string[];
