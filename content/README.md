@@ -4,7 +4,7 @@ Site content lives here as JSON. The site is English-only:
 
 ```
 content/
-  en/  portfolio.json  skills.json  site.json  workExperience.json  qualifications.json  languages.json  privacy.json
+  en/  portfolio.json  skills.json  site.json  workExperience.json  qualifications.json  privacy.json
 ```
 
 The strings are the copy (no translation keys). Types live in
@@ -29,7 +29,7 @@ Filenames match their collection key exactly (`workExperience.json`,
 
 - **Migrated (component reads from `useContent`):** `skills`, `portfolio`
   (incl. card action labels + home "all work" strip), `workExperience`,
-  `qualifications`, `languages`, `privacy`, and `site` (`hero`, `companies`,
+  `qualifications`, `privacy`, and `site` (`hero`, `companies`,
   `about`, `contact`, `thankYou`). The About page + home preview, the contact
   form, the home contact CTA and the thank-you page all read from `site.*`.
   `assets/config/data.ts` has been removed and the corresponding structured
@@ -42,7 +42,7 @@ Filenames match their collection key exactly (`workExperience.json`,
 
 - `content.config.ts` declares one **data** collection per content type
   (`skills`, `portfolio`, `workExperience`, `qualifications`, `site`,
-  `languages`, `privacy`), each sourced from `content/en/<type>.json`. The
+  `privacy`), each sourced from `content/en/<type>.json`. The
   typed shapes live in `types/content.ts`.
 - `plugins/content.ts` preloads every collection into a `useState("content")`
   store at startup (awaited on the server, serialized to the client). This is
@@ -70,7 +70,7 @@ itself at **`/_studio`**. Setup docs: https://nuxt.studio/setup
   back via GitHub.
 - The per-collection Zod schemas in `content.config.ts` drive Studio's form
   editor for each collection (`skills`, `portfolio`, `workExperience`,
-  `qualifications`, `site`, `languages`, `privacy`).
+  `qualifications`, `site`, `privacy`).
 
 **Local dev:** run `npm run dev`, open `/_studio` (or the floating button) —
 no auth needed; edits sync straight to the files in `content/**`, you commit

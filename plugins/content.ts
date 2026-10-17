@@ -16,7 +16,6 @@ const COLLECTIONS = [
   "workExperience",
   "qualifications",
   "site",
-  "languages",
   "privacy",
 ] as const;
 

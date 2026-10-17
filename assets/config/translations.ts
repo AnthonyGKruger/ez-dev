@@ -8,10 +8,6 @@ export const translations: Translations = new Map([
   [
     "en",
     new Map<string, string>([
-      //About
-      ["languages-i-am-fluent-in", "Languages I am fluent in."],
-      ["keep-up-with-the-lingo", "Keep up with the lingo"],
-
       //Home
       [
         "home-hero-title",
@@ -91,7 +87,6 @@ export const translations: Translations = new Map([
       ["nav-qualifications", "Qualifications"],
       ["nav-work-experience", "Work Experience"],
       ["nav-experience", "Experience"],
-      ["nav-languages", "Languages"],
       ["nav-portfolio", "Portfolio"],
       ["nav-contact", "Contact"],
       ["nav-privacy", "Privacy"],
@@ -104,7 +99,6 @@ export const translations: Translations = new Map([
       ["skills-title", "Skills"],
       ["qualifications-title", "Qualifications"],
       ["work-experience-title", "Work Experience"],
-      ["languages-title", "Languages"],
       ["portfolio-title", "Our work"],
       ["contact-title", "Contact"],
       ["thank-you-title", "Thank You"],
@@ -129,10 +123,6 @@ export const translations: Translations = new Map([
       ["cookie-accept", "Accept"],
 
       // Companies
-
-      // Languages page labels
-      ["language-english", "English"],
-      ["language-afrikaans", "Afrikaans"],
 
       // Portfolio
       ["portfolio-heading", "Check Out My Portfolio"],

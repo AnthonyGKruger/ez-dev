@@ -14,7 +14,6 @@ const siteLinks = computed(() => [
   { label: t("nav-skills"), to: "/skills" },
   { label: t("nav-experience"), to: "/work-experience" },
   { label: t("nav-qualifications"), to: "/qualifications" },
-  { label: t("nav-languages"), to: "/languages" },
 ]);
 
 const products = [

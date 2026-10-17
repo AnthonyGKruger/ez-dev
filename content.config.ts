@@ -47,21 +47,6 @@ const portfolio = z.object({
   ),
 });
 
-const languages = z.object({
-  eyebrow: z.string(),
-  heading: z.string(),
-  tagline: z.string(),
-  items: z.array(
-    z.object({
-      code: z.string(),
-      name: z.string(),
-      level: z.string(),
-      pct: z.string(),
-      note: z.string(),
-    }),
-  ),
-});
-
 const privacy = z.object({
   eyebrow: z.string(),
   heading: z.string(),
@@ -269,7 +254,6 @@ export default defineContentConfig({
     workExperience: defineCollection({ type: "data", source: "en/workExperience.json", schema: workExperience }),
     qualifications: defineCollection({ type: "data", source: "en/qualifications.json", schema: qualifications }),
     site: defineCollection({ type: "data", source: "en/site.json", schema: site }),
-    languages: defineCollection({ type: "data", source: "en/languages.json", schema: languages }),
     privacy: defineCollection({ type: "data", source: "en/privacy.json", schema: privacy }),
   },
 });

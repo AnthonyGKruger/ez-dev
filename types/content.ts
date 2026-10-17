@@ -192,25 +192,6 @@ export interface SiteContent {
   thankYou: ThankYouContent;
 }
 
-export interface LanguageItem {
-  /** Short code shown in the badge, e.g. "EN" */
-  code: string;
-  name: string;
-  /** e.g. "FLUENT · NATIVE" */
-  level: string;
-  /** Proficiency shown next to the bar, e.g. "100%" */
-  pct: string;
-  /** Localized note under the proficiency bar */
-  note: string;
-}
-
-export interface LanguagesContent {
-  eyebrow: string;
-  heading: string;
-  tagline: string;
-  items: LanguageItem[];
-}
-
 export interface PrivacyTopic {
   num: string;
   title: string;
@@ -283,6 +264,5 @@ export interface ContentCollections {
   site: SiteContent;
   workExperience: WorkExperienceContent;
   qualifications: QualificationsContent;
-  languages: LanguagesContent;
   privacy: PrivacyContent;
 }
