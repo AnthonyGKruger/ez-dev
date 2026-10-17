@@ -119,13 +119,6 @@ export const translations: Translations = new Map([
       ["footer-site", "SITE"],
       ["footer-elsewhere", "ELSEWHERE"],
 
-      // Download resume
-      [
-        "download-resume-heading",
-        "Want to skip through all of this? Download my resume below:",
-      ],
-      ["download-resume-button", "Download Resume"],
-
       // Cookie notice
       ["cookie-title", "Cookie Policy and T's & C's"],
       [
@@ -356,13 +349,6 @@ export const translations: Translations = new Map([
       ],
       ["footer-site", "WEBWERF"],
       ["footer-elsewhere", "ELDERS"],
-
-      // Download resume
-      [
-        "download-resume-heading",
-        "Wil jy alles oorslaan? Laai my CV hieronder af:",
-      ],
-      ["download-resume-button", "Laai CV af"],
 
       // Cookie notice
       ["cookie-title", "Koe policy en Bepalings & Voorwaardes"],
