@@ -6,12 +6,12 @@
     "headline": "Building the web,",
     "headlineAccent": "end to end.",
     "paragraphs": [
-      "Fueled by a passion for technology and a knack for problem-solving, I'm a web developer with a drive to craft intuitive and impactful web experiences.",
-      "My journey began in the dynamic world of retail, where I honed my leadership and customer-centric skills as a Branch Manager. While exceeding sales targets and building a thriving team, I discovered a passion for web development, which led me to a Bachelor's degree in Information Technology, graduating in 2021 with a comprehensive understanding of web principles.",
-      "Since then I've delivered production apps end to end, from SaaS platforms to e-commerce, for agencies, trading companies and my own clients through EZdev Solutions."
+      "I'm Anthony Kruger, a software engineer and the founder of EZdev Solutions, which I run alongside my full-time engineering role.",
+      "My career began in retail, where I led a team and exceeded sales targets as a Branch Manager. Along the way I discovered a passion for web development, which led me to a BSc in Information Technology, completed in 2021.",
+      "Through EZdev I own and run Votera and Chilli Collective, and take on a small number of client projects."
     ],
     "ctaChat": "Let's Chat",
-    "ctaWork": "SEE MY WORK",
+    "ctaWork": "SEE OUR WORK",
     "factCards": [
       {
         "icon": "mdi:school",
@@ -21,7 +21,7 @@
       {
         "icon": "mdi:rocket-launch",
         "title": "6+ years building",
-        "desc": "Production web apps across agencies, trading and my own clients, front end to back end."
+        "desc": "Production web apps for agencies, businesses and our own products, front end to back end."
       },
       {
         "icon": "mdi:translate",
