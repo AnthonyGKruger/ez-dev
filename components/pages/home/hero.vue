@@ -24,7 +24,13 @@ const sizesB = "100vw sm:60vw lg:380px";
     >
       <!-- Left: copy -->
       <div class="flex min-w-0 flex-col gap-5.5 md:gap-7">
-        <p class="eyebrow">{{ hero.eyebrow }}</p>
+        <!-- Keep each "·" part on one line, so narrow screens wrap after the
+             dot rather than inside a word ("Sagteware-|ateljee"). -->
+        <p class="eyebrow">
+          <template v-for="(part, i) in hero.eyebrow.split(' · ')" :key="i">
+            <template v-if="i > 0"> · </template><span class="whitespace-nowrap">{{ part }}</span>
+          </template>
+        </p>
 
         <h1
           class="text-[length:clamp(38px,2.6vw_+_27px,64px)] leading-[1.02] font-black tracking-[-0.035em] text-[#f4f7fa]"

@@ -204,12 +204,6 @@ const onFormSubmit = async (submitEvent?: FormSubmitEvent) => {
           >
             <Icon name="mdi:email" size="24" class="text-[#eef2f6]" />
           </a>
-          <a
-            href="tel:+27610340820"
-            class="flex items-center justify-center w-11 h-11 rounded-[10px] border border-primary-gold/30 hover:border-light-gold transition-colors duration-300"
-          >
-            <Icon name="mdi:cellphone-iphone" size="24" class="text-[#eef2f6]" />
-          </a>
         </div>
       </div>
 

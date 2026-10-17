@@ -28,10 +28,13 @@ const about = computed(() => site.value.about);
               <span>{{ about.photoName }}</span>
               <span>{{ about.photoLocation }}</span>
             </div>
+            <!-- Same photo and crop as the home About section (4:5, top-anchored). -->
             <img
-              src="/media/AnthonyIllustrated.jpeg"
-              alt="Anthony Kruger"
-              class="w-full block"
+              src="/media/anthony-headshot.jpg"
+              :alt="site.home.about.photoAlt"
+              width="765"
+              height="1024"
+              class="block aspect-[4/5] w-full object-cover object-top"
             />
           </div>
           <span
@@ -72,7 +75,7 @@ const about = computed(() => site.value.about);
 
     <!-- Fact cards -->
     <section class="max-w-[1240px] mx-auto px-7 pb-[88px]">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div
           v-for="card in about.factCards"
           :key="card.title"

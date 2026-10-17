@@ -1,12 +1,14 @@
 /**
- * Preloads every content collection (both locales) from Nuxt Content into a
- * reactive `useState` store at app startup.
+ * Preloads every content collection from Nuxt Content into a reactive
+ * `useState` store at app startup.
  *
- * Why preload: Nuxt Content's `queryCollection()` is async, but the site does
- * live EN/AF switching and components consume content synchronously via
- * `useContent()`. Loading the (small, static) content set once — awaited on
- * the server, serialized to the client via `useState` — keeps `useContent()`
- * synchronous and lets locale switches resolve instantly with no refetch.
+ * Why preload: Nuxt Content's `queryCollection()` is async, but components
+ * consume content synchronously via `useContent()`. Loading the (small,
+ * static) content set once (awaited on the server, serialized to the client
+ * via `useState`) keeps `useContent()` synchronous with no refetch.
+ *
+ * The site is English-only; the store keeps an `en` key so useContent() reads
+ * `store.en[collection]`.
  */
 const COLLECTIONS = [
   "skills",
@@ -14,30 +16,23 @@ const COLLECTIONS = [
   "workExperience",
   "qualifications",
   "site",
-  "languages",
   "privacy",
 ] as const;
 
-type Store = Record<string, Record<string, unknown>>;
+type Store = { en: Record<string, unknown> };
 
 export default defineNuxtPlugin(async () => {
-  const store = useState<Store>("content", () => ({ en: {}, af: {} }));
+  const store = useState<Store>("content", () => ({ en: {} }));
 
-  // Already hydrated from the SSR payload on the client — don't re-query.
+  // Already hydrated from the SSR payload on the client; don't re-query.
   if (Object.keys(store.value.en).length) return;
 
-  const next: Store = { en: {}, af: {} };
+  const next: Store = { en: {} };
   for (const collection of COLLECTIONS) {
-    const docs = await queryCollection(collection).all();
-    for (const doc of docs) {
-      // With per-collection schemas the JSON fields are top-level on the doc
-      // (alongside Nuxt Content metadata like id/stem). `stem`
-      // (e.g. "en/skills" | "af/skills") carries the locale.
-      const d = doc as { stem?: string; id?: string };
-      const stem = String(d.stem ?? d.id ?? "");
-      const locale = /(^|\/)af(\/|$)/.test(stem) ? "af" : "en";
-      next[locale][collection] = doc;
-    }
+    // One document per collection (content/en/<collection>.json). With
+    // per-collection schemas its JSON fields are top-level on the doc.
+    const doc = await queryCollection(collection).first();
+    if (doc) next.en[collection] = doc;
   }
   store.value = next;
 });

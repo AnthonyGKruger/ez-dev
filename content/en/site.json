@@ -6,12 +6,12 @@
     "headline": "Building the web,",
     "headlineAccent": "end to end.",
     "paragraphs": [
-      "Fueled by a passion for technology and a knack for problem-solving, I'm a web developer with a drive to craft intuitive and impactful web experiences.",
-      "My journey began in the dynamic world of retail, where I honed my leadership and customer-centric skills as a Branch Manager. While exceeding sales targets and building a thriving team, I discovered a passion for web development, which led me to a Bachelor's degree in Information Technology, graduating in 2021 with a comprehensive understanding of web principles.",
-      "Since then I've delivered production apps end to end, from SaaS platforms to e-commerce, for agencies, trading companies and my own clients through EZdev Solutions."
+      "I'm Anthony Kruger, a software engineer and the founder of EZdev Solutions, which I run alongside my full-time engineering role.",
+      "My career began in retail, where I led a team and exceeded sales targets as a Branch Manager. Along the way I discovered a passion for web development, which led me to a BSc in Information Technology, completed in 2021.",
+      "Through EZdev I own and run Votera and Chilli Collective, and take on a small number of client projects."
     ],
     "ctaChat": "Let's Chat",
-    "ctaWork": "SEE MY WORK",
+    "ctaWork": "SEE OUR WORK",
     "factCards": [
       {
         "icon": "mdi:school",
@@ -21,12 +21,7 @@
       {
         "icon": "mdi:rocket-launch",
         "title": "6+ years building",
-        "desc": "Production web apps across agencies, trading and my own clients, front end to back end."
-      },
-      {
-        "icon": "mdi:translate",
-        "title": "Bilingual delivery",
-        "desc": "Fluent in English and Afrikaans, comfortable building and communicating in both."
+        "desc": "Production web apps for agencies, businesses and our own products, front end to back end."
       }
     ]
   },
@@ -61,7 +56,7 @@
   "contact": {
     "eyebrow": "CONTACT",
     "heading": "Let's build something together.",
-    "subtitle": "Have a product or project in mind? Fill in the form and we'll reply within one business day.",
+    "subtitle": "Have a product or project in mind? Fill in the form and we'll reply within two business days.",
     "reachMeAt": "YOU CAN ALSO REACH US AT",
     "form": {
       "name": {
@@ -89,16 +84,16 @@
   "thankYou": {
     "eyebrow": "MESSAGE SENT",
     "heading": "Thank you!",
-    "message": "Thanks for reaching out! We'll reply within one business day. In the meantime, why not carry on looking around?",
+    "message": "Thanks for reaching out! We'll reply within two business days. In the meantime, why not carry on looking around?",
     "ctaHome": "BACK TO HOME",
     "ctaWork": "SEE OUR WORK"
   },
   "home": {
     "hero": {
-      "eyebrow": "EZdev Solutions · Dev house",
+      "eyebrow": "EZdev Solutions · Software studio",
       "title": "Websites, web apps and e-commerce.",
       "titleAccent": "Done end to end.",
-      "lead": "We design, build and run software for clients and for our own products, so we know what it takes to keep it working.",
+      "lead": "We design, build and run our own software products, and take on a small number of client projects, so we know what it takes to keep things working.",
       "ctaPrimary": "Start a project",
       "ctaSecondary": "See our work",
       "stats": [
@@ -166,10 +161,10 @@
     },
     "about": {
       "eyebrow": "About",
-      "title": "A dev house that runs what it builds",
+      "title": "A studio that runs what it builds",
       "body": [
-        "EZdev Solutions was founded by Anthony Kruger, a developer with a BSc in IT who has spent years shipping production web apps for agencies, businesses and clients.",
-        "Today EZdev runs two products of its own, Votera and Chilli Collective, and builds for clients. Operating our own platforms means we feel every slow page and failed payment ourselves, and that is the standard we bring to client work."
+        "EZdev Solutions was founded by Anthony Kruger, a developer with a BSc in IT and years of experience building production web apps. He runs EZdev alongside his full-time engineering role.",
+        "EZdev owns and runs two products, Votera and Chilli Collective, and takes on a small number of client projects. Operating our own platforms means we feel every slow page and failed payment ourselves, and that's the standard we bring to client work."
       ],
       "caption": "Anthony Kruger",
       "role": "Founder",
@@ -185,13 +180,13 @@
       "eyebrow": "Contact",
       "title": "Have a product to build?",
       "titleAccent": "Let's talk.",
-      "reply": "We reply within one business day.",
+      "reply": "We reply within two business days.",
       "email": "anthony@ezdev.solutions",
       "button": "Start a project"
     }
   },
   "banner": {
-    "available": "Available for select projects"
+    "available": "Taking on a small number of projects"
   },
   "nav": {
     "work": "Work",
@@ -200,11 +195,10 @@
     "contact": "Contact",
     "cta": "Start a project",
     "menuOpen": "Open menu",
-    "menuClose": "Close menu",
-    "language": "Language"
+    "menuClose": "Close menu"
   },
   "footer": {
-    "blurb": "EZdev Solutions is a dev house. We build and run SaaS and e-commerce, for our own products and for clients.",
+    "blurb": "EZdev Solutions is a small software studio. We build and run our own SaaS and e-commerce products, and take on select client work.",
     "siteHeading": "Site",
     "productsHeading": "Our products",
     "productsNote": "Built and run by EZdev",

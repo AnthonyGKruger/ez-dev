@@ -14,7 +14,6 @@ const siteLinks = computed(() => [
   { label: t("nav-skills"), to: "/skills" },
   { label: t("nav-experience"), to: "/work-experience" },
   { label: t("nav-qualifications"), to: "/qualifications" },
-  { label: t("nav-languages"), to: "/languages" },
 ]);
 
 const products = [
@@ -60,10 +59,6 @@ const headingClass = "eyebrow mb-3";
             </li>
           </ul>
           <p class="mono mt-2 text-[10px] tracking-[0.12em] uppercase">{{ footer.productsNote }}</p>
-          <!-- EN/AF lives in the nav from 900px -->
-          <div class="mt-6 min-[900px]:hidden">
-            <UxLanguageToggle />
-          </div>
         </div>
 
         <!-- Contact -->
