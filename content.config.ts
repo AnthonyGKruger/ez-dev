@@ -1,9 +1,8 @@
 import { defineContentConfig, defineCollection, z } from "@nuxt/content";
 
 /**
- * One data collection per content type. Each `source` glob matches both locale
- * directories (content/en/<type>.json and content/af/<type>.json); the locale
- * is derived from the document stem at read time in plugins/content.ts.
+ * One data collection per content type, each sourced from a single English
+ * file: content/en/<type>.json.
  *
  * Schemas mirror types/content.ts. They drive validation AND the Nuxt Studio
  * form editor, so keep the two in sync.
@@ -265,12 +264,12 @@ const site = z.object({
 
 export default defineContentConfig({
   collections: {
-    skills: defineCollection({ type: "data", source: "**/skills.json", schema: skills }),
-    portfolio: defineCollection({ type: "data", source: "**/portfolio.json", schema: portfolio }),
-    workExperience: defineCollection({ type: "data", source: "**/workExperience.json", schema: workExperience }),
-    qualifications: defineCollection({ type: "data", source: "**/qualifications.json", schema: qualifications }),
-    site: defineCollection({ type: "data", source: "**/site.json", schema: site }),
-    languages: defineCollection({ type: "data", source: "**/languages.json", schema: languages }),
-    privacy: defineCollection({ type: "data", source: "**/privacy.json", schema: privacy }),
+    skills: defineCollection({ type: "data", source: "en/skills.json", schema: skills }),
+    portfolio: defineCollection({ type: "data", source: "en/portfolio.json", schema: portfolio }),
+    workExperience: defineCollection({ type: "data", source: "en/workExperience.json", schema: workExperience }),
+    qualifications: defineCollection({ type: "data", source: "en/qualifications.json", schema: qualifications }),
+    site: defineCollection({ type: "data", source: "en/site.json", schema: site }),
+    languages: defineCollection({ type: "data", source: "en/languages.json", schema: languages }),
+    privacy: defineCollection({ type: "data", source: "en/privacy.json", schema: privacy }),
   },
 });
