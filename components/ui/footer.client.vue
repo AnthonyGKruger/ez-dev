@@ -11,7 +11,6 @@ const siteLinks = computed(() => [
   { label: nav.value.work, to: "/portfolio" },
   { label: nav.value.services, to: "/#services" },
   { label: nav.value.about, to: "/about" },
-  { label: t("nav-skills"), to: "/skills" },
   { label: t("nav-experience"), to: "/work-experience" },
   { label: t("nav-qualifications"), to: "/qualifications" },
 ]);

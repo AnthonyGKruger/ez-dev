@@ -29,6 +29,8 @@ export default defineNuxtConfig({
     "/contact": { redirect: "/contact-me" },
     // The Languages page was removed when the site went English-only.
     "/languages": { redirect: { to: "/about", statusCode: 301 } },
+    // The /skills page was folded into the home page's stack section.
+    "/skills": { redirect: { to: "/#stack", statusCode: 301 } },
   },
   devtools: { enabled: !cleanDevUi },
   css: ["~/assets/css/main.css"],

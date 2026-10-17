@@ -8,20 +8,14 @@ import { defineContentConfig, defineCollection, z } from "@nuxt/content";
  * form editor, so keep the two in sync.
  */
 
+// The stack, grouped by capability (shown in the home "How we build" section).
 const skills = z.object({
-  eyebrow: z.string(),
-  heading: z.string(),
-  items: z.array(
+  groups: z.array(
     z.object({
-      name: z.string(),
-      // Display label, e.g. "Next.js" (name is the lowercase id).
-      label: z.string().optional(),
-      icon: z.string(),
-      description: z.string(),
+      title: z.string(),
+      items: z.array(z.string()),
     }),
   ),
-  alsoComfortableLabel: z.string(),
-  alsoComfortable: z.array(z.string()),
 });
 
 const portfolio = z.object({
@@ -183,7 +177,7 @@ const site = z.object({
     stack: z.object({
       eyebrow: z.string(),
       title: z.string(),
-      alsoLabel: z.string(),
+      lead: z.string(),
     }),
     services: z.object({
       eyebrow: z.string(),

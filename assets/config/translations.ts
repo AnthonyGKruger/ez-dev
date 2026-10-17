@@ -83,7 +83,6 @@ export const translations: Translations = new Map([
       ["nav-home", "Home"],
       ["nav-about", "About"],
       ["nav-work", "Work"],
-      ["nav-skills", "Skills"],
       ["nav-qualifications", "Qualifications"],
       ["nav-work-experience", "Work Experience"],
       ["nav-experience", "Experience"],
@@ -96,7 +95,6 @@ export const translations: Translations = new Map([
       // SEO Titles
       ["home-title", "EZdev Solutions · Software studio"],
       ["about-title", "About"],
-      ["skills-title", "Skills"],
       ["qualifications-title", "Qualifications"],
       ["work-experience-title", "Work Experience"],
       ["portfolio-title", "Our work"],
@@ -132,8 +130,6 @@ export const translations: Translations = new Map([
       ["portfolio-code", "Code"],
 
       // Work Experience
-
-      // Skills
 
       // Privacy Policy
       ["privacy-subtitle", "All About Privacy"],

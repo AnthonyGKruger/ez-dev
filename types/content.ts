@@ -8,23 +8,15 @@ import type { IPortfolioItem } from "./portfolio";
  * change without touching component code.
  */
 
-export interface SkillItem {
-  /** Lowercase id, e.g. "nuxt" */
-  name: string;
-  /** Display label, e.g. "Next.js" */
-  label?: string;
-  /** Iconify id, e.g. "skill-icons:nuxtjs-dark" */
-  icon: string;
-  /** One-line description of how we use it, shown on the /skills card */
-  description: string;
+export interface StackGroup {
+  /** Capability, e.g. "Payments" */
+  title: string;
+  /** Tool names, e.g. ["Yoco", "PayFast"] */
+  items: string[];
 }
 
 export interface SkillsContent {
-  eyebrow: string;
-  heading: string;
-  items: SkillItem[];
-  alsoComfortableLabel: string;
-  alsoComfortable: string[];
+  groups: StackGroup[];
 }
 
 export type PortfolioProject = IPortfolioItem;
@@ -77,7 +69,7 @@ export interface HomeContent {
   hero: HomeHeroContent;
   trusted: { label: string };
   work: WorkLabels;
-  stack: { eyebrow: string; title: string; alsoLabel: string };
+  stack: { eyebrow: string; title: string; lead: string };
   cta: {
     eyebrow: string;
     title: string;

@@ -10,7 +10,7 @@ import type { ContentCollections } from "~/types/content";
  * store synchronously.
  *
  *   const skills = useContent("skills");
- *   skills.value.items // typed SkillItem[]
+ *   skills.value.groups // typed StackGroup[]
  */
 export default function useContent<K extends keyof ContentCollections>(
   collection: K,
