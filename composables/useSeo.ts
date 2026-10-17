@@ -55,9 +55,6 @@ export default function useSeo() {
       htmlAttrs: {
         lang: getLang(),
       },
-      // No hreflang alternates: the EN/AF switch is cookie-based on the same
-      // URL, and hreflang requires distinct URLs per locale. The crawlable
-      // content is English.
       link: [{ rel: "canonical", href: canonical }],
     });
   };

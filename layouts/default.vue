@@ -1,11 +1,7 @@
 <script setup lang="ts">
 import { SpeedInsights } from "@vercel/speed-insights/vue";
 
-const { getLang } = useTranslate();
-
 useAnalytics();
-
-onMounted(() => getLang());
 </script>
 
 <template>
