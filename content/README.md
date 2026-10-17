@@ -1,20 +1,18 @@
 # Content layer
 
-Site content lives here as JSON, split **per locale**:
+Site content lives here as JSON. The site is English-only:
 
 ```
 content/
-  en/  portfolio.json  skills.json  site.json  workExperience.json  qualifications.json  languages.json  privacy.json
-  af/  portfolio.json  skills.json  site.json  workExperience.json  qualifications.json  languages.json  privacy.json
+  en/  portfolio.json  skills.json  site.json  workExperience.json  qualifications.json  privacy.json
 ```
 
-Each locale directory holds fully-translated content — no translation keys, the
-strings are the copy. Types live in `types/content.ts`.
+The strings are the copy (no translation keys). Types live in
+`types/content.ts`.
 
 ## How components read it
 
-Components never import JSON directly. They use the `useContent()` composable,
-which resolves the active locale (via `useTranslate`) and falls back to `en`:
+Components never import JSON directly. They use the `useContent()` composable:
 
 ```ts
 const skills = useContent("skills"); // ComputedRef<SkillsContent>
@@ -25,18 +23,18 @@ The `{years}` token in `site.json` (hero lead + first stat) is interpolated at
 render time by the consuming component.
 
 Filenames match their collection key exactly (`workExperience.json`,
-`qualifications.json`, …) so `useContent(key)` resolves `content/<locale>/<key>.json`.
+`qualifications.json`, …) so `useContent(key)` resolves `content/en/<key>.json`.
 
 ## Status
 
 - **Migrated (component reads from `useContent`):** `skills`, `portfolio`
   (incl. card action labels + home "all work" strip), `workExperience`,
-  `qualifications`, `languages`, `privacy`, and `site` (`hero`, `companies`,
+  `qualifications`, `privacy`, and `site` (`hero`, `companies`,
   `about`, `contact`, `thankYou`). The About page + home preview, the contact
   form, the home contact CTA and the thank-you page all read from `site.*`.
   `assets/config/data.ts` has been removed and the corresponding structured
   strings pruned from `assets/config/translations.ts`.
-- **Still key-based i18n microcopy** (stays in `translations.ts`): nav/footer
+- **Still key-based UI microcopy** (stays in `translations.ts`, English only): nav/footer
   labels, contact-form validation errors + verification toasts, cookie notice,
   SEO titles, the hero typing strings, error pages.
 
@@ -44,17 +42,14 @@ Filenames match their collection key exactly (`workExperience.json`,
 
 - `content.config.ts` declares one **data** collection per content type
   (`skills`, `portfolio`, `workExperience`, `qualifications`, `site`,
-  `languages`, `privacy`); each
-  `source` glob matches both locale dirs. Schemas are passthrough — the typed
-  shapes live in `types/content.ts`.
-- `plugins/content.ts` preloads every collection for **both** locales into a
-  `useState("content")` store at startup (awaited on the server, serialized to
-  the client). This is what keeps `useContent()` **synchronous** and lets live
-  EN/AF switching resolve instantly with no refetch — Nuxt Content's
+  `privacy`), each sourced from `content/en/<type>.json`. The
+  typed shapes live in `types/content.ts`.
+- `plugins/content.ts` preloads every collection into a `useState("content")`
+  store at startup (awaited on the server, serialized to the client). This is
+  what keeps `useContent()` **synchronous**: Nuxt Content's
   `queryCollection()` is itself async, so reading it eagerly once avoids
   turning every consumer into `useAsyncData`.
-- `useContent(collection)` reads that store, resolves the active locale (via
-  `useTranslate`), and falls back to `en`.
+- `useContent(collection)` reads that store.
 
 Requires a SQLite adapter (`better-sqlite3`, installed) — Nuxt Content builds a
 local content DB under `.data/` (gitignored). Editing a JSON file triggers a
@@ -75,7 +70,7 @@ itself at **`/_studio`**. Setup docs: https://nuxt.studio/setup
   back via GitHub.
 - The per-collection Zod schemas in `content.config.ts` drive Studio's form
   editor for each collection (`skills`, `portfolio`, `workExperience`,
-  `qualifications`, `site`, `languages`, `privacy`) in both `en` and `af`.
+  `qualifications`, `site`, `privacy`).
 
 **Local dev:** run `npm run dev`, open `/_studio` (or the floating button) —
 no auth needed; edits sync straight to the files in `content/**`, you commit

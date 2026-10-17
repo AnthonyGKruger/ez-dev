@@ -22,11 +22,6 @@
         "icon": "mdi:rocket-launch",
         "title": "6+ years building",
         "desc": "Production web apps for agencies, businesses and our own products, front end to back end."
-      },
-      {
-        "icon": "mdi:translate",
-        "title": "Bilingual delivery",
-        "desc": "Fluent in English and Afrikaans, comfortable building and communicating in both."
       }
     ]
   },
@@ -200,8 +195,7 @@
     "contact": "Contact",
     "cta": "Start a project",
     "menuOpen": "Open menu",
-    "menuClose": "Close menu",
-    "language": "Language"
+    "menuClose": "Close menu"
   },
   "footer": {
     "blurb": "EZdev Solutions is a small software studio. We build and run our own SaaS and e-commerce products, and take on select client work.",

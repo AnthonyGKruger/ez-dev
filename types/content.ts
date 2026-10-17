@@ -1,13 +1,11 @@
 import type { IPortfolioItem } from "./portfolio";
 
 /**
- * Content models for the JSON content layer (content/<locale>/*.json).
+ * Content models for the JSON content layer (content/en/*.json).
  *
- * Content is stored per-locale (content/en/*.json, content/af/*.json) and
- * read through the `useContent()` composable, which resolves the active
- * locale. Components consume these typed shapes and never import raw JSON,
- * so the backing store can later move to Nuxt Content / a CMS without
- * touching component code.
+ * Content is read through the `useContent()` composable. Components consume
+ * these typed shapes and never import raw JSON, so the backing store can
+ * change without touching component code.
  */
 
 export interface SkillItem {
@@ -17,14 +15,13 @@ export interface SkillItem {
   label?: string;
   /** Iconify id, e.g. "skill-icons:nuxtjs-dark" */
   icon: string;
-  /** Localized one-line description shown on the flipped card */
+  /** One-line description of how we use it, shown on the /skills card */
   description: string;
 }
 
 export interface SkillsContent {
   eyebrow: string;
   heading: string;
-  flipHint: string;
   items: SkillItem[];
   alsoComfortableLabel: string;
   alsoComfortable: string[];
@@ -172,7 +169,6 @@ export interface SiteContent {
     cta: string;
     menuOpen: string;
     menuClose: string;
-    language: string;
   };
   footer: {
     blurb: string;
@@ -191,25 +187,6 @@ export interface SiteContent {
   about: AboutContent;
   contact: ContactContent;
   thankYou: ThankYouContent;
-}
-
-export interface LanguageItem {
-  /** Short code shown in the badge, e.g. "EN" */
-  code: string;
-  name: string;
-  /** e.g. "FLUENT · NATIVE" */
-  level: string;
-  /** Proficiency shown next to the bar, e.g. "100%" */
-  pct: string;
-  /** Localized note under the proficiency bar */
-  note: string;
-}
-
-export interface LanguagesContent {
-  eyebrow: string;
-  heading: string;
-  tagline: string;
-  items: LanguageItem[];
 }
 
 export interface PrivacyTopic {
@@ -284,6 +261,5 @@ export interface ContentCollections {
   site: SiteContent;
   workExperience: WorkExperienceContent;
   qualifications: QualificationsContent;
-  languages: LanguagesContent;
   privacy: PrivacyContent;
 }

@@ -27,6 +27,8 @@ export default defineNuxtConfig({
   // The brief links to /contact; the page lives at /contact-me.
   routeRules: {
     "/contact": { redirect: "/contact-me" },
+    // The Languages page was removed when the site went English-only.
+    "/languages": { redirect: { to: "/about", statusCode: 301 } },
   },
   devtools: { enabled: !cleanDevUi },
   css: ["~/assets/css/main.css"],

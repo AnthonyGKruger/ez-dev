@@ -24,7 +24,6 @@ Welcome to EZdev Solutions! This is the official repository for the EZdev Soluti
 - Showcase of portfolio projects with live links and source code
 - Interactive contact form with EmailJS integration
 - Dark mode support with seamless theme switching
-- Multi-language support (English and Afrikaans)
 - SEO optimized with proper meta tags and structured data
 - Smooth animations using Framer Motion
 - Lottie animations for enhanced visual appeal

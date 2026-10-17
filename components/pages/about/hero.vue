@@ -75,7 +75,7 @@ const about = computed(() => site.value.about);
 
     <!-- Fact cards -->
     <section class="max-w-[1240px] mx-auto px-7 pb-[88px]">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div
           v-for="card in about.factCards"
           :key="card.title"
