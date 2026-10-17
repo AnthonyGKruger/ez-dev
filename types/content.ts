@@ -1,13 +1,11 @@
 import type { IPortfolioItem } from "./portfolio";
 
 /**
- * Content models for the JSON content layer (content/<locale>/*.json).
+ * Content models for the JSON content layer (content/en/*.json).
  *
- * Content is stored per-locale (content/en/*.json, content/af/*.json) and
- * read through the `useContent()` composable, which resolves the active
- * locale. Components consume these typed shapes and never import raw JSON,
- * so the backing store can later move to Nuxt Content / a CMS without
- * touching component code.
+ * Content is read through the `useContent()` composable. Components consume
+ * these typed shapes and never import raw JSON, so the backing store can
+ * change without touching component code.
  */
 
 export interface SkillItem {
