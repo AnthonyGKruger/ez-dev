@@ -173,8 +173,8 @@
     },
     "stack": {
       "eyebrow": "Stack",
-      "title": "Tools we build with",
-      "alsoLabel": "Also comfortable with"
+      "title": "How we build",
+      "lead": "The tools behind our own products and our client work."
     },
     "cta": {
       "eyebrow": "Contact",

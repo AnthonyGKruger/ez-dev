@@ -1,42 +1,53 @@
 {
-  "alsoComfortable": [
-    "Vue 3",
-    "HTML & CSS",
-    "Git",
-    "Microsoft Azure",
-    "Figma",
-    "SEO",
-    "Accessibility",
-    "React",
-    "TanStack"
-  ],
-  "alsoComfortableLabel": "Also comfortable with",
-  "eyebrow": "STACK",
-  "heading": "Tools we build with",
-  "items": [
+  "groups": [
     {
-      "name": "nuxt",
-      "icon": "skill-icons:nuxtjs-dark",
-      "description": "Our default for full-stack web apps: server rendering, routing and APIs in one framework.",
-      "label": "Nuxt"
+      "title": "Front end",
+      "items": [
+        "Nuxt",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "GSAP"
+      ]
     },
     {
-      "name": "next",
-      "icon": "skill-icons:nextjs-light",
-      "description": "The React framework behind our client websites, with fast static and server-rendered pages.",
-      "label": "Next.js"
+      "title": "Back end and data",
+      "items": [
+        "Node.js",
+        "Supabase",
+        "Prisma"
+      ]
     },
     {
-      "name": "tailwindcss",
-      "icon": "skill-icons:tailwindcss-dark",
-      "description": "Utility-first styling that keeps interfaces consistent and quick to change.",
-      "label": "Tailwind CSS"
+      "title": "Content management",
+      "items": [
+        "Payload CMS",
+        "Nuxt Studio"
+      ]
     },
     {
-      "name": "typescript",
-      "icon": "skill-icons:typescript",
-      "description": "Typed code across the stack, so whole classes of bugs are caught before they ship.",
-      "label": "TypeScript"
+      "title": "Payments",
+      "items": [
+        "Yoco",
+        "PayFast",
+        "iKhokha"
+      ]
+    },
+    {
+      "title": "Hosting and delivery",
+      "items": [
+        "Vercel",
+        "Cloudflare",
+        "Git"
+      ]
+    },
+    {
+      "title": "Quality, as standard",
+      "items": [
+        "Accessibility",
+        "Performance",
+        "SEO"
+      ]
     }
   ]
 }
