@@ -74,9 +74,6 @@ useEventListener("keydown", (e: KeyboardEvent) => {
       </ul>
 
       <div class="flex items-center gap-2.5 min-[900px]:gap-4">
-        <div class="hidden min-[900px]:block">
-          <UxLanguageToggle />
-        </div>
         <UiButton variant="primary" size="sm" to="/contact-me">{{ nav.cta }}</UiButton>
 
         <!-- Menu button (below 900px) -->
@@ -135,9 +132,6 @@ useEventListener("keydown", (e: KeyboardEvent) => {
             >
               {{ item.label }}
             </NuxtLink>
-          </li>
-          <li class="mt-3 border-t border-primary-gold/15 pt-4">
-            <UxLanguageToggle />
           </li>
         </ul>
       </div>

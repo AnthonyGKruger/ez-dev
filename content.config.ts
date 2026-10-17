@@ -136,7 +136,6 @@ const site = z.object({
     cta: z.string(),
     menuOpen: z.string(),
     menuClose: z.string(),
-    language: z.string(),
   }),
   footer: z.object({
     blurb: z.string(),

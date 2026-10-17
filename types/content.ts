@@ -172,7 +172,6 @@ export interface SiteContent {
     cta: string;
     menuOpen: string;
     menuClose: string;
-    language: string;
   };
   footer: {
     blurb: string;
