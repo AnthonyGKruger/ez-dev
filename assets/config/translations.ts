@@ -99,7 +99,7 @@ export const translations: Translations = new Map([
       ["nav-start-project", "START A PROJECT"],
 
       // SEO Titles
-      ["home-title", "EZdev Solutions · Dev house"],
+      ["home-title", "EZdev Solutions · Software studio"],
       ["about-title", "About"],
       ["skills-title", "Skills"],
       ["qualifications-title", "Qualifications"],
@@ -330,7 +330,7 @@ export const translations: Translations = new Map([
       ["nav-start-project", "BEGIN 'N PROJEK"],
 
       // SEO Titles
-      ["home-title", "EZdev Solutions · Ontwikkelingshuis"],
+      ["home-title", "EZdev Solutions · Sagteware-ateljee"],
       ["about-title", "Oor"],
       ["skills-title", "Vaardighede"],
       ["qualifications-title", "Kwalifikasies"],

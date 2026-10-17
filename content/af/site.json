@@ -95,7 +95,7 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "EZdev Solutions · Ontwikkelingshuis",
+      "eyebrow": "EZdev Solutions · Sagteware-ateljee",
       "title": "Webwerwe, webtoepassings en e-handel.",
       "titleAccent": "Van begin tot einde.",
       "lead": "Ons ontwerp, bou en bedryf ons eie sagtewareprodukte en neem 'n klein aantal kliëntprojekte aan, so ons weet wat dit verg om dinge aan die gang te hou.",
@@ -166,7 +166,7 @@
     },
     "about": {
       "eyebrow": "Oor ons",
-      "title": "'n Ontwikkelingshuis wat self bedryf wat dit bou",
+      "title": "'n Ateljee wat self bedryf wat dit bou",
       "body": [
         "EZdev Solutions is gestig deur Anthony Kruger, 'n ontwikkelaar met 'n BSc in IT en jare se ervaring in die bou van produksie-webtoepassings. Hy bedryf EZdev naas sy voltydse ingenieursrol.",
         "EZdev besit en bedryf twee produkte, Votera en Chilli Collective, en neem 'n klein aantal kliëntprojekte aan. Omdat ons ons eie platforms bedryf, voel ons elke stadige bladsy en mislukte betaling self, en dit is die standaard wat ons na kliëntewerk bring."
@@ -204,7 +204,7 @@
     "language": "Taal"
   },
   "footer": {
-    "blurb": "EZdev Solutions is 'n klein ontwikkelingshuis. Ons bou en bedryf ons eie SaaS- en e-handelsprodukte, en neem uitgesoekte kliëntewerk aan.",
+    "blurb": "EZdev Solutions is 'n klein sagteware-ateljee. Ons bou en bedryf ons eie SaaS- en e-handelsprodukte, en neem uitgesoekte kliëntewerk aan.",
     "siteHeading": "Webwerf",
     "productsHeading": "Ons produkte",
     "productsNote": "Gebou en bedryf deur EZdev",
