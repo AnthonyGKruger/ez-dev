@@ -82,9 +82,6 @@ export interface HomeContent {
     eyebrow: string;
     title: string;
     body: string[];
-    caption: string;
-    role: string;
-    photoAlt: string;
     cta: string;
   };
   services: {
@@ -114,8 +111,6 @@ export interface FactCard {
 
 export interface AboutContent {
   eyebrow: string;
-  photoName: string;
-  photoLocation: string;
   headline: string;
   headlineAccent: string;
   paragraphs: string[];

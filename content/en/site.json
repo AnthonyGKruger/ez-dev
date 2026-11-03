@@ -1,8 +1,6 @@
 {
   "about": {
     "eyebrow": "ABOUT",
-    "photoName": "ANTHONY KRUGER",
-    "photoLocation": "EZDEV SOLUTIONS",
     "headline": "Building the web,",
     "headlineAccent": "end to end.",
     "paragraphs": [
@@ -166,9 +164,6 @@
         "EZdev Solutions was founded by Anthony Kruger, a developer with a BSc in IT and years of experience building production web apps. He runs EZdev alongside his full-time engineering role.",
         "EZdev owns and runs two products, Votera and Chilli Collective, and takes on a small number of client projects. Operating our own platforms means we feel every slow page and failed payment ourselves, and that's the standard we bring to client work."
       ],
-      "caption": "Anthony Kruger",
-      "role": "Founder",
-      "photoAlt": "Anthony Kruger, founder of EZdev Solutions",
       "cta": "Let's chat"
     },
     "stack": {
