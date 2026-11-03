@@ -82,6 +82,7 @@ export interface HomeContent {
     eyebrow: string;
     title: string;
     body: string[];
+    points: { title: string; body: string }[];
     cta: string;
   };
   services: {

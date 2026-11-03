@@ -161,6 +161,7 @@ const site = z.object({
       eyebrow: z.string(),
       title: z.string(),
       body: z.array(z.string()),
+      points: z.array(z.object({ title: z.string(), body: z.string() })),
       cta: z.string(),
     }),
     cta: z.object({
