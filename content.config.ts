@@ -161,9 +161,7 @@ const site = z.object({
       eyebrow: z.string(),
       title: z.string(),
       body: z.array(z.string()),
-      caption: z.string(),
-      role: z.string(),
-      photoAlt: z.string(),
+      points: z.array(z.object({ title: z.string(), body: z.string() })),
       cta: z.string(),
     }),
     cta: z.object({
@@ -206,8 +204,6 @@ const site = z.object({
   }),
   about: z.object({
     eyebrow: z.string(),
-    photoName: z.string(),
-    photoLocation: z.string(),
     headline: z.string(),
     headlineAccent: z.string(),
     paragraphs: z.array(z.string()),

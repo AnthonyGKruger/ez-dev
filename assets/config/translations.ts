@@ -93,7 +93,7 @@ export const translations: Translations = new Map([
       ["nav-start-project", "START A PROJECT"],
 
       // SEO Titles
-      ["home-title", "EZdev Solutions · Software studio"],
+      ["home-title", "EZdev Solutions · Web development"],
       ["about-title", "About"],
       ["qualifications-title", "Qualifications"],
       ["work-experience-title", "Work Experience"],

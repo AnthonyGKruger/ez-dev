@@ -14,39 +14,9 @@ const about = computed(() => site.value.about);
         <div class="flex-1 h-px bg-primary-gold/20"></div>
       </div>
 
-      <div
-        class="grid grid-cols-1 lg:grid-cols-[.85fr_1.15fr] gap-14 items-center"
-      >
-        <!-- Photo card -->
-        <div class="relative">
-          <div
-            class="relative border border-primary-gold/35 rounded-[18px] overflow-hidden bg-surface-bg"
-          >
-            <div
-              class="mono flex justify-between text-[11px] tracking-[.1em] text-primary-gold px-4 py-3 border-b border-primary-gold/20"
-            >
-              <span>{{ about.photoName }}</span>
-              <span>{{ about.photoLocation }}</span>
-            </div>
-            <!-- Same photo and crop as the home About section (4:5, top-anchored). -->
-            <img
-              src="/media/anthony-headshot.jpg"
-              :alt="site.home.about.photoAlt"
-              width="765"
-              height="1024"
-              class="block aspect-[4/5] w-full object-cover object-top"
-            />
-          </div>
-          <span
-            class="absolute -top-1.5 -left-1.5 w-[18px] h-[18px] border-t-2 border-l-2 border-light-gold"
-          ></span>
-          <span
-            class="absolute -bottom-1.5 -right-1.5 w-[18px] h-[18px] border-b-2 border-r-2 border-light-gold"
-          ></span>
-        </div>
-
+      <div>
         <!-- Text -->
-        <div>
+        <div class="max-w-[760px]">
           <h1
             class="text-[56px] leading-[1.05] font-black tracking-[-0.02em] text-[#f4f7fa]"
           >
