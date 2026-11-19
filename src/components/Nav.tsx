@@ -21,7 +21,12 @@ export const Nav = () => {
   // Only real routes get the active state; hash links point into the home page.
   const isActive = (to: string) => !to.includes("#") && pathname.startsWith(to);
 
-  useEffect(() => setOpen(false), [pathname, hash]);
+  // Close the menu on navigation, including hash links on the same page.
+  const [lastLocation, setLastLocation] = useState(pathname + hash);
+  if (lastLocation !== pathname + hash) {
+    setLastLocation(pathname + hash);
+    setOpen(false);
+  }
 
   // The toggle is ignored so its own click can close the menu.
   useEffect(() => {

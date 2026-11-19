@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { site, ui } from "../content";
 import { AppLink } from "./ui";
 
@@ -21,10 +21,13 @@ const linkClass =
   "flex min-h-11 items-center text-base transition-colors hover:text-heading lg:block lg:min-h-0 lg:leading-8";
 const headingClass = "eyebrow mb-3";
 
+const BUILD_YEAR = new Date().getFullYear();
+const currentYear = () => new Date().getFullYear();
+const noSubscribe = () => () => {};
+
 export const Footer = () => {
-  // Pages are prerendered at build time, so refresh the year in the browser.
-  const [year, setYear] = useState(() => new Date().getFullYear());
-  useEffect(() => setYear(new Date().getFullYear()), []);
+  // Pages are prerendered, so the build year is replaced in the browser.
+  const year = useSyncExternalStore(noSubscribe, currentYear, () => BUILD_YEAR);
 
   return (
     <footer className="border-t border-primary-gold/15">

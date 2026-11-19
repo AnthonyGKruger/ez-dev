@@ -21,6 +21,7 @@ npm run dev            # http://localhost:3000
 | `npm start` | Serves the production build locally |
 | `npm run check:content` | Validates `content/en/*.json` against the schemas |
 | `npm run typecheck` | TypeScript check |
+| `npm run lint` | ESLint (type-aware, React hooks, accessibility, TanStack Router) |
 | `npm run images` | Regenerates the WebP screenshot sizes in `public/media` |
 
 ## How it fits together

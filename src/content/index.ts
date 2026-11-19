@@ -17,19 +17,19 @@ import skillsJson from "../../content/en/skills.json";
 import uiJson from "../../content/en/ui.json";
 import workExperienceJson from "../../content/en/workExperience.json";
 
-// `npm run check:content` validates the JSON before each build, so these
-// casts are safe and zod stays out of the browser bundle.
+// TypeScript checks the JSON's shape against the schema types here;
+// `npm run check:content` validates the values before each build.
 export type SiteContent = z.infer<typeof siteSchema>;
 export type Project = z.infer<typeof projectSchema>;
 export type WorkLabels = SiteContent["home"]["work"];
 
-export const site = siteJson as SiteContent;
-export const ui = uiJson as z.infer<typeof uiSchema>;
-export const skills = skillsJson as z.infer<typeof skillsSchema>;
+export const site: SiteContent = siteJson;
+export const ui: z.infer<typeof uiSchema> = uiJson;
+export const skills: z.infer<typeof skillsSchema> = skillsJson;
 export const portfolio = portfolioJson as z.infer<typeof portfolioSchema>;
-export const workExperience = workExperienceJson as z.infer<typeof workExperienceSchema>;
-export const qualifications = qualificationsJson as z.infer<typeof qualificationsSchema>;
-export const privacy = privacyJson as z.infer<typeof privacySchema>;
+export const workExperience: z.infer<typeof workExperienceSchema> = workExperienceJson;
+export const qualifications: z.infer<typeof qualificationsSchema> = qualificationsJson;
+export const privacy: z.infer<typeof privacySchema> = privacyJson;
 
 export interface WorkItem extends Project {
   index: string;

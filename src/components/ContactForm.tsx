@@ -147,7 +147,9 @@ export const ContactForm = () => {
       cancelled = true;
       try {
         if (widgetId.current) window.turnstile?.remove(widgetId.current);
-      } catch {}
+      } catch {
+        // The widget may already be gone.
+      }
     };
   }, []);
 
@@ -180,7 +182,7 @@ export const ContactForm = () => {
           expectedHostname: location.hostname,
         }),
       });
-      const verification = await res.json().catch(() => null);
+      const verification = (await res.json().catch(() => null)) as { success?: boolean } | null;
       if (!verification?.success) {
         trackFormVerification(false);
         setToast({ tone: "error", text: m.verificationFailed });
@@ -204,9 +206,11 @@ export const ContactForm = () => {
       sessionStorage.setItem(SENT_FLAG, "1");
       try {
         window.turnstile?.reset(widgetId.current ?? undefined);
-      } catch {}
+      } catch {
+        // Best effort; we're leaving the page.
+      }
       setToken(null);
-      navigate({ to: "/thank-you" });
+      void navigate({ to: "/thank-you" });
     } catch (err) {
       console.error(err);
       setToast({ tone: "error", text: m.failed });
@@ -269,7 +273,7 @@ export const ContactForm = () => {
               {toast.text}
             </div>
           )}
-          <form id="contact-form" noValidate onSubmit={onSubmit} className="flex flex-col gap-4">
+          <form id="contact-form" noValidate onSubmit={(e) => void onSubmit(e)} className="flex flex-col gap-4">
             {fields.map(({ name, content }) => {
               const error = touched[name] ? errors[name] : undefined;
               const props = {

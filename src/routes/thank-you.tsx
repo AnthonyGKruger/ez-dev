@@ -14,12 +14,12 @@ const ThankYou = () => {
   useEffect(() => {
     try {
       if (!sessionStorage.getItem(SENT_FLAG)) {
-        navigate({ to: "/", replace: true });
+        void navigate({ to: "/", replace: true });
         return;
       }
       sessionStorage.removeItem(SENT_FLAG);
     } catch {
-      navigate({ to: "/", replace: true });
+      void navigate({ to: "/", replace: true });
     }
   }, [navigate]);
 
