@@ -1,7 +1,5 @@
-# Nuxt dev/build outputs
+# Build outputs
 .output
-.data
-.nuxt
 .nitro
 .cache
 dist
@@ -22,3 +20,6 @@ logs
 .env
 .env.*
 !.env.example
+# TanStack Start / Nitro
+.vercel
+.tanstack
