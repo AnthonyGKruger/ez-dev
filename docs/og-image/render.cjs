@@ -1,5 +1,5 @@
 // Renders docs/og-image/og.html to public/media/og-image.png (1200x630).
-// Needs Playwright with Chromium (`npm i -D playwright` or a global install)
+// Needs Playwright with Chromium (`bun add -d playwright` or a global install)
 // and network access for the Google Fonts it loads.
 //   node docs/og-image/render.cjs
 const path = require("path");

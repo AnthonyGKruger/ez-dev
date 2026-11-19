@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 // One schema per content/en/*.json file. Types are inferred from these, and
-// `npm run check:content` validates the files before every build.
+// `bun run check:content` validates the files before every build.
 
 export const skillsSchema = z.object({
   groups: z.array(z.object({ title: z.string(), items: z.array(z.string()) })),

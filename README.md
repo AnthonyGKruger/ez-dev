@@ -7,22 +7,22 @@ TypeScript, deployed on Vercel.
 ## Getting started
 
 ```bash
-npm install
+bun install
 cp .env.example .env   # optional: analytics and contact form keys
-npm run dev            # http://localhost:3000
+bun dev                # http://localhost:3000
 ```
 
 ## Scripts
 
 | Command | What it does |
 | --- | --- |
-| `npm run dev` | Dev server with hot reload |
-| `npm run build` | Validates the content, then builds and prerenders every page |
-| `npm start` | Serves the production build locally |
-| `npm run check:content` | Validates `content/en/*.json` against the schemas |
-| `npm run typecheck` | TypeScript check |
-| `npm run lint` | ESLint (type-aware, React hooks, accessibility, TanStack Router) |
-| `npm run images` | Regenerates the WebP screenshot sizes in `public/media` |
+| `bun run dev` | Dev server with hot reload |
+| `bun run build` | Validates the content, then builds and prerenders every page |
+| `bun start` | Serves the production build locally |
+| `bun run check:content` | Validates `content/en/*.json` against the schemas |
+| `bun run typecheck` | TypeScript check |
+| `bun run lint` | ESLint (type-aware, React hooks, accessibility, TanStack Router) |
+| `bun run images` | Regenerates the WebP screenshot sizes in `public/media` |
 
 ## How it fits together
 

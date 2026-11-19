@@ -15,8 +15,8 @@ content/en/
 
 Edit the JSON and commit; the change goes live with the next deploy.
 
-Each file has a schema in `src/content/schema.ts`. `npm run build` runs
-`npm run check:content` first, so a missing or misspelt field fails the build
+Each file has a schema in `src/content/schema.ts`. `bun run build` runs
+`bun run check:content` first, so a missing or misspelt field fails the build
 with the file and field named, instead of breaking a page. Run it on its own
 after an edit to check quickly.
 
@@ -24,6 +24,6 @@ Tokens filled in at render time: `{years}` in the hero lead and stats (years
 since 2020) and `{year}` in the footer copyright.
 
 Project screenshots are referenced by their PNG path (e.g.
-`/media/votera.png`). After adding or replacing one, run `npm run images` to
+`/media/votera.png`). After adding or replacing one, run `bun run images` to
 make the WebP sizes the site actually serves, and add its name to
 `scripts/optimize-images.ts`.

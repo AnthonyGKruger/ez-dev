@@ -3,7 +3,7 @@
  * originals: public/media/<name>-<width>.webp. <ResponsiveImage> serves them
  * through srcset, so phones download the small one.
  *
- * Re-run after adding or replacing a screenshot: npm run images
+ * Re-run after adding or replacing a screenshot: bun run images
  */
 import { readdir, stat } from "node:fs/promises";
 import path from "node:path";

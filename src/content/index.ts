@@ -18,7 +18,7 @@ import uiJson from "../../content/en/ui.json";
 import workExperienceJson from "../../content/en/workExperience.json";
 
 // TypeScript checks the JSON's shape against the schema types here;
-// `npm run check:content` validates the values before each build.
+// `bun run check:content` validates the values before each build.
 export type SiteContent = z.infer<typeof siteSchema>;
 export type Project = z.infer<typeof projectSchema>;
 export type WorkLabels = SiteContent["home"]["work"];
