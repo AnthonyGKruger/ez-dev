@@ -131,7 +131,7 @@ export const Frame = ({
 
 const WIDTHS = [640, 1024, 1600];
 
-/** Serves the WebP sizes `npm run images` makes next to the original `src`. */
+/** Serves the WebP sizes `bun run images` makes next to the original `src`. */
 export const ResponsiveImage = ({
   src,
   alt,

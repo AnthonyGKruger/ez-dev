@@ -4,11 +4,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev --port 3000",
-    "build": "npm run check:content && vite build",
-    "start": "node .output/server/index.mjs",
-    "check:content": "node scripts/check-content.ts",
+    "build": "bun run check:content && vite build",
+    "start": "bun .output/server/index.mjs",
+    "check:content": "bun scripts/check-content.ts",
     "typecheck": "tsc --noEmit",
-    "images": "node scripts/optimize-images.ts",
+    "images": "bun scripts/optimize-images.ts",
     "lint": "eslint ."
   },
   "dependencies": {

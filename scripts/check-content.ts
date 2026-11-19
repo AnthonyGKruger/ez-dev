@@ -1,6 +1,6 @@
 /**
  * Validates every content/en/<name>.json file against its schema in
- * src/content/schema.ts. Runs before each build (npm run build), so a broken
+ * src/content/schema.ts. Runs before each build (bun run build), so a broken
  * JSON edit fails the deploy with a readable message instead of breaking a
  * page in production.
  */
