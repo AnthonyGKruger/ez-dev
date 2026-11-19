@@ -65,7 +65,7 @@ export const CookieNotice = () => {
         <div className="pt-4">
           <button
             type="button"
-            className="btn btn-primary btn-sm w-full md:w-fit"
+            className="w-full rounded-xl border-2 border-light-gold px-4 py-2 text-sm font-extrabold text-white duration-500 hover:bg-light-gold hover:text-black md:w-fit xl:text-lg"
             onClick={accept}
           >
             {ui.cookie.accept}
