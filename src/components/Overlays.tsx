@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { ui } from "../content";
 import { trackCookieAccept, trackScrollToTop } from "../lib/analytics";
 import { Icon } from "../lib/icon";
@@ -25,19 +25,23 @@ export const MouseGlow = () => {
 };
 
 const CONSENT_COOKIE = "consent";
+const consentListeners = new Set<() => void>();
+const subscribeConsent = (listener: () => void) => {
+  consentListeners.add(listener);
+  return () => consentListeners.delete(listener);
+};
 const hasConsent = () =>
   document.cookie.split("; ").some((c) => c === `${CONSENT_COOKIE}=true`);
 
 export const CookieNotice = () => {
-  // Starts hidden so it never flashes for visitors who already accepted.
-  const [show, setShow] = useState(false);
-  useEffect(() => setShow(!hasConsent()), []);
+  // Hidden in the prerendered HTML so it never flashes for visitors who accepted.
+  const show = !useSyncExternalStore(subscribeConsent, hasConsent, () => true);
 
   if (!show) return null;
 
   const accept = () => {
     document.cookie = `${CONSENT_COOKIE}=true; path=/; max-age=${60 * 60 * 24 * 365}; samesite=lax`;
-    setShow(false);
+    consentListeners.forEach((listener) => listener());
     trackCookieAccept();
   };
 
@@ -76,15 +80,13 @@ export const CookieNotice = () => {
   );
 };
 
-export const ScrollToTop = () => {
-  const [show, setShow] = useState(false);
+const subscribeScroll = (listener: () => void) => {
+  window.addEventListener("scroll", listener, { passive: true });
+  return () => window.removeEventListener("scroll", listener);
+};
 
-  useEffect(() => {
-    const onScroll = () => setShow(window.scrollY > 100);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+export const ScrollToTop = () => {
+  const show = useSyncExternalStore(subscribeScroll, () => window.scrollY > 100, () => false);
 
   return (
     <button

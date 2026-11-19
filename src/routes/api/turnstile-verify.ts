@@ -8,6 +8,13 @@ const TEST_SECRETS = new Set([
   "3x0000000000000000000000000000000AA",
 ]);
 
+interface SiteverifyResult {
+  success: boolean;
+  action?: string;
+  hostname?: string;
+  "error-codes"?: string[];
+}
+
 const verify = async (request: Request) => {
   const secret = process.env.TURNSTILE_SECRET_KEY;
   if (!secret) {
@@ -44,7 +51,7 @@ const verify = async (request: Request) => {
       body: form,
       signal: controller.signal,
     });
-    const result = await resp.json();
+    const result = (await resp.json()) as SiteverifyResult;
 
     if (result?.success && !TEST_SECRETS.has(secret)) {
       const { expectedAction, expectedHostname } = body ?? {};
