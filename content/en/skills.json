@@ -3,8 +3,10 @@
     {
       "title": "Front end",
       "items": [
-        "Nuxt",
+        "React",
         "Next.js",
+        "TanStack Start",
+        "Nuxt",
         "TypeScript",
         "Tailwind CSS",
         "GSAP"
