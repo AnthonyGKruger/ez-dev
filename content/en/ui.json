@@ -1,0 +1,55 @@
+{
+  "pageTitles": {
+    "home": "EZdev Solutions · Web development",
+    "about": "About",
+    "portfolio": "Our work",
+    "contact": "Contact",
+    "workExperience": "Work Experience",
+    "qualifications": "Qualifications",
+    "privacy": "Privacy Policy",
+    "thankYou": "Thank You"
+  },
+  "pageDescriptions": {
+    "portfolio": "Two products we own and operate, and the sites we build for clients.",
+    "contact": "Let's Build Something Together!",
+    "thankYou": "Thank you for contacting us. We'll get back to you shortly."
+  },
+  "footerLinks": {
+    "experience": "Experience",
+    "qualifications": "Qualifications"
+  },
+  "cookie": {
+    "title": "Cookie Policy and T's & C's",
+    "text": "This website uses cookies to improve the UI and UX. By viewing my portfolio, you consent to all cookies & terms and conditions in accordance with my",
+    "privacyLink": "Privacy Policy.",
+    "accept": "Accept"
+  },
+  "scrollToTop": "Back to top",
+  "contactMessages": {
+    "sent": "Your email has been sent. Thank you!",
+    "failed": "Your email could not be sent. Please try again later.",
+    "verificationRequired": "Please complete the verification.",
+    "verificationFailed": "Invisible verification failed."
+  },
+  "contactErrors": {
+    "nameInvalid": "Please enter a valid name.",
+    "nameTooShort": "Your name cant be less than two characters.",
+    "nameTooLong": "Names can't be longer than 20 characters.",
+    "companyRequired": "Your company is required.",
+    "companyTooShort": "Your company name cant be less than two characters.",
+    "companyTooLong": "Company names can't be longer than 30 characters.",
+    "companyInvalid": "Please enter a valid company name.",
+    "commentsRequired": "Your comments are required.",
+    "commentsTooShort": "Your comments cant be less than two characters.",
+    "commentsTooLong": "Comments can't be longer than 200 characters.",
+    "commentsInvalid": "Please enter a valid comments.",
+    "emailInvalid": "Please enter a valid email."
+  },
+  "errorPage": {
+    "notFoundTitle": "Sorry, we can't find the page you are looking for.",
+    "notFoundSubtitle": "Try using the navigation above to find the page you are looking for.",
+    "title": "Oops, something went wrong.",
+    "subtitle": "Try using the navigation above to navigate to a new page.",
+    "goHome": "Go Home"
+  }
+}
